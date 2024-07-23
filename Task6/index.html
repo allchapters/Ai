@@ -548,6 +548,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#code-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Annotation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Annotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codeblocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      CODEBLOCKS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-plain-code-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      A plain Code Block
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#drill-into-a-automated-session-test" class="md-nav__link">
     <span class="md-ellipsis">
       Drill into a Automated Session Test
@@ -709,7 +742,16 @@
 
 <h1 id="analyzing-thousandeyes-epa-data">Analyzing ThousandEyes EPA Data</h1>
 <p>Typically when a user experiences an issue they will either suffer in silence, wait for the issue to go away and when it crops up again get frustrated and call in for help. Sometimes while they are working with support or the helpdesk the issue resolves itself. This makes it really difficult to troubleshoot issues if they aren't presistent. ThousandEyes stores 30 days of data so you have the abilty to go back in time and see what was occuring or see if this issue has been occuring and the user just didn't call into support.</p>
-<p>If you are troubleshooting a issue and want to quickly see all the test data for a users system <strong>Agent Views</strong> provides the perfect visualization.</p>
+<h2 id="code-annotation">Code Annotation</h2>
+<h3 id="codeblocks">CODEBLOCKS</h3>
+<p>Some <code>Code</code> will be below:</p>
+<h3 id="a-plain-code-block">A plain Code Block</h3>
+<div class="highlight"><pre><span></span><code>Some Code here
+
+print(A)
+</code></pre></div>
+<p><br>
+If you are troubleshooting a issue and want to quickly see all the test data for a users system <strong>Agent Views</strong> provides the perfect visualization.</p>
 <p>Navigate to VM session and browse to ThousandEyes portal. Open <strong>Endpoint Agents &gt; Agent Views</strong> (be sure to use the incognito browser). Use the search box to find your agent which will be what you named your VM. Then you can begin to explore the metrics and tests. The top section contains your system’s performance metrics.</p>
 <ul>
 <li>Use the Metrics pull down to view the different system metrics</li>
@@ -758,9 +800,7 @@
 </ul>
 <p><img alt="TE - Scheduled Test View" src="../assets/task6/scheduled-tests-view.png" /></p>
 <p>If you wanted to see all agents that are runnig the scheduled test you could just remove the agent filter (this won't work in this lab as we have only one agent). This would be a great way to figure out if an issue is effecting multiple users or start to isolate the users that are having issues as they might all be in the same building or connecting through the same router that is causing congestion, latency or loss. You can also right click on the agent to pull up the traceroute which is run every time the test is executed.</p>
-<!-- ![TE - Scheduled Test Agent View](./assets/task6/scheduled-tests-agent-view.png) -->
-
-<p>Another powerful feature is the <strong>Run Now</strong> option for when you are actively troubleshooting and need test results right away or you can make changes and run it. Feel free to test it out. </p>
+<p>Another powerful feature is the <strong>Run Now</strong> option for when you are actively troubleshooting and need test results right away or you can make changes and run it. Feel free to test it out.</p>
 <p><img alt="TE - Scheduled Run Now" src="../assets/task6/scheduled-tests-run-now.png" /></p>
 <p>Note: It might take a few minutes for the test to complete and then be processed for visualization. So you may want to kick it off and then continue on with the lab and come back to the tab in a few minutes.</p>
 <h2 id="drill-into-browser-sessions">Drill into Browser Sessions</h2>
