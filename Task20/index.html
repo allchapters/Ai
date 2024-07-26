@@ -13,10 +13,6 @@
       
       
       
-        <link rel="prev" href="../Task7a/">
-      
-      
-        <link rel="next" href="../conclusion/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +20,7 @@
     
     
       
-        <title>Task 8 - Log out and Shutdown the Lab - Collaboration - Technical Marketing Engineering</title>
+        <title>Logging Out and Ending the Lab Session - Collaboration - Technical Marketing Engineering</title>
       
     
     
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deep-dive-into-lora-and-sft" class="md-skip">
+        <a href="#logging-out-and-ending-the-lab-session" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 8  - Log out and Shutdown the Lab
+              Logging Out and Ending the Lab Session
             
           </span>
         </div>
@@ -220,12 +216,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../overview/" class="md-tabs__link">
           
   
@@ -304,10 +298,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -336,22 +328,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -362,7 +351,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lab
@@ -562,30 +551,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Task 8  - Log out and Shutdown the Lab
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Task8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -594,80 +563,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-functioning-of-lora-in-fine-tuning-llms" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Functioning of LoRA in Fine-tuning LLMs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-reminder-on-instruction-and-conversational-finetuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      A Reminder On Instruction and Conversational Finetuning
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#introduction-to-efficient-finetuning-with-parameter-efficient-fine-tuning-peft" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to Efficient Finetuning with Parameter-Efficient Fine-tuning (PEFT)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-reminder-of-the-techniques-for-finetuning-llms" class="md-nav__link">
-    <span class="md-ellipsis">
-      A Reminder of the Techniques For Finetuning LLMs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -716,38 +611,20 @@
                   
 
 
-<h1 id="deep-dive-into-lora-and-sft">Deep Dive into LoRA and SFT</h1>
-<h2 id="introduction">Introduction</h2>
-<p>In this lesson, we will dive deeper into the mechanics of LoRA, a powerful method for optimizing the fine-tuning process of Large Language Models, its practical uses in various fine-tuning tasks, and the open-source resources that simplify its implementation. We will also introduce QLoRA, a highly efficient version of LoRA. By the end of this lesson, you will have an in-depth understanding of how LoRA and QLoRA can enhance the efficiency and accessibility of fine-tuning LLMs.</p>
-<h2 id="the-functioning-of-lora-in-fine-tuning-llms">The Functioning of LoRA in Fine-tuning LLMs</h2>
-<p><img alt="Screenshot 2024-07-26 at 07.06.23.png" src=".media/lora.png" /></p>
-<p>LoRA, or Low-Rank Adaptation, is a method developed by Microsoft researchers to optimize the fine-tuning of Large Language Models. This technique tackles the issues related to the fine-tuning process, such as extensive memory demands and computational inefficiency. LoRA introduces a compact set of parameters, referred to as low-rank matrices, to store the necessary changes in the model instead of altering all parameters.</p>
-<p>Here are the key features of how LoRA operates:</p>
-<ul>
-<li><strong>Maintaining Pretrained Weights:</strong> LoRA adopts a unique strategy by preserving the pretrained weights of the model. This approach reduces the risk of catastrophic forgetting, ensuring the model maintains the valuable knowledge it gained during pretraining.</li>
-<li><strong>Efficient Rank-Decomposition:</strong> LoRA incorporates rank-decomposition weight matrices, known as update matrices, to the existing weights. These update matrices have significantly fewer parameters than the original model, making them highly memory-efficient. By training only these newly added weights, LoRA achieves a faster training process with reduced memory demands. These LoRA matrices are typically integrated into the attention layers of the original model.</li>
-</ul>
-<p>By using the low-rank decomposition approach, the memory demands for training large language models are significantly reduced. This allows running fine-tuning tasks on consumer-grade GPUs, making the benefits of LoRA available to a broader range of researchers and developers.</p>
-<h2 id="a-reminder-on-instruction-and-conversational-finetuning">A Reminder On Instruction and Conversational Finetuning</h2>
-<p>In Conversational fine tuning the model engages in a dialogue with the user, maintaining context over multiple turns.The interaction mimics a natural conversation, with the model responding in a way that feels like a human interlocutor.</p>
-<p>Instruction fine-tuning is a specific type of fine-tuning that grants precise control over a model's behavior. The objective is to train a Language Model (LLM) to interpret prompts as instructions rather than simply treating them as text to continue generating.</p>
-<h2 id="introduction-to-efficient-finetuning-with-parameter-efficient-fine-tuning-peft">Introduction to Efficient Finetuning with Parameter-Efficient Fine-tuning (PEFT)</h2>
-<p>Parameter-Efficient Fine-tuning (PEFT) approaches address the need for computational and storage efficiency in fine-tuning LLMs. Hugging Face developed the PEFT library specifically for this purpose. PEFT leverages architectures that only fine-tune a small number of additional model parameters while freezing most parameters of the pretrained LLMs, significantly reducing computational and storage costs.</p>
-<p>PEFT methods offer benefits beyond just efficiency. These methods have been proven to outperform standard fine-tuning methods, particularly in low-data situations, and provide improved generalization for out-of-domain scenarios. Furthermore, they contribute to the portability of models by generating tiny model checkpoints that require substantially less storage space compared to extensive full fine-tuning checkpoints.</p>
-<p>The PEFT library supports popular methods such as Low-Rank Adaptation (LoRA) and Prompt Tuning.</p>
-<h2 id="a-reminder-of-the-techniques-for-finetuning-llms">A Reminder of the Techniques For Finetuning LLMs</h2>
-<p>There are several techniques to make the finetuning process more efficient and effective:</p>
-<ul>
-<li><strong>Full Finetuning:</strong> This method involves adjusting all the parameters in the pretrained LLM models to adapt to a specific task. While effective, it is resource-intensive and requires extensive computational power, therefore it’s rarely used. <strong>Not in our Scope</strong></li>
-<li><strong>Low-Rank Adaptation (LoRA):</strong> LoRA is a technique that aims to adapt LLMs to specific tasks and datasets while simultaneously reducing computational resources and costs. By applying low-rank approximations to the downstream layers of LLMs, LoRA significantly reduces the number of parameters to be trained, thereby lowering the GPU memory requirements and training costs. We’ll also see QLoRA, a variant of LoRA that is more optimized and leverages quantization.</li>
-</ul>
-<p>With a focus on the number of parameters involved in finetuning, there are multiple methods, such as:</p>
-<ul>
-<li><strong>Supervised Finetuning (SFT):</strong> SFT involves doing standard supervised finetuning with a pretrained LLM on a small amount of demonstration data. This method is less resource-intensive than full finetuning but still requires significant computational power. <strong>Scope of this lab</strong></li>
-<li><strong>Reinforcement Learning from Human Feedback (RLHF):</strong> RLHF is a training methodology where models are trained to follow human feedback over multiple iterations. This method can be more effective than SFT, as it allows for continuous improvement based on human feedback. We’ll also see some alternatives to RLHF, such as Direct Preference Optimization (DPO), and Reinforcement Learning from AI Feedback (RLAIF).<strong>Not in our Scope</strong></li>
-</ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>In this lesson, we've learned that while pretraining equips LLMs with a broad understanding of language, fine-tuning is necessary to specialize these models for complex tasks. We've looked into various fine-tuning techniques, including Full Finetuning, Low-Rank Adaptation (LoRA), Supervised Finetuning (SFT), and Reinforcement Learning from Human Feedback (RLHF).</p>
+<h1 id="logging-out-and-ending-the-lab-session">Logging Out and Ending the Lab Session</h1>
+<p>Close out of the Chrome Browser
+Close out Webex
+Close the Windows VM browser tab
+Log out of the ThousandEyes and close the incognito browser</p>
+<p>In the Webex Demo Toolbox browser tab scroll to the bottom and click <strong>End</strong></p>
+<p><img alt="Lab - Webex Demo Toolbox End" src="../assets/task8/webex-demo-toolbox.png" /></p>
+<p>Click <strong>End Session</strong> in the pop up to shutdown the lab and close the tab</p>
+<p><img alt="Lab - End Session" src="../assets/task8/end-session.png" /></p>
+<!-- Lastly in the dCloud eXpo Session tab click **Logout and End Session**
+
+![Lab - End Session](./assets/task8/expo-end-session.png) -->
+
+<p>Time to wrap things and with the <a href="../conclusion/">Lab Conclusion</a>.</p>
 
 
 
