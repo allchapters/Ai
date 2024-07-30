@@ -16,7 +16,7 @@
         <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../Task2/">
+        <link rel="next" href="../Task3/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Task 1 - Lab Login and Setup - Collaboration - Technical Marketing Engineering</title>
+        <title>Task 1 - Lab Setup - Google Colab and Hugging Face - Collaboration - Technical Marketing Engineering</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-1-lab-login-and-setup" class="md-skip">
+        <a href="#pre-requisites-and-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 1  - Lab Login and Setup
+              Task 1  - Lab Setup - Google Colab and Hugging Face
             
           </span>
         </div>
@@ -333,6 +333,8 @@
       
         
       
+        
+      
     
     
       
@@ -406,15 +408,147 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Task 1  - Lab Setup - Google Colab and Hugging Face
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Task 1  - Lab Login and Setup
+    Task 1  - Lab Setup - Google Colab and Hugging Face
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#google-collab-accessing-google-collab-and-creating-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Collab- Accessing Google Collab and creating account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started With Google Colab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-gpu-and-tpu-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes: On GPU and TPU Access:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-huggingface-hub-to-share-our-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Huggingface Hub to share our Datasets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-hugging-face-hub-and-creating-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing Hugging Face Hub and creating account
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing Hugging Face Hub and creating account">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signing-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signing up
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hugging-face-api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hugging Face API Keys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-hugging-face-api-in-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing Hugging Face API in Google Colab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing Hugging Face API in Google Colab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incorporating-secrets-into-your-code-we-will-use-it-later-in-our-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incorporating Secrets into Your Code - We will use it later in our lab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-secrets-as-environment-variables-optional-step-we-will-use-it-later-in-our-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Secrets as Environment Variables - Optional Step , we will use it later in our lab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -428,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Task2/" class="md-nav__link">
+      <a href="../Task2.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -537,28 +671,7 @@
         
   
   <span class="md-ellipsis">
-    Task 7  - ThousandEyes Home Worker Dashboard (optional)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Task7a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Task 7a - Techniques for Finetuning LLMs
+    Task 7  - Understanding Fine-Tuning for Large Language Models
   </span>
   
 
@@ -579,7 +692,49 @@
         
   
   <span class="md-ellipsis">
-    Task 8  - Log out and Shutdown the Lab
+    Task 8  - Deep Dive into LoRA and SFT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Task8a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task 8a  - Configuring and Fine Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Task20/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task 20 - Log out and Shutdown the Lab
   </span>
   
 
@@ -632,48 +787,179 @@
                   
 
 
-<h1 id="task-1-lab-login-and-setup">Task 1: Lab Login and Setup</h1>
-<p>Click to access the <a href="https://demotoolbox.cat-dcloud.com/">lab</a></p>
-<!-- Click **Explore** as shown in the screenshot below to begin your adventure with Hybrid Work monitoring using the ThousandEyes Endpoint Agent -->
-
-<!-- ![dCloud eXpo Login Page](./assets/task1/dCloud-login-page.png) -->
-
-<!-- * Enter your Email Address -->
-<!-- * Click to Agree to the terms and conditions -->
-<!-- * Click Continue -->
-
-<!-- Click Launch to start the **Troubleshooting Webex Meetings with Thousandeyes - Instant Demo** lab -->
-
-<!-- ![Launch dCloud Lab](./assets/task1/launch-dCloud-lab.png) -->
-
-<p>This lab requires a set of characters which will be aligned with roles to access ThousandEyes and Webex. <strong>Optional</strong> you can also register your Webex device on the platform that can be used with your demo.</p>
-<p>Click <strong>My Characters</strong> then click <strong>Add New Character</strong> as shown in the below image. You only need to create one character for the lab.</p>
-<p><img alt="Demo Characters" src="../assets/task1/demo-characters.png" /></p>
-<p>Click <strong>Create Character</strong>.  Note (They will be randomly created so yours may not match the below screenshot. Also you have an option to modify the names as per your preferences.)</p>
-<p><img alt="Create Character" src="../assets/task1/create-character.png" /></p>
-<p><strong>Optional Step</strong> Click on the My Devices tab, select Add New Room Device, if you want your device to be available in the demo and thousandEyes agent installed on your device. Please remember its an optional step.</p>
-<p><img alt="Create Devices" src="../assets/task1/demo-devices.png" /></p>
-<p>Make sure you are on your <a href="https://demotoolbox.cat-dcloud.com/demo/demo-troubleshooting-with-webex-and-thousandeyes">demo page</a> Click <strong>Start Demo</strong> (you may have to use the back arrow to navigate back to the main overview page)</p>
-<p><img alt="Start Demo" src="../assets/task1/start-demo.png" /></p>
-<p>Next we need to provide a few details in order for the lab to be spun up.</p>
+<h1 id="pre-requisites-and-setup">Pre-Requisites and Setup</h1>
+<h2 id="google-collab-accessing-google-collab-and-creating-account">Google Collab- Accessing Google Collab and creating account</h2>
+<p>Google Colab is a free, cloud-based platform that provides a convenient environment for running notebooks. If you want to create a machine learning model but don't have a computer that can handle the workload, Google Colab is the platform for you. In our lab, we will be using Google Colab to test and run our code. However, if you have your own Python environment and prefer to run the code on your local machine, please feel free to do so.</p>
+<p>Here are some reasons why using Google Colab can be beneficial for this lab:</p>
 <ul>
-<li><strong>Audience:</strong> External</li>
-<li><strong>External Type:</strong> Trade Show</li>
-<li><strong>Tradeshow Name:</strong> Roadshow</li>
-<li><strong>Demo Session Name:</strong> Enter your name – or leave it default</li>
+<li>Free Access to GPUs and TPUs: Google Colab offers free access to powerful GPUs and TPUs, which can significantly accelerate the training and fine-tuning of machine learning models.</li>
+<li>No Setup Required: With Colab, there is no need to set up your local environment. Everything runs in the cloud, which saves time and avoids configuration issues.</li>
+<li>Easy Collaboration: Colab notebooks can be easily shared and collaborated on with team members, making it an ideal tool for collaborative projects.</li>
+<li>Integration with Google Drive: Colab integrates seamlessly with Google Drive, allowing you to save and manage your work conveniently.</li>
+<li>Pre-installed Libraries: Many popular machine learning libraries, including TensorFlow and PyTorch, come pre-installed in Colab, making it easy to start working on your projects immediately.</li>
 </ul>
-<p><img alt="Demo Details" src="../assets/task1/demo-details.png" /></p>
-<p>Click <strong>Next</strong> and then choose the character you created previously.
-(Note: this will be needed for automated session testing - AST)</p>
-<p><img alt="Demo Webex Character" src="../assets/task1/demo-webex-character.png" /></p>
-<p>Click <strong>Next</strong> and add a virtual workstation using the '+" sign. This will be used to install the ThousandEyes Endpoint Agent (EPA) which can be configured to monitor web browser sessions, automtically monitor dynamic Webex meeting network connections and run scheduled tests in the background. <strong>Note</strong> you also have an option to install the <a href="https://demotoolbox.cat-dcloud.com/demo/demo-troubleshooting-with-webex-and-thousandeyes#:~:text=DEMO%20DOWNLOADS%20AND%20LINKS">ThousandEyes agent</a> on your personal machine</p>
-<p><img alt="Demo Webex Character" src="../assets/task1/demo-vm.png" /></p>
-<p><strong>Optional Step</strong>  If you have a Webex device select your device and click <strong>Next</strong> </p>
-<p><img alt="Demo Webex Device" src="../assets/task1/add-device.png" /></p>
-<p>Click <strong>Next</strong> select your duration and Click <strong>Start Demo</strong> as shown in the below screenshot.</p>
-<p><img alt="Demo Webex Character" src="../assets/task1/start-demo2.png" /></p>
-<p>This is roughly a 45 min lab but the access duration can be upto 3 days. It will take a few minutes for the lab to spin up.
-While this is occurring proceed on to the ThousandEyes Overview content and extra background information in <a href="../Task2/">Task 2</a>.</p>
+<h2 id="getting-started-with-google-colab">Getting Started With Google Colab</h2>
+<p>To start working with Google Collaboratory Notebook you first need to log in to your Google account, then go to this link <a href="https://colab.research.google.com">Google Colab</a></p>
+<ul>
+<li>Create a new Jupyter Notebook  </li>
+</ul>
+<p><img alt="Colab_SignUP" src="../assets/task1/Colab_signup.png" /></p>
+<ul>
+<li>On creating a new notebook, it will create a Jupyter notebook with Untitled0.ipynb and save it to your google drive in a folder named Colab Notebooks. Now as it is essentially a Jupyter Notebook, all commands of Jupyter Notebooks will work here. </li>
+</ul>
+<p><img alt="Colab_Untitled" src="../assets/task1/Colab_unt.png" /></p>
+<ul>
+<li>
+<p>There might be times when we need to fine-tune models or perform specific tasks that require changing the runtime environment in Colab. Google Colab offers different runtime environments that can be selected based on your requirements:</p>
+</li>
+<li>
+<p><strong>Python Versions:</strong> You can select between different versions of Python (e.g., Python 2 or Python 3 )depending on the compatibility of the code and libraries. We will be using Python3 for our lab.</p>
+</li>
+<li>
+<p><strong>Hardware Accelerators:</strong> Colab provides access to hardware accelerators, which can be particularly useful for intensive computations. You can choose between:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>None: No hardware acceleration, suitable for basic tasks.
+
+GPU: Accelerate your computations with a Graphics Processing Unit.
+
+TPU: Use a Tensor Processing Unit for even faster performance, especially beneficial for deep learning tasks.
+</code></pre></div>
+<ul>
+<li>Change Runtime Environment: Click the “Runtime” dropdown menu at the top of the Colab interface.</li>
+</ul>
+<p><img alt="Colab_runtime" src="../assets/task1/Colab_chg.png" /></p>
+<ul>
+<li>
+<p>Select “Change runtime type”: This will open a dialog box where you can configure the runtime environment.</p>
+</li>
+<li>
+<p>Select Python Version: Choose Python 3 from the “Runtime type” dropdown menu.</p>
+</li>
+<li>
+<p>Select Hardware Accelerator: From the “Hardware accelerator” dropdown menu, choose  GPU, or TPU based on your needs.</p>
+</li>
+</ul>
+<p><img alt="Colab_savruntime" src="../assets/task1/savColab_chg.png" /></p>
+<ul>
+<li>
+<p>Save Settings: Click “Save” to apply the changes.</p>
+</li>
+<li>
+<p><strong>New Cell:</strong> Whenever you want to copy the code in Google Colab and run it, be sure to click on + Code to add a new code cell.</p>
+</li>
+</ul>
+<p><img alt="Colab_newcell" src="../assets/task8/newcell.png" /></p>
+<ul>
+<li><strong>Execute Code:</strong> Click the play button to the left of the code, or use the keyboard shortcut "Command/Ctrl+Enter" while the cell is selected.</li>
+</ul>
+<p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>
+<hr />
+<h2 id="notes-on-gpu-and-tpu-access">Notes: On GPU and TPU Access:</h2>
+<p>While Google Colab offers free access to GPUs and TPUs, there are limitations. For more consistent access to high-performance GPUs and TPUs, you might need to subscribe to Colab Pro or Colab Pro+ accounts. These paid plans provide priority access to better hardware, longer runtimes, and more memory.</p>
+<hr />
+<h2 id="using-huggingface-hub-to-share-our-datasets">Using Huggingface Hub to share our Datasets</h2>
+<p>In this lab, we will be utilizing the Hugging Face Hub to load our custom datasets. Hugging Face provides an extensive repository of datasets that can be easily integrated into your machine learning workflows. For the purposes of this lab, we will demonstrate how to access/upload and use our custom datasets effectively.</p>
+<p>However, when fine-tuning models in your own work environment, especially if you are using private data, there are important considerations to keep in mind:</p>
+<ul>
+<li><strong>Private Datastores:</strong> If you are working with proprietary or sensitive data, it is crucial to use your organization's secure datastores. Ensure that all data handling complies with your organization's data privacy policies and regulations.</li>
+<li><strong>Hugging Face Datasets:</strong> If you prefer to use Hugging Face for dataset storage and management, make sure to mark your datasets as private. This setting ensures that your data cannot be accessed by anyone outside your organization, maintaining the confidentiality and integrity of your information. Please refer to Huggingface documentation for more info.</li>
+</ul>
+<p><strong>Few more Condsideration</strong></p>
+<ul>
+<li><strong>Upload Dataset:</strong> When uploading your dataset to Hugging Face, choose the appropriate privacy settings. You can set your dataset to private during the upload process.</li>
+<li><strong>Check Permissions:</strong> Regularly review and manage the permissions of your datasets to ensure they remain private and secure.</li>
+<li><strong>Collaborator Access:</strong> If you need to share the dataset with specific team members, use the Hugging Face interface to grant access to trusted collaborators only.</li>
+</ul>
+<p>By following these guidelines, you can ensure that your data remains secure while leveraging the powerful tools and resources provided by Hugging Face. This approach not only enhances your workflow efficiency but also upholds the best practices in data security and privacy.</p>
+<h2 id="accessing-hugging-face-hub-and-creating-account">Accessing Hugging Face Hub and creating account</h2>
+<p>Hugging Face can be accessed by browsing to <a href="huggingface.co">huggingface.co</a></p>
+<p><img alt="HLF" src="../assets/task8a/HF.png" /></p>
+<h3 id="signing-up">Signing up</h3>
+<ul>
+<li>Browse to Hugging Face home page and click on Sign up. Follow the instructions as per below images</li>
+</ul>
+<p><img alt="SignUP" src="../assets/task8a/signup.png" /></p>
+<p><img alt="Prof" src="../assets/task8a/HFProfile.png" /></p>
+<ul>
+<li>Please check your email address for a confirmation link and click to verify your account </li>
+</ul>
+<p><img alt="Verify" src="../assets/task8a/HFverify.png" /></p>
+<ul>
+<li>Organization Creation (Optional): While you can upload datasets and fine-tune models directly on Hugging Face without creating an organization, you have the option to create an organization on Hugging Face. This can be particularly useful for team collaboration, as it allows you to upload all your datasets and models in one centralized location.</li>
+</ul>
+<p><img alt="Optional" src="../assets/task8a/HFOptional.png" /></p>
+<ul>
+<li>At this stage, you will see no models or datasets created under your account.</li>
+</ul>
+<p><img alt="Mo_DS" src="../assets/task8a/HFNoMD.png" /></p>
+<ul>
+<li>Access Your Models and Datasets: The same can be accessed by clicking your profile picture on the top right corner of the Hugging Face website. This will take you to your personal dashboard where you can view and manage your models and datasets.</li>
+</ul>
+<p><img alt="Mo_DS1" src="../assets/task8a/HFNoMD1.png" /></p>
+<h3 id="hugging-face-api-keys">Hugging Face API Keys</h3>
+<p><strong>Create an API Key:</strong> As we will be uploading our datasets to the Hugging Face Hub, we need to create an API key for our account. This API key will be used to authenticate and interact with the Hugging Face services programmatically.</p>
+<p>you can browse to <a href="https://huggingface.co/settings/token">huggingface API Key</a></p>
+<p>or </p>
+<p>Click on your profile picture &gt; Settings &gt; Access Tokens</p>
+<p><img alt="HF_API" src="../assets/task8a/HF_APi.png" /></p>
+<p><img alt="HF_WT" src="../assets/task8a/writetoken.png" /></p>
+<p>Under the "Access Tokens" section, click on "Create new token." You will see options to select the token type and provide a token name. For example, you might name your token "Webexone" and select the approperiate permissions.  </p>
+<ul>
+<li>
+<p>fine-grained: tokens with this role can be used to provide fine-grained access to specific resources, such as a specific model or models in a specific organization. This type of token is useful in production environments, as you can use your own token without sharing access to all your resources.</p>
+</li>
+<li>
+<p>read: tokens with this role can only be used to provide read access to repositories you could read. That includes public and private repositories that you, or an organization you’re a member of, own. Use this role if you only need to read content from the Hugging Face Hub (e.g. when downloading private models or doing inference).</p>
+</li>
+<li>
+<p>write: tokens with this role additionally grant write access to the repositories you have write access to. Use this token if you need to create or push content to a repository (e.g., when training a model or modifying a model card).</p>
+</li>
+</ul>
+<p>As we have a lab envoirnment we will be using the "Write" permission. This token will have read and write access to all your resources and can make calls to inference API on your behalf, as shown in the image below.</p>
+<p><img alt="HF_CT" src="../assets/task8a/createtoken.png" /></p>
+<p><strong>Save and Secure the Token:</strong> Once the token is generated, save it securely. This token will be required for accessing and managing your datasets via the API. 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</p>
+<p><img alt="HF_GT" src="../assets/task8a/gentoken.png" /></p>
+<h2 id="accessing-hugging-face-api-in-google-colab">Accessing Hugging Face API in Google Colab</h2>
+<ul>
+<li>Open the Google Colab notebook and navigate to the new “Secrets” section in the sidebar.</li>
+</ul>
+<p><img alt="HF_GT_sec" src="../assets/task8a/gensec.png" /></p>
+<ul>
+<li>
+<p>Click on “Add a new secret.” Enter the name example: HF_TOKEN and value of the secret. Note: The name is permanent once set. </p>
+</li>
+<li>
+<p>The list of secrets is global across all your notebooks.</p>
+</li>
+<li>
+<p>Use the “Notebook access” toggle to grant or revoke access to a secret for each notebook.</p>
+</li>
+</ul>
+<p><img alt="HF_GT_sec_created" src="../assets/task8a/addsec.png" /></p>
+<p><span style="color: RED;"> Optional Steps below </span> </p>
+<h3 id="incorporating-secrets-into-your-code-we-will-use-it-later-in-our-lab">Incorporating Secrets into Your Code - We will use it later in our lab</h3>
+<ul>
+<li>To use a secret in your notebook, use the following code snippet</li>
+</ul>
+<div class="highlight"><pre><span></span><code>from google.colab import userdata
+my_secret_key = userdata.get(&#39;HF_TOKEN&#39;)
+</code></pre></div>
+<ul>
+<li>Replace <name_of_your_secret> with your secret's name.</li>
+</ul>
+<h3 id="using-secrets-as-environment-variables-optional-step-we-will-use-it-later-in-our-lab">Using Secrets as Environment Variables -  Optional Step , we will use it later in our lab</h3>
+<ul>
+<li>For Python modules requiring API keys as environment variables, use the below snippet:</li>
+</ul>
+<div class="highlight"><pre><span></span><code># Import Colab Secrets userdata module
+
+from google.colab import userdata
+import os
+
+# Set other API keys similarly
+os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
+</code></pre></div>
 
 
 
