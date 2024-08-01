@@ -820,6 +820,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#load-the-pretrained-model-from-hugging-face-and-use-for-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load the pretrained model from Hugging Face and use for inference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#troubleshooting-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting - Best Practices
@@ -2116,6 +2125,110 @@ You are a helpful AI assistant for Collaboration</li>
 </code></pre></div></td></tr></table></div>
 <p><img alt="Colab_nloadmodel" src="../assets/task8a/load_hf.png" /></p>
 <p><img alt="Colab_ModeUpl" src="../assets/task8a/mod_hf.png" /></p>
+<h2 id="load-the-pretrained-model-from-hugging-face-and-use-for-inference">Load the  pretrained model from Hugging Face and use for inference</h2>
+<ul>
+<li>The Model Hub simplifies the process of selecting the appropriate model. You can now use this model for inference by loading it like any other Llama 2 model from the Hub. Let's explore how to use the model we've uploaded.</li>
+</ul>
+<p><span class="colour" style="color:purple"> Step 15:  login into Hugging Face hub </span></p>
+<p><img alt="Colab_ModeUpl_inf" src="../assets/task8a/mod_lo_1.png" /></p>
+<ul>
+<li>We select the WebexOne/WebexOneDemo-Llama-2-7b-chat-finetune model.</li>
+</ul>
+<p><img alt="Colab_ModeUpl_inf1" src="../assets/task8a/mod_lo_11.png" /></p>
+<ul>
+<li>Lets click on Transformer so we can instantiate it using the pipeline() function:</li>
+</ul>
+<p><img alt="Colab_ModeUpl_inf12" src="../assets/task8a/mod_lo_112.png" /></p>
+<p><span class="colour" style="color:purple"> Step 16: Copy the code for transformers </span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span><span class="p">,</span> <span class="n">AutoModelForCausalLM</span><span class="p">,</span> <span class="n">AutoTokenizer</span>
+<span class="c1"># Load the model and tokenizer</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="s2">&quot;WebexOne/WebexOneDemo-Llama-2-7b-chat-finetune&quot;</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="Colab_rep786" src="../assets/task8a/downl.png" /></p>
+<p>The process involves downloading the necessary files for the model and tokenizer from the Hub to ensure the model and tokenizer work correctly.  Followed by loading them into memory so they can be used for generating text. When downloading a model, the following components are typically fetched:</p>
+<ul>
+<li>
+<p><strong>Model Configuration:</strong> Defines the architecture and hyperparameters (config.json).</p>
+</li>
+<li>
+<p><strong>Weight Shards:</strong> Large binary files containing the model's trained parameters (pytorch_model-00001-of-00002.bin, pytorch_model-00002-of-00002.bin).</p>
+</li>
+<li>
+<p><strong>Index Files:</strong> Help manage and load weight shards (pytorch_model.bin.index.json).</p>
+</li>
+<li>
+<p><strong>Generation Configuration:</strong> Specifies settings for text generation tasks (generation_config.json).</p>
+</li>
+<li>
+<p><strong>Tokenizer Files:</strong> Include configuration, the tokenizer model, and mappings for converting text to tokens (tokenizer_config.json, tokenizer.model, tokenizer.json).</p>
+</li>
+<li>
+<p><strong>Special Tokens:</strong> Ensures special tokens are correctly handled (added_tokens.json, special_tokens_map.json).</p>
+</li>
+</ul>
+<p><span class="colour" style="color:purple"> Step 17: Instantiate using the pipeline() function </span></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set up the text generation pipeline</span>
+<span class="n">pipe</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span>
+    <span class="s2">&quot;text-generation&quot;</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+    <span class="n">tokenizer</span><span class="o">=</span><span class="n">tokenizer</span><span class="p">,</span>
+    <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+    <span class="n">pad_token_id</span><span class="o">=</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">eos_token_id</span>  <span class="c1"># Ensure the padding token is correctly set</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<span class="colour" style="color:purple"> Step 18: Example 1: </span></p>
+<p><span class="colour" style="color:blue"> Note : </span> Lets take one question from our dataset.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Define the prompt</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;What is the Private Network Connect (PNC) solution?&quot;</span>
+
+<span class="c1"># Run the text generation pipeline with the prompt</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">pipe</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&lt;s&gt;[INST] </span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="s2"> [/INST]&quot;</span><span class="p">)</span>
+
+<span class="c1"># Print the generated text</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;generated_text&#39;</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<p><span class="colour" style="color:Red"> Output: </span></p>
+<p><img alt="Colab_rep1" src="../assets/task8a/rep1.png" /></p>
+<p><span class="colour" style="color:purple"> Step 19: Example 2: </span></p>
+<p><span class="colour" style="color:blue"> Note : </span> Lets take one question from our dataset.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Define the prompt</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;What happens if ICE negotiation fails in Webex Calling?&quot;</span>
+
+<span class="c1"># Run the text generation pipeline with the prompt</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">pipe</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&lt;s&gt;[INST] </span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="s2"> [/INST]&quot;</span><span class="p">)</span>
+
+<span class="c1"># Print the generated text</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;generated_text&#39;</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<p><span class="colour" style="color:Red"> Output: </span></p>
+<p><img alt="Colab_rep1" src="../assets/task8a/rep2.png" /></p>
 <h2 id="troubleshooting-best-practices">Troubleshooting - Best Practices</h2>
 <ul>
 <li>Challenges are an inherent part of model training. Let's discuss some common issues and their resolutions.</li>
