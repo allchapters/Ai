@@ -16,7 +16,7 @@
         <link rel="prev" href="../Task8/">
       
       
-        <link rel="next" href="../Task20/">
+        <link rel="next" href="../Task8b/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Task 8a - Configuring and Fine Tuning - Collaboration - Technical Marketing Engineering</title>
+        <title>Task 8a - Configuring and Fine Tuning - Using llama2 - Collaboration - Technical Marketing Engineering</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fine-tuning-high-level-diagram" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 8a  - Configuring and Fine Tuning
+              Task 8a - Configuring and Fine Tuning - Using llama2
             
           </span>
         </div>
@@ -310,6 +310,12 @@
   
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -550,7 +556,7 @@
         
   
   <span class="md-ellipsis">
-    Task 8  - Deep Dive into LoRA and SFT
+    Task 8  - Fine Tuning - Deep Dive into LoRA and SFT
   </span>
   
 
@@ -573,14 +579,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Task 8a  - Configuring and Fine Tuning
+    Task 8a - Configuring and Fine Tuning - Using llama2
   </span>
   
 
@@ -591,7 +595,7 @@
         
   
   <span class="md-ellipsis">
-    Task 8a  - Configuring and Fine Tuning
+    Task 8a - Configuring and Fine Tuning - Using llama2
   </span>
   
 
@@ -602,8 +606,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -631,6 +633,16 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#usecase-1-fine-tuning-using-llama2" class="md-nav__link">
+    <span class="md-ellipsis">
+      UseCase 1 - Fine Tuning Using Llama2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UseCase 1 - Fine Tuning Using Llama2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#datasets-creation" class="md-nav__link">
     <span class="md-ellipsis">
       Datasets Creation
@@ -638,8 +650,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#custom-datasets" class="md-nav__link">
     <span class="md-ellipsis">
       Custom datasets
@@ -648,15 +660,6 @@
   
     <nav class="md-nav" aria-label="Custom datasets">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-format-for-llama3-instruct" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Format for Llama3 - Instruct
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#example-format-for-llama2" class="md-nav__link">
@@ -671,8 +674,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#datasets-creation_1" class="md-nav__link">
     <span class="md-ellipsis">
       Datasets Creation
@@ -713,16 +716,15 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#fine-tuning-llama2-7b-model" class="md-nav__link">
     <span class="md-ellipsis">
       Fine-tuning Llama2-7B Model
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Fine-tuning Llama2-7B Model">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#background-on-fine-tuning" class="md-nav__link">
@@ -731,7 +733,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Background on Fine-Tuning">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#guide-to-fine-tuning-llama-2" class="md-nav__link">
@@ -823,12 +826,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#load-the-pretrained-model-from-hugging-face-and-use-for-inference" class="md-nav__link">
     <span class="md-ellipsis">
       Load the pretrained model from Hugging Face and use for inference
@@ -836,17 +834,23 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#fine-tuning-example-2" class="md-nav__link">
     <span class="md-ellipsis">
       Fine Tuning - Example 2
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Fine Tuning - Example 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#troubleshooting-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting - Best Practices
@@ -892,12 +896,13 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#conclusions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusions
-    </span>
-  </a>
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -906,10 +911,82 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusions
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Task8b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task 8b - Configuring and Fine Tuning - Using llama3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Task8c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task 8c - Configuring and Fine Tuning - Using ChatGPT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Task8d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task 8d - Model Merging
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -979,7 +1056,8 @@
                   
 
 
-<h1 id="fine-tuning-high-level-diagram">Fine Tuning - High Level Diagram</h1>
+  <h1>Task 8a - Configuring and Fine Tuning - Using llama2</h1>
+
 <p><img alt="HLF" src="../assets/task8a/hlf.png" /></p>
 <h2 id="introduction">Introduction</h2>
 <p>This diagram represents the workflow of training and using a LLM. Here’s a step-by-step explanation:</p>
@@ -993,40 +1071,26 @@
 </ul>
 <h2 id="pre-requisites">Pre-requisites</h2>
 <p><img alt="prereq" src="../assets/task8a/prereq.png" /></p>
-<h2 id="datasets-creation">Datasets Creation</h2>
+<h2 id="usecase-1-fine-tuning-using-llama2">UseCase 1 - Fine Tuning Using Llama2</h2>
+<h3 id="datasets-creation">Datasets Creation</h3>
 <p>There are several ways to create datasets:</p>
 <ul>
 <li>Using existing open source datasets e.g The Pile, Common Crawl , Wiki or even HuggingFace</li>
 <li>Using LLM to create synthetic datasets faster and can be less expensive</li>
 <li>Using your own custom datasets e.t.c &lt;-- Focus for our lab</li>
 </ul>
-<h2 id="custom-datasets">Custom datasets</h2>
-<p>As we will be using and fine tuning Llam2 and Llam3 base models we need to convert them(datasets) into a uniform format compatible with training regimens.</p>
-<h3 id="example-format-for-llama3-instruct">Example Format for Llama3 - Instruct</h3>
-<div class="highlight"><span class="filename">Sample Format - Dont Copy - reference ONLY</span><pre><span></span><code>&lt;|begin_of_text|&gt;&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
-
-You are a helpful AI assistant for  Collaboration&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
-
-What can you help me with?&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
-</code></pre></div>
-<ul>
-<li><strong>&lt;|begin_of_text|&gt;:</strong> Specifies the start of the prompt</li>
-<li><strong>&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;:</strong> Specifies the role for the following message, i.e. “system”
-You are a helpful AI assistant for Collaboration</li>
-<li><strong>&lt;|eot_id|&gt;:</strong> Specifies the end of the input message</li>
-<li><strong>&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;:</strong> Specifies the role for the following message i.e. “user” What can you help me with?: The user message</li>
-<li><strong>&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;:</strong> Ends with the assistant header, to prompt the model to start generation.</li>
-</ul>
-<h3 id="example-format-for-llama2">Example Format for Llama2</h3>
+<h3 id="custom-datasets">Custom datasets</h3>
+<p>As we will be using and fine tuning Llam2  we need to convert them(datasets) into a uniform format compatible with training regimens. <a href="https://llama.meta.com/docs/model-cards-and-prompt-formats/other-models#meta-llama-2">More Info at</a></p>
+<h4 id="example-format-for-llama2">Example Format for Llama2</h4>
 <div class="highlight"><span class="filename">Sample Format - Dont Copy - reference ONLY</span><pre><span></span><code>&lt;s&gt;[INST] &lt;&lt;SYS&gt;&gt;
 {{ system_prompt }}
 &lt;&lt;/SYS&gt;&gt;
 {{ user_message }} [/INST] Model answer &lt;/s&gt;
 </code></pre></div>
-<h2 id="datasets-creation_1">Datasets Creation</h2>
+<h3 id="datasets-creation_1">Datasets Creation</h3>
 <p>After defining the problem and confirming that LLMs are a suitable solution, the next step is to prepare a dataset for fine-tuning. If you already have a clean, high-quality dataset, that's great. However, let's assume you don't have one readily available.</p>
 <p>In my scenario, I was able to generate synthetic dataset from the <a href="https://www.cisco.com/c/dam/en/us/td/docs/solutions/CVD/Collaboration/hybrid/AltDesigns/PA-WbxCall.pdf">Cisco Preferred Architecture for Webex Calling</a>.</p>
-<h3 id="creating-a-dataset-from-a-pdf-summary">Creating a Dataset from a PDF - Summary</h3>
+<h4 id="creating-a-dataset-from-a-pdf-summary">Creating a Dataset from a PDF - Summary</h4>
 <p>To delve into the intricacies of dataset creation, let's explore a scenario where we aim to train an AI to replicate our preferred architecture. In this lab, we will transform a PDF document into a dataset. Specifically, we will use a PDF about Webex Calling as our source material.</p>
 <p>Our goal is to convert the PDF into a dynamic and engaging dialogue, similar to an interview format. This will allow us to create a more interactive and informative dataset.</p>
 <p><span class="colour" style="color:orange">Steps Involved</span></p>
@@ -1047,7 +1111,7 @@ You are a helpful AI assistant for Collaboration</li>
 <p>By following these steps, we will convert the static information in the PDF into a dynamic and interactive dataset, facilitating a deeper understanding and more engaging learning experience. You can find the complete code that worked for me <a href="https://github.com/geronimi73/qlora-minimal/blob/main/book-to-QA.py">here</a>.</p>
 <p>Here's an example of the resulting file. Please note that for this lab demonstration, only a few data points were converted from the PDF.</p>
 <p><span class="colour" style="color:red">Note: We will use the following file to create and eventually train downstream tasks for our LLM, specifically the Llama2 model.</span></p>
-<h3 id="sample-file">Sample File</h3>
+<h4 id="sample-file">Sample File</h4>
 <div class="highlight"><span class="filename">example.txt</span><pre><span></span><code><span class="err">huma</span><span class="kc">n</span><span class="err">_</span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">Wha</span><span class="kc">t</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">solu</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">provided</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">Webex</span><span class="w"> </span><span class="err">Calli</span><span class="kc">n</span><span class="err">g?</span><span class="w"> </span><span class="err">assis</span><span class="kc">tant</span><span class="err">_</span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">Webex</span><span class="w"> </span><span class="err">Calli</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">provides</span><span class="w"> </span><span class="err">e</span><span class="kc">nter</span><span class="err">prise</span><span class="mi">-</span><span class="err">grade</span><span class="w"> </span><span class="err">PBX</span><span class="w"> </span><span class="kc">features</span><span class="p">,</span><span class="w"> </span><span class="kc">fun</span><span class="err">c</span><span class="kc">t</span><span class="err">io</span><span class="kc">nal</span><span class="err">i</span><span class="kc">t</span><span class="err">y</span><span class="p">,</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">per</span><span class="kc">f</span><span class="err">orma</span><span class="kc">n</span><span class="err">ce.</span>
 <span class="err">huma</span><span class="kc">n</span><span class="err">_</span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">Wha</span><span class="kc">t</span><span class="w"> </span><span class="err">op</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">available</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="err">PSTN</span><span class="w"> </span><span class="err">access</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="err">Webex</span><span class="w"> </span><span class="err">Calli</span><span class="kc">n</span><span class="err">g?</span><span class="w"> </span><span class="err">assis</span><span class="kc">tant</span><span class="err">_</span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">The</span><span class="w"> </span><span class="err">op</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">Cisco</span><span class="w"> </span><span class="err">Calli</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">Pla</span><span class="kc">ns</span><span class="p">,</span><span class="w"> </span><span class="err">Cloud</span><span class="w"> </span><span class="err">Co</span><span class="kc">nne</span><span class="err">c</span><span class="kc">te</span><span class="err">d</span><span class="w"> </span><span class="err">PSTN</span><span class="p">,</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">Premises</span><span class="mi">-</span><span class="err">based</span><span class="w"> </span><span class="err">PSTN.</span>
 <span class="err">huma</span><span class="kc">n</span><span class="err">_</span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">Wha</span><span class="kc">t</span><span class="w"> </span><span class="kc">t</span><span class="err">ype</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">devices</span><span class="w"> </span><span class="err">does</span><span class="w"> </span><span class="err">Webex</span><span class="w"> </span><span class="err">Calli</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">suppor</span><span class="kc">t</span><span class="err">?</span><span class="w"> </span><span class="err">assis</span><span class="kc">tant</span><span class="err">_</span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">Webex</span><span class="w"> </span><span class="err">Calli</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">suppor</span><span class="kc">ts</span><span class="w"> </span><span class="err">Cisco</span><span class="w"> </span><span class="err">MPP</span><span class="w"> </span><span class="err">Series</span><span class="w"> </span><span class="err">IP</span><span class="w"> </span><span class="err">Pho</span><span class="kc">nes</span><span class="p">,</span><span class="w"> </span><span class="err">Webex</span><span class="w"> </span><span class="err">Devices</span><span class="p">,</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">varie</span><span class="kc">t</span><span class="err">y</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="kc">t</span><span class="err">hird</span><span class="mi">-</span><span class="err">par</span><span class="kc">t</span><span class="err">y</span><span class="w"> </span><span class="err">devices.</span>
@@ -1213,7 +1277,7 @@ You are a helpful AI assistant for Collaboration</li>
 <p style="color: blue;">Save the file as example.txt as we will be using it in the next step</p>
 
 <p><strong><em>To finalize, we again convert the above dataset (example.txt) into Llama2 format. Lets look into those steps</em></strong></p>
-<h3 id="convert-dataset-into-llama2-format-and-upload-on-hugging-face">Convert dataset into Llama2 format and upload on Hugging Face</h3>
+<h4 id="convert-dataset-into-llama2-format-and-upload-on-hugging-face">Convert dataset into Llama2 format and upload on Hugging Face</h4>
 <ul>
 <li>Open Google Colab and create a new notebook. Click on "File" &gt; "New notebook" .Go to the "Secrets" section in the sidebar and ensure the Huuging Face toggle is enabled. Please refer to the <a href="../Task1/">following section</a> to create Google Colab account.</li>
 </ul>
@@ -1234,9 +1298,9 @@ You are a helpful AI assistant for Collaboration</li>
 <li>Choose your example.txt file and click Open</li>
 </ul>
 <p><img alt="HL_file_uplo" src="../assets/task8a/file_uplod.png" /></p>
-<p><span class="colour" style="color:orange">Note </span> Ensure that your files are saved elsewhere. This runtime's files will be deleted when this runtime is terminated.</p>
+<p><span class="colour" style="color:orange">Note </span> Ensure that your files are saved elsewhere. This runtime's files will be deleted when it is terminated.</p>
 <p><strong><em>Summary: So far, we have our raw dataset as example.txt, enabled Hugging Face in our Colab notebook, and uploaded the data into our folder. we will be convertig the dataset (example.txt) into Llama2 format and uploading on Hugging Face so it can be used for our fine tuning in the upcoming steps</em></strong></p>
-<p><span style="color: purple;"> We will start by installing specific Python packages. </span></p>
+<p><span style="color: green;"> We will start by installing specific Python packages. </span></p>
 <div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">datasets</span> <span class="n">huggingface_hub</span> <span class="n">google</span><span class="o">-</span><span class="n">colab</span>
 </code></pre></div>
 <p><img alt="HL_Output1" src="../assets/task8a/output_pip.png" /></p>
@@ -1254,7 +1318,7 @@ You are a helpful AI assistant for Collaboration</li>
 <p>google-colab: This package includes utilities specifically designed for Google Colab, a  Jupyter notebook environment that runs in the cloud.</p>
 </li>
 </ul>
-<p><span style="color: purple;"> Step 1: Import the required modules </span></p>
+<p><span style="color: green;"> Step 1: Import the required modules </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1279,7 +1343,7 @@ You are a helpful AI assistant for Collaboration</li>
 <p>from google.colab import userdata: imports the userdata module from the google.colab library. The google.colab library contains utilities specifically designed for use with Google Colab. </p>
 </li>
 </ul>
-<p><span style="color: purple;">Step 2:  Retrieve Hugging Face token from Colab secrets </span></p>
+<p><span style="color: green;">Step 2:  Retrieve Hugging Face token from Colab secrets </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1297,7 +1361,7 @@ You are a helpful AI assistant for Collaboration</li>
 <p>Login to Hugging Face: This line logs into Hugging Face using the retrieved token. Logging in allows our code to interact with the Hugging Face Hub, and allow us to upload datasets and models.</p>
 </li>
 </ul>
-<p><span style="color: purple;"> Step 3: Define a fuction that will help us convert our example.txt into Llama2 format </span></p>
+<p><span style="color: green;"> Step 3: Define a fuction that will help us convert our example.txt into Llama2 format </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1347,17 +1411,17 @@ You are a helpful AI assistant for Collaboration</li>
 <p>yield {"reformatted_segment": reformatted_segment}: the yield statement  return a dictionary containing the reformatted_segment. The yield statement makes this function a generator, allowing it to produce a sequence of values over time, rather than returning them all at once.</p>
 </li>
 </ul>
-<p><span style="color: purple;"> Step 4: Define the path for the file that we want to convert </span></p>
+<p><span style="color: green;"> Step 4: Define the path for the file that we want to convert </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Path to your data file</span>
 <span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/content/data/example.txt&#39;</span>
 </code></pre></div></td></tr></table></div>
 <p><span style="color: red;"> Note: How to get path for your file in Google COlab </span></p>
 <ul>
-<li>RIght click on your file (example.txt) and select Copy Path</li>
+<li>Right click on your file (example.txt) and select Copy Path</li>
 </ul>
 <p><img alt="HL_Output3" src="../assets/task8a/get_path.png" /></p>
-<p><span style="color: purple;"> Step 5: Calling data_generator function </span></p>
+<p><span style="color: green;"> Step 5: Calling data_generator function </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create the dataset from the generator</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_generator</span><span class="p">(</span><span class="n">data_generator</span><span class="p">,</span> <span class="n">gen_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;file_path&quot;</span><span class="p">:</span> <span class="n">file_path</span><span class="p">})</span>
@@ -1365,19 +1429,19 @@ You are a helpful AI assistant for Collaboration</li>
 <ul>
 <li>Creating a Dataset object by passing the file (example.txt) to the data_generator function</li>
 </ul>
-<p><span style="color: purple;"> Step 6: Verify if our data formatted </span></p>
+<p><span style="color: green;"> Step 6: Verify if our data formatted </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Access the dataset</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="HL_Output4" src="../assets/task8a/ds_format.png" /></p>
-<p><span style="color: purple;"> Step 7: Verify values in our varaiable ds </span></p>
+<p><span style="color: green;"> Step 7: Verify values in our varaiable ds </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Access the dataset</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="HL_Output5" src="../assets/task8a/ds_all.png" /></p>
-<p><span style="color: purple;"> Step 8: Consolidates all the data and create new Dataset </span></p>
+<p><span style="color: green;"> Step 8: Consolidates all the data and create new Dataset </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1407,7 +1471,7 @@ You are a helpful AI assistant for Collaboration</li>
 </li>
 </ul>
 <p><img alt="HL_Output6" src="../assets/task8a/reformat_st.png" /></p>
-<p><span style="color: purple;"> Step 9: Push our new Dataset to Hugging Face Hub so it can be processed and used for fine tuning </span></p>
+<p><span style="color: green;"> Step 9: Push our new Dataset to Hugging Face Hub so it can be processed and used for fine tuning </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Push the dataset to the Hub</span>
 <span class="n">reformatted_ds</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="s2">&quot;WebexOne/test&quot;</span><span class="p">)</span>
@@ -1512,7 +1576,7 @@ You are a helpful AI assistant for Collaboration</li>
 <span class="c1"># Push the dataset to the Hub</span>
 <span class="n">reformatted_ds</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="s2">&quot;WebexOne/test&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="fine-tuning-llama2-7b-model">Fine-tuning Llama2-7B Model</h2>
+<h3 id="fine-tuning-llama2-7b-model">Fine-tuning Llama2-7B Model</h3>
 <p><span class="colour" style="color:RED"> NOTE: If you’re serious about fine-tuning models, using a script instead of a notebook is recommended. You can easily rent GPUs on Lambda Labs, Runpod, Vast.ai e.t.c </span></p>
 <h3 id="background-on-fine-tuning">Background on Fine-Tuning</h3>
 <p><img alt="Finetuning" src="../assets/task8a/bg-llm.png" /></p>
@@ -1534,11 +1598,11 @@ You are a helpful AI assistant for Collaboration</li>
 &lt;&lt;/SYS&gt;&gt;
 {{ user_message }} [/INST] Model answer &lt;/s&gt;</code></p>
 <p><span class="colour" style="color:red">Note:</span> For this tutorial, we will use a preformatted dataset (WebexOne/test) that was uploaded earlier on Hugging Face. We will apply Supervised Fine-Tuning (SFT) to a base model.</p>
-<h3 id="guide-to-fine-tuning-llama-2">Guide to Fine-Tuning Llama 2</h3>
+<h4 id="guide-to-fine-tuning-llama-2">Guide to Fine-Tuning Llama 2</h4>
 <p>In this section, we will learn about all the steps required to fine-tune the Llama 2 model with 7 billion parameters on a T4 GPU with high RAM using Google Colab.</p>
 <p>The Colab T4 GPU has a limited 16 GB of VRAM. That is barely enough to store Llama 2–7b's weights (7b × 2 bytes = 14 GB in FP16), which means full fine-tuning is not possible, and we need to use parameter-efficient fine-tuning techniques like LoRA and QLoRA.</p>
 <p>We will use the QLoRA technique to fine-tune the model in 4-bit precision and optimize VRAM usage. For that, we will use the Hugging Face ecosystem of LLM libraries: <span class="colour" style="color:blue">  transformers, accelerate, peft, trl, and bitsandbytes.</span></p>
-<h3 id="base-models-for-fine-tuning">Base models for Fine Tuning</h3>
+<h4 id="base-models-for-fine-tuning">Base models for Fine Tuning</h4>
 <ul>
 <li>We have the option to fine-tune the Llama2 Base model <span class="colour" style="color:blue">(meta-llama/Llama-2-7b-hf)</span>, which can be found in the Hugging Face <a href="https://huggingface.co/meta-llama/Llama-2-7b-hf">repository</a></li>
 </ul>
@@ -1557,7 +1621,7 @@ You are a helpful AI assistant for Collaboration</li>
 <ul>
 <li>Lets continue</li>
 </ul>
-<h3 id="logging-into-google-collab">Logging into Google Collab</h3>
+<h4 id="logging-into-google-collab">Logging into Google Collab</h4>
 <ul>
 <li>You can either use the existing notebook from above and add a new code cell to start fine-tuning, or create a new Jupyter Notebook.</li>
 </ul>
@@ -1582,14 +1646,14 @@ You are a helpful AI assistant for Collaboration</li>
 <p><img alt="Colab_newcell" src="../assets/task8/newcell.png" /></p>
 <p><span class="colour" style="color:red">Reminder: </span>Click the play button to the left of the code, or use the keyboard shortcut "Command/Ctrl+Enter" while the cell is selected.</p>
 <p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>
-<h3 id="set-up-envoirnment">Set up Envoirnment</h3>
-<p><span class="colour" style="color:purple">Step 1: Check the status of Nvidia chipset. OPTIONAL STEP </span></p>
+<h4 id="set-up-envoirnment">Set up Envoirnment</h4>
+<p><span class="colour" style="color:green">Step 1: Check the status of Nvidia chipset. OPTIONAL STEP </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">nvidia</span><span class="o">-</span><span class="n">smi</span> 
 </code></pre></div></td></tr></table></div>
 <p><span class="colour" style="color:red">Note: Remember to execute each cell individually </span></p>
 <p><img alt="Nvidia-Info" src="../assets/task8a/n-info.png" /></p>
 <p><span class="colour" style="color:red">Note: </span> nvidia-smi stands for NVIDIA System Management Interface. It is a command-line utility that provides information about NVIDIA GPUs installed on the system. This tool is part of the NVIDIA GPU driver package. By using !nvidia-smi, you can quickly check the status and health of your NVIDIA GPUs from within a Jupyter Notebook, making it a useful tool for machine learning and data science workflows.</p>
-<p><span class="colour" style="color:purple">Step 2: Install the required libraries. </span></p>
+<p><span class="colour" style="color:green">Step 2: Install the required libraries. </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="n">accelerate</span><span class="o">==</span><span class="mf">0.21.0</span> <span class="n">peft</span><span class="o">==</span><span class="mf">0.4.0</span> <span class="n">bitsandbytes</span><span class="o">==</span><span class="mf">0.40.2</span> <span class="n">transformers</span><span class="o">==</span><span class="mf">4.31.0</span> <span class="n">trl</span><span class="o">==</span><span class="mf">0.4.7</span>
 </code></pre></div></td></tr></table></div>
 <p><span class="colour" style="color:red">Note: Remember to execute each cell individually </span></p>
@@ -1614,7 +1678,7 @@ You are a helpful AI assistant for Collaboration</li>
 <p>trl==0.4.7:  Transformer Reinforcement Learning. It is a library for applying reinforcement learning techniques to transformer models. </p>
 </li>
 </ul>
-<p><span class="colour" style="color:purple">Step 3: Load the necessary modules </span></p>
+<p><span class="colour" style="color:green">Step 3: Load the necessary modules </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1676,7 +1740,7 @@ You are a helpful AI assistant for Collaboration</li>
 <p>trl: Stands for Transformer Reinforcement Learning, a library that includes tools for fine-tuning and training models</p>
 </li>
 </ul>
-<p><span class="colour" style="color:purple">Step 4: Retrieve Hugging Face token and set as an environment variable. </span></p>
+<p><span class="colour" style="color:green">Step 4: Retrieve Hugging Face token and set as an environment variable. </span></p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">userdata</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;HF_TOKEN&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">userdata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;HF_TOKEN&quot;</span><span class="p">)</span>
@@ -1688,8 +1752,8 @@ You are a helpful AI assistant for Collaboration</li>
 <ul>
 <li>Verify to confirm that the Hugging Face CLI is correctly authenticated with your account.</li>
 </ul>
-<h3 id="load-and-prepare-dataset-and-model">Load and prepare dataset and model</h3>
-<p><span class="colour" style="color:purple">Step 5: Before we start processing the data we prepared earlier, we need to load the model, tokenizer and datasets.  </span></p>
+<h4 id="load-and-prepare-dataset-and-model">Load and prepare dataset and model</h4>
+<p><span class="colour" style="color:green">Step 5: Before we start processing the data we prepared earlier, we need to load the model, tokenizer and datasets.  </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># model_name = &quot;meta-llama/Llama-2-7b-hf&quot; as its a gated repo</span>
@@ -1723,8 +1787,8 @@ You are a helpful AI assistant for Collaboration</li>
 <p>Loading the previously created dataset from the Hugging Face Hub</p>
 </li>
 </ul>
-<h3 id="training-parameters-and-4-bit-quantization-parameters-qlora">Training parameters and 4 bit Quantization Parameters (Qlora)</h3>
-<p><span class="colour" style="color:purple">Step 6: Define hyperparameters for training a machine learning model using QLoRA (Quantized Low-Rank Adaptation) and bitsandbytes, along with the TrainingArguments for the training process. In the below we will use QLoRA with a rank of 64 and a scaling parameter of 16. We’ll load the Llama 2 model directly in 4-bit using the NF4 type and train it for 10 epoch. </span></p>
+<h4 id="training-parameters-and-4-bit-quantization-parameters-qlora">Training parameters and 4 bit Quantization Parameters (Qlora)</h4>
+<p><span class="colour" style="color:green">Step 6: Define hyperparameters for training a machine learning model using QLoRA (Quantized Low-Rank Adaptation) and bitsandbytes, along with the TrainingArguments for the training process. In the below we will use QLoRA with a rank of 64 and a scaling parameter of 16. We’ll load the Llama 2 model directly in 4-bit using the NF4 type and train it for 10 epoch. </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
 <span class="normal">  2</span>
 <span class="normal">  3</span>
@@ -1925,8 +1989,8 @@ You are a helpful AI assistant for Collaboration</li>
 <span class="c1"># Load the entire model on the GPU 0</span>
 <span class="n">device_map</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="load-tokenizer">Load tokenizer</h3>
-<p><span class="colour" style="color:purple">Step 7: Load Tokenizer </span></p>
+<h4 id="load-tokenizer">Load tokenizer</h4>
+<p><span class="colour" style="color:green">Step 7: Load Tokenizer </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1995,8 +2059,8 @@ You are a helpful AI assistant for Collaboration</li>
 <span class="n">tokenizer</span><span class="o">.</span><span class="n">pad_token</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">eos_token</span>
 <span class="n">tokenizer</span><span class="o">.</span><span class="n">padding_side</span> <span class="o">=</span> <span class="s2">&quot;right&quot;</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="load-lora-configuration">Load LoRA configuration</h3>
-<p><span class="colour" style="color:purple">Step 8: Load Lora Config </span></p>
+<h4 id="load-lora-configuration">Load LoRA configuration</h4>
+<p><span class="colour" style="color:green">Step 8: Load Lora Config </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2011,8 +2075,8 @@ You are a helpful AI assistant for Collaboration</li>
     <span class="n">task_type</span><span class="o">=</span><span class="s2">&quot;CAUSAL_LM&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="setting-peft-parameters">Setting Peft Parameters</h3>
-<p><span class="colour" style="color:purple">Step 9: Setting Peft Config </span></p>
+<h4 id="setting-peft-parameters">Setting Peft Parameters</h4>
+<p><span class="colour" style="color:green">Step 9: Setting Peft Config </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2081,19 +2145,19 @@ You are a helpful AI assistant for Collaboration</li>
 <li>Supervised fine-tuning (SFT) is a key step in reinforcement learning. We will provide SFT Trainer the model, dataset, Lora configuration, tokenizer, and training parameters.</li>
 </ul>
 <p><img alt="Colab_newcel34" src="../assets/task8a/checkpoint.png" /></p>
-<p><span class="colour" style="color:purple">Step 10: We will use .train() to fine-tune the Llama 2 model on our new dataset.</span></p>
+<p><span class="colour" style="color:green">Step 10: We will use .train() to fine-tune the Llama 2 model on our new dataset.</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">trainer</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="Colab_newcel343" src="../assets/task8a/traindat1.png" /></p>
 <p><span class="colour" style="color:red">Note: Given our minimal dataset, the training process may take up to 10 minutes. However, with larger datasets, the training duration can range from an hour to several hours, depending on the size and complexity of the data. </span></p>
-<p><span class="colour" style="color:purple">Step 11: After training the model, we will save the model adopter and tokenizers.</span></p>
+<p><span class="colour" style="color:green">Step 11: After training the model, we will save the model adopter and tokenizers.</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">trainer</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">save_pretrained</span><span class="p">(</span><span class="n">new_model</span><span class="p">)</span>
 <span class="n">trainer</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">save_pretrained</span><span class="p">(</span><span class="n">new_model</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="Colab_newcel34112" src="../assets/task8a/adap1.png" /></p>
 <p><img alt="Colab_newcel34113" src="../assets/task8a/adopters.png" /></p>
-<p><span class="colour" style="color:purple">Step 12: To ensure our model is functioning correctly, let's ask a question from our dataset. While a more comprehensive evaluation is necessary for production, we can perform a basic check in our lab using the text generation pipeline. For instance, we can ask, "What capabilities does the Webex App offer when integrated with Webex Calling?" Note that the input is formatted to match Llama 2's prompt template. </span></p>
+<p><span class="colour" style="color:green">Step 12: To ensure our model is functioning correctly, let's ask a question from our dataset. While a more comprehensive evaluation is necessary for production, we can perform a basic check in our lab using the text generation pipeline. For instance, we can ask, "What capabilities does the Webex App offer when integrated with Webex Calling?" Note that the input is formatted to match Llama 2's prompt template. </span></p>
 <ul>
 <li>Our dataset on HF</li>
 </ul>
@@ -2109,8 +2173,8 @@ You are a helpful AI assistant for Collaboration</li>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;generated_text&#39;</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="Colab_newcel3411" src="../assets/task8a/answe.png" /></p>
-<h3 id="merge-lora-adapters-with-base-model-and-saving-our-model">Merge LoRA adapters with base model and saving our model</h3>
-<p><span class="colour" style="color:purple"> Step 13:  Merge LoRA adapters </span></p>
+<h4 id="merge-lora-adapters-with-base-model-and-saving-our-model">Merge LoRA adapters with base model and saving our model</h4>
+<p><span class="colour" style="color:green"> Step 13:  Merge LoRA adapters </span></p>
 <ul>
 <li>To store our newly fine-tuned <span class="colour" style="color:blue"> WebexOneDemo-Llama-2-7b-chat-finetune </span> model, we need to merge the LoRA weights with the base model. This involves reloading the base model with FP16 precision and using the PEFT library to combine all components.</li>
 </ul>
@@ -2153,7 +2217,7 @@ You are a helpful AI assistant for Collaboration</li>
 
 <span class="n">clear_gpu_cache</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:purple"> Step 14:  Push our model and tokenizer to Hugging Face</span></p>
+<p><span class="colour" style="color:green"> Step 14:  Push our model and tokenizer to Hugging Face</span></p>
 <ul>
 <li>We can now push everything to the Hugging Face Hub to save our model.</li>
 </ul>
@@ -2170,11 +2234,11 @@ You are a helpful AI assistant for Collaboration</li>
 </code></pre></div></td></tr></table></div>
 <p><img alt="Colab_nloadmodel" src="../assets/task8a/load_hf.png" /></p>
 <p><img alt="Colab_ModeUpl" src="../assets/task8a/mod_hf.png" /></p>
-<h2 id="load-the-pretrained-model-from-hugging-face-and-use-for-inference">Load the  pretrained model from Hugging Face and use for inference</h2>
+<h4 id="load-the-pretrained-model-from-hugging-face-and-use-for-inference">Load the  pretrained model from Hugging Face and use for inference</h4>
 <ul>
 <li>The Model Hub simplifies the process of selecting the appropriate model. You can now use this model for inference by loading it like any other Llama 2 model from the Hub. Let's explore how to use the model we've uploaded.</li>
 </ul>
-<p><span class="colour" style="color:purple"> Step 15:  login into Hugging Face hub </span></p>
+<p><span class="colour" style="color:green"> Step 15:  login into Hugging Face hub </span></p>
 <p><img alt="Colab_ModeUpl_inf" src="../assets/task8a/mod_lo_1.png" /></p>
 <ul>
 <li>We select the WebexOne/WebexOneDemo-Llama-2-7b-chat-finetune model. Click Use this model.</li>
@@ -2185,7 +2249,7 @@ You are a helpful AI assistant for Collaboration</li>
 <li>Lets click on Transformer so we can instantiate it using the pipeline() function:</li>
 </ul>
 <p><img alt="Colab_ModeUpl_inf12" src="../assets/task8a/mod_lo_112.png" /></p>
-<p><span class="colour" style="color:purple"> Step 16: Copy the code for transformers </span></p>
+<p><span class="colour" style="color:green"> Step 16: Copy the code for transformers </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2218,7 +2282,7 @@ You are a helpful AI assistant for Collaboration</li>
 <p><strong>Special Tokens:</strong> Ensures special tokens are correctly handled (added_tokens.json, special_tokens_map.json).</p>
 </li>
 </ul>
-<p><span class="colour" style="color:purple"> Step 17: Instantiate using the pipeline() function </span></p>
+<p><span class="colour" style="color:green"> Step 17: Instantiate using the pipeline() function </span></p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2235,7 +2299,7 @@ You are a helpful AI assistant for Collaboration</li>
     <span class="n">pad_token_id</span><span class="o">=</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">eos_token_id</span>  <span class="c1"># Ensure the padding token is correctly set</span>
 <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<span class="colour" style="color:purple"> Step 18: Example 1: </span></p>
+<span class="colour" style="color:green"> Step 18: Example 1: </span></p>
 <p><span class="colour" style="color:blue"> Note : </span> Lets take one question from our dataset.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -2255,7 +2319,7 @@ You are a helpful AI assistant for Collaboration</li>
 </code></pre></div></td></tr></table></div>
 <p><span class="colour" style="color:Red"> Output: </span></p>
 <p><img alt="Colab_rep1" src="../assets/task8a/rep1.png" /></p>
-<p><span class="colour" style="color:purple"> Step 19: Example 2: </span></p>
+<p><span class="colour" style="color:green"> Step 19: Example 2: </span></p>
 <p><span class="colour" style="color:blue"> Note : </span> Lets take one question from our dataset.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -2275,9 +2339,9 @@ You are a helpful AI assistant for Collaboration</li>
 </code></pre></div></td></tr></table></div>
 <p><span class="colour" style="color:Red"> Output: </span></p>
 <p><img alt="Colab_rep1" src="../assets/task8a/rep2.png" /></p>
-<h2 id="fine-tuning-example-2">Fine Tuning - Example 2</h2>
+<h3 id="fine-tuning-example-2">Fine Tuning - Example 2</h3>
 <p>In this example, I will show you how to fine-tune using the <a href="https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cuipph/MPP/6800-DECT/deployment/CiscoDECT6800DeploymentGuide.pdf">Cisco IP DECT Phone 6800 Series Deployment Guide</a> . I have already created the dataset from the PDF, which can be found at <a href="https://huggingface.co/datasets/WebexOne/dect1?row=0">WebexOne/dect1</a></p>
-<p><span class="colour" style="color:purple"> Step 1: Import the Necessary Libraries </span></p>
+<p><span class="colour" style="color:green"> Step 1: Import the Necessary Libraries </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2308,7 +2372,7 @@ You are a helpful AI assistant for Collaboration</li>
 <span class="kn">from</span> <span class="nn">trl</span> <span class="kn">import</span> <span class="n">SFTTrainer</span>
 <span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:purple"> Step 2: Load your HuggingFace tokens </span></p>
+<p><span class="colour" style="color:green"> Step 2: Load your HuggingFace tokens </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">userdata</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;HF_TOKEN&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">userdata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;HF_TOKEN&quot;</span><span class="p">)</span>
@@ -2319,7 +2383,7 @@ You are a helpful AI assistant for Collaboration</li>
 <span class="n">hf_token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;HF_TOKEN&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </span></p>
-<p><span class="colour" style="color:purple"> Step 3: Load your Datasets and models </span></p>
+<p><span class="colour" style="color:green"> Step 3: Load your Datasets and models </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2335,7 +2399,7 @@ You are a helpful AI assistant for Collaboration</li>
 <span class="n">new_model</span> <span class="o">=</span> <span class="s2">&quot;dect-phone-Llama-2-7b-Finale&quot;</span>
 </code></pre></div></td></tr></table></div>
 <p><span class="colour" style="color:red">Note: You can name the new_model variable whatever you prefer. </span></p>
-<p><span class="colour" style="color:purple"> Step 4: Load pre-trained model with 4-bit quantization</span></p>
+<p><span class="colour" style="color:green"> Step 4: Load pre-trained model with 4-bit quantization</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2532,7 +2596,7 @@ You are a helpful AI assistant for Collaboration</li>
 <span class="c1"># Load the entire model on the GPU 0</span>
 <span class="n">device_map</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:purple"> Step 5: Configure PEFT and Training Parameters</span></p>
+<p><span class="colour" style="color:green"> Step 5: Configure PEFT and Training Parameters</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2613,12 +2677,12 @@ You are a helpful AI assistant for Collaboration</li>
     <span class="n">packing</span><span class="o">=</span><span class="n">packing</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:purple"> Step 6: Train the Model Using the Trainer API and Save the model</span></p>
+<p><span class="colour" style="color:green"> Step 6: Train the Model Using the Trainer API and Save the model</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">trainer</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
 <span class="n">trainer</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">save_pretrained</span><span class="p">(</span><span class="n">new_model</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:purple"> Testing the model Locally</span></p>
+<p><span class="colour" style="color:green"> Testing the model Locally</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2631,19 +2695,19 @@ You are a helpful AI assistant for Collaboration</li>
 <span class="n">result</span> <span class="o">=</span> <span class="n">pipe</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&lt;s&gt;[INST] &lt;&lt;SYS&gt;&gt; </span><span class="si">{</span><span class="n">sys1</span><span class="si">}</span><span class="s2"> &lt;&lt;/SYS&gt;&gt; </span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="s2"> [/INST]&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;generated_text&#39;</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:purple"> Step 7: Push the Model to Hub</span>
+<p><span class="colour" style="color:green"> Step 7: Push the Model to Hub</span>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">model</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="n">new_model</span><span class="p">,</span> <span class="n">use_temp_dir</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">tokenizer</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="n">new_model</span><span class="p">,</span> <span class="n">use_temp_dir</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
-<p><span class="colour" style="color:purple"> Step 8: Verify the Model: </span></p>
+<p><span class="colour" style="color:green"> Step 8: Verify the Model: </span></p>
 <ul>
 <li><strong>Log in to the Hugging Face Hub and navigate to your model's page.</strong></li>
 <li><strong>Click on "Use this model" and then "Transformers".</strong></li>
 <li><strong>Copy the provided code snippet for using the model.</strong></li>
 </ul>
 <p><img alt="Colab_ModeU786" src="../assets/task8a/mo123.png" /></p>
-<p><span class="colour" style="color:purple"> Step 9: Configure Inferencing </span></p>
+<p><span class="colour" style="color:green"> Step 9: Configure Inferencing </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2668,7 +2732,7 @@ You are a helpful AI assistant for Collaboration</li>
     <span class="n">pad_token_id</span><span class="o">=</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">eos_token_id</span>  <span class="c1"># Ensure the padding token is correctly set</span>
 <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:purple"> Step 10: Inferencing with downloaded Model to test </span></p>
+<p><span class="colour" style="color:green"> Step 10: Inferencing with downloaded Model to test </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2685,11 +2749,11 @@ You are a helpful AI assistant for Collaboration</li>
 <div class="highlight"><pre><span></span><code>&lt;s&gt;[INST] &lt;&lt;SYS&gt;&gt; You are an interviewer AI tasked with asking questions about a deployment guide for the Cisco IP DECT Phone 6800 Series. Your goal is to elicit detailed responses from the text as if the pdf itself were answering. Be polite and address the user&#39;s query directly. Aim to offer clear and accurate answers. If you dont find the answer in pdf just say no info available at this time please contact your Cisco TME &lt;&lt;/SYS&gt;&gt; What is a key consideration when planning the DECT system for different regions? [/INST]
 Consider the regulatory requirements for DECT frequencies in different regions. Cisco offers units set up correctly for each region, such as 1880-1900 MHz for Australia and New Zealand, 1880-1900 MHz for E.U. and APAC. 
 </code></pre></div></p>
-<h2 id="troubleshooting-best-practices">Troubleshooting - Best Practices</h2>
+<h4 id="troubleshooting-best-practices">Troubleshooting - Best Practices</h4>
 <ul>
 <li>Challenges are an inherent part of model training. Let's discuss some common issues and their resolutions.</li>
 </ul>
-<h3 id="out-of-memory-oom-errors">Out of Memory (OOM) Errors</h3>
+<h5 id="out-of-memory-oom-errors">Out of Memory (OOM) Errors</h5>
 <ul>
 <li>
 <p>If you encounter an Out of Memory (OOM) error:</p>
@@ -2699,7 +2763,7 @@ Consider the regulatory requirements for DECT frequencies in different regions. 
 </ul>
 </li>
 </ul>
-<h3 id="slow-training">Slow Training</h3>
+<h5 id="slow-training">Slow Training</h5>
 <ul>
 <li>
 <p>If training seems sluggish:</p>
@@ -2713,9 +2777,9 @@ Consider the regulatory requirements for DECT frequencies in different regions. 
 </ul>
 </li>
 </ul>
-<h3 id="poor-model-quality">Poor Model Quality</h3>
+<h5 id="poor-model-quality">Poor Model Quality</h5>
 <p>The quality of your model reflects the quality of your dataset. To improve model quality ensure your dataset is rich and relevant.</p>
-<h3 id="metadata-info-on-huggingface-optional">Metadata - Info on HuggingFace - Optional</h3>
+<h5 id="metadata-info-on-huggingface-optional">Metadata - Info on HuggingFace - Optional</h5>
 <div class="highlight"><pre><span></span><code><span class="mi">---</span>
 <span class="err">i</span><span class="kc">nferen</span><span class="err">ce</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="err">la</span><span class="kc">n</span><span class="err">guage</span><span class="p">:</span>
@@ -2731,7 +2795,7 @@ Consider the regulatory requirements for DECT frequencies in different regions. 
 <span class="err">library_</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="kc">transf</span><span class="err">ormers</span>
 <span class="mi">---</span>
 </code></pre></div>
-<h3 id="conclusions">Conclusions</h3>
+<h2 id="conclusions">Conclusions</h2>
 <p>So, we have explored the process of fine-tuning our model and performing inference with it. Now, let’s say you have successfully trained or fine-tuned your model and are ready to deploy it for widespread use. However, you notice that the latency is too slow, and you want to speed up the model. There are four key methods you can employ to enhance your model's performance. While these steps are not covered in this lab, they serve as a good starting point for further investigation:</p>
 <ul>
 <li><strong>Quantization</strong></li>
