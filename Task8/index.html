@@ -24,7 +24,7 @@
     
     
       
-        <title>Task 8 - Fine Tuning - Deep Dive into LoRA and SFT - Collaboration - Technical Marketing Engineering</title>
+        <title>Task 8 - Fine Tuning - Deep Dive into Quantization , LoRA and SFT - Collaboration - Technical Marketing Engineering</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deep-dive-into-lora-and-sft" class="md-skip">
+        <a href="#deep-dive-into-quantization-lora-and-sft" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 8  - Fine Tuning - Deep Dive into LoRA and SFT
+              Task 8  - Fine Tuning - Deep Dive into Quantization , LoRA and SFT
             
           </span>
         </div>
@@ -565,7 +565,7 @@
           
   
   <span class="md-ellipsis">
-    Task 8  - Fine Tuning - Deep Dive into LoRA and SFT
+    Task 8  - Fine Tuning - Deep Dive into Quantization , LoRA and SFT
   </span>
   
 
@@ -576,7 +576,7 @@
         
   
   <span class="md-ellipsis">
-    Task 8  - Fine Tuning - Deep Dive into LoRA and SFT
+    Task 8  - Fine Tuning - Deep Dive into Quantization , LoRA and SFT
   </span>
   
 
@@ -603,39 +603,6 @@
       Introduction
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-functioning-of-lora-in-fine-tuning-llms" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Functioning of LoRA in Fine-tuning LLMs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="The Functioning of LoRA in Fine-tuning LLMs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#open-source-resources-for-lora" class="md-nav__link">
-    <span class="md-ellipsis">
-      Open-source Resources for LoRA
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#qlora-an-efficient-variant-of-lora" class="md-nav__link">
-    <span class="md-ellipsis">
-      QLoRA: An Efficient Variant of LoRA
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -702,6 +669,39 @@
       Understanding Quantization - Lab Example
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-functioning-of-lora-in-fine-tuning-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Functioning of LoRA in Fine-tuning LLMs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Functioning of LoRA in Fine-tuning LLMs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-source-resources-for-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open-source Resources for LoRA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qlora-an-efficient-variant-of-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      QLoRA: An Efficient Variant of LoRA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -871,36 +871,15 @@
                   
 
 
-<h1 id="deep-dive-into-lora-and-sft">Deep Dive into LoRA and SFT</h1>
+<h1 id="deep-dive-into-quantization-lora-and-sft">Deep Dive into Quantization, LoRA and SFT</h1>
 <h2 id="introduction">Introduction</h2>
-<p>In this lesson, we will dive deeper into the mechanics of LoRA, a powerful method for optimizing the fine-tuning process of Large Language Models, its practical uses in various fine-tuning tasks, and the open-source resources that simplify its implementation. We will also introduce QLoRA, a highly efficient version of LoRA. By the end of this lesson, you will have an in-depth understanding of how LoRA and QLoRA can enhance the efficiency and accessibility of fine-tuning LLMs.</p>
-<h2 id="the-functioning-of-lora-in-fine-tuning-llms">The Functioning of LoRA in Fine-tuning LLMs</h2>
-<p><img alt="Lora" src="../assets/task8/lora.png" /></p>
-<p>LoRA, or Low-Rank Adaptation, is a method developed by Microsoft researchers to optimize the fine-tuning of Large Language Models. This technique tackles the issues related to the fine-tuning process, such as extensive memory demands and computational inefficiency. LoRA introduces a compact set of parameters, referred to as low-rank matrices, to store the necessary changes in the model instead of altering all parameters.</p>
-<p>Here are the key features of how LoRA operates:</p>
-<ul>
-<li><strong>Maintaining Pretrained Weights:</strong> LoRA adopts a unique strategy by preserving the pretrained weights of the model. This approach reduces the risk of catastrophic forgetting, ensuring the model maintains the valuable knowledge it gained during pretraining.</li>
-<li><strong>Efficient Rank-Decomposition:</strong> LoRA incorporates rank-decomposition weight matrices, known as update matrices, to the existing weights. Rank decomposition is a way to simplify a large, complex matric by breaking it down into the product of smaller matrices.
-These update matrices have significantly fewer parameters than the original model, making them highly memory-efficient. By training only these newly added weights, LoRA achieves a faster training process with reduced memory demands. These LoRA matrices are typically integrated into the attention layers of the original model.</li>
-</ul>
-<p>By using the low-rank decomposition approach, the memory demands for training large language models are significantly reduced. This allows running fine-tuning tasks on consumer-grade GPUs, making the benefits of LoRA available to a broader range of researchers and developers.</p>
-<p><img alt="Lora Desc" src="../assets/task8/lora_desc.png" /></p>
-<h3 id="open-source-resources-for-lora">Open-source Resources for LoRA</h3>
-<p>The following libraries offer a mix of tools that enhance the efficiency of fine-tuning large language models. They provide optimizations, compatibility with different data types, resource efficiency, and user-friendly interfaces that accommodate various tasks and hardware configurations.</p>
-<ul>
-<li><strong>PEFT Library:</strong> Parameter-efficient fine-tuning (PEFT) methods facilitate efficient adaptation of pre-trained language models to various downstream applications without fine-tuning all the model's parameters. By fine-tuning only a portion of the model's parameters, PEFT methods like LoRA, Prefix Tuning, and P-Tuning, including QLoRA, significantly reduce computational and storage costs.</li>
-<li><strong>Lit-GPT:</strong> Lit-GPT from LightningAI is an open-source resource designed to simplify the fine-tuning process, making it easier to apply LoRA's techniques without manually altering the core model architecture. Models available for this purpose include Vicuna, Pythia, and Falcon. Specific configurations can be applied to different weight matrices, and precision settings can be adjusted to manage memory consumption.</li>
-</ul>
-<p>In our lab, we’ll focus on the PEFT library.</p>
-<h3 id="qlora-an-efficient-variant-of-lora">QLoRA: An Efficient Variant of LoRA</h3>
-<p>QLoRA, or Quantized Low-Rank Adaptation, is a popular variant of LoRA that makes fine-tuning large language models even more efficient. QLoRA introduces several innovations to save memory without sacrificing performance.</p>
-<p>The technique involves backpropagating gradients through a frozen, 4-bit quantized pretrained language model into Low-Rank Adapters. This approach significantly reduces memory usage, enabling the fine-tuning of even larger models on consumer-grade GPUs. For instance, QLoRA can fine-tune a 65 billion parameter model on a single 48GB GPU while preserving full 16-bit fine-tuning task performance.</p>
-<p>QLoRA uses a new data type known as 4-bit NormalFloat (NF4), which is optimal for normally distributed weights. It also employs double quantization to reduce the average memory footprint by quantizing the quantization constants and paged optimizers to manage memory spikes.</p>
-<p>The practical implementation of QLoRA for fine-tuning LLMs is very accessible, thanks to open-source libraries and tools. For instance, <strong>the BitsAndBytes library</strong> offers functionalities for 4-bit quantization. In the coming sections we will see a code example showing how to use QLoRA with PEFT.</p>
+<p>In this lesson, we will dive deeper into Quantization and the mechanics of LoRA, a powerful method for optimizing the fine-tuning process of Large Language Models, its practical uses in various fine-tuning tasks, and the open-source resources that simplify its implementation. We will also introduce QLoRA, a highly efficient version of LoRA. By the end of this lesson, you will have an in-depth understanding of quantization and how LoRA and QLoRA can enhance the efficiency and accessibility of fine-tuning LLMs.</p>
 <h2 id="understanding-quantization">Understanding Quantization</h2>
+<p><img alt="Quant Desc" src="../assets/task8/quant.png" /></p>
 <p>As large language models, grow more advanced, their increasing number of parameters leads to significant memory usage. This, in turn, increases the costs of hosting and deploying these tools.</p>
 <p>In this section, we will quickly learn about quantization. Quantization is a process that converts data that’s in your memory from high bit to low bit rate.</p>
 <h3 id="quantization-in-machine-learning">Quantization in Machine Learning</h3>
+<p><img alt="Quant Desc1" src="../assets/task8/quant2.png" /></p>
 <p>Neural Networks have millions or billions of parameters (floating point values) representing their weights and biases, a characteristic known as precision. The precision of these data types directly impacts the amount of memory required by the model. Using higher precision types, such as Float32 or Float64, offers greater accuracy but demands more memory. By default when you train your neural network  ususally the parameters are stored in FP32, which means each paraeter takes 32 bits. The idea of Quantization is to reduce parameters that takes less space example 16 bit floating points(FP16) or Int8. If we store all the parameters in INT8 , it means everything be saved between 0 - 255, which will result in saving space 4 times comapred to FP32</p>
 <p>Quantization can significantly reduce this memory requirement by representing parameters with fewer bits. For example, converting from 32-bit to smaller bit representations allows us to perform inference with the models more efficiently. Once models are quantized, they can be deployed on edge devices like phones, smartwatches, etc. However, using lower precision types, such as Float16 or BFloat16 or Int8, while saving memory, may result in a slight loss of accuracy. To overcome this loss in accuracy, techniques like Lora and QLoRA can be utilized.</p>
 <p><strong>Benefits of Quantization:</strong></p>
@@ -920,6 +899,7 @@ These update matrices have significantly fewer parameters than the original mode
 <p><img alt="Quantz Desc" src="../assets/task8/quantz.png" /></p>
 <h3 id="why-quantization-uses-less-memory">Why Quantization uses less memory</h3>
 <p>As mentioned above, the primary advantage of using quantization (4-bit) is the reduction in model size and memory usage. Here's a simple explanation:</p>
+<p><img alt="Quantz Desc23" src="../assets/task8/quant3.png" /></p>
 <ul>
 <li>A float32 number takes up 32 bits of memory.</li>
 <li>A 4-bit quantized number takes up only 4 bits of memory.
@@ -1160,6 +1140,38 @@ bnb_4bit_compute_dtype=bfloat16 //Specifies the data type for computation, which
         7, 13, 14,  6,  9, 11, 12, 13,  4, 14, 15,  1, 12,  3,  6, 10, 10,
         8, 13,  4,  3,  9, 12, 10,  2, 15,  8,  2,  5,  3,
        dtype=uint8)</code></p>
+<p><img alt="y Quant" src="../assets/task8/yquant.png" /></p>
+<ul>
+<li>
+<p>After quantizing LLMs (Large Language Models) from 32-bit to 8-bit precision, we achieve significant reductions in memory usage and computational demands. However, this process can also result in some loss of information and a decrease in accuracy. This brings up an important question: why should we fine-tune a quantized model?</p>
+</li>
+<li>
+<p>Fine-tuning becomes crucial in this context because it helps to restore or even enhance the model's performance after quantization. By fine-tuning, we can adapt the model to specific tasks or datasets, which can mitigate the accuracy loss that occurs during quantization.</p>
+</li>
+</ul>
+<h2 id="the-functioning-of-lora-in-fine-tuning-llms">The Functioning of LoRA in Fine-tuning LLMs</h2>
+<p><img alt="Lora" src="../assets/task8/lora.png" /></p>
+<p>LoRA, or Low-Rank Adaptation, is a method developed by Microsoft researchers to optimize the fine-tuning of Large Language Models. This technique tackles the issues related to the fine-tuning process, such as extensive memory demands and computational inefficiency. LoRA introduces a compact set of parameters, referred to as low-rank matrices, to store the necessary changes in the model instead of altering all parameters.</p>
+<p>Here are the key features of how LoRA operates:</p>
+<ul>
+<li><strong>Maintaining Pretrained Weights:</strong> LoRA adopts a unique strategy by preserving the pretrained weights of the model. This approach reduces the risk of catastrophic forgetting, ensuring the model maintains the valuable knowledge it gained during pretraining.</li>
+<li><strong>Efficient Rank-Decomposition:</strong> LoRA incorporates rank-decomposition weight matrices, known as update matrices, to the existing weights. Rank decomposition is a way to simplify a large, complex matric by breaking it down into the product of smaller matrices.
+These update matrices have significantly fewer parameters than the original model, making them highly memory-efficient. By training only these newly added weights, LoRA achieves a faster training process with reduced memory demands. These LoRA matrices are typically integrated into the attention layers of the original model.</li>
+</ul>
+<p>By using the low-rank decomposition approach, the memory demands for training large language models are significantly reduced. This allows running fine-tuning tasks on consumer-grade GPUs, making the benefits of LoRA available to a broader range of researchers and developers.</p>
+<p><img alt="Lora Desc" src="../assets/task8/lora_desc.png" /></p>
+<h3 id="open-source-resources-for-lora">Open-source Resources for LoRA</h3>
+<p>The following libraries offer a mix of tools that enhance the efficiency of fine-tuning large language models. They provide optimizations, compatibility with different data types, resource efficiency, and user-friendly interfaces that accommodate various tasks and hardware configurations.</p>
+<ul>
+<li><strong>PEFT Library:</strong> Parameter-efficient fine-tuning (PEFT) methods facilitate efficient adaptation of pre-trained language models to various downstream applications without fine-tuning all the model's parameters. By fine-tuning only a portion of the model's parameters, PEFT methods like LoRA, Prefix Tuning, and P-Tuning, including QLoRA, significantly reduce computational and storage costs.</li>
+<li><strong>Lit-GPT:</strong> Lit-GPT from LightningAI is an open-source resource designed to simplify the fine-tuning process, making it easier to apply LoRA's techniques without manually altering the core model architecture. Models available for this purpose include Vicuna, Pythia, and Falcon. Specific configurations can be applied to different weight matrices, and precision settings can be adjusted to manage memory consumption.</li>
+</ul>
+<p>In our lab, we’ll focus on the PEFT library.</p>
+<h3 id="qlora-an-efficient-variant-of-lora">QLoRA: An Efficient Variant of LoRA</h3>
+<p>QLoRA, or Quantized Low-Rank Adaptation, is a popular variant of LoRA that makes fine-tuning large language models even more efficient. QLoRA introduces several innovations to save memory without sacrificing performance.</p>
+<p>The technique involves backpropagating gradients through a frozen, 4-bit quantized pretrained language model into Low-Rank Adapters. This approach significantly reduces memory usage, enabling the fine-tuning of even larger models on consumer-grade GPUs. For instance, QLoRA can fine-tune a 65 billion parameter model on a single 48GB GPU while preserving full 16-bit fine-tuning task performance.</p>
+<p>QLoRA uses a new data type known as 4-bit NormalFloat (NF4), which is optimal for normally distributed weights. It also employs double quantization to reduce the average memory footprint by quantizing the quantization constants and paged optimizers to manage memory spikes.</p>
+<p>The practical implementation of QLoRA for fine-tuning LLMs is very accessible, thanks to open-source libraries and tools. For instance, <strong>the BitsAndBytes library</strong> offers functionalities for 4-bit quantization. In the coming sections we will see a code example showing how to use QLoRA with PEFT.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>In this lesson, we explored LoRA and QLoRA, two powerful techniques for fine-tuning Large Language Models (LLMs). We examined how LoRA operates by preserving pretrained weights and introducing low-rank matrices, thereby enhancing the memory and computational efficiency of the fine-tuning process. We also highlighted open-source libraries like PEFT and Lit-GPT that facilitate the implementation of LoRA.</p>
 <p>Additionally, we discussed QLoRA, an efficient variant of LoRA that employs 4-bit NormalFloat and double quantization to further reduce memory usage. This technique allows for significant memory savings but can introduce quantization errors, impacting model accuracy.</p>

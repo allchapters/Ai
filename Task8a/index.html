@@ -556,7 +556,7 @@
         
   
   <span class="md-ellipsis">
-    Task 8  - Fine Tuning - Deep Dive into LoRA and SFT
+    Task 8  - Fine Tuning - Deep Dive into Quantization , LoRA and SFT
   </span>
   
 
@@ -1073,14 +1073,16 @@
 <p><img alt="prereq" src="../assets/task8a/prereq.png" /></p>
 <h2 id="usecase-1-fine-tuning-using-llama2">UseCase 1 - Fine Tuning Using Llama2</h2>
 <h3 id="datasets-creation">Datasets Creation</h3>
+<p><img alt="dsc" src="../assets/task8/datase.png" /></p>
 <p>There are several ways to create datasets:</p>
 <ul>
 <li>Using existing open source datasets e.g The Pile, Common Crawl , Wiki or even HuggingFace</li>
 <li>Using LLM to create synthetic datasets faster and can be less expensive</li>
 <li>Using your own custom datasets e.t.c &lt;-- Focus for our lab</li>
 </ul>
+<p><img alt="dsc1" src="../assets/task8a/ds2.png" /></p>
 <h3 id="custom-datasets">Custom datasets</h3>
-<p>As we will be using and fine tuning Llam2  we need to convert them(datasets) into a uniform format compatible with training regimens. <a href="https://llama.meta.com/docs/model-cards-and-prompt-formats/other-models#meta-llama-2">More Info at</a></p>
+<p>As we will be using and fine tuning Llam2  we need to convert them(datasets) into a uniform format compatible with training regimens <a href="https://llama.meta.com/docs/model-cards-and-prompt-formats/other-models#meta-llama-2">More Info</a></p>
 <h4 id="example-format-for-llama2">Example Format for Llama2</h4>
 <div class="highlight"><span class="filename">Sample Format - Dont Copy - reference ONLY</span><pre><span></span><code>&lt;s&gt;[INST] &lt;&lt;SYS&gt;&gt;
 {{ system_prompt }}
@@ -2796,6 +2798,7 @@ Consider the regulatory requirements for DECT frequencies in different regions. 
 <span class="mi">---</span>
 </code></pre></div>
 <h2 id="conclusions">Conclusions</h2>
+<p><img alt="Summa" src="../assets/task8a/suma.png" /></p>
 <p>So, we have explored the process of fine-tuning our model and performing inference with it. Now, let’s say you have successfully trained or fine-tuned your model and are ready to deploy it for widespread use. However, you notice that the latency is too slow, and you want to speed up the model. There are four key methods you can employ to enhance your model's performance. While these steps are not covered in this lab, they serve as a good starting point for further investigation:</p>
 <ul>
 <li><strong>Quantization</strong></li>
