@@ -13,7 +13,7 @@
       
       
       
-        <link rel="prev" href="../Task1/">
+        <link rel="prev" href="../Task2/">
       
       
         <link rel="next" href="../Task4/">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Task 3 - Log into the Lab Environment - Collaboration - Technical Marketing Engineering</title>
+        <title>Task 3 - Tokenization - Collaboration - Technical Marketing Engineering</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-3-log-into-the-lab-environment" class="md-skip">
+        <a href="#tokenization" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 3  - Log into the Lab Environment
+              Task 3  - Tokenization
             
           </span>
         </div>
@@ -426,11 +426,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Task2.md" class="md-nav__link">
+      <a href="../Task2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Task 2  - ThousandEyes Overview
+    Task 2  - AI/ML Revolution Unveiled
   </span>
   
 
@@ -456,15 +456,120 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Task 3  - Tokenization
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Task 3  - Log into the Lab Environment
+    Task 3  - Tokenization
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-we-need-tokenization-or-text-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why we need Tokenization or Text Splitting?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-1-log-into-the-lab-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task 1: Log into the Lab Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 1: Log into the Lab Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-testing-for-chunking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual testing for Chunking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langchain-text-splitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      LangChain Text Splitter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-charector-text-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursive Charector Text Splitting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-level-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document Level Splitting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Level Splitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pdf-with-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      PDF with table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -724,54 +829,237 @@
                   
 
 
-<h1 id="task-3-log-into-the-lab-environment">Task 3: Log into the Lab Environment</h1>
-<p>Click <strong>My Demo Sessions</strong> select your <strong>ThousandEyes</strong> demo and click the <strong>green View button</strong></p>
-<p><img alt="Lab - My Demo Sessions" src="../assets/task3/my-demo-sessions.png" /></p>
-<p>Lab Administration Information (New Read Only Admin User)</p>
+<h1 id="tokenization">Tokenization</h1>
+<p><a download="omer.png" href="../assets/static/omer.png" target="_blank">Download Omer Image2</a></p>
+<p><img alt="token_intro" src="../assets/task3/token.png" /></p>
 <ul>
-<li>Webex Control Hub/ThousandEyes Admin Access - A new <strong>read only</strong> admin user will be created. This is the new user you'll use to access the Webex ControlHub and ThousandEyes Platform
-(<strong>Note:</strong> Your user will most likely be different than this one as they are radomly assigned.)</li>
-<li>Email Address will be used for the SSO login access as well as the Password</li>
+<li>Language models have a limit on how much text they can handle at once, known as their context window. While these limits are expanding, research shows that LLM's often perform better when provided with less, but more relevant, information. However, selecting the most relevant information is straightforward for humans but challenging for computers. </li>
 </ul>
-<p><img alt="Lab - ThousandEyes Read Only Admin" src="../assets/task3/thousandeyes-admin.png" /></p>
+<p>A common approach to manage large amounts of data is to break it down into smaller, more manageable parts a process often referred to as Tokenization or Chunking. Tokenization is a key step in this process, where raw text is divided into smaller units, called tokens, which can then be processed by a neural network.</p>
+<p><img alt="token_intro1" src="../assets/task3/tokeniza.png" /></p>
+<p>In order to do this you need to pick a chunk strategy. Just to name a few:</p>
 <ul>
-<li>Access information to the Webex ControlHub Portal -  right click and use an <strong>Incognito Browser</strong></li>
+<li>
+<p>Word-Based: A simple and straightforward method that most of us would propose is to use word-based tokens, splitting the text by spaces.</p>
+</li>
+<li>
+<p>Character based tokenization: Individual words are considered as tokens . Lot of computing resources needed as now e.g for a 3 word serentence where you might need 3 tokens now 15 – 20 tokens needed </p>
+</li>
+<li>
+<p>Sentence Based: We need a .(fullstop) for it to work </p>
+</li>
 </ul>
-<p><img alt="Lab - ControlHub Portal" src="../assets/task3/controlhub-portal.png" /></p>
+<p><span class="colour" style="color:orange"> Note: We've all heard of GPT and OpenAI. They utilize a tokenization method called Byte Pair Encoding (BPE), which is a middle ground between word-based and character-based tokenization. In BPE, words are broken down into smaller character sequences that the model encountered during training, allowing it to make informed predictions. </span></p>
+<h2 id="why-we-need-tokenization-or-text-splitting">Why we need Tokenization or Text Splitting?</h2>
+<p><img alt="salon" src="../assets/task3/salon.png" /></p>
+<p>Historically, applications perform better when they are provided with your own data. However, you can't feed unlimited data to your LLMs due to two key limitations:</p>
 <ul>
-<li>Access information to the ThousandEyes Portal be sure to right click and use an <strong>Incognito Browser</strong></li>
+<li>
+<p>Context window limit: LLMs have a finite context window for processing data.</p>
+</li>
+<li>
+<p>Signal-to-noise ratio (SNR): LLMs perform better when the SNR is high, meaning the information provided is useful, relevant, and clear. Clear, unambiguous instructions help the model deliver more accurate and detailed results, while ambiguous or complex input can lead to less accurate or incomplete outputs.</p>
+</li>
 </ul>
-<p><img alt="Lab - ThousandEyes Portal" src="../assets/task3/thousandeyes-portal.png" /></p>
-<!-- * Access to the lab Windows VM
+<p>As noted, chunking or splitting refers to breaking your data into smaller, manageable pieces.</p>
+<p><img alt="FSFW" src="../assets/task3/fsfw.png" /></p>
+<h2 id="task-1-log-into-the-lab-environment">Task 1: Log into the Lab Environment</h2>
+<ul>
+<li>Open Google Colab and create a new notebook. Click on "File" &gt; "New notebook". Please refer to the <a href="../Task1/">following section</a> to create Google Colab account.</li>
+</ul>
+<p><img alt="GCOLAB" src="../assets/task3/gcolab.png" /></p>
+<ul>
+<li>Make sure you are connected to a runtime. For this task, you can use the CPU as the runtime environment.</li>
+</ul>
+<p><img alt="HL_Format_run" src="../assets/task8a/rungc.png" /></p>
+<p><span class="colour" style="color:red">Reminder: </span>Whenever you want to copy the code in Google Colab and run it, be sure to click on + Code to add a new code cell.</p>
+<p><img alt="Colab_newcell" src="../assets/task8/newcell.png" /></p>
+<p><span class="colour" style="color:red">Reminder: </span>Click the play button to the left of the code, or use the keyboard shortcut "Command/Ctrl+Enter" while the cell is selected.</p>
+<p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>
+<h3 id="manual-testing-for-chunking"><strong>Manual testing for Chunking</strong></h3>
+<p><span class="colour" style="color:green">We will create Chunks of 35 charectors, so first 35 charectors as chunk 1 , next 35 charectors chunk2 and so on </span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Manual Splitting</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;WebexOne is an annual in-person and virtual event that takes place over four days. It’s an event focused on AI collaboration and customer experience.  </span>
+<span class="s2">It features a range of activities such as insightful breakout sessions, technical training courses, hands-on labs, inspiring keynotes, epic entertainment, a solutions showcase and expo, customer awards, meet the experts, 1:1 executive meetings, a partner program, and more!&quot;&quot;&quot;</span>
 
-![Lab - Lab VM Access](./assets/task3/vm-workstation.png) -->
+<span class="c1"># Create a list that will hold your chunks</span>
+<span class="n">chunks</span> <span class="o">=</span> <span class="p">[]</span>
 
-<p>First thing will be to get your VM set up</p>
+<span class="n">chunk_size</span> <span class="o">=</span> <span class="mi">35</span> 
+
+<span class="c1"># Run through the a range with the length of your text and iterate every chunk_size you want</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="n">chunk_size</span><span class="p">):</span>
+    <span class="n">chunk</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">chunk_size</span><span class="p">]</span>
+    <span class="n">chunks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="token_intro1" src="../assets/task3/char.png" /></p>
+<p><span class="colour" style="color:orange">Note: </span> The text contained a total of 422 characters, divided into 13 chunks. Problem with the above chunking technique is that it got split at 'r'. How we know when to chunk . Before we look into that. Lets look into Langchain Splitter </span></p>
+<h3 id="langchain-text-splitter"><strong>LangChain Text Splitter</strong></h3>
 <ul>
-<li>Click the Workstation 1 link. You should see a Windows Desktop show up in new browser tab.</li>
+<li>Let's retrieve the langchain library from the Python Package. In the example below, we'll configure the chunk_overlap parameter, which ensures that our chunks are blended together—meaning the end of chunk 1 will overlap with the beginning of chunk 2.</li>
 </ul>
-<p><img alt="VM - Log into the VM" src="../assets/task3/vm-workstation-1.png" /></p>
-<p>Right Click on the <strong>This PC</strong> desktop icon and click <strong>Properties</strong> so you can rename the VM.</p>
-<p><img alt="VM - Rename your VM" src="../assets/task3/rename-vm-1.png" /></p>
-<p>Click Rename this PC</p>
-<p><img alt="VM - Rename your VM" src="../assets/task3/rename-vm-2.png" /></p>
-<p>Name the PC your-name-Roadshow (no spaces), click <strong>Next</strong> and click <strong>Restart Now</strong></p>
-<p><img alt="VM - Rename your VM" src="../assets/task3/rename-vm-3.png" /></p>
-<p>While the VM reboots go back to your previous tab for demo . Right click the <strong>Control Hub URL</strong> and <strong>ThousandEyes Administration</strong> Portal link and open both in incognito browsers as we will be using them in the coming steps. The same creds can be used to login into Webex Control Hub and ThousandEyes  </p>
-<p><img alt="TE - ThousandEyes Portal Access" src="../assets/task3/thousandeyes-portal-1.png" /></p>
-<p>Use the credentials from the ControlHub/ThousandEyes Read Only Admin in the next steps.</p>
-<p><img alt="Lab - ThousandEyes Read Only Admin" src="../assets/task3/thousandeyes-admin.png" /></p>
-<p>Your incognito browser will open to the ThousandEyes SSO login page as shown in the below image. Use the Username and Password from the ThousandEyes Read Only Admin to complete the login process. Click Don’t show this again and Yes in the pop up window after you have completed the SSO login process.</p>
-<p><img alt="TE - ThousandEyes SSO Login" src="../assets/task3/thousandeyes-sso.png" /></p>
-<p><img alt="TE - ThousandEyes SSO Auth" src="../assets/task3/thousandeyes-sso-1.png" /></p>
-<p>You should now see the ThousandEyes Default Dashboard (see the below image). You can leave this browser open and we will come back to it later.</p>
-<p><img alt="TE - ThousandEyes Default Dashboard" src="../assets/task3/thousandeyes-default-dashboard.png" /></p>
-<p><strong>Note:</strong> Follow the above creds/steps to login into Webex Control Hub as we will be using them in coming steps.</p>
-<p>Log back into the Windows VM. Navigate back to the tab that had the Windows VM running in it and click “Reconnect” or if that tab closed you click on the Workstation 1 link to open a new session to it.</p>
-<p><img alt="VM - Reconnect to the VM" src="../assets/task3/reconnect-vm.png" /></p>
-<p>Note if a Let’s finish setting up your PC window appears just click ”Remind me Later". Also close the CC Cleaner browser and Accept the Webex EULA (if they appear).</p>
-<p><img alt="VM - Finish Setting Up PC" src="../assets/task3/finish-vm.png" /></p>
-<p>Time to install the ThousandEyes Endpoint Agent (EPA) continue to <a href="../Task4/">Task 4</a>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">langchain</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="LCh" src="../assets/task3/lch.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;WebexOne is an annual in-person and virtual event that takes place over four days. It’s an event focused on AI collaboration and customer experience.  </span>
+<span class="s2">It features a range of activities such as insightful breakout sessions, technical training courses, hands-on labs, inspiring keynotes, epic entertainment, a solutions showcase and expo, customer awards, meet the experts, 1:1 executive meetings, a partner program, and more!&quot;&quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">langchain.text_splitter</span> <span class="kn">import</span> <span class="n">CharacterTextSplitter</span>
+
+<span class="n">text_splitter</span> <span class="o">=</span> <span class="n">CharacterTextSplitter</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">chunk_overlap</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">strip_whitespace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># seprate means you splt by charector</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">text_splitter</span><span class="o">.</span><span class="n">create_documents</span><span class="p">([</span><span class="n">text</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<span class="colour" style="color:green">Note:</span> Seprators are charectors sequence you wanna split on. </span></p>
+<p><img alt="LCh1" src="../assets/task3/lch1.png" /></p>
+<h3 id="recursive-charector-text-splitting"><strong>Recursive Charector Text Splitting</strong></h3>
+<p>In the previous example, when we used Character Splitting, we split the text based on a fixed number of characters. Specifically, we divided the text into chunks of 35 characters each.</p>
+<p>However, with Recursive Text Splitting (RTS), the process is more dynamic and considers the physical structure of the text to determine the appropriate chunk size.</p>
+<p>Here’s how RTS works:</p>
+<ul>
+<li>
+<p>Instead of relying on a static number of characters, RTS examines the structure of the document.</p>
+</li>
+<li>
+<p>It begins by identifying the largest logical divisions, such as paragraphs, and splits the text at each double newline (indicating paragraph breaks).</p>
+</li>
+<li>
+<p>If any of these chunks are still too large, RTS will then move to the next level of separation, which is single newlines (often indicating sentences or list items).</p>
+</li>
+<li>
+<p>If necessary, it will continue to break down the text further, using spaces and eventually individual characters as separators.</p>
+</li>
+</ul>
+<p>With RTS, you don’t need to manually specify the chunk size by character count. You simply pass your text to the RTS process, and it will intelligently determine how to split the text based on its structure, resulting in chunks that are logically organized and more contextually meaningful.</p>
+<p><img alt="RTS" src="../assets/task3/RTS.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;WebexOne is an annual in-person and virtual event that takes place over four days. It’s an event focused on AI collaboration and customer experience.  </span>
+<span class="s2">It features a range of activities such as insightful breakout sessions, technical training courses, hands-on labs, inspiring keynotes, epic entertainment, a solutions showcase and expo, customer awards, meet the experts, 1:1 executive meetings, a partner program, and more!&quot;&quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">langchain.text_splitter</span> <span class="kn">import</span> <span class="n">RecursiveCharacterTextSplitter</span>
+<span class="n">text_splitter</span> <span class="o">=</span> <span class="n">RecursiveCharacterTextSplitter</span><span class="p">(</span><span class="n">chunk_size</span> <span class="o">=</span> <span class="mi">35</span><span class="p">,</span> <span class="n">chunk_overlap</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="c1"># how many chunks we have </span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text_splitter</span><span class="o">.</span><span class="n">create_documents</span><span class="p">([</span><span class="n">text</span><span class="p">])))</span>
+
+<span class="n">text_splitter</span><span class="o">.</span><span class="n">create_documents</span><span class="p">([</span><span class="n">text</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<span class="colour" style="color:green">Note:</span> We avoid splitting in the middle of words by using spaces as one of the separators, ensuring that each chunk ends on a complete word. This is crucial because RCS (Recursive Character Splitting) helps maintain the context within sentences by keeping related words together.</span></p>
+<p><img alt="RTS1" src="../assets/task3/RTS1.png" /></p>
+<p><span class="colour" style="color:green">Note:</span>If you're new to AI, I would personally recommend starting with Recursive Text Splitting (RTS). </span></p>
+<h3 id="document-level-splitting"><strong>Document Level Splitting</strong></h3>
+<p>So far, we've been working with splitting regular documents. But what if we have markdown files or  PDF or Python documentation? There's a better way to handle those cases, and that's where specialized document splitting comes into play.</p>
+<h4 id="pdf-with-table">PDF with table</h4>
+<p>PDFs often contain tables and other structured data that can be challenging to split accurately using character-based methods. For PDFs, it's important to extract and chunk all elements, including tables, effectively. We'll accomplish this using the <a href="https://unstructured.io/">Unstructured library</a>, which is specifically designed for handling such tasks. If you have a large collection of PDFs, <a href="(https://unstructured.io/)">Unstructured</a> is an excellent tool to manage them efficiently.</p>
+<p><img alt="r11" src="../assets/task3/r11.png" /></p>
+<ul>
+<li>Install relevant libraries for <a href="https://unstructured.io/">Unstructured</a></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="n">langchain_community</span> <span class="n">unstructured</span><span class="p">[</span><span class="nb">all</span><span class="o">-</span><span class="n">docs</span><span class="p">]</span> <span class="n">unstructured</span> <span class="n">pdfminer</span> <span class="n">pdfminer</span><span class="o">.</span><span class="n">six</span> <span class="n">pdf2image</span> <span class="n">pillow_heif</span> <span class="n">opencv</span><span class="o">-</span><span class="n">python</span> <span class="n">unstructured_inference</span> <span class="n">pytesseract</span> <span class="n">unstructured_pytesseract</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="unstrc" src="../assets/task3/unstr.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">poppler</span><span class="o">-</span><span class="n">utils</span> <span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">tesseract</span><span class="o">-</span><span class="n">ocr</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="apt" src="../assets/task3/apy.png" /></p>
+<ul>
+<li>
+<p>Let's load our PDF files into Google Colab. For this example, we can use the Cisco Financial Results. Please <a download="CiscoReport.pdf" href="../assets/static/CiscoReport.pdf" target="_blank">Download the file here</a> as we will be using in the next step.</p>
+</li>
+<li>
+<p>Within Google Colab, Click on Folder and create a new folder called "data"</p>
+</li>
+</ul>
+<p><img alt="HL_Format_fold" src="../assets/task8a/fold.png" /></p>
+<ul>
+<li>Click on [...], select Upload</li>
+</ul>
+<p><img alt="HL_Format_fold_created" src="../assets/task8a/dc_created.png" /></p>
+<ul>
+<li>Choose your CiscoReport.pdf file and click Open</li>
+</ul>
+<p><img alt="HL_file_uplo" src="../assets/task3/uplo.png" /></p>
+<ul>
+<li>We'll use the following code from the Unstructured library to demonstrate how tables can be extracted</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">unstructured.partition.pdf</span> <span class="kn">import</span> <span class="n">partition_pdf</span>
+<span class="kn">from</span> <span class="nn">unstructured.staging.base</span> <span class="kn">import</span> <span class="n">elements_to_json</span>
+
+<span class="c1"># Let&#39;s load up our PDF and then partition it.</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;/content/data/CiscoReport.pdf&quot;</span><span class="c1"># Use relative path since the file is in the same directory</span>
+
+<span class="c1"># Extracts the elements from the PDF</span>
+<span class="n">elements</span> <span class="o">=</span> <span class="n">partition_pdf</span><span class="p">(</span>
+    <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span>
+    <span class="n">extract_images_in_pdf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;hi_res&quot;</span><span class="p">,</span>
+    <span class="n">infer_table_structure</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">hi_res_model_name</span><span class="o">=</span><span class="s2">&quot;yolox&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Let&#39;s look at our elements</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="elemebts" src="../assets/task3/elem.png" /></p>
+<ul>
+<li>Lets grab element 37 as its the one where our table is</li>
+</ul>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">elements</span><span class="p">[</span><span class="mi">37</span><span class="p">]</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">text_as_html</span>
+</code></pre></div></td></tr></table></div>
+<span class="colour" style="color:green">OUTPUT</span></p>
+<div class="highlight"><pre><span></span><code>&#39;<span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;&lt;</span><span class="nt">thead</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Revenue<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>$8.51 - $8.53 Billion<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>$34.5 - $34.7 Billion<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;/</span><span class="nt">thead</span><span class="p">&gt;&lt;</span><span class="nt">tbody</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Y/Y Growth<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>~10%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>~10%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>FX Impact)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>no impact<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>no impact<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>GAAP Operating Margin<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>~11.4%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Non-GAAP Operating Margin’)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>~28.0%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>GAAP Earnings per Share?)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>$0.79 - $0.80<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>$2.67 - $2.69<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Non-GAAP Earnings per Share()<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>$1.89 - $1.90<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>$7.41 - $7.43<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Operating Cash Flow Growth (Y/Y)°)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>16% - 17%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Current Remaining Performance Obligation Growth (Y/Y)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>~10%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;/</span><span class="nt">tbody</span><span class="p">&gt;&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>&#39;
+</code></pre></div>
+<ul>
+<li>Tables are straightforward for humans to read, but they aren't as easy for language models to interpret. Language models are typically trained on HTML tables, so when you pass HTML-formatted tables to an LLM, it will better understand the structure and content. You can paste the HTML into an <a href="https://codebeautify.org/htmlviewer">HTML viewer</a> to see how it looks.</li>
+</ul>
+<p><img alt="Table1" src="../assets/task3/tab.png" /></p>
+<p><span class="colour" style="color:green">Note: That's how you handle tables within a PDF.</span></p>
 
 
 
