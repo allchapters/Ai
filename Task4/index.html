@@ -24,7 +24,7 @@
     
     
       
-        <title>Task 4 - Install the ThousandEyes EPA - Collaboration - Technical Marketing Engineering</title>
+        <title>Task 4 - Embeddings and Vector Database - Collaboration - Technical Marketing Engineering</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-4-install-the-thousandeyes-epa" class="md-skip">
+        <a href="#task-4-embeddings-and-vector-database" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 4  - Install the ThousandEyes EPA
+              Task 4  - Embeddings and Vector Database
             
           </span>
         </div>
@@ -481,7 +481,7 @@
           
   
   <span class="md-ellipsis">
-    Task 4  - Install the ThousandEyes EPA
+    Task 4  - Embeddings and Vector Database
   </span>
   
 
@@ -492,7 +492,7 @@
         
   
   <span class="md-ellipsis">
-    Task 4  - Install the ThousandEyes EPA
+    Task 4  - Embeddings and Vector Database
   </span>
   
 
@@ -514,27 +514,93 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#start-up-a-webex-meeting-on-your-vm" class="md-nav__link">
+  <a href="#what-are-embeddings" class="md-nav__link">
     <span class="md-ellipsis">
-      Start up a Webex Meeting on your VM
+      What are embeddings?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#login-to-webex-controlhub" class="md-nav__link">
+  <a href="#why-vector-databases-when-we-have-relational-dbs" class="md-nav__link">
     <span class="md-ellipsis">
-      Login to Webex ControlHub
+      Why Vector Databases when we have relational DB's?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#locate-your-thousandeyes-epa" class="md-nav__link">
+  <a href="#understanding-working-of-embeddings-and-vector-databases" class="md-nav__link">
     <span class="md-ellipsis">
-      Locate your ThousandEyes EPA
+      Understanding working of Embeddings and Vector Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding working of Embeddings and Vector Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practical-example-of-embedding-techniques-using-postman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Example of Embedding Techniques Using Postman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Example of Embedding Techniques Using Postman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-openai-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set OpenAI token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-to-postman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login to Postman
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inserting-values-in-vector-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inserting values in Vector Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-values-from-the-vector-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving Values from the Vector Database
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
     </span>
   </a>
   
@@ -781,54 +847,256 @@
                   
 
 
-<h1 id="task-4-install-the-thousandeyes-epa">Task 4: Install the ThousandEyes EPA</h1>
-<p>Once on your VM station,make sure no browser sessions are running on Window VM then click the ThousandEyes Agent Installer</p>
-<p><img alt="VM - Install ThousandEyes EPA" src="../assets/task4/thousandeyes-epa-installer.png" /></p>
-<p>You should <strong>NOT</strong> have to do this but if you don’t see the ThousandEyes Agent Installer go back to the tab for the lab and click the <strong>Instructions link</strong> then copy the link for the <strong>Windows x64 Agent Install (MSI) – Full</strong> from the Demo Downloads and Links section. Navigate back to the Windows VM tab, open a browser and paste the link into it to download the installer. Locate the installer and click it to install it.</p>
-<p><img alt="VM - ThousandEyes EPA Installer Link" src="../assets/task4/thousandeyes-epa-download-link.png" /></p>
-<p>Click <strong>Next</strong> and Accept the License Agreement</p>
-<p><img alt="VM - Install ThousandEyes EPA 1" src="../assets/task4/thousandeyes-epa-installer-1.png" /></p>
-<p>Click the disk icon for <strong>ThousandEyes Endpoint Agent</strong> and <strong>Google Chrome</strong> and select <strong>Entire feature will be installed on local hard drive</strong> then click <strong>Next</strong> and <strong>Finish</strong>.</p>
-<p><img alt="VM - Install ThousandEyes EPA 2" src="../assets/task4/thousandeyes-epa-installer-2.png" /></p>
-<p><strong>Note</strong> the above step will install ThousandEyes Endpoint agent on the VM provided. As mentioned earlier you can also get the install file from the <strong>Instruction</strong> tab and install the same on your personal machine (windows/mac)</p>
-<h2 id="start-up-a-webex-meeting-on-your-vm">Start up a Webex Meeting on your VM</h2>
-<p>This will generate Webex traffic which we will view later in the lab. Navigate back to your lab information tab. Copy the email address for the character you <strong>created</strong> to schedule a Webex meeting with. You will use this to login into Webex App and start a Webex meeting session.</p>
-<p><img alt="Lab - Chacater Informaton" src="../assets/task4/character-webex.png" /></p>
-<p>Navigate back to your VM web browser tab and click on the Webex icon then sign in using the email address and password from your character.</p>
-<p><img alt="VM - Webex Sign In" src="../assets/task4/webex-sign-in.png" /></p>
-<p><img alt="VM - Webex Authorization" src="../assets/task4/webex-auth.png" /></p>
-<p>Click the <strong>Webex icon</strong> on the task bar. Click <strong>Meetings</strong>. Click <strong>Start a Personal Room meeting</strong>. 
-<strong>Note</strong> Your WebexApp might do a quick update.</p>
-<p><img alt="VM - Webex Start Personal Room Meeting" src="../assets/task4/webex-start-personal-meeting.png" /></p>
-<p>Click <strong>Join meeting</strong> and then click <strong>Start meeting</strong>.</p>
-<p><img alt="VM - Webex Join Meeting" src="../assets/task4/webex-join-meeting.png" /></p>
-<!-- Click **Ok** on the Microphone Not Available. Click OK on **Others can’t hear you**
-
-![VM - Webex Meeting](./assets/task4/webex-meeting.png) -->
-
-<p>This will generate Webex traffic which you will view later in the lab. <strong>Note:</strong> Since no one is joining the meeting it may have a pop up after a while warning the meeting will end unless you click to keep it active. Feel free to click to keep it active or you can add another participant in that meeting or you can always go back and <strong>Start a Personal Room Meeting</strong> again.</p>
-<h2 id="login-to-webex-controlhub">Login to Webex ControlHub</h2>
-<p>Once the user join a meeting you can login into Webex Control Hub using the (read only admin) credentials provided.  </p>
-<p><img alt="ControlHub Login" src="../assets/task4/CH-login.png" /></p>
-<p>Click on <strong>Troubleshooting</strong> search for your <strong>userid</strong> that you have used to join the Webex meeting.</p>
-<p><img alt="ControlHub TS" src="../assets/task4/CH-TS.png" /></p>
-<h2 id="locate-your-thousandeyes-epa">Locate your ThousandEyes EPA</h2>
-<p>By now you have your ThousandEyes Endpoint Agent running. Let’s verify it has connected to the ThousandEyes Platform.</p>
-<p>Navigate back to your incognito browser that is logged into ThousandEyes.</p>
-<p>Click <strong>Endpoint Agents &gt; Agent Settings</strong> (if you were already in the tab you may have to click <strong>refresh</strong>)</p>
-<p>Search for your EPA </p>
+<h1 id="task-4-embeddings-and-vector-database">Task 4: Embeddings and Vector Database</h1>
 <ul>
-<li>In the search bar type the name you gave your VM (if it doesn’t show up contact a lab proctor). Also verify that the Google Chrome Browser Extension shows up as shown in the below screen shot.</li>
+<li>Embeddings and vector databases are essential if you are building any kind of AI product.</li>
 </ul>
-<p><img alt="TE - EPA Chrome Extension" src="../assets/task4/thousandeyes-chrome-extension.png" /></p>
-<p>If your Google Chrome Browser Plug-in didn’t install. (Note sometimes it take a minute to show up. Please refresh the browser.) Navigate back to your <strong>VM</strong> and click on the <strong>Google Chrome</strong> icon on the task bar.</p>
+<p><img alt="EV" src="../assets/task4/ev.png" /></p>
+<h2 id="what-are-embeddings">What are embeddings?</h2>
+<p>Embeddings are basically data.</p>
+<p><img alt="Emb1" src="../assets/task4/emb1.png" /></p>
+<p>That are converted into array of numbers called vectors thats contain pattern of relationship, and can be used for similarity search.</p>
+<p><img alt="Emb2" src="../assets/task4/emb2.png" /></p>
+<p>Let me explain this concept using a 2D graph. In this graph, words like "Webex" and "collaboration" are often used in similar context, so their embeddings essentially vector representations are positioned close to each other. These vectors are numerical arrays that computers can easily interpret.  </p>
+<p>The advantage of using vectors is that you can find similar items by calculating the distances between their vectors, a process known as nearest neighbor search. However, simply storing these embeddings isn't enough. Performing queries across thousands of vectors can be incredibly slow. To overcome this, these vectors also need to be indexed in the vector database.</p>
+<p><span class="colour" style="color:orange"> Note: In reality vectors can have hundred of dimensions </span></p>
+<p><img alt="Emb3" src="../assets/task4/emb3.png" /></p>
+<p>Similarly, images are also broken into vectors, which are arrays of numbers that machines can process. Once these embeddings (both for words and images) are generated, they are stored in a specialized database known as a vector database.</p>
+<p><img alt="Emb4" src="../assets/task4/emb4.png" /></p>
+<p>There are numerous embedding models available, such as Google's Word2Vec, CLIP (Contrastive Language–Image Pretraining), and even those provided by OpenAI, which offer excellent capabilities for generating embeddings. However, the challenge is that these models don't include tools for storing and managing those embeddings. That's where vector databases become essential.</p>
+<p><img alt="Emb5" src="../assets/task4/emb5.png" /></p>
+<p><span class="colour" style="color:orange"> Note: In this lab session, we will be using OpenAI embeddings. More info can be found <a href="https://platform.openai.com/docs/guides/embeddings">here</a></span> </p>
+<h2 id="why-vector-databases-when-we-have-relational-dbs">Why Vector Databases when we have relational DB's?</h2>
+<p>Around 80% of the data we encounter is unstructured, including social media posts, images, and videos. This type of data doesn’t easily fit into traditional relational databases, which is where vector databases come into play.</p>
+<p><img alt="VecDB" src="../assets/task4/vdb.png" /></p>
+<h2 id="understanding-working-of-embeddings-and-vector-databases">Understanding working of Embeddings and Vector Databases</h2>
+<h3 id="practical-example-of-embedding-techniques-using-postman">Practical Example of Embedding Techniques Using Postman</h3>
+<p><img alt="SingleStore" src="../assets/task4/HLO.png" /></p>
+<h4 id="set-openai-token">Set OpenAI token</h4>
+<p><span class="colour" style="color:orange">Note: If you’ve already obtained the token in previous steps, you can skip this section </span></p>
+<p><span class="colour" style="color:orange">Note: First, create an account from the<a href="https://platform.openai.com/"> OpenAI official website</a>.</span></p>
 <ul>
-<li>Install the Google ThousandEyes Google Chrom Plug-in by pasting this <a href="https://chrome.google.com/webstore/detail/thousandeyes-endpoint-age/ddnennmeinlkhkmajmmfaojcnpddnpgb">link</a> in your Google Chrome Browser</li>
-<li>https://chrome.google.com/webstore/detail/thousandeyes-endpoint-age/ddnennmeinlkhkmajmmfaojcnpddnpgb</li>
+<li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the APi Key as we will be using it in the later steps .</li>
 </ul>
-<p>If asked Turn on Sync. Navigate back to the incognito browser logged into ThousandEyes and your ThousandEyes EPA should look like the one below.</p>
-<p><img alt="TE - EPA Chrome Extension" src="../assets/task4/thousandeyes-chrome-extension.png" /></p>
-<p>You are now ready to continue your journey see how AST (Automated Session tests) can automatically monitor Webex meetings. Customize and see how your EPA monitors browser sessions and set up scheduled tests to montior the health of critical applications in the background. Scheduled tests are a great way to provide a baseline for application and network health. The browser sessions provide the view of what the end users session is like when sites are accessed in the domains you are interested in monitoring. And Automated sessions tests will integrate with Webex and monitor traffic automatically whenever a user joins a Webex meeting from Webex App or the RoomOS devices. Let's carry on with <a href="../Task5/">Task 5</a>.</p>
+<p><img alt="GPT1_apiKey" src="../assets/task8c/ap.png" /></p>
+<p><span class="colour" style="color:orange">Note: We will use the OpenAI key in Postman to generate embeddings.</span></p>
+<h4 id="login-to-postman">Login to Postman</h4>
+<p>If you haven't installed Postman on your machine yet, you can download it from the following <a href="https://www.postman.com/downloads/">link</a></p>
+<p>As we will be using embedding APIs to create an embedding vector that represents our input text, more information can be found at the following <a href="https://platform.openai.com/docs/api-reference/embeddings">link</a></p>
+<p>The POST request we will be using:</p>
+<p><div class="highlight"><pre><span></span><code>https://api.openai.com/v1/embeddings
+</code></pre></div>
+* Open Postman, create a new request by pressing +. Select POST as your request and enter the request url  </p>
+<p><img alt="postman1" src="../assets/task4/pm1.png" /></p>
+<ul>
+<li>Click on the Headers tab and enter the Following creds</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">Au</span><span class="kc">t</span><span class="err">horiza</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">Bearer</span><span class="w"> </span><span class="err">&lt;replace</span><span class="w"> </span><span class="err">wi</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">ope</span><span class="kc">n</span><span class="err">Ai</span><span class="w"> </span><span class="err">API</span><span class="w"> </span><span class="err">key&gt;</span>
+<span class="err">Co</span><span class="kc">ntent</span><span class="mi">-</span><span class="err">Type</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span>
+</code></pre></div>
+<p><img alt="postman2" src="../assets/task4/pm2.png" /></p>
+<ul>
+<li>In this lab, we will be using the <a href="https://platform.openai.com/docs/guides/embeddings/embedding-models">text-embedding-ada-002 model</a>, but feel free to use any other embedding model of your choice.</li>
+</ul>
+<p><img alt="Em2" src="../assets/task4/em1.png" /></p>
+<ul>
+<li>In Postman, click on the "Body" tab, enter the following information, and then press "Send."</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;input&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;What is WebexOne 2024? WebexOne is an annual in-person and virtual event that takes place over four days. It’s an event focused on AI collaboration and customer experience, and it features a range of activities such as insightful breakout sessions, technical training courses, hands-on labs, inspiring keynotes, epic entertainment, a solutions showcase and expo, customer awards, meet the experts, 1:1 executive meetings, a partner program, and more! &quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;model&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text-embedding-ada-002&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><img alt="postman3" src="../assets/task4/pm3.png" /></p>
+<ul>
+<li>You will receive a 200 OK message, confirming success, and you'll notice that our text has been converted into embeddings (vectors). In the upcoming steps, I will show you on how to manually save this information in a vector database.</li>
+</ul>
+<p><img alt="postman4" src="../assets/task4/pm4.png" /></p>
+<p><span class="colour" style="color:orange">Note: Text embedding models, convert text into numerical data(embeddings) that represent text meaning.</span></p>
+<h4 id="inserting-values-in-vector-database">Inserting values in Vector Database</h4>
+<p>We have a variety of databases available. In the upcoming step, I will demonstrate how to use <a href="https://www.singlestore.com/built-in-vector-database/">SingleStore</a> as a vector database and save our embeddings there.</p>
+<p><span class="colour" style="color:orange">Note: This manual step is simply to illustrate how embeddings are stored in vector databases.</span></p>
+<p><img alt="VecDB1" src="../assets/task4/ex_vdb.png" /></p>
+<p><span class="colour" style="color:orange">Note: We will create a Free account on <a href="https://www.singlestore.com/built-in-vector-database/">SingleStore</a>since it provides some credits to set up a trial account.</span></p>
+<p><img alt="SS1" src="../assets/task4/st1.png" /></p>
+<ul>
+<li>I’m choosing to create an account using Google, but feel free to use any other method that works for you.</li>
+</ul>
+<p><img alt="SS2" src="../assets/task4/st2.png" /></p>
+<ul>
+<li>Select Continue</li>
+</ul>
+<p><img alt="SS3" src="../assets/task4/st3.png" /></p>
+<p><img alt="SS4" src="../assets/task4/st4.png" /></p>
+<p><img alt="SS5" src="../assets/task4/st5.png" /></p>
+<ul>
+<li>Click on New Deployment</li>
+</ul>
+<p><img alt="SS6" src="../assets/task4/st6.png" /></p>
+<ul>
+<li>Give your workspace a name, keep all other settings at their default, and click "Next."</li>
+</ul>
+<p><img alt="SS7" src="../assets/task4/st7.png" /></p>
+<ul>
+<li>Then, leave everything as is and click on "Create Workspace."</li>
+</ul>
+<p><img alt="SS8" src="../assets/task4/st8.png" /></p>
+<p><img alt="SS9" src="../assets/task4/st9.png" /></p>
+<ul>
+<li>Now we can create a database</li>
+</ul>
+<p><img alt="SS10" src="../assets/task4/st10.png" /></p>
+<p><img alt="SS11" src="../assets/task4/st11.png" /></p>
+<ul>
+<li>Click on Database tab</li>
+</ul>
+<p><img alt="SS12" src="../assets/task4/st12.png" /></p>
+<p><img alt="SS13" src="../assets/task4/st13.png" /></p>
+<ul>
+<li>Return to the home screen and navigate to Develop &gt; Data Studio. Open the SQL Editor.</li>
+</ul>
+<p><img alt="SS14" src="../assets/task4/st14.png" /></p>
+<ul>
+<li>Be sure to select your workspace and database.</li>
+</ul>
+<p><img alt="SS15" src="../assets/task4/st15.png" /></p>
+<ul>
+<li>Run a SQL command to create a table - Press Run</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="n">myvectortable</span><span class="w"> </span><span class="p">(</span>
+<span class="nb">text</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="n">vector</span><span class="w"> </span><span class="nb">BLOB</span>
+<span class="p">);</span>
+</code></pre></div>
+<img alt="SS16" src="../assets/task4/st16.png" /></p>
+<ul>
+<li>You can navigate to the Databases tab and verify that the table has been created.</li>
+</ul>
+<p><img alt="SS17" src="../assets/task4/st17.png" /></p>
+<ul>
+<li>
+<p>Let's copy the embeddings we generated earlier using Postman so that we can insert them into our database.</p>
+</li>
+<li>
+<p>To proceed, copy the input text and  all the embedding values, including the square brackets [], as shown in the image. These will be used for insertion into our database.</p>
+</li>
+</ul>
+<p><img alt="SS18" src="../assets/task4/st18.png" /></p>
+<ul>
+<li>Let's head back to our SQL editor and insert the values into our database. Once done press "Run"</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">myvectortable</span><span class="w"> </span><span class="p">(</span><span class="nb">text</span><span class="w"> </span><span class="p">,</span><span class="n">vector</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;your_input_text&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;your_embeddings&quot;</span><span class="p">))</span>
+</code></pre></div>
+In this query:</p>
+<div class="highlight"><pre><span></span><code>* Replace &quot;your_input_text&quot; with the input values from Postman.
+
+* Replace your_embeddings with the embeddings you copied earlier, including the square brackets [].
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">myvectortable</span><span class="w"> </span><span class="p">(</span><span class="nb">text</span><span class="w"> </span><span class="p">,</span><span class="n">vector</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;What is WebexOne 2024? WebexOne is an annual in-person and virtual event that takes place over four days. It’s an event focused on AI collaboration and customer experience, and it features a range of activities such as insightful breakout sessions, technical training courses, hands-on labs, inspiring keynotes, epic entertainment, a solutions showcase and expo, customer awards, meet the experts, 1:1 executive meetings, a partner program, and more!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;[</span>
+<span class="ss">                -0.0042485874,</span>
+<span class="ss">                -0.02296605,</span>
+<span class="ss">                0.011213377,</span>
+<span class="ss">                0.01114761,</span>
+<span class="ss">                -0.027280405,</span>
+<span class="ss">                0.0023528363,</span>
+<span class="ss">                -0.004350527,</span>
+<span class="ss">                0.0043768343,</span>
+<span class="ss">                -0.00068562734,</span>
+<span class="ss">                -0.011660597,</span>
+<span class="ss">                0.010397859,</span>
+<span class="ss">                0.018730614,</span>
+<span class="ss">                -0.0158763,</span>
+<span class="ss">                -0.013469206,</span>
+<span class="ss">                0.0026997605,</span>
+<span class="ss">                -0.00003768792,</span>
+<span class="ss">                0.014850326,</span>
+<span class="ss">                -0.03183152,</span>
+<span class="ss">                0.0026175508,</span>
+<span class="ss">                -0.0459321,</span>
+<span class="ss">                -0.0055803815,</span>
+<span class="ss">                -0.008247258,</span>
+<span class="ss">                -0.011713211,</span>
+<span class="ss">                0.0006169824,</span>
+<span class="ss">                -0.017112732,</span>
+<span class="ss">                -0.002885554,</span>
+<span class="ss">                -0.004113764,</span>
+<span class="ss">                -0.01348236,</span>
+<span class="ss">                ........</span>
+<span class="ss">            ]&quot;</span><span class="p">))</span>
+</code></pre></div>
+<ul>
+<li>After running the above command, you will see that our table now contains both the input text and the corresponding embeddings.</li>
+</ul>
+<p><img alt="SS19" src="../assets/task4/st19.png" /></p>
+<h4 id="retrieving-values-from-the-vector-database">Retrieving Values from the Vector Database</h4>
+<p><img alt="SS20" src="../assets/task4/st20.png" /></p>
+<ul>
+<li>
+<p>Searching the vector database is quite simple. Example: we want to find anything related to WebexOne. To do this, we'll create embeddings for our query, "Is WebexOne an annual event?" and then search the vector database to find matches against the existing embeddings.</p>
+</li>
+<li>
+<p>Let's open Postman and create an embedding for our question. Be sure to click on "Send."</p>
+</li>
+</ul>
+<p><img alt="SS21" src="../assets/task4/st21.png" /></p>
+<ul>
+<li>Let's head over to the SQL editor and run a query for our search.</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="nb">text</span><span class="p">,</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;[your_embeddings]&quot;</span><span class="p">))</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">score</span>
+<span class="k">from</span><span class="w"> </span><span class="n">myvectortable</span>
+<span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">desc</span>
+<span class="k">limit</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+* In this query:
+    * Replace your_embeddings with the embeddings you copied earlier, including the square brackets [] for the question.</p>
+<div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="nb">text</span><span class="p">,</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;[</span>
+<span class="ss">                -0.0015118581,</span>
+<span class="ss">                -0.021267666,</span>
+<span class="ss">                0.023597047,</span>
+<span class="ss">                -0.0072638104,</span>
+<span class="ss">                -0.02286653,</span>
+<span class="ss">                0.005909599,</span>
+<span class="ss">                -0.026119394,</span>
+<span class="ss">                -0.010268575,</span>
+<span class="ss">                0.0052169873,</span>
+<span class="ss">                -0.009551842,</span>
+<span class="ss">                0.024065679,</span>
+<span class="ss">                0.020178782,</span>
+<span class="ss">                0.015464887,</span>
+<span class="ss">                0.016815653,</span>
+<span class="ss">                -0.016333235,</span>
+<span class="ss">                -0.0006641838,</span>
+<span class="ss">                0.018069934,</span>
+<span class="ss">                -0.010564916,</span>
+<span class="ss">                0.007911626,</span>
+<span class="ss">                -0.026367495,</span>
+<span class="ss">                -0.0019417254,</span>
+<span class="ss">                -0.005547787,</span>
+<span class="ss">                -0.012604848,</span>
+<span class="ss">                0.0003715036,</span>
+<span class="ss">                -0.013962504,</span>
+<span class="ss">                0.011729606,</span>
+<span class="ss">                -0.00078737224,</span>
+<span class="ss">                -0.011881223,</span>
+<span class="ss">                0.007815143,</span>
+<span class="ss">                0.009992908,</span>
+<span class="ss">                0.020316616,</span>
+<span class="ss">                -0.0032580325,</span>
+<span class="ss">                -0.0066401153,</span>
+<span class="ss">                0.0097310245,</span>
+<span class="ss">                -0.0028652078,</span>
+<span class="ss">                -0.008145943,</span>
+<span class="ss">                -0.0074843434,</span>
+<span class="ss">                ........</span>
+<span class="ss">            ]&quot;</span><span class="p">))</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">score</span>
+<span class="k">from</span><span class="w"> </span><span class="n">myvectortable</span>
+<span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">desc</span>
+<span class="k">limit</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<p><img alt="SS22" src="../assets/task4/st22.png" /></p>
+<p><span class="colour" style="color:orange">Note: You’ll be able to see the success of the vector database—higher scores indicate better matches for the answer.</span></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We explored how to use embeddings and vector databases by generating embeddings with the OpenAI API through Postman. After setting up a free SingleStore account, we stored embeddings in a vector database. We learned how to create an embedding for a query, searched the database, and confirmed that it effectively retrieved relevant information. This process demonstrated how vector databases can efficiently manage and query embeddings, making it easier to find relevant information based on the data stored.</p>
 
 
 
