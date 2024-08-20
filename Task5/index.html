@@ -24,7 +24,7 @@
     
     
       
-        <title>Task 5 - Configure ThousandEyes AST and EPA Monitoring - Collaboration - Technical Marketing Engineering</title>
+        <title>Task 5 - Context Windows and Retrieval Augmented Generation (RAG) - Collaboration - Technical Marketing Engineering</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-5-configure-thousandeyes-automated-session-tests-and-epa-monitoring" class="md-skip">
+        <a href="#task-5-context-windows-and-retrieval-augmented-generation-rag" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 5  - Configure ThousandEyes AST and EPA Monitoring
+              Task 5  - Context Windows and Retrieval Augmented Generation (RAG)
             
           </span>
         </div>
@@ -502,7 +502,7 @@
           
   
   <span class="md-ellipsis">
-    Task 5  - Configure ThousandEyes AST and EPA Monitoring
+    Task 5  - Context Windows and Retrieval Augmented Generation (RAG)
   </span>
   
 
@@ -513,7 +513,7 @@
         
   
   <span class="md-ellipsis">
-    Task 5  - Configure ThousandEyes AST and EPA Monitoring
+    Task 5  - Context Windows and Retrieval Augmented Generation (RAG)
   </span>
   
 
@@ -535,54 +535,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#set-up-automated-session-tests-for-webex-meetings-optional-step" class="md-nav__link">
+  <a href="#how-context-window-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Set up Automated Session tests for Webex Meetings - Optional Step
+      How Context window work
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-scheduled-tests" class="md-nav__link">
+  <a href="#retrieval-augmented-generation-rag" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding Scheduled tests
+      Retrieval Augmented Generation (RAG)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#set-up-scheduled-tests-for-your-thousandeyes-epa" class="md-nav__link">
+  <a href="#how-can-rag-address-the-limitations-weve-seen-with-the-context-window" class="md-nav__link">
     <span class="md-ellipsis">
-      Set up Scheduled Tests for your ThousandEyes EPA
+      How can RAG address the limitations we've seen with the context window?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#set-up-browser-sessions-for-your-thousandeyes-epa" class="md-nav__link">
+  <a href="#whats-happening-under-the-hood" class="md-nav__link">
     <span class="md-ellipsis">
-      Set up Browser Sessions for your ThousandEyes EPA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#automated-sessions-tests-ast-for-your-thousandeyes-epa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Automated Sessions Tests (AST) for your ThousandEyes EPA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#navigate-back-to-your-vm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Navigate back to your VM
+      What's Happening Under the Hood
     </span>
   </a>
   
@@ -808,108 +790,62 @@
                   
 
 
-<h1 id="task-5-configure-thousandeyes-automated-session-tests-and-epa-monitoring">Task 5: Configure ThousandEyes Automated Session tests and EPA Monitoring</h1>
-<h2 id="set-up-automated-session-tests-for-webex-meetings-optional-step">Set up Automated Session tests for Webex Meetings - Optional Step</h2>
-<p><strong>Automated Session Tests</strong> enable the Endpoint Agents installed on your  workstations to monitor and identify network connections between a user’s application and the destination node (Webex); thereby, removing the ambiguity of knowing whether the IP addresses created in synthetic tests are going to the right datacentre or service.
-Automated Session Tests capture the performance of a desktop application e.g. Webex App, without you having to manually configure an IP address or hostname for the application.</p>
-<p><strong>Note:</strong> The below configuration steps are for information purpose only</p>
-<ul>
-<li>Navigate to the Endpoint Agents &gt; Monitoring Settings &gt; Automated Session Tests tab.</li>
-<li>Click the Add New Test button.</li>
-</ul>
-<p><img alt="TE - EPA Configure" src="../assets/task5/epa-configure.png" /></p>
-<ul>
-<li>Create an AST to monitor Webex Meetings in your organization  </li>
-</ul>
-<p><img alt="TE - EPA Configure Agent" src="../assets/task5/epa-config-agent.png" /></p>
-<p><strong>Note:</strong> The above steps have already been configured. Showing for <strong>information purpose</strong> only. </p>
-<p><strong>Note:</strong> More info can be found on <a href="https://help.webex.com/en-us/article/nymfj2d/Integrate-ThousandEyes-with-Troubleshooting-in-Control-Hub">Webex help</a> that explains how to create a configuration between ControlHub and ThousandEyes platform.</p>
-<p>When the user (that was created by you) initiate and join a Webex meeting from the WebexApp, you be able to view the ThousandEyes path in ControlHub troubleshooting section.</p>
-<ul>
-<li>If you have logged out, log back in ControlHub using Readonly admin creds provided . Click on Troubleshooting,  search for your userid that you have used to join the Webex meeting and click the meeting that is in progress.</li>
-</ul>
-<p><strong>Note</strong> Make sure the Webex meeting is still going on in the virtual machine. As you are the only participant, it will disconnect in some time. If disconnected, please start the meeting again.</p>
-<p><img alt="ControlHub TS" src="./assets/task4/CH-TS.png" /></p>
-<ul>
-<li>Click your demo user id</li>
-</ul>
-<p><img alt="ControlHub TS EU" src="../assets/task5/CH-User.png" /></p>
-<ul>
-<li>You will notice ThousandEyes path. <strong>ThousandEyes AST</strong> starts capturing network path data as soon as the meeting starts. However, there could be a delay of up to five minutes before that data populates in Troubleshooting section. </li>
-</ul>
-<p><img alt="ControlHub TS PATH" src="../assets/task5/CH-User-Path.png" /></p>
-<ul>
-<li>The network path route shows the details for each node that the hop connected to. Click on any of the dotted lines </li>
-</ul>
-<p><img alt="ControlHub TS PATH Details" src="../assets/task5/CH-User-Path-details.png" /></p>
+<h1 id="task-5-context-windows-and-retrieval-augmented-generation-rag">Task 5: Context Windows and Retrieval Augmented Generation (RAG)</h1>
+<p><img alt="CW" src="../assets/task5/cw.png" /></p>
 <ul>
 <li>
-<p>You can hover over a dotted line to see the user's latency (round-trip) average value during that interval. The color changes depending on the threshold that the value met. Thresholds in Webex are are calculated as:</p>
-<div class="highlight"><pre><span></span><code>- Poor (red)—Latency &gt; 400ms or Loss (round-trip) &gt; 5%
-- Good (green)—Latency &lt; 300ms or Loss (round-trip) &lt; 3%
-- Fair (yellow)—Neither of the above.
-- Unknown (grey)—Not available yet. You still be able to retrieve the metric from the TE dashboard.
-</code></pre></div>
+<p>The context window is the limit on how much text the model can keep in mind and process at once. It includes your messages, the model’s replies, and any other text in the conversation. If the conversation gets too long and goes beyond this limit, the model might start to forget what was said earlier.</p>
 </li>
 <li>
-<p>You can also click on <strong>Launch the ThousandEyes dashboard</strong> . It will cross-launch from the Webex ControlHub Network Path into ThousandEyes platform. You will be navigated to the Automated Session Tests view, which is found within the <strong>Endpoint Agents &gt; Views &gt; Automated Session Tests</strong> section of the web application. The view is pre-filtered to the corresponding user and time segment from Webex Control Hub.</p>
+<p><strong>Example</strong> </p>
+</li>
+<li>
+<p>For GPT-3.5, the context window limit is approximately 8,000 tokens (one token typically represents about 4 characters on average.). If the input text along with previous interactions (if any) exceeds the limit of LLM, the model may not be able to see or remember parts of the text that fall outside this window. This can result in errors or the inability to refer back to earlier parts of the conversation or document. </p>
 </li>
 </ul>
-<p><img alt="TS PATH AST" src="../assets/task5/AST-Path-details.png" /></p>
-<h2 id="understanding-scheduled-tests">Understanding Scheduled tests</h2>
-<p>Before setting up scheduled tests it's a good idea to create an Agent Label and assign your EPA to it. Labels are a super powerful way to dynamically manage how ThousandEyes Endpoint Agents are configured for testing and reporting.</p>
-<p>For more information on Endpoint Agent Labels check out our <a href="https://docs.thousandeyes.com/product-documentation/global-vantage-points/endpoint-agents/configuring/configure-endpoint-agent-labels">documentation</a>.</p>
-<p>Click the <strong>Agent Labels</strong> if you are still viewing your EPA otherwise navigate to <strong>Endpoint Agents &gt; Agent Settings &gt; Agent Labels</strong>.</p>
-<p>Click <strong>Add New Label</strong>. Name the label e.g RS_PC, select any color.</p>
-<p>In the Filter section select <strong>Agent</strong> <strong>in</strong> and use the pull down to select your agent (note you can use the search field to quickly find your agent). Click <strong>Save</strong>. See the image below for and example of how to add your agent to your label.</p>
-<p><img alt="TE - EPA Chrome Extension" src="../assets/task5/epa-label.png" /></p>
-<h2 id="set-up-scheduled-tests-for-your-thousandeyes-epa">Set up Scheduled Tests for your ThousandEyes EPA</h2>
-<p>You will build a test that will run every minute to https://office.com for this lab but feel free to build other tests. You can have up to 10 tests run on an EPA.</p>
-<p>Navigate to <strong>Endpoint Agents &gt; Monitoring Settings</strong></p>
-<p>Click <strong>Add New Test</strong></p>
+<p><img alt="Erro7" src="../assets/task5/erro.png" /></p>
+<p><span class="colour" style="color:orange"> Note: A token can be as small as a piece of a word or as large as a word itself, depending on the language and complexity of the text </span></p>
 <ul>
-<li>Type Web, HTTP Server (this is the default)</li>
-<li>Test Name: Set a unique name</li>
-<li>URL: https://office.com</li>
-<li>Interval: 1 minute</li>
-<li>Agents: Agent label then select the label you created</li>
-<li>Click the prioritize slider (as this is an important test)</li>
-<li>Click <strong>Add New Test</strong> (note you can also Run Once but if you do this don’t forget to save the test!)</li>
+<li>Consider a model with a context window limit of 8,000 tokens. If we input 6,000 tokens and the model generates a response of 1,500 tokens, the total token count is 7,500. This is within the model's context window, so all information is processed correctly.
+Conversely, if the input increases to 10,000 tokens and the response remains at 1,500 tokens, the total becomes 11,500 tokens. This exceeds the model's 8,000-token limit. Consequently, the model might lose context or be unable to respond properly as the excess information falls outside its context window. This demonstrates the importance of managing input size to stay within the model's processing capabilities.</li>
 </ul>
-<p><img alt="TE - EPA Add New Test" src="../assets/task5/epa-add-new-test.png" /></p>
-<h2 id="set-up-browser-sessions-for-your-thousandeyes-epa">Set up Browser Sessions for your ThousandEyes EPA</h2>
-<p>Set up domains to be monitored when the browser on the Windows VM accesses them (Note: Only Chrome, Edge or IE 11+ browsers are supported). Typically these consist of the domains that are critical for your users and businses operations. You'll see shortly how powerful this can for troubleshooting users issues. </p>
-<p>Navigate to <strong>Endpoint Agents &gt; Monitoring Settings &gt; Browser Sessions</strong>. For more information on Browser Session monitoring click <a href="https://docs.thousandeyes.com/product-documentation/end-user-monitoring/browser-session/configure-browser-session">here</a>.</p>
-<p>Click <strong>Add New Monitored Domain Set</strong></p>
+<p><img alt="CW1" src="../assets/task5/cw1.png" /></p>
+<h2 id="how-context-window-work">How Context window work</h2>
 <ul>
-<li>Domain Set Name: Set a unique name</li>
-<li>Monitored Domains: office.com, webex.com, cisco.com (feel free to add in other domains)</li>
-<li>Agents: Agent Labels and select your agent label that you created earlier  </li>
-<li>Click <strong>Add New Monitored Domain Set</strong></li>
+<li>
+<p>In the below example , multiple potential predicted words exist, but the model chooses the words based on the surrounding context and their probability. However, if the context window size increases and the word "Webex" moves out of the window, the model may lose critical context. As a result, the next predicted word might be incorrect, as the model can no longer reference "Webex" to inform its predictions accurately. This highlights the importance of keeping key information within the context window to maintain the accuracy of the model's predictions.</p>
+</li>
+<li>
+<p>Additionally, the temperature setting in the model can influence the type of content it generates. Lower temperatures are useful for summarizing or generating more deterministic and concise outputs, while higher temperatures encourage creativity, making the model more suitable for writing stories or poems. Adjusting the temperature allows you to control the balance between predictability and creativity in the model's output.</p>
+</li>
 </ul>
-<p><img alt="TE - EPA Monitored Domain Set" src="../assets/task5/epa-domain-set.png" /></p>
-<h2 id="automated-sessions-tests-ast-for-your-thousandeyes-epa">Automated Sessions Tests (AST) for your ThousandEyes EPA</h2>
-<!-- Please do not make changes to the AST that is configured. **This is for informational purposes only.**
-
-Navigate to **Endpoint Agents > Monitoring Settings > Automated Session Tests**
-
-Click **Add New Test**
-
-Click the **Target Pull Down**. Review the list applications then click **Cancel** -->
-
-<!-- ![TE - EPA Automated Session Tests](./assets/task5/epa-ast.png)
-
-Automated Session Tests make it easy to monitor dynamic sessions that are created by applications. Today, Microsoft Teams, Webex, Webex Calling and Zoom are out of the box. If you have a custom dynamic application you’d like to have monitored please reach out to your ThousandEyes TSA or support and let us know so we can collaborate with you and craete it. -->
-<h2 id="navigate-back-to-your-vm">Navigate back to your VM</h2>
-<p>Open the Chrome Browser and navigate to the domains you set for browser sessions. Open a tab and bring up a site in each tab:</p>
+<p><img alt="CW2" src="../assets/task5/cw2.png" /></p>
+<p><img alt="ISolved2" src="../assets/task5/issue_colved.png" /></p>
 <ul>
-<li>https://cisco.com</li>
-<li>https://webex.com</li>
-<li>https://office.com</li>
+<li>Thats where RAG com einto play</li>
 </ul>
-<p><img alt="VM - Chrome Browser Tabs" src="../assets/task5/vm-chrome-tabs.png" /></p>
-<p>Click refresh on each tab a few times to create some extra sessions. Do this for a few minutes randomly to generate web browser traffic which we will analyze later. If you need to test out having browser traffic randomly generated to a site or set of sites a great chrome plug in to use is <a href="https://autorefresh.io/">Auto Refresh Plus</a>. We won't go into configuring or installing it for this lab.</p>
-<p>You should have some good data captured with the Webex session running in the background on the VM being catpured with the Webex AST, the scheduled tests runing in background providing a baseline and then the browser sessions. Time to move onto <a href="../Task6/">Task 6</a> and start analyzing the data!</p>
+<h2 id="retrieval-augmented-generation-rag">Retrieval Augmented Generation (RAG)</h2>
+<p>Lets try to undertsand what RAGs are all about before we can look how they can solve context window issues</p>
+<p>RAG = Retrieval Augmented Generation</p>
+<p><img alt="rag" src="../assets/task5/rag.png" /></p>
+<p>Lets focus on the <span class="colour" style="color:orange">Generation </span>part. Generation basically means responding to user query. For example, you might ask the model whether DX or Navigators are compatible with supporting ThousandEyes.</p>
+<p><img alt="rag1" src="../assets/task5/rag1.png" /></p>
+<p>That's an excellent question. LLMs are trained on vast amounts of historical data, so they may recognize that DX and Navigators are well-regarded Cisco products. As a result, the LLM might confidently respond that you can install ThousandEyes on those devices. However, the issue is that the response may lack a verifiable source to back up that claim or the information can be out-of-date  </p>
+<p><img alt="rag2" src="../assets/task5/rag2.png" /></p>
+<p>What if, instead of just asking the question, I had first consulted a reputable source and only then informed the user that ThousandEyes can't be installed on those devices? This is where Retrieval-Augmented Generation comes into play. By integrating a knowledge base—such as PDFs, CSVs, images, and other resources—into the model, we ensure that any time a question is asked, the response is based on the most current and accurate information available.</p>
+<p><img alt="rag3" src="../assets/task5/rag3.png" /></p>
+<h2 id="how-can-rag-address-the-limitations-weve-seen-with-the-context-window">How can RAG address the limitations we've seen with the context window?</h2>
+<p>To address the context window limitation, we can use an embedding model to convert relevant text into embeddings and store them in a vector database. When a user submits a query, we transform it into an embedding and compare it to the stored embeddings to find the closest match. Once we identify the match, we retrieve that specific chunk of text to respond to the query. This approach effectively overcomes the context window limitation by ensuring that our responses are accurate and contextually relevant.</p>
+<p><img alt="rag4" src="../assets/task5/rag4.png" /></p>
+<p>Now you can see how RAG can address some of the challenges with LLMs. Instead of re-training or fine-tuning the model with new information, we can augment our data sources to retrieve the most up-to-date information. Additionally, LLMs are now instructed to prioritize primary source data before generating responses, making them less likely to hallucinate and encouraging more accurate and reliable outputs.</p>
+<p><img alt="rag6" src="../assets/task5/rag6.png" /></p>
+<h2 id="whats-happening-under-the-hood">What's Happening Under the Hood</h2>
+<p><img alt="rag7" src="../assets/task5/rag7.png" /></p>
+<p>We normally start by taking multiple documents and converting them into embeddings. Imagine these embeddings as points in a 3D space, where each document is projected based on its semantic meaning or content. Documents located near each other in this space contain similar semantic information, which is crucial when we search for or retrieve information.</p>
+<p>Now, when we receive a query, we also convert it into an embedding (numerical value). We then perform a similarity search in this 3D space, looking for the documents that are closest to our query's embedding. These nearby documents are likely to contain the most relevant information.</p>
+<p>Once we've identified these matching documents, we retrieve the relevant sections (or "splits") and feed all this information into the LLM's context window, allowing it to generate a well-informed response.</p>
+<p><img alt="rag5" src="../assets/task5/rag5.png" /></p>
+<p>We've seen models like Gemini Pro with a context window size of millions, allowing them to retain more information. So, why use RAG? The answer is that RAG remains highly beneficial for sourcing real-time data,fact-checking, and accessing external knowledge that isn't contained within the context window.</p>
 
 
 
