@@ -341,6 +341,8 @@
       
         
       
+        
+      
     
     
       
@@ -552,6 +554,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#optional-step-running-ollama-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional Step - Running Ollama locally
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional Step - Running Ollama locally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-for-installing-ollama-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites for Installing Ollama Locally
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-ollama-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Ollama Locally
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Interface
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -656,7 +700,7 @@
         
   
   <span class="md-ellipsis">
-    Task 6  - Analyzing ThousandEyes EPA Data
+    Task 6  - Multimodal RAG
   </span>
   
 
@@ -783,6 +827,27 @@
   
   <span class="md-ellipsis">
     Task 8d - Model Merging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Task9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task 9  - GenAI Frameworks
   </span>
   
 
@@ -942,7 +1007,7 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 </ul>
 <p>By following these guidelines, you can ensure that your data remains secure while leveraging the powerful tools and resources provided by Hugging Face. This approach not only enhances your workflow efficiency but also upholds the best practices in data security and privacy.</p>
 <h2 id="accessing-hugging-face-hub-and-creating-account">Accessing Hugging Face Hub and creating account</h2>
-<p>Hugging Face can be accessed by browsing to <a href="huggingface.co">huggingface.co</a></p>
+<p>Hugging Face can be accessed by browsing to <a href="huggingface.co">huggingface</a></p>
 <p><img alt="HLF" src="../assets/task8a/HF.png" /></p>
 <h3 id="signing-up">Signing up</h3>
 <ul>
@@ -1029,6 +1094,87 @@ import os
 # Set other API keys similarly
 os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 </code></pre></div>
+<h2 id="optional-step-running-ollama-locally">Optional Step - Running Ollama locally</h2>
+<p>Have you ever used GPT and amazed at its ability to understand and respond to your queries? But did you know that you can also harness the power of open-source models using Ollama? With Ollama, you can download and interact with these models directly, getting responses that are tailored to your needs.</p>
+<p>In this lab, I'll show you how to install Ollama locally on your machine and start using it to generate responses. You'll learn how to download and load open-source models, and then use Ollama's intuitive interface to interact with them. More info for <a href="https://ollama.com/">Ollama can be found here</a></p>
+<p><span style="color: RED;"> Note: The steps below are provided for informational purposes. If you are using the demo laptop in this lab, feel free to follow these instructions. However, if you are using your personal or work machine, please ensure that you have the necessary privileges and authorization from your organization's administrator to install Ollama locally.</span> </p>
+<h3 id="prerequisites-for-installing-ollama-locally">Prerequisites for Installing Ollama Locally</h3>
+<ul>
+<li>Ensure that Docker is installed and running on your machine. It is available for various operating systems, including macOS, Windows, and Linux. You can download it from the <a href="https://www.docker.com/">official Docker website</a> and follow the installation instructions for your specific OS.</li>
+</ul>
+<h3 id="installing-ollama-locally">Installing Ollama Locally</h3>
+<p><span style="color: RED;"> Note: Since we're using a Mac, I'll demonstrate how you can install it on macOS. </span></p>
+<ul>
+<li>
+<p>First, you need to install Ollama. You can download it <a href="ollama.com">here</a> and clicking on the download button. Follow the instructions.</p>
+</li>
+<li>
+<p>Once installed, Ollama functions as a command-line application, allowing you to interact with it directly through the terminal. To get started, open the terminal and enter the following command:</p>
+</li>
+</ul>
+<div class="highlight"><span class="filename">SHELL</span><pre><span></span><code><span class="n">ollama</span>
+</code></pre></div>
+<p>It will output the below commands</p>
+<p><img alt="Ollama" src="../assets/task1/olama.png" /></p>
+<ul>
+<li>Ollama supports a list of models available <a href="ollama.com/library">here</a>. Below are some example models that can be downloaded:</li>
+</ul>
+<p><img alt="Ollama1" src="../assets/task1/olama1.png" /></p>
+<ul>
+<li>To download a model, for example, gemma:2b, which is a lighter model, we can simply type:</li>
+</ul>
+<div class="highlight"><span class="filename">SHELL</span><pre><span></span><code><span class="n">ollama</span> <span class="n">pull</span> <span class="n">gemma</span><span class="p">:</span><span class="mi">2</span><span class="n">b</span>
+</code></pre></div>
+<p><img alt="pull" src="../assets/task1/pull.png" /></p>
+<ul>
+<li>After pulling the model we can interact with it in the terminal by typing:</li>
+</ul>
+<div class="highlight"><span class="filename">SHELL</span><pre><span></span><code><span class="n">ollama</span> <span class="n">run</span> <span class="n">gemma</span><span class="p">:</span><span class="mi">2</span><span class="n">b</span>
+</code></pre></div>
+<p><img alt="pull1" src="../assets/task1/pull1.png" /></p>
+<ul>
+<li>We can now ask our question directly in the terminal</li>
+</ul>
+<p><img alt="pull2" src="../assets/task1/pull2.png" /></p>
+<ul>
+<li>To remove model you can type</li>
+</ul>
+<div class="highlight"><span class="filename">SHELL</span><pre><span></span><code><span class="n">ollama</span> <span class="n">rm</span> <span class="n">gemma</span><span class="p">:</span><span class="mi">2</span><span class="n">b</span>
+</code></pre></div>
+<ul>
+<li>To see the models installed, just enter </li>
+</ul>
+<div class="highlight"><span class="filename">SHELL</span><pre><span></span><code><span class="n">ollama</span> <span class="nb">list</span>
+</code></pre></div>
+<h3 id="web-interface">Web Interface</h3>
+<p>Once we've installed Ollama, we can interact with it directly through the terminal, as demonstrated earlier. But what if you prefer a web interface? There are several open-source tools available, but I'll show you how to use <a href="https://github.com/open-webui/open-webui">Open WebUI</a>, which was previously known as Ollama WebUI.</p>
+<p>Open WebUI is a versatile, feature-rich, and user-friendly web interface that you can host yourself and use entirely offline. It offers a ChatGPT-style interface, allowing you to interact with language models running on locally (Ollama). This tool is especially useful for those who want to run language models locally or in a self-hosted environment, ensuring both data privacy and control.</p>
+<ul>
+<li>After installing Ollama, simply run the following Docker command to set up the interface</li>
+</ul>
+<div class="highlight"><span class="filename">SHELL</span><pre><span></span><code><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">3000</span><span class="p">:</span><span class="mi">8080</span> <span class="o">--</span><span class="n">add</span><span class="o">-</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="o">.</span><span class="n">docker</span><span class="o">.</span><span class="n">internal</span><span class="p">:</span><span class="n">host</span><span class="o">-</span><span class="n">gateway</span> <span class="o">-</span><span class="n">v</span> <span class="nb">open</span><span class="o">-</span><span class="n">webui</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">backend</span><span class="o">/</span><span class="n">data</span> <span class="o">--</span><span class="n">name</span> <span class="nb">open</span><span class="o">-</span><span class="n">webui</span> <span class="o">--</span><span class="n">restart</span> <span class="n">always</span> <span class="n">ghcr</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="nb">open</span><span class="o">-</span><span class="n">webui</span><span class="o">/</span><span class="nb">open</span><span class="o">-</span><span class="n">webui</span><span class="p">:</span><span class="n">main</span>
+</code></pre></div>
+<p><img alt="pull3" src="../assets/task1/pull3.png" /></p>
+<ul>
+<li>Once installed, you can access Open WebUI at http://localhost:3000. </li>
+</ul>
+<p><span style="color: RED;">Note: Before accessing the web interface, you will be prompted to create an account. Please follow the instructions.</span></p>
+<ul>
+<li>In the dropdown menu, you'll see the model you previously installed via the terminal (gemma:2b).</li>
+</ul>
+<p><img alt="pull4" src="../assets/task1/pull4.png" /></p>
+<ul>
+<li>You can now interact with the model via WebUi</li>
+</ul>
+<p><img alt="pull5" src="../assets/task1/pull5.png" /></p>
+<ul>
+<li>You no longer need to use the terminal to download a model. Simply navigate to the “Settings --&gt; Models” section in the WebUI, and select the specific model you want to download.</li>
+</ul>
+<p><img alt="pull6" src="../assets/task1/pull6.png" /></p>
+<ul>
+<li>After installing, all the installed models will be displayed in the UI.</li>
+</ul>
+<p><img alt="pull7" src="../assets/task1/pull7.png" /></p>
 
 
 

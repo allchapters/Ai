@@ -341,6 +341,8 @@
       
         
       
+        
+      
     
     
       
@@ -484,9 +486,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lab-overview-enabling-hybrid-work-with-thousandeyes" class="md-nav__link">
+  <a href="#lab-overview-generative-ai-and-webex-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Lab Overview - Enabling Hybrid Work with ThousandEyes
+      Lab Overview - Generative AI and Webex integration
     </span>
   </a>
   
@@ -617,7 +619,7 @@
         
   
   <span class="md-ellipsis">
-    Task 6  - Analyzing ThousandEyes EPA Data
+    Task 6  - Multimodal RAG
   </span>
   
 
@@ -760,6 +762,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../Task9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task 9  - GenAI Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Task20/" class="md-nav__link">
         
   
@@ -818,10 +841,12 @@
 
 
 <h1 id="overview-understanding-ai-and-its-integration-with-webex">Overview - Understanding AI and Its Integration with Webex</h1>
-<p><img alt="AI_Info" src="../assets/task1/ai.png" /></p>
+<p><img alt="AI_Info" src="../assets/task1/ai1.png" /></p>
 <p>Artificial Intelligence (AI) is transforming the way we work, enabling innovative solutions and enhancing productivity. Cisco is committed to innovating responsibly, with responsible AI being non-negotiable. Our approach is grounded in the principles of transparency, fairness, accountability, reliability, security, and privacy. Cisco's Responsible AI Framework, aligned with the  AI Risk Management Framework, ensures that all AI initiatives undergo rigorous assessments, particularly around privacy. </p>
-<p>Cisco's AI strategy emphasizes building ethical and trustworthy  systems that mitigate risks while enhancing innovation across products and services.</p>
-<p>Please refer to the below info for more detailed insights:</p>
+<p>Remember data has value, Cisco's AI strategy emphasizes building ethical and trustworthy systems that mitigate risks while enhancing innovation across products and services.</p>
+<!-- ![AI_InfoIMP1](./assets/task1/IMP1.png) -->
+<p><img alt="AI_InfoIMP" src="../assets/task1/IMP.png" /></p>
+<p>Please refer to the below info for more detailed insights about Cisco Responsible AI:</p>
 <ul>
 <li><a href="https://blogs.cisco.com/news/responsible-ai-is-built-on-a-foundation-of-privacy">Responsible AI is built on a foundation of privacy</a></li>
 <li><a href="https://www.cisco.com/c/dam/en_us/about/doing_business/trust-center/docs/cisco-responsible-artificial-intelligence-principles.pdf">Cisco's Responsible Artificial Intelligence Principles</a></li>
@@ -840,42 +865,49 @@
 <p><img alt="AI_Info1225" src="../assets/task1/ai15.png" /></p>
 <p><img alt="AI_Info1226" src="../assets/task1/ai16.png" /></p>
 <p><img alt="AI_Info1227" src="../assets/task1/ai17.png" /></p>
+<p><strong>AI Codec Improve audio quality in poor network conditions</strong> </p>
 <p><img alt="AI_Info12277" src="../assets/task1/ai18.png" /></p>
+<p><img alt="AI_Info122771" src="../assets/task1/ai21.png" /></p>
 <p><img alt="AI_Info1228" src="../assets/task1/ai19.png" /></p>
 <h2 id="summary-of-newly-integrated-ai-features-within-our-platform">Summary of newly integrated AI features within our platform</h2>
 <p><img alt="AI_Info1229" src="../assets/task1/ai20.png" /></p>
 <p><span class="colour" style="color:orange">REMINDER: Our product team is hosting AI sessions. Please review the agenda and join the ones that interest you.</span></p>
 <h2 id="lab-guide-overview">Lab Guide Overview</h2>
-<p>In this lab  guide you will go through the fundamental concepts of AI, various techniques, and how AI can be integrated with Webex to create efficient workflows.</p>
+<p>In this lab guide you will go through the fundamental concepts of AI, various techniques, and how AI can be integrated with Webex to create efficient workflows.</p>
 <h2 id="upon-completion-of-this-lab-you-will-be-able-to">Upon completion of this lab you will be able to</h2>
 <ul>
 <li>Understand the basics of AI and its applications</li>
 <li>Learn about embedding techniques</li>
-<li>Explore vector databases</li>
+<li>Vector databases</li>
 <li>Gain insights into Generative AI models</li>
 <li>Familiarize yourself with different AI frameworks</li>
-<li>Integrate AI with Webex to create seamless workflows</li>
+<li>Integrate AI with Webex to create seamless workflows - Call Recording</li>
 <li>Develop hands-on skills through practical exercises</li>
 <li>Understand Fine-tuning and Quantization</li>
 <li>Deploy Fine Tuning techniques</li>
+<li>Retrieval Augmented Generation (RAG) and Multimodal RAG</li>
 </ul>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>Basic understanding of AI concepts is helpful but not required.</li>
+<li>We will be using Google Colab for this lab. However, if you have your own machine with an Nvidia chipset and prefer to run the lab locally, feel free to do so.</li>
 </ul>
 <h2 id="disclaimer">Disclaimer</h2>
-<p>The lab design and configuration examples provided are for reference purposes only. This is a sample deployment, and not all recommended features are used or enabled optimally. For design-related questions, please contact your representative at Cisco or a Cisco partner or TME team.</p>
-<h2 id="lab-overview-enabling-hybrid-work-with-thousandeyes">Lab Overview - Enabling Hybrid Work with ThousandEyes</h2>
+<p>The lab design and configuration examples provided are for reference/learning purposes only. This is a sample deployment, and not all recommended features are used or enabled optimally. For design-related questions, please contact your representative at Cisco or a TME team.</p>
+<h2 id="lab-overview-generative-ai-and-webex-integration">Lab Overview - Generative AI and Webex integration</h2>
 <ul>
-<li>Lab Login and Setup</li>
-<li>Quick AI Overview</li>
-<li>Configure and Access the Lab Systems</li>
-<li>Deploy AI Models and Techniques</li>
-<li>Use POSTMAN for embeddings</li>
-<li>Set up and Configure AI Monitoring</li>
-<li>Review AI Integration with Webex</li>
-<li>Analyze Data and Optimize Workflows</li>
-<li>Wrap up and End the Lab</li>
+<li>Lab Setup - Google Colab and Hugging Face</li>
+<li>AI/ML Revolution Unveiled: Task2.md</li>
+<li>Tokenization: </li>
+<li>Embeddings and Vector Database:</li>
+<li>Context Windows and Retrieval Augmented Generation (RAG)</li>
+<li>Multimodal RAG</li>
+<li>Understanding Fine-Tuning for Large Language Models</li>
+<li>Fine Tuning - Deep Dive into Quantization , LoRA and SFT</li>
+<li>Configuring and Fine Tuning - Using llama2</li>
+<li>Configuring and Fine Tuning - Using llama3</li>
+<li>Configuring and Fine Tuning - Using ChatGPT</li>
+<li>Model Merging (Theory Only)</li>
 </ul>
 <p>Let's get started! Click on <a href="../Task1/">Task 1 - Google Collab- Accessing Google Collab and creating account</a>.</p>
 
