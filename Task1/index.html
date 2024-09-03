@@ -24,7 +24,7 @@
     
     
       
-        <title>Task 1 - Lab Setup - Google Colab and Hugging Face - Collaboration - Technical Marketing Engineering</title>
+        <title>Task 1 - Lab Setup - Google Colab, Hugging Face, Langchain, Ollama - Collaboration - Technical Marketing Engineering</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Task 1  - Lab Setup - Google Colab and Hugging Face
+              Task 1  - Lab Setup - Google Colab, Hugging Face, Langchain, Ollama
             
           </span>
         </div>
@@ -420,7 +420,7 @@
           
   
   <span class="md-ellipsis">
-    Task 1  - Lab Setup - Google Colab and Hugging Face
+    Task 1  - Lab Setup - Google Colab, Hugging Face, Langchain, Ollama
   </span>
   
 
@@ -431,7 +431,7 @@
         
   
   <span class="md-ellipsis">
-    Task 1  - Lab Setup - Google Colab and Hugging Face
+    Task 1  - Lab Setup - Google Colab, Hugging Face, Langchain, Ollama
   </span>
   
 
@@ -544,6 +544,30 @@
   <a href="#using-secrets-as-environment-variables-optional-step-we-will-use-it-later-in-our-lab" class="md-nav__link">
     <span class="md-ellipsis">
       Using Secrets as Environment Variables - Optional Step , we will use it later in our lab
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-langchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started with Langchain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with Langchain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-langchain-envoirnment-sample-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Langchain envoirnment - Sample Code
     </span>
   </a>
   
@@ -1094,6 +1118,23 @@ import os
 # Set other API keys similarly
 os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 </code></pre></div>
+<h2 id="getting-started-with-langchain">Getting Started with Langchain</h2>
+<p>Let's explore how to create a LangChain account and obtain the API key, which we will use later in our lab. </p>
+<p>To start building applications with LangChain, you'll need an API key. This key allows your applications to securely connect with LangChain's services, ensuring proper authentication and usage tracking.</p>
+<p>Lets start by visiting the official <a href="https://smith.langchain.com/settings">LangChain website</a> and create an account. You'll need to enter some basic information about yourself or your organization. In this example, I will be using my Google account to sign up.</p>
+<p><img alt="ls1" src="../assets/task1/ls1.png" /></p>
+<p>To create an API key head to the Settings page. Then click Create API Key.</p>
+<p><img alt="ls2" src="../assets/task1/ls2.png" /></p>
+<h3 id="setup-langchain-envoirnment-sample-code">Setup Langchain envoirnment - Sample Code</h3>
+<ul>
+<li>In the code snippet below, we'll configure our environment to enable tracing of AI calls and set up the API key for interacting with LangChain's services, as we will be using these in the upcoming section.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sample Code</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">langchain</span><span class="o">-</span><span class="n">community</span>
+<span class="n">export</span> <span class="n">LANGCHAIN_TRACING_V2</span><span class="o">=</span><span class="n">true</span>
+<span class="n">export</span> <span class="n">LANGCHAIN_API_KEY</span><span class="o">=&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">key</span><span class="o">&gt;</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="optional-step-running-ollama-locally">Optional Step - Running Ollama locally</h2>
 <p>Have you ever used GPT and amazed at its ability to understand and respond to your queries? But did you know that you can also harness the power of open-source models using Ollama? With Ollama, you can download and interact with these models directly, getting responses that are tailored to your needs.</p>
 <p>In this lab, I'll show you how to install Ollama locally on your machine and start using it to generate responses. You'll learn how to download and load open-source models, and then use Ollama's intuitive interface to interact with them. More info for <a href="https://ollama.com/">Ollama can be found here</a></p>
@@ -1175,6 +1216,7 @@ os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 <li>After installing, all the installed models will be displayed in the UI.</li>
 </ul>
 <p><img alt="pull7" src="../assets/task1/pull7.png" /></p>
+<p><span style="color: RED;">Note: Using LangChain with Ollama allows you to leverage Ollama's capabilities within the LangChain ecosystem. You can find <a href="https://python.langchain.com/v0.1/docs/get_started/quickstart/">more information here</a> </span></p>
 
 
 
