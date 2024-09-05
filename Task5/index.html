@@ -573,9 +573,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lets-buils-a-quick-rag-application" class="md-nav__link">
+  <a href="#lets-build-a-quick-rag-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Lets buils a quick RAG application
+      Lets build a quick RAG application
     </span>
   </a>
   
@@ -887,7 +887,7 @@ Conversely, if the input increases to 10,000 tokens and the response remains at 
 <p>Once we've identified these matching documents, we retrieve the relevant sections (or "splits") and feed all this information into the LLM's context window, allowing it to generate a well-informed response.</p>
 <p><img alt="rag5" src="../assets/task5/rag5.png" /></p>
 <p>We've seen models like Gemini Pro with a context window size of millions, allowing them to retain more information. So, why use RAG? The answer is that RAG remains highly beneficial for sourcing real-time data,fact-checking, and accessing external knowledge that isn't contained within the context window.</p>
-<h2 id="lets-buils-a-quick-rag-application">Lets buils a quick RAG application</h2>
+<h2 id="lets-build-a-quick-rag-application">Lets build a quick RAG application</h2>
 <p>While LLMs (Large Language Models) like GPT-4 , Llama, Gemini possess impressive general knowledge, they don't inherently have access to your data. To connect LLMs with your own data sources, we can use frameworks like <span class="colour" style="color:red">LangChain</span>. These frameworks enable us to leverage our own data by breaking down documents into smaller chunks and storing them as embeddings in vector databases.</p>
 <p>This approach allows us to build applications that can effectively use language models. Example: When a user asks a question, we convert it into embeddings, perform a semantic search to find the most relevant answers, and then send both the question and the retrieved information to the LLM to generate a response.</p>
 <p>In this section, we'll briefly introduce LangChain, but in the upcoming chapters, we'll dive deeper to gain a more comprehensive understanding of how it works.</p>
