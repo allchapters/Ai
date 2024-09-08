@@ -453,9 +453,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#google-collab-accessing-google-collab-and-creating-account" class="md-nav__link">
+  <a href="#google-colab-accessing-google-colab-and-creating-account" class="md-nav__link">
     <span class="md-ellipsis">
-      Google Collab- Accessing Google Collab and creating account
+      Google Colab - Accessing Google Colab and creating account
     </span>
   </a>
   
@@ -946,7 +946,7 @@
 
 
 <h1 id="pre-requisites-and-setup">Pre-Requisites and Setup</h1>
-<h2 id="google-collab-accessing-google-collab-and-creating-account">Google Collab- Accessing Google Collab and creating account</h2>
+<h2 id="google-colab-accessing-google-colab-and-creating-account">Google Colab - Accessing Google Colab and creating account</h2>
 <p>Google Colab is a free, cloud-based platform that provides a convenient environment for running notebooks. If you want to create a machine learning model but don't have a computer that can handle the workload, Google Colab is the platform for you. In our lab, we will be using Google Colab to test and run our code. However, if you have your own Python environment and prefer to run the code on your local machine, please feel free to do so.</p>
 <p>Here are some reasons why using Google Colab can be beneficial for this lab:</p>
 <ul>
@@ -971,7 +971,7 @@
 <p>There might be times when we need to fine-tune models or perform specific tasks that require changing the runtime environment in Colab. Google Colab offers different runtime environments that can be selected based on your requirements:</p>
 </li>
 <li>
-<p><strong>Python Versions:</strong> You can select between different versions of Python (e.g., Python 2 or Python 3 )depending on the compatibility of the code and libraries. We will be using Python3 for our lab.</p>
+<p><strong>Python Versions:</strong> You can select between different versions of Python (e.g., Python 2 or Python 3)depending on the compatibility of the code and libraries. We will be using Python3 for our lab.</p>
 </li>
 <li>
 <p><strong>Hardware Accelerators:</strong> Colab provides access to hardware accelerators, which can be particularly useful for intensive computations. You can choose between:</p>
@@ -984,7 +984,12 @@ GPU: Accelerate your computations with a Graphics Processing Unit.
 TPU: Use a Tensor Processing Unit for even faster performance, especially beneficial for deep learning tasks.
 </code></pre></div>
 <ul>
-<li>Change Runtime Environment: Click the “Runtime” dropdown menu at the top of the Colab interface.</li>
+<li>
+<p>Click the arrow next to “Connect” to open the dropdown</p>
+</li>
+<li>
+<p>Change Runtime Environment: Click the “Runtime” dropdown menu at the top of the Colab interface.</p>
+</li>
 </ul>
 <p><img alt="Colab_runtime" src="../assets/task1/Colab_chg.png" /></p>
 <ul>
@@ -995,7 +1000,15 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 <p>Select Python Version: Choose Python 3 from the “Runtime type” dropdown menu.</p>
 </li>
 <li>
-<p>Select Hardware Accelerator: From the “Hardware accelerator” dropdown menu, choose  GPU, or TPU based on your needs.</p>
+<p>Select Hardware Accelerator: From the “Hardware accelerator” dropdown menu, choose  GPU, or TPU . </p>
+<ul>
+<li>
+<p>GPU (Graphics Processing Unit): Best for tasks requiring extensive parallel processing, such as training neural networks (the main focus in our lab guide).</p>
+</li>
+<li>
+<p>TPU (Tensor Processing Unit): Optimized for deep learning tasks</p>
+</li>
+</ul>
 </li>
 </ul>
 <p><img alt="Colab_savruntime" src="../assets/task1/savColab_chg.png" /></p>
@@ -1014,10 +1027,10 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 <p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>
 <hr />
 <h2 id="notes-on-gpu-and-tpu-access">Notes: On GPU and TPU Access:</h2>
-<p>While Google Colab offers free access to GPUs and TPUs, there are limitations. For more consistent access to high-performance GPUs and TPUs, you might need to subscribe to Colab Pro or Colab Pro+ accounts. These paid plans provide priority access to better hardware, longer runtimes, and more memory.</p>
+<p>While Google Colab offers free access to GPUs and TPUs, there are limitations. For more consistent access to high-performance GPUs and TPUs, you might need to subscribe to <a href="https://colab.research.google.com/signup">Colab Pro or Colab Pro+ accounts</a>. These paid plans provide priority access to better hardware, longer runtimes, and more memory.</p>
 <hr />
 <h2 id="using-huggingface-hub-to-share-our-datasets">Using Huggingface Hub to share our Datasets</h2>
-<p>In this lab, we will be utilizing the Hugging Face Hub to load our custom datasets. Hugging Face provides an extensive repository of datasets that can be easily integrated into your machine learning workflows. For the purposes of this lab, we will demonstrate how to access/upload and use our custom datasets effectively.</p>
+<p>In this lab, we will be utilizing the <a href="https://huggingface.co/">Hugging Face Hub</a> to load our custom datasets. Hugging Face provides an extensive repository of datasets that can be easily integrated into your machine learning workflows. For the purposes of this lab, we will demonstrate how to access/upload and use our custom datasets effectively.</p>
 <p>However, when fine-tuning models in your own work environment, especially if you are using private data, there are important considerations to keep in mind:</p>
 <ul>
 <li><strong>Private Datastores:</strong> If you are working with proprietary or sensitive data, it is crucial to use your organization's secure datastores. Ensure that all data handling complies with your organization's data privacy policies and regulations.</li>
@@ -1031,7 +1044,7 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 </ul>
 <p>By following these guidelines, you can ensure that your data remains secure while leveraging the powerful tools and resources provided by Hugging Face. This approach not only enhances your workflow efficiency but also upholds the best practices in data security and privacy.</p>
 <h2 id="accessing-hugging-face-hub-and-creating-account">Accessing Hugging Face Hub and creating account</h2>
-<p>Hugging Face can be accessed by browsing to <a href="huggingface.co">huggingface</a></p>
+<p>Hugging Face can be accessed by browsing to <a href="https://huggingface.co/">huggingface</a></p>
 <p><img alt="HLF" src="../assets/task8a/HF.png" /></p>
 <h3 id="signing-up">Signing up</h3>
 <ul>
@@ -1048,13 +1061,13 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 </ul>
 <p><img alt="Optional" src="../assets/task8a/HFOptional.png" /></p>
 <ul>
-<li>At this stage, you will see no models or datasets created under your account.</li>
-</ul>
-<p><img alt="Mo_DS" src="../assets/task8a/HFNoMD.png" /></p>
-<ul>
 <li>Access Your Models and Datasets: The same can be accessed by clicking your profile picture on the top right corner of the Hugging Face website. This will take you to your personal dashboard where you can view and manage your models and datasets.</li>
 </ul>
 <p><img alt="Mo_DS1" src="../assets/task8a/HFNoMD1.png" /></p>
+<ul>
+<li>At this stage, you will see no models or datasets created under your account.</li>
+</ul>
+<p><img alt="Mo_DS" src="../assets/task8a/HFNoMD.png" /></p>
 <h3 id="hugging-face-api-keys">Hugging Face API Keys</h3>
 <p><strong>Create an API Key:</strong> As we will be uploading our datasets to the Hugging Face Hub, we need to create an API key for our account. This API key will be used to authenticate and interact with the Hugging Face services programmatically.</p>
 <p>you can browse to <a href="https://huggingface.co/settings/token">huggingface API Key</a></p>
@@ -1065,13 +1078,14 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 <p>Under the "Access Tokens" section, click on "Create new token." You will see options to select the token type and provide a token name. For example, you might name your token "Webexone" and select the approperiate permissions.  </p>
 <ul>
 <li>
-<p>fine-grained: tokens with this role can be used to provide fine-grained access to specific resources, such as a specific model or models in a specific organization. This type of token is useful in production environments, as you can use your own token without sharing access to all your resources.</p>
+<p>Fine-grained: tokens with this role can be used to provide fine-grained access to specific resources, such as a specific model or models in a specific organization. This type of token is useful in production environments, as you can use your own token without sharing access to all your resources.</p>
 </li>
 <li>
-<p>read: tokens with this role can only be used to provide read access to repositories you could read. That includes public and private repositories that you, or an organization you’re a member of, own. Use this role if you only need to read content from the Hugging Face Hub (e.g. when downloading private models or doing inference).</p>
+<p>Read: tokens with this role can only be used to provide read access to repositories you could read. That includes public and private repositories that you, or an organization you’re a member of, own. Use this role if you only need to read content from the Hugging Face Hub 
+(e.g. when downloading private models or doing inference).</p>
 </li>
 <li>
-<p>write: tokens with this role additionally grant write access to the repositories you have write access to. Use this token if you need to create or push content to a repository (e.g., when training a model or modifying a model card).</p>
+<p>Write: tokens with this role additionally grant write access to the repositories you have write access to. Use this token if you need to create or push content to a repository (e.g., when training a model or modifying a model card).</p>
 </li>
 </ul>
 <p>As we have a lab envoirnment we will be using the "Write" permission. This token will have read and write access to all your resources and can make calls to inference API on your behalf, as shown in the image below.</p>
