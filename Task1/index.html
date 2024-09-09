@@ -532,18 +532,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#incorporating-secrets-into-your-code-we-will-use-it-later-in-our-lab" class="md-nav__link">
+  <a href="#using-secrets-as-environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Incorporating Secrets into Your Code - We will use it later in our lab
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-secrets-as-environment-variables-optional-step-we-will-use-it-later-in-our-lab" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Secrets as Environment Variables - Optional Step , we will use it later in our lab
+      Using Secrets as Environment Variables
     </span>
   </a>
   
@@ -557,17 +548,17 @@
         <li class="md-nav__item">
   <a href="#getting-started-with-langchain" class="md-nav__link">
     <span class="md-ellipsis">
-      Getting Started with Langchain
+      Getting Started with LangChain
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Getting Started with Langchain">
+    <nav class="md-nav" aria-label="Getting Started with LangChain">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#setup-langchain-envoirnment-sample-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup Langchain envoirnment - Sample Code
+      Setup LangChain envoirnment - Sample Code
     </span>
   </a>
   
@@ -957,7 +948,7 @@
 <li>Pre-installed Libraries: Many popular machine learning libraries, including TensorFlow and PyTorch, come pre-installed in Colab, making it easy to start working on your projects immediately.</li>
 </ul>
 <h2 id="getting-started-with-google-colab">Getting Started With Google Colab</h2>
-<p>To start working with Google Collaboratory Notebook you first need to log in to your Google account, then go to this link <a href="https://colab.research.google.com">Google Colab</a></p>
+<p>To start working with Google Collaboratory Notebook you first need to log in to your Google account, then go to this link <a href="https://colab.research.google.com" target="_blank">Google Colab</a></p>
 <ul>
 <li>Create a new Jupyter Notebook  </li>
 </ul>
@@ -1027,7 +1018,7 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 <p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>
 <hr />
 <h2 id="notes-on-gpu-and-tpu-access">Notes: On GPU and TPU Access:</h2>
-<p>While Google Colab offers free access to GPUs and TPUs, there are limitations. For more consistent access to high-performance GPUs and TPUs, you might need to subscribe to <a href="https://colab.research.google.com/signup">Colab Pro or Colab Pro+ accounts</a>. These paid plans provide priority access to better hardware, longer runtimes, and more memory.</p>
+<p>While Google Colab offers free access to GPUs and TPUs, there are limitations. For more consistent access to high-performance GPUs and TPUs, you might need to subscribe to <a href="https://colab.research.google.com/signup" target="_blank">Colab Pro or Colab Pro+ accounts</a>. These paid plans provide priority access to better hardware, longer runtimes, and more memory.</p>
 <hr />
 <h2 id="using-huggingface-hub-to-share-our-datasets">Using Huggingface Hub to share our Datasets</h2>
 <p>In this lab, we will be utilizing the <a href="https://huggingface.co/">Hugging Face Hub</a> to load our custom datasets. Hugging Face provides an extensive repository of datasets that can be easily integrated into your machine learning workflows. For the purposes of this lab, we will demonstrate how to access/upload and use our custom datasets effectively.</p>
@@ -1090,11 +1081,11 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 </ul>
 <p>As we have a lab envoirnment we will be using the "Write" permission. This token will have read and write access to all your resources and can make calls to inference API on your behalf, as shown in the image below.</p>
 <p><img alt="HF_CT" src="../assets/task8a/createtoken.png" /></p>
-<p><strong>Save and Secure the Token:</strong> Once the token is generated, save it securely. This token will be required for accessing and managing your datasets via the API. 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</p>
+<p><strong>Save and Secure the Token:</strong> Once the token is generated, save it securely, as it will be needed to access and manage your datasets via the API. The image below is for reference only. Make sure to use and save the token you generate.</p>
 <p><img alt="HF_GT" src="../assets/task8a/gentoken.png" /></p>
 <h2 id="accessing-hugging-face-api-in-google-colab">Accessing Hugging Face API in Google Colab</h2>
 <ul>
-<li>Open the Google Colab notebook and navigate to the new “Secrets” section in the sidebar.</li>
+<li>Open the Google Colab notebook and navigate to the new “Secrets” section in the sidebar by clicking the "key icon”</li>
 </ul>
 <p><img alt="HF_GT_sec" src="../assets/task8a/gensec.png" /></p>
 <ul>
@@ -1109,18 +1100,7 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 </li>
 </ul>
 <p><img alt="HF_GT_sec_created" src="../assets/task8a/addsec.png" /></p>
-<p><span style="color: RED;"> Optional Steps below </span> </p>
-<h3 id="incorporating-secrets-into-your-code-we-will-use-it-later-in-our-lab">Incorporating Secrets into Your Code - We will use it later in our lab</h3>
-<ul>
-<li>To use a secret in your notebook, use the following code snippet</li>
-</ul>
-<div class="highlight"><pre><span></span><code>from google.colab import userdata
-my_secret_key = userdata.get(&#39;HF_TOKEN&#39;)
-</code></pre></div>
-<ul>
-<li>Replace <name_of_your_secret> with your secret's name.</li>
-</ul>
-<h3 id="using-secrets-as-environment-variables-optional-step-we-will-use-it-later-in-our-lab">Using Secrets as Environment Variables -  Optional Step , we will use it later in our lab</h3>
+<h3 id="using-secrets-as-environment-variables">Using Secrets as Environment Variables</h3>
 <ul>
 <li>For Python modules requiring API keys as environment variables, use the below snippet:</li>
 </ul>
@@ -1132,14 +1112,17 @@ import os
 # Set other API keys similarly
 os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 </code></pre></div>
-<h2 id="getting-started-with-langchain">Getting Started with Langchain</h2>
+<h2 id="getting-started-with-langchain">Getting Started with LangChain</h2>
+<p>LangChain is a framework that enables developers to build applications using large language models (LLMs). It connects with various AI models, data sources, and APIs, allowing the creation of complex work flows for tasks such as question answering, chatbot interactions, and document summarization. We will explore LangChain in more detail in the later section.</p>
 <p>Let's explore how to create a LangChain account and obtain the API key, which we will use later in our lab. </p>
 <p>To start building applications with LangChain, you'll need an API key. This key allows your applications to securely connect with LangChain's services, ensuring proper authentication and usage tracking.</p>
-<p>Lets start by visiting the official <a href="https://smith.langchain.com/settings">LangChain website</a> and create an account. You'll need to enter some basic information about yourself or your organization. In this example, I will be using my Google account to sign up.</p>
+<p>Lets start by visiting the official <a href="https://smith.langchain.com/settings" target="_blank">LangChain website</a> and create an account. You'll need to enter some basic information about yourself or your organization. In this example, I will be using my Google account to sign up.</p>
 <p><img alt="ls1" src="../assets/task1/ls1.png" /></p>
-<p>To create an API key head to the Settings page. Then click Create API Key.</p>
+<p>To create an API key head to the <strong>Settings</strong> page. Then click Create API Key.</p>
 <p><img alt="ls2" src="../assets/task1/ls2.png" /></p>
-<h3 id="setup-langchain-envoirnment-sample-code">Setup Langchain envoirnment - Sample Code</h3>
+<p>Lets create a Personal Access Token</p>
+<p><img alt="lsr3" src="../assets/task1/lsr3.png" /></p>
+<h3 id="setup-langchain-envoirnment-sample-code">Setup LangChain envoirnment - Sample Code</h3>
 <ul>
 <li>In the code snippet below, we'll configure our environment to enable tracing of AI calls and set up the API key for interacting with LangChain's services, as we will be using these in the upcoming section.</li>
 </ul>
@@ -1150,8 +1133,8 @@ os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 <span class="n">export</span> <span class="n">LANGCHAIN_API_KEY</span><span class="o">=&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">key</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="optional-step-running-ollama-locally">Optional Step - Running Ollama locally</h2>
-<p>Have you ever used GPT and amazed at its ability to understand and respond to your queries? But did you know that you can also harness the power of open-source models using Ollama? With Ollama, you can download and interact with these models directly, getting responses that are tailored to your needs.</p>
-<p>In this lab, I'll show you how to install Ollama locally on your machine and start using it to generate responses. You'll learn how to download and load open-source models, and then use Ollama's intuitive interface to interact with them. More info for <a href="https://ollama.com/">Ollama can be found here</a></p>
+<p>Have you ever used ChatGPT and amazed at its ability to understand and respond to your queries? But did you know that you can also harness the power of open-source models using Ollama? With Ollama, you can download and interact with these models directly, getting responses that are tailored to your needs.</p>
+<p>In this lab, I'll show you how to install Ollama locally on your machine and start using it to generate responses. You'll learn how to download and load open-source models, and then use Ollama's intuitive interface to interact with them. More info for <a href="https://ollama.com/" target="_blank">Ollama can be found here</a></p>
 <p><span style="color: RED;"> Note: The steps below are provided for informational purposes. If you are using the demo laptop in this lab, feel free to follow these instructions. However, if you are using your personal or work machine, please ensure that you have the necessary privileges and authorization from your organization's administrator to install Ollama locally.</span> </p>
 <h3 id="prerequisites-for-installing-ollama-locally">Prerequisites for Installing Ollama Locally</h3>
 <ul>
@@ -1161,7 +1144,7 @@ os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 <p><span style="color: RED;"> Note: Since we're using a Mac, I'll demonstrate how you can install it on macOS. </span></p>
 <ul>
 <li>
-<p>First, you need to install Ollama. You can download it <a href="ollama.com">here</a> and clicking on the download button. Follow the instructions.</p>
+<p>First, you need to install Ollama. You can download it <a href="https://ollama.com" target="_blank">here</a> and clicking on the download button. Follow the instructions.</p>
 </li>
 <li>
 <p>Once installed, Ollama functions as a command-line application, allowing you to interact with it directly through the terminal. To get started, open the terminal and enter the following command:</p>
@@ -1172,7 +1155,7 @@ os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 <p>It will output the below commands</p>
 <p><img alt="Ollama" src="../assets/task1/olama.png" /></p>
 <ul>
-<li>Ollama supports a list of models available <a href="ollama.com/library">here</a>. Below are some example models that can be downloaded:</li>
+<li>Ollama supports a list of models available <a href="https://ollama.com/library" target="_blank">here</a>. Below are some example models that can be downloaded:</li>
 </ul>
 <p><img alt="Ollama1" src="../assets/task1/olama1.png" /></p>
 <ul>
@@ -1202,7 +1185,7 @@ os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 <div class="highlight"><span class="filename">SHELL</span><pre><span></span><code><span class="n">ollama</span> <span class="nb">list</span>
 </code></pre></div>
 <h3 id="web-interface">Web Interface</h3>
-<p>Once we've installed Ollama, we can interact with it directly through the terminal, as demonstrated earlier. But what if you prefer a web interface? There are several open-source tools available, but I'll show you how to use <a href="https://github.com/open-webui/open-webui">Open WebUI</a>, which was previously known as Ollama WebUI.</p>
+<p>Once we've installed Ollama, we can interact with it directly through the terminal, as demonstrated earlier. But what if you prefer a web interface? There are several open-source tools available, but I'll show you how to use <a href="https://github.com/open-webui/open-webui" target="_blank">Open WebUI</a>, which was previously known as Ollama WebUI.</p>
 <p>Open WebUI is a versatile, feature-rich, and user-friendly web interface that you can host yourself and use entirely offline. It offers a ChatGPT-style interface, allowing you to interact with language models running on locally (Ollama). This tool is especially useful for those who want to run language models locally or in a self-hosted environment, ensuring both data privacy and control.</p>
 <ul>
 <li>After installing Ollama, simply run the following Docker command to set up the interface</li>
@@ -1211,7 +1194,7 @@ os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 </code></pre></div>
 <p><img alt="pull3" src="../assets/task1/pull3.png" /></p>
 <ul>
-<li>Once installed, you can access Open WebUI at http://localhost:3000. </li>
+<li>Once installed, you can access Open WebUI at <a href="http://localhost:3000" target="_blank">localhost</a>. </li>
 </ul>
 <p><span style="color: RED;">Note: Before accessing the web interface, you will be prompted to create an account. Please follow the instructions.</span></p>
 <ul>
@@ -1219,7 +1202,7 @@ os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 </ul>
 <p><img alt="pull4" src="../assets/task1/pull4.png" /></p>
 <ul>
-<li>You can now interact with the model via WebUi</li>
+<li>You can now Interact with the model via WebUi</li>
 </ul>
 <p><img alt="pull5" src="../assets/task1/pull5.png" /></p>
 <ul>
@@ -1230,7 +1213,7 @@ os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 <li>After installing, all the installed models will be displayed in the UI.</li>
 </ul>
 <p><img alt="pull7" src="../assets/task1/pull7.png" /></p>
-<p><span style="color: RED;">Note: Using LangChain with Ollama allows you to leverage Ollama's capabilities within the LangChain ecosystem. You can find <a href="https://python.langchain.com/v0.1/docs/get_started/quickstart/">more information here</a> </span></p>
+<p><span style="color: RED;">Note: Using LangChain with Ollama allows you to leverage Ollama's capabilities within the LangChain ecosystem. You can find <a href="https://python.langchain.com/v0.1/docs/get_started/quickstart/" target="_blank">more information here</a> </span></p>
 
 
 

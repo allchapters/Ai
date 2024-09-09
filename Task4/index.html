@@ -901,15 +901,15 @@
 <p><img alt="SingleStore" src="../assets/task4/HLO.png" /></p>
 <h4 id="set-openai-token">Set OpenAI token</h4>
 <p><span class="colour" style="color:orange">Note: If you’ve already obtained the token in previous steps, you can skip this section </span></p>
-<p><span class="colour" style="color:orange">Note: First, create an account from the<a href="https://platform.openai.com/"> OpenAI official website</a>.</span></p>
+<p><span class="colour" style="color:orange">Note: First, create an account from the <a href="https://platform.openai.com/" target="_blank">OpenAI official website</a>.</span></p>
 <ul>
-<li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the APi Key as we will be using it in the later steps .</li>
+<li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys" target="_blank">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the APi Key as we will be using it in the later steps .</li>
 </ul>
 <p><img alt="GPT1_apiKey" src="../assets/task8c/ap.png" /></p>
 <p><span class="colour" style="color:orange">Note: We will use the OpenAI key in Postman to generate embeddings.</span></p>
 <h4 id="login-to-postman">Login to Postman</h4>
-<p>If you haven't installed Postman on your machine yet, you can download it from the following <a href="https://www.postman.com/downloads/">link</a></p>
-<p>As we will be using embedding APIs to create an embedding vector that represents our input text, more information can be found at the following <a href="https://platform.openai.com/docs/api-reference/embeddings">link</a></p>
+<p>If you haven't installed Postman on your machine yet, you can download it from the following <a href="https://www.postman.com/downloads/" target="_blank">link</a></p>
+<p>As we will be using embedding APIs to create an embedding vector that represents our input text, more information can be found at the following <a href="https://platform.openai.com/docs/api-reference/embeddings" target="_blank">link</a></p>
 <p>The POST request we will be using:</p>
 <p><div class="highlight"><pre><span></span><code>https://api.openai.com/v1/embeddings
 </code></pre></div>
@@ -941,10 +941,10 @@
 <p><img alt="postman4" src="../assets/task4/pm4.png" /></p>
 <p><span class="colour" style="color:orange">Note: Text embedding models, convert text into numerical data(embeddings) that represent text meaning.</span></p>
 <h4 id="inserting-values-in-vector-database">Inserting values in Vector Database</h4>
-<p>We have a variety of databases available. In the upcoming step, I will demonstrate how to use <a href="https://www.singlestore.com/built-in-vector-database/">SingleStore</a> as a vector database and save our embeddings there.</p>
+<p>We have a variety of databases available. In the upcoming step, I will demonstrate how to use <a href="https://www.singlestore.com/built-in-vector-database/" target="_blank">SingleStore</a> as a vector database and save our embeddings there.</p>
 <p><span class="colour" style="color:orange">Note: This manual step is simply to illustrate how embeddings are stored in vector databases.</span></p>
 <p><img alt="VecDB1" src="../assets/task4/ex_vdb.png" /></p>
-<p><span class="colour" style="color:orange">Note: We will create a Free account on <a href="https://www.singlestore.com/built-in-vector-database/">SingleStore</a>since it provides some credits to set up a trial account.</span></p>
+<p><span class="colour" style="color:orange">Note: We will create a Free account on <a href="https://www.singlestore.com/built-in-vector-database/" target="_blank">SingleStore</a> since it provides some credits to set up a trial account.</span></p>
 <p><img alt="SS1" src="../assets/task4/st1.png" /></p>
 <ul>
 <li>I’m choosing to create an account using Google, but feel free to use any other method that works for you.</li>

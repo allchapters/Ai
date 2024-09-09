@@ -892,7 +892,7 @@ Conversely, if the input increases to 10,000 tokens and the response remains at 
 <p>This approach allows us to build applications that can effectively use language models. Example: When a user asks a question, we convert it into embeddings, perform a semantic search to find the most relevant answers, and then send both the question and the retrieved information to the LLM to generate a response.</p>
 <p>In this section, we'll briefly introduce LangChain, but in the upcoming chapters, we'll dive deeper to gain a more comprehensive understanding of how it works.</p>
 <p><img alt="PIPE" src="../assets/task5/rag_pipe.png" /></p>
-<p><span class="colour" style="color:orange">Note: In this section, we will be using the <a href="https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cuipph/MPP/6800-DECT/deployment/CiscoDECT6800DeploymentGuide.pdf">Cisco DECT 6800 Deployment Guide</a>.  For the purposes of this lab, I've modified the original PDF by removing a few pages and saving it as a new file. The PDF we are using in this lab can be downloaded from <a download="dect.pdf" href="../assets/static/dect.pdf" target="_blank">here</a> </span></p>
+<p><span class="colour" style="color:orange">Note: In this section, we will be using the <a href="https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cuipph/MPP/6800-DECT/deployment/CiscoDECT6800DeploymentGuide.pdf" target="_blank">Cisco DECT 6800 Deployment Guide</a>.  For the purposes of this lab, I've modified the original PDF by removing a few pages and saving it as a new file. The PDF we are using in this lab can be downloaded from <a download="dect.pdf" href="../assets/static/dect.pdf" target="_blank">here</a></span></p>
 <ul>
 <li>Open Google Colab and create a new notebook. Click on "File" &gt; "New notebook". Please refer to the <a href="../Task1/">following section</a> to create Google Colab account.</li>
 </ul>
@@ -1000,7 +1000,7 @@ Also we can use <a href="https://python.langchain.com/v0.2/docs/integrations/tex
 # embeddings = OllamaEmbeddings()
 </code></pre></div>
 </span></p>
-<p><span style="color:orange">Note: More info on Vector Databases can be found <a href="https://python.langchain.com/v0.2/docs/integrations/vectorstores/">here</a></p>
+<p><span style="color:orange">Note: More info on Vector Databases can be found <a href="https://python.langchain.com/v0.2/docs/integrations/vectorstores/" target="_blank">here</a></p>
 <ul>
 <li>At this stage, we've loaded the document, created splits, converted them into embeddings, and stored them in the Vector DB. Now, let's query the database to ensure we can retrieve the information.</li>
 </ul>
@@ -1012,7 +1012,7 @@ Also we can use <a href="https://python.langchain.com/v0.2/docs/integrations/tex
 </code></pre></div></td></tr></table></div>
 <p><img alt="Output2" src="../assets/task5/o2.png" /></p>
 <ul>
-<li>Let's create our prompt. There are several ways to do this, you can either craft it manually or use prompts that have already been made available on the LangChain Hub. In this section, I'll demonstrate how to pull a prompt from the LangChain Hub and use it. Browse to <a href="https://smith.langchain.com/">Langmith</a> and create an account. In this example, I'll use Google to sign up for a Langsmith account, but feel free to choose the option that works best for you.</li>
+<li>Let's create our prompt. There are several ways to do this, you can either craft it manually or use prompts that have already been made available on the LangChain Hub. In this section, I'll demonstrate how to pull a prompt from the LangChain Hub and use it. Browse to <a href="https://smith.langchain.com/" target="_blank">Langmith</a> and create an account. In this example, I'll use Google to sign up for a Langsmith account, but feel free to choose the option that works best for you.</li>
 </ul>
 <p><img alt="Lsmith" src="../assets/task5/lsmith.png" /></p>
 <ul>

@@ -495,9 +495,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-we-need-tokenization-or-text-splitting" class="md-nav__link">
+  <a href="#why-do-we-need-tokenization-or-text-splitting" class="md-nav__link">
     <span class="md-ellipsis">
-      Why we need Tokenization or Text Splitting?
+      Why do we need Tokenization or Text Splitting?
     </span>
   </a>
   
@@ -532,9 +532,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recursive-charector-text-splitting" class="md-nav__link">
+  <a href="#recursive-character-text-splitting" class="md-nav__link">
     <span class="md-ellipsis">
-      Recursive Charector Text Splitting
+      Recursive character Text Splitting
     </span>
   </a>
   
@@ -932,7 +932,7 @@
 <ul>
 <li>Language models have a limit on how much text they can handle at once, known as their context window. While these limits are expanding, research shows that LLM's often perform better when provided with less, but more relevant, information. However, selecting the most relevant information is straightforward for humans but challenging for computers. </li>
 </ul>
-<p>A common approach to manage large amounts of data is to break it down into smaller, more manageable parts a process often referred to as Tokenization or Chunking. Tokenization is a key step in this process, where raw text is divided into smaller units, called tokens, which can then be processed by a neural network.</p>
+<p>A common approach to manage large amounts of data is to break it down into smaller, more manageable parts; this is a process often referred to as Tokenization or Chunking. Tokenization is a key step in this process, where raw text is divided into smaller units, called tokens, which can then be processed by a neural network.</p>
 <p><img alt="token_intro1" src="../assets/task3/tokeniza.png" /></p>
 <p>In order to do this you need to pick a chunk strategy. Just to name a few:</p>
 <ul>
@@ -947,7 +947,7 @@
 </li>
 </ul>
 <p><span class="colour" style="color:orange"> Note: We've all heard of GPT and OpenAI. They utilize a tokenization method called Byte Pair Encoding (BPE), which is a middle ground between word-based and character-based tokenization. In BPE, words are broken down into smaller character sequences that the model encountered during training, allowing it to make informed predictions. </span></p>
-<h2 id="why-we-need-tokenization-or-text-splitting">Why we need Tokenization or Text Splitting?</h2>
+<h2 id="why-do-we-need-tokenization-or-text-splitting">Why do we need Tokenization or Text Splitting?</h2>
 <p><img alt="salon" src="../assets/task3/salon.png" /></p>
 <p>Historically, applications perform better when they are provided with your own data. However, you can't feed unlimited data to your LLMs due to two key limitations:</p>
 <ul>
@@ -955,7 +955,7 @@
 <p>Context window limit: LLMs have a finite context window for processing data.</p>
 </li>
 <li>
-<p>Signal-to-noise ratio (SNR): LLMs perform better when the SNR is high, meaning the information provided is useful, relevant, and clear. Clear, unambiguous instructions help the model deliver more accurate and detailed results, while ambiguous or complex input can lead to less accurate or incomplete outputs.</p>
+<p>Signal-to-noise ratio (SNR): LLMs perform better when the SNR is high, meaning the information provided is useful, relevant, and clear. Clear, unambiguous instructions help the model deliver more accurate and detailed results, while ambiguous or complex inputs can lead to less accurate or incomplete outputs.</p>
 </li>
 </ul>
 <p>As noted, chunking or splitting refers to breaking your data into smaller, manageable pieces.</p>
@@ -974,7 +974,7 @@
 <p><span class="colour" style="color:red">Reminder: </span>Click the play button to the left of the code, or use the keyboard shortcut "Command/Ctrl+Enter" while the cell is selected.</p>
 <p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>
 <h3 id="manual-testing-for-chunking"><strong>Manual testing for Chunking</strong></h3>
-<p><span class="colour" style="color:green">We will create Chunks of 35 charectors, so first 35 charectors as chunk 1 , next 35 charectors chunk2 and so on </span></p>
+<p><span class="colour" style="color:green">We will create Chunks of 35 characters, so first 35 characters as chunk 1 ,next 35 characters chunk2 and so on </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1005,11 +1005,12 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
+<p><span class="colour" style="color:orange">Note: </span> The image below is provided to highlight the code and help you understand how chunking works. Not an actual output from print(chunks) command.</span></p>
 <p><img alt="token_intro1" src="../assets/task3/char.png" /></p>
 <p><span class="colour" style="color:orange">Note: </span> The text contained a total of 422 characters, divided into 13 chunks. Problem with the above chunking technique is that it got split at 'r'. How we know when to chunk . Before we look into that. Lets look into Langchain Splitter </span></p>
 <h3 id="langchain-text-splitter"><strong>LangChain Text Splitter</strong></h3>
 <ul>
-<li>Let's retrieve the langchain library from the Python Package. In the example below, we'll configure the chunk_overlap parameter, which ensures that our chunks are blended together—meaning the end of chunk 1 will overlap with the beginning of chunk 2.</li>
+<li>Let's retrieve the langchain library from the Python Package. In the example below, we'll configure the chunk_overlap parameter, which ensures that our chunks are blended together—meaning the end of chunk 1 will overlap with the beginning of chunk 2. Please copy the below command in Colab and press <strong>run</strong> to execute each cell individually.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">langchain</span>
 </code></pre></div></td></tr></table></div>
@@ -1032,10 +1033,10 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<span class="colour" style="color:green">Note:</span> Seprators are charectors sequence you wanna split on. </span></p>
+<span class="colour" style="color:green">Note:</span> Seprators are characters sequence you wanna split on. The image below is provided to highlight the code and help you understand how chunking works. </span></p>
 <p><img alt="LCh1" src="../assets/task3/lch1.png" /></p>
-<h3 id="recursive-charector-text-splitting"><strong>Recursive Charector Text Splitting</strong></h3>
-<p>In the previous example, when we used Character Splitting, we split the text based on a fixed number of characters. Specifically, we divided the text into chunks of 35 characters each.</p>
+<h3 id="recursive-character-text-splitting"><strong>Recursive character Text Splitting</strong></h3>
+<p>In the previous example, when we used character Splitting, we split the text based on a fixed number of character. Specifically, we divided the text into chunks of 35 characters each.</p>
 <p>However, with Recursive Text Splitting (RTS), the process is more dynamic and considers the physical structure of the text to determine the appropriate chunk size.</p>
 <p>Here’s how RTS works:</p>
 <ul>
@@ -1070,7 +1071,7 @@
 
 <span class="n">text_splitter</span><span class="o">.</span><span class="n">create_documents</span><span class="p">([</span><span class="n">text</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
-<span class="colour" style="color:green">Note:</span> We avoid splitting in the middle of words by using spaces as one of the separators, ensuring that each chunk ends on a complete word. This is crucial because RCS (Recursive Character Splitting) helps maintain the context within sentences by keeping related words together.</span></p>
+<span class="colour" style="color:green">Note:</span> We avoid splitting in the middle of words by using spaces as one of the separators, ensuring that each chunk ends on a complete word. This is crucial because RCS (Recursive Character Splitting) helps maintain the context within sentences by keeping related words together. The image below is provided to highlight the code and help you understand how chunking works.</span></p>
 <p><img alt="RTS1" src="../assets/task3/RTS1.png" /></p>
 <p><span class="colour" style="color:green">Note:</span>If you're new to AI, I would personally recommend starting with Recursive Text Splitting (RTS). </span></p>
 <h3 id="document-level-splitting"><strong>Document Level Splitting</strong></h3>
@@ -1092,12 +1093,12 @@
 <p>Let's load our PDF files into Google Colab. For this example, we can use the Cisco Financial Results. Please <a download="CiscoReport.pdf" href="../assets/static/CiscoReport.pdf" target="_blank">Download the file here</a> as we will be using in the next step.</p>
 </li>
 <li>
-<p>Within Google Colab, Click on Folder and create a new folder called "data"</p>
+<p>In Google Colab, click on the Folder tab. Right-click and select New Folder to create a folder named "data."</p>
 </li>
 </ul>
 <p><img alt="HL_Format_fold" src="../assets/task8a/fold.png" /></p>
 <ul>
-<li>Click on [...], select Upload</li>
+<li>Right-click on your newly created 'data' folder, then select Upload.</li>
 </ul>
 <p><img alt="HL_Format_fold_created" src="../assets/task8a/dc_created.png" /></p>
 <ul>
@@ -1107,6 +1108,7 @@
 <ul>
 <li>We'll use the following code from the Unstructured library to demonstrate how tables can be extracted</li>
 </ul>
+<p><span class="colour" style="color:green">Note: <Your-File-Path> In the below code filename, is the relative path where your PDF is uploaded. To get the correct file path, right-click on the 'data' folder, select your PDF file, and choose Copy Path. Example: filename = "/content/data/CiscoReport.pdf" </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1122,15 +1124,12 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">unstructured.partition.pdf</span> <span class="kn">import</span> <span class="n">partition_pdf</span>
 <span class="kn">from</span> <span class="nn">unstructured.staging.base</span> <span class="kn">import</span> <span class="n">elements_to_json</span>
 
 <span class="c1"># Let&#39;s load up our PDF and then partition it.</span>
-<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;/content/data/CiscoReport.pdf&quot;</span><span class="c1"># Use relative path since the file is in the same directory</span>
-
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;&lt;Your-File-Path&gt;&quot;</span><span class="c1"># Use relative path since the file is in the same directory.</span>
 <span class="c1"># Extracts the elements from the PDF</span>
 <span class="n">elements</span> <span class="o">=</span> <span class="n">partition_pdf</span><span class="p">(</span>
     <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span>
@@ -1139,7 +1138,6 @@
     <span class="n">infer_table_structure</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">hi_res_model_name</span><span class="o">=</span><span class="s2">&quot;yolox&quot;</span>
 <span class="p">)</span>
-
 <span class="c1"># Let&#39;s look at our elements</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -1153,7 +1151,7 @@
 <div class="highlight"><pre><span></span><code>&#39;<span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;&lt;</span><span class="nt">thead</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Revenue<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>$8.51 - $8.53 Billion<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>$34.5 - $34.7 Billion<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;/</span><span class="nt">thead</span><span class="p">&gt;&lt;</span><span class="nt">tbody</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Y/Y Growth<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>~10%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>~10%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>FX Impact)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>no impact<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>no impact<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>GAAP Operating Margin<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>~11.4%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Non-GAAP Operating Margin’)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>~28.0%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>GAAP Earnings per Share?)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>$0.79 - $0.80<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>$2.67 - $2.69<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Non-GAAP Earnings per Share()<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>$1.89 - $1.90<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>$7.41 - $7.43<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Operating Cash Flow Growth (Y/Y)°)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>16% - 17%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Current Remaining Performance Obligation Growth (Y/Y)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>~10%<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;/</span><span class="nt">tbody</span><span class="p">&gt;&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>&#39;
 </code></pre></div>
 <ul>
-<li>Tables are straightforward for humans to read, but they aren't as easy for language models to interpret. Language models are typically trained on HTML tables, so when you pass HTML-formatted tables to an LLM, it will better understand the structure and content. You can paste the HTML into an <a href="https://codebeautify.org/htmlviewer">HTML viewer</a> to see how it looks.</li>
+<li>Tables are straightforward for humans to read, but they aren't as easy for language models to interpret. Language models are typically trained on HTML tables, so when you pass HTML-formatted tables to an LLM, it will better understand the structure and content. You can paste the HTML into an <a href="https://codebeautify.org/htmlviewer" target="_blank">HTML viewer</a> to see how it looks.</li>
 </ul>
 <p><img alt="Table1" src="../assets/task3/tab.png" /></p>
 <p><span class="colour" style="color:green">Note: That's how you handle tables within a PDF.</span></p>
@@ -1218,9 +1216,9 @@ However, the CLIP model can generate embeddings for both images and text, making
 <p><img alt="image_extract" src="../assets/task3/iex.png" /></p>
 <p><span class="colour" style="color:green">Note: After extracting images from a PDF or any other source, you can use the below method to send them to a multimodal model like GPT-4o to understand and generate insights about the images. This approach allows you to combine textual and visual data for a richer understanding of the content.</span></p>
 <h4 id="set-openai-token-multimodal">Set OpenAI token - MultiModal</h4>
-<p><span class="colour" style="color:orange">Note: First, create an account from the<a href="https://platform.openai.com/"> OpenAI official website</a>.</span></p>
+<p><span class="colour" style="color:orange">Note: First, create an account from the <a href="https://platform.openai.com/" target="_blank">OpenAI official website</a>.</span></p>
 <ul>
-<li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the APi Key as we will be using it in the later steps .</li>
+<li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys" target="_blank">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the APi Key as we will be using it in the later steps . The below API key is for reference only .</li>
 </ul>
 <p><img alt="GPT1_apiKey" src="../assets/task8c/ap.png" /></p>
 <ul>
