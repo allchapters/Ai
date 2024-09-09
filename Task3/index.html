@@ -1089,16 +1089,23 @@
 </code></pre></div></td></tr></table></div>
 <p><img alt="apt" src="../assets/task3/apy.png" /></p>
 <ul>
+<li>We will upgrade nltk to version 3.9.1</li>
+</ul>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">nltk</span>
+</code></pre></div></td></tr></table></div>
+<img alt="apt1" src="../assets/task3/apy1.png" /></p>
+<p><span class="colour" style="color:green">Note: You need to restart your session</span></p>
+<ul>
 <li>
 <p>Let's load our PDF files into Google Colab. For this example, we can use the Cisco Financial Results. Please <a download="CiscoReport.pdf" href="../assets/static/CiscoReport.pdf" target="_blank">Download the file here</a> as we will be using in the next step.</p>
 </li>
 <li>
-<p>In Google Colab, click on the Folder tab. Right-click and select New Folder to create a folder named "data."</p>
+<p>In Google Colab, click on the Folder tab. Click and select New Folder to create a folder named "data."</p>
 </li>
 </ul>
 <p><img alt="HL_Format_fold" src="../assets/task8a/fold.png" /></p>
 <ul>
-<li>Right-click on your newly created 'data' folder, then select Upload.</li>
+<li>On your newly created 'data' folder, click [...] then select Upload.</li>
 </ul>
 <p><img alt="HL_Format_fold_created" src="../assets/task8a/dc_created.png" /></p>
 <ul>
@@ -1108,7 +1115,7 @@
 <ul>
 <li>We'll use the following code from the Unstructured library to demonstrate how tables can be extracted</li>
 </ul>
-<p><span class="colour" style="color:green">Note: <Your-File-Path> In the below code filename, is the relative path where your PDF is uploaded. To get the correct file path, right-click on the 'data' folder, select your PDF file, and choose Copy Path. Example: filename = "/content/data/CiscoReport.pdf" </span></p>
+<p><span class="colour" style="color:green">Note: <Your-File-Path> In the below code filename, is the relative path where your PDF is uploaded. To get the correct file path, click on the 'data' folder, select your PDF file, click on [...] and choose Copy Path. Example: filename = "/content/data/CiscoReport.pdf" </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
