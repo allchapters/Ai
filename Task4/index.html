@@ -525,22 +525,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-vector-databases-when-we-have-relational-dbs" class="md-nav__link">
+  <a href="#why-use-vector-databases-when-we-have-relational-databases" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Vector Databases when we have relational DB's?
+      Why use vector databases when we have relational databases?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-working-of-embeddings-and-vector-databases" class="md-nav__link">
+  <a href="#understanding-the-workings-of-embeddings-and-vector-databases" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding working of Embeddings and Vector Databases
+      Understanding the workings of Embeddings and Vector Databases
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Understanding working of Embeddings and Vector Databases">
+    <nav class="md-nav" aria-label="Understanding the workings of Embeddings and Vector Databases">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -872,7 +872,7 @@
 
 <h1 id="task-4-embeddings-and-vector-database">Task 4: Embeddings and Vector Database</h1>
 <ul>
-<li>Vector databases are special databases meant to store content such as PDFs, Blogs, Word Documents, Images, Audio Files, and even Videos as embedding vectors, allowing for semantic based retrieval.</li>
+<li>Vector databases are specialized databases designed to store content like PDFs, blogs, Word documents, images, audio files, and videos as embedding vectors. This enables semantic-based retrieval, meaning the database can understand the meaning and context of the stored data, allowing for more accurate and relevant search results beyond simple keyword matching.</li>
 </ul>
 <p><img alt="vD" src="../assets/task4/v.png" /></p>
 <ul>
@@ -880,27 +880,26 @@
 </ul>
 <p><img alt="EV" src="../assets/task4/ev.png" /></p>
 <h2 id="what-are-embeddings">What are embeddings?</h2>
-<p>Embeddings are basically data.</p>
+<p>Embeddings are basically data which are converted into array of numbers called vectors that contain pattern of relationship, and can be used for similarity search.</p>
 <p><img alt="Emb1" src="../assets/task4/emb1.png" /></p>
-<p>That are converted into array of numbers called vectors thats contain pattern of relationship, and can be used for similarity search.</p>
 <p><img alt="Emb2" src="../assets/task4/emb2.png" /></p>
-<p>Let me explain this concept using a 2D graph. In this graph, words like "Webex" and "collaboration" are often used in similar context, so their embeddings essentially vector representations are positioned close to each other. These vectors are numerical arrays that computers can easily interpret.  </p>
-<p>The advantage of using vectors is that you can find similar items by calculating the distances between their vectors, a process known as nearest neighbor search. However, simply storing these embeddings isn't enough. Performing queries across thousands of vectors can be incredibly slow. To overcome this, these vectors also need to be indexed in the vector database.</p>
+<p>Let's explain this concept using a 2D graph. In this graph, words like "Webex" and "collaboration" are often used in similar contexts, so their embeddings—essentially vector representations—are positioned close to each other. These vectors are numerical arrays that computers can easily interpret.</p>
+<p>The advantage of using vectors is that we can find similar items by calculating the distances between their vectors, a process known as nearest neighbor search. However, simply storing these embeddings isn't enough. Performing queries across thousands of vectors can be incredibly slow. To overcome this, the vectors need to be indexed in the vector database.</p>
 <p><span class="colour" style="color:orange"> Note: In reality vectors can have hundred of dimensions </span></p>
 <p><img alt="Emb3" src="../assets/task4/emb3.png" /></p>
 <p>Similarly, images are also broken into vectors, which are arrays of numbers that machines can process. Once these embeddings (both for words and images) are generated, they are stored in a specialized database known as a vector database.</p>
 <p><img alt="Emb4" src="../assets/task4/emb4.png" /></p>
-<p>There are numerous embedding models available, such as Google's Word2Vec, CLIP (Contrastive Language–Image Pretraining), and even those provided by OpenAI, which offer excellent capabilities for generating embeddings. However, the challenge is that these models don't include tools for storing and managing those embeddings. That's where vector databases become essential.</p>
+<p>There are numerous embedding models available, such as Google's Word2Vec, CLIP (Contrastive Language–Image Pretraining), and even those provided by OpenAI, which offer excellent capabilities for generating embeddings. However, the challenge is that these models don't include tools for storing and managing those embeddings. This is where vector databases become essential.</p>
 <p><img alt="Emb5" src="../assets/task4/emb5.png" /></p>
 <p><span class="colour" style="color:orange"> Note: In this lab session, we will be using OpenAI embeddings. More info can be found <a href="https://platform.openai.com/docs/guides/embeddings">here</a></span> </p>
-<h2 id="why-vector-databases-when-we-have-relational-dbs">Why Vector Databases when we have relational DB's?</h2>
+<h2 id="why-use-vector-databases-when-we-have-relational-databases">Why use vector databases when we have relational databases?</h2>
 <p>Around 80% of the data we encounter is unstructured, including social media posts, images, and videos. This type of data doesn’t easily fit into traditional relational databases, which is where vector databases come into play.</p>
 <p><img alt="VecDB" src="../assets/task4/vdb.png" /></p>
-<h2 id="understanding-working-of-embeddings-and-vector-databases">Understanding working of Embeddings and Vector Databases</h2>
+<h2 id="understanding-the-workings-of-embeddings-and-vector-databases">Understanding the workings of Embeddings and Vector Databases</h2>
 <h3 id="practical-example-of-embedding-techniques-using-postman">Practical Example of Embedding Techniques Using Postman</h3>
 <p><img alt="SingleStore" src="../assets/task4/HLO.png" /></p>
 <h4 id="set-openai-token">Set OpenAI token</h4>
-<p><span class="colour" style="color:orange">Note: If you’ve already obtained the token in previous steps, you can skip this section </span></p>
+<p><span class="colour" style="color:orange">Note: If you’ve already obtained the token in previous steps or section, you can skip this section </span></p>
 <p><span class="colour" style="color:orange">Note: First, create an account from the <a href="https://platform.openai.com/" target="_blank">OpenAI official website</a>.</span></p>
 <ul>
 <li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys" target="_blank">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the APi Key as we will be using it in the later steps .</li>
@@ -909,7 +908,7 @@
 <p><span class="colour" style="color:orange">Note: We will use the OpenAI key in Postman to generate embeddings.</span></p>
 <h4 id="login-to-postman">Login to Postman</h4>
 <p>If you haven't installed Postman on your machine yet, you can download it from the following <a href="https://www.postman.com/downloads/" target="_blank">link</a></p>
-<p>As we will be using embedding APIs to create an embedding vector that represents our input text, more information can be found at the following <a href="https://platform.openai.com/docs/api-reference/embeddings" target="_blank">link</a></p>
+<p>We will use embedding APIs to create an embedding vector that represents our input text, more information can be found at the following <a href="https://platform.openai.com/docs/api-reference/embeddings" target="_blank">link</a></p>
 <p>The POST request we will be using:</p>
 <p><div class="highlight"><pre><span></span><code>https://api.openai.com/v1/embeddings
 </code></pre></div>
