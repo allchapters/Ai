@@ -594,9 +594,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lets-import-and-load-the-envoirnment-variables" class="md-nav__link">
+  <a href="#lets-import-and-load-the-envoirnment-variables-in-the-same-notebook" class="md-nav__link">
     <span class="md-ellipsis">
-      Lets import and load the envoirnment variables
+      Let's import and load the envoirnment variables in the same notebook
     </span>
   </a>
   
@@ -1162,7 +1162,7 @@
 <p><img alt="Table1" src="../assets/task3/tab.png" /></p>
 <p><span class="colour" style="color:green">Note: That's how you handle tables within a PDF.</span></p>
 <h3 id="multi-modal-text-images">Multi-Modal (Text + images)</h3>
-<p>What if there are images within a PDF or other documents? How can you extract them? We'll use the Unstructured library again to handle this.</p>
+<p>What if a PDF or other document contains images? How can you extract them? We'll use the Unstructured library again to handle this.</p>
 <h4 id="extract-images-within-pdf">Extract Images within PDF</h4>
 <ul>
 <li>Install relevant libraries</li>
@@ -1220,12 +1220,16 @@
 <p><span class="colour" style="color:green">Note: You'll notice that a folder called 'figures' is created, where all the extracted images are stored. To make these images more useful, we can generate embeddings for them, which can later be used for semantic search. Typically, embedding models are specialized—they either handle text or images, but not both. This means the vector lengths won't align, and using different models for text and image embeddings can complicate similarity searches.
 However, the CLIP model can generate embeddings for both images and text, making it a versatile option for this purpose. To simplify things, we can first create a text summary for each image, and then generate embeddings based on those summaries. This approach allows us to leverage text-based semantic search while still incorporating the visual information from the images. </span></p>
 <p><img alt="image_extract" src="../assets/task3/iex.png" /></p>
+<ul>
+<li>You can view the image by double clicking it </li>
+</ul>
 <p><span class="colour" style="color:green">Note: After extracting images from a PDF or any other source, you can use the below method to send them to a multimodal model like GPT-4o to understand and generate insights about the images. This approach allows you to combine textual and visual data for a richer understanding of the content.</span></p>
 <h4 id="set-openai-token-multimodal">Set OpenAI token - MultiModal</h4>
 <p><span class="colour" style="color:orange">Note: First, create an account from the <a href="https://platform.openai.com/" target="_blank">OpenAI official website</a>.</span></p>
 <ul>
-<li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys" target="_blank">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the APi Key as we will be using it in the later steps . The below API key is for reference only .</li>
+<li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys" target="_blank">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the API Key as we will be using it in the later steps . The below API key is for reference only . Also when creating an API key run with default settings.</li>
 </ul>
+<p><img alt="GPT1_apiKey1" src="../assets/task8c/ap1.png" /></p>
 <p><img alt="GPT1_apiKey" src="../assets/task8c/ap.png" /></p>
 <ul>
 <li>Within your existing Google Colab notebook navigate to the new “Secrets” section in the sidebar.</li>
@@ -1243,7 +1247,7 @@ However, the CLIP model can generate embeddings for both images and text, making
 </li>
 </ul>
 <p><img alt="HF_GT_sec_created_8c" src="../assets/task8c/kei.png" /></p>
-<h5 id="lets-import-and-load-the-envoirnment-variables">Lets import and load the envoirnment variables</h5>
+<h5 id="lets-import-and-load-the-envoirnment-variables-in-the-same-notebook">Let's import and load the envoirnment variables in the same notebook</h5>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1288,7 +1292,10 @@ However, the CLIP model can generate embeddings for both images and text, making
 
 <span class="n">image_str</span> <span class="o">=</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="s2">&quot;/content/figures/figure-1-1.jpg&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<span class="colour" style="color:orange">Note: This is the image that was extracted from our data and saved in the figures folder.</span></p>
+<span class="colour" style="color:orange">Note: This is the image that was extracted from our data and saved in the <strong>Figures</strong> folder.</span></p>
+<ul>
+<li>Lets see our  base64-encoded image</li>
+</ul>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">image_str</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <span class="colour" style="color:orange">Output: Our base64-encoded string </span></p>
@@ -1332,6 +1339,7 @@ However, the CLIP model can generate embeddings for both images and text, making
 </code></pre></div></td></tr></table></div>
 <span class="colour" style="color:orange">Output: The response from the model is stored in msg.content, which will contain the descriptive summary of the image. </span></p>
 <p>The image is the logo of Cisco Systems, Inc., commonly known as Cisco. The logo features the company name "cisco" written in lowercase letters in a distinct, modern sans-serif font. Above the text, there is a series of vertical bars of varying heights, which is stylized to resemble the Golden Gate Bridge. The logo is rendered in a light blue color. The design is clean, professional, and easily recognizable, reflecting Cisco's identity as a major tech company specializing in networking hardware, telecommunications equipment, and other high-technology services and products.</p>
+<p><img alt="elemebts11" src="../assets/task3/elem11.png" /></p>
 <p><span class="colour" style="color:orange">Note: The description of your image may vary depending on the image retrieved.</span></p>
 
 
