@@ -988,6 +988,7 @@
 <ul>
 <li>Run this SQL command to create a table - Press Run</li>
 </ul>
+<p><span class="colour" style="color:orange">Note: If your lab remains inactive for 20 minutes, the SingleStore database will automatically "pause" or go dormant. When this happens, you’ll need to return to the homepage, click “resume,” and the workspace will be ready again in a few minutes. </span></p>
 <p><div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="n">myvectortable</span><span class="w"> </span><span class="p">(</span>
 <span class="nb">text</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
 <span class="n">vector</span><span class="w"> </span><span class="nb">BLOB</span>
@@ -1057,12 +1058,12 @@ In this query:</p>
 <h4 id="retrieving-values-from-the-vector-database">Retrieving Values from the Vector Database</h4>
 <p><img alt="SS20" src="../assets/task4/st20.png" /></p>
 <ul>
-<li>
-<p>Searching the vector database is quite simple. Example: we want to find anything related to WebexOne. To do this, we'll create embeddings for our query, "Is WebexOne an annual event?" and then search the vector database to find matches against the existing embeddings.</p>
-</li>
-<li>
-<p>Let's open Postman and create an embedding for our question. Be sure to click on "Send."</p>
-</li>
+<li>Searching the vector database is quite simple. Example: we want to find information related to WebexOne. To do this, we'll create embeddings for our query, "Is WebexOne an annual event?" and then search the vector database to find matches against the existing embeddings.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Is</span> <span class="n">WebexOne</span> <span class="n">an</span> <span class="n">annual</span> <span class="n">event</span><span class="err">?</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Let's open Postman and create an embedding for our question. Be sure to click on "Send."</li>
 </ul>
 <p><img alt="SS21" src="../assets/task4/st21.png" /></p>
 <ul>
