@@ -986,7 +986,7 @@
 </ul>
 <p><img alt="SS15" src="../assets/task4/st15.png" /></p>
 <ul>
-<li>Run a SQL command to create a table - Press Run</li>
+<li>Run this SQL command to create a table - Press Run</li>
 </ul>
 <p><div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="n">myvectortable</span><span class="w"> </span><span class="p">(</span>
 <span class="nb">text</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
@@ -1010,6 +1010,7 @@
 <ul>
 <li>Let's head back to our SQL editor and insert the values into our database. Once done press "Run"</li>
 </ul>
+<p><span class="colour" style="color:orange">Note: You can reuse the same SQL editor block, remove the previous command, and run the following one. </span></p>
 <p><div class="highlight"><pre><span></span><code><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">myvectortable</span><span class="w"> </span><span class="p">(</span><span class="nb">text</span><span class="w"> </span><span class="p">,</span><span class="n">vector</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;your_input_text&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;your_embeddings&quot;</span><span class="p">))</span>
 </code></pre></div>
 In this query:</p>
