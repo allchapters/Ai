@@ -930,7 +930,7 @@ The PDF we are using in this lab can be downloaded from <a download="dect.pdf" h
 </ul>
 <p><img alt="HL_file_uplo" src="../assets/task5/dect.png" /></p>
 <ul>
-<li>Install relevant Python packages </li>
+<li>First let’s install the necessary Python packages</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">langchain</span> <span class="n">langchain_community</span> <span class="n">langchain</span><span class="o">-</span><span class="n">openai</span> <span class="n">python</span><span class="o">-</span><span class="n">dotenv</span> <span class="n">chromadb</span> <span class="n">pymupdf</span>
 </code></pre></div></td></tr></table></div>
@@ -970,7 +970,7 @@ The PDF we are using in this lab can be downloaded from <a download="dect.pdf" h
 <span class="n">load_dotenv</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Load data source also called Data ingestion</li>
+<li>Next let’s load the data source. This is also known as “Data Ingestion”.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">loader</span> <span class="o">=</span> <span class="n">PyMuPDFLoader</span><span class="p">(</span><span class="s2">&quot;/content/data/dect.pdf&quot;</span><span class="p">)</span>
@@ -985,7 +985,9 @@ The PDF we are using in this lab can be downloaded from <a download="dect.pdf" h
 </code></pre></div></td></tr></table></div>
 <span class="colour" style="color:orange"> Note: RecursiveCharacterTextSplitter Covered in previous section </span></p>
 <ul>
-<li>Let's create our embeddings. As discussed in the Embedding section, there are multiple techniques available. In this lab, we will use OpenAI embeddings. By default, the text-embedding-ada-002 model is used, but we can also opt for the text-embedding-3-large model if desired. Once the embeddings are created, they can be stored in a Vector Database. While there are various databases available, as covered in the Embeddings and Vector DB section, in our example, we will use the Chroma Vector DB, which can be easily deployed locally on your machine. We will also create a retriever by using  retriever = vectorstore.as_retriever() which converts the vector store into a retriever object. This retriever can then be used to find and retrieve documents or data from the vector store that are most relevant to a given query, based on the similarity of their embeddings.</li>
+<li>Let's create our embeddings. As discussed in the Embedding section, there are multiple techniques available. In this lab, we will use OpenAI embeddings. By default, the text-embedding-ada-002 model is used, but we can also opt for the text-embedding-3-large model if desired. Once the embeddings are created, they can be stored in a Vector Database. 
+While there are various databases available, as covered in the Embeddings and Vector DB section, in our example, we will use the Chroma Vector DB, which can be easily deployed locally on your machine. 
+We will also create a retriever by using  retriever = vectorstore.as_retriever() which converts the vector store into a retriever object. This retriever can then be used to find and retrieve documents or data from the vector store that are most relevant to a given query, based on the similarity of their embeddings.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1013,7 +1015,8 @@ Also we can use <a href="https://python.langchain.com/v0.2/docs/integrations/tex
 </code></pre></div></td></tr></table></div>
 <p><img alt="Output2" src="../assets/task5/o2.png" /></p>
 <ul>
-<li>Let's create our prompt. There are several ways to do this, you can either craft it manually or use prompts that have already been made available on the LangChain Hub. In this section, I'll demonstrate how to pull a prompt from the LangChain Hub and use it. Browse to <a href="https://smith.langchain.com/" target="_blank">Langmith</a> and create an account. In this example, I'll use Google to sign up for a Langsmith account, but feel free to choose the option that works best for you.</li>
+<li>Let's create our prompt. There are several ways to do this, you can either craft it manually or use prompts that have already been made available on the LangChain Hub. In this section, I'll demonstrate how to pull a prompt from the LangChain Hub and use it. 
+First browse to <a href="https://smith.langchain.com/" target="_blank">Langmith</a> and create an account. In this example, I'll use Google to sign up for a Langsmith account, but feel free to choose the option that works best for you.</li>
 </ul>
 <p><img alt="Lsmith" src="../assets/task5/lsmith.png" /></p>
 <ul>
@@ -1123,6 +1126,7 @@ To set up and install a DECT phone system, first review the site and plan the lo
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cosine Similarity: </span><span class="si">{</span><span class="n">similarity</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="Csimi" src="../assets/task5/cos_s.png" /></p>
+<p><span class="colour" style="color:orange"> Note: Cosine similarity values range from -1 to 1, where 1 means the vectors are identical, 0 means they are completely different, and values closer to 1 indicate greater similarity.  In our example where one similarity score is 0.63 and another is 0.57, the document with a score of 0.63 is more similar to the query than the one with 0.57. Both scores indicate a moderate similarity to the query, but the document with 0.63 contains slightly more relevant information. </span></p>
 
 
 

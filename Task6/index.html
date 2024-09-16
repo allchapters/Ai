@@ -646,9 +646,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lets-now-create-summary-from-our-data-by-passing-the-info-to-multimodal" class="md-nav__link">
+  <a href="#lets-now-create-summary-from-our-data-by-passing-the-info-to-multimodal-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Lets now create summary from our data by passing the info to Multimodal
+      Lets now create summary from our data by passing the info to Multimodal model
     </span>
   </a>
   
@@ -922,15 +922,16 @@
 
 
 <h1 id="multimodal-rag">Multimodal RAG</h1>
-<p>In the previous section, we explored RAG systems primarily designed for handling text. However, in real-world scenarios, many documents within organizations contain valuable information in the form of images, tables, and other non-text elements. When building a robust RAG system, it's crucial to have the capability to retrieve not just text-based information but also relevant images and other visual data. This multimodal approach significantly enhances the effectiveness of information retrieval. In this section, we will explore methods to retrieve both images and text in response to user queries, enabling a more comprehensive and efficient RAG based system.</p>
+<p>In the previous section, we explored RAG systems primarily designed for handling text. However, in real-world scenarios, many documents within organizations contain valuable information in the form of images, tables, and other non-text elements. </p>
+<p>When building a robust RAG system, it's crucial to have the capability to retrieve not just text-based information but also relevant images and other visual data. This multimodal approach significantly enhances the effectiveness of information retrieval. In this section, we will explore methods to retrieve both images and text in response to user queries, enabling a more comprehensive and efficient RAG based system.</p>
 <h2 id="three-different-approaches-for-multimodal-rag">Three Different approaches for Multimodal RAG</h2>
 <p><img alt="C1" src="../assets/task6/1.png" /></p>
-<p><span class="colour" style="color:orange">Embedding for images can be done via CLIP model.</span></p>
 <p><img alt="C2" src="../assets/task6/2.png" /></p>
-<p><span class="colour" style="color:orange"> We will be using OpTion 2 for our lab </span></p>
 <p><img alt="C3" src="../assets/task6/3.png" /></p>
+<p><span class="colour" style="color:orange"> We will be using Option 2 for our lab </span></p>
+<p><span class="colour" style="color:orange">Embedding for images can be done via CLIP model.</span></p>
 <h2 id="contrastive-language-image-pretraining-clip-model">Contrastive Language-Image Pretraining - CLIP Model</h2>
-<p>Unlike other embedding models that focus on single modality (either text or images) the <a href="https://openai.com/index/clip/">CLIP (Contrastive Language-Image Pretraining)</a>, was developed by OpenAI in 2021.</p>
+<p>Unlike other embedding models that focus on a single modality, such as text or images, the <a href="https://openai.com/index/clip/">CLIP (Contrastive Language-Image Pretraining)</a>, was developed by OpenAI in 2021, handles multiple modalities by integrating both text and images.</p>
 <p><span class="colour" style="color:orange">Note: CLIP models are embedding models, not traditional Large Language Models (LLMs).</span></p>
 <p>The primary function of CLIP (Contrastive Language-Image Pretraining) is to create a shared embedding space where both text and images are represented as vectors. The key idea is to learn representations where images and their corresponding text descriptions are close to each other in this embedding space, while unrelated image-text pairs are far apart. This allows CLIP to perform tasks like image classification, zero-shot learning, and text-to-image retrieval based on the semantic similarity between text and images. So in summary CLIP models create a relationship between images and text.</p>
 <h3 id="zero-shot-learning-zsl">Zero-Shot Learning (ZSL)</h3>
@@ -949,7 +950,7 @@
 </li>
 </ul>
 <p><img alt="C5" src="../assets/task6/5.png" /></p>
-<p>Lets contine and jump to our lab</p>
+<p>Let’s continue by jumping over to our lab environment!</p>
 <h2 id="deploy-multimodal-rag">Deploy Multimodal RAG</h2>
 <p>Whenever we develop applications based on Large Language Models (LLMs), handling data is a crucial aspect. As discussed in the previous section (RAG), data injection is the initial step in this process. It's important to note that there are typically three types of data structure.</p>
 <p><img alt="C6" src="../assets/task6/6.png" /></p>
@@ -1008,7 +1009,7 @@
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;unstructured[all-docs]&quot;</span> <span class="n">pillow</span> <span class="n">pydantic</span> <span class="n">lxml</span> <span class="n">matplotlib</span> <span class="n">langchain</span> <span class="n">langchain_community</span> <span class="n">chromadb</span> <span class="n">langchain</span><span class="o">-</span><span class="n">experimental</span> <span class="n">langchain_openai</span>
 </code></pre></div></td></tr></table></div>
 <img alt="unstrc" src="../assets/task6/unstr.png" /></p>
-<p><span class="colour" style="color:orange">Note: Make sure to restart your notebook after installing the packages</span></p>
+<p><span class="colour" style="color:red">Note: Make sure to RESTART your notebook after installing the packages</span></p>
 <ul>
 <li>Since Google Colab is built on top of an Ubuntu environment, it's necessary to update the Google Colab environment to ensure we can effectively extract information from images or PDFs for analysis and processing.</li>
 </ul>
@@ -1039,7 +1040,7 @@
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;NLTK_DATA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;/root/nltk_data&#39;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lets make sure we have nltk version 3.9.1 installed</li>
+<li>Let's make sure we have nltk version 3.9.1 installed</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">nltk</span>
 </code></pre></div></td></tr></table></div>
@@ -1056,7 +1057,7 @@
 <ul>
 <li>Click on [...], select Upload</li>
 </ul>
-<p><img alt="HL_Format_fold_created" src="../assets/task8a/dc_created.png" /></p>
+<p><img alt="HL_Format_fold_created1" src="../assets/task8a/dc_created1.png" /></p>
 <ul>
 <li>Choose your CX-Essentials.pdf file and click Open</li>
 </ul>
@@ -1065,6 +1066,7 @@
 <li>Let's process our PDF document by splitting it into smaller, manageable chunks based on titles, extracting images, and handling text in a way that ensures the chunks are neither too large nor too small. We will store the extracted elements (text, images, etc.) in the pdf_elements variable, and images are saved in the specified path(image_path). To understand more about <a href="https://docs.unstructured.io/open-source/core-functionality/partitioning#partition-csv">unstructured partition_pdf click here</a> </li>
 </ul>
 <p>Unstructured will partition PDF files by first extracting embedded images if specified. It then processes the document's layout, dividing the content into structured elements such as titles, tables, and paragraphs based on the layout and text structure. For more detailed layout analysis, it may use advanced models like YOLOX to identify and extract bounding boxes for elements like tables and titles. This allows for the precise extraction and organization of text and images, making the content more suitable for further analysis and processing.</p>
+<p><span class="colour" style="color:orange"> NOTE: To avoid errors, overlap, or dependencies from previous tasks, open a new Google Colab notebook for this step. This will ensure a clean environment and prevent any potential issues related to previous work. </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1096,7 +1098,7 @@
 </ul>
 <p><img alt="r11" src="../assets/task6/11.png" /></p>
 <ul>
-<li>To see different elements fr om our pdf we can look into the variable</li>
+<li>To see different elements from our pdf we can look into the variable</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">pdf_elements</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -1140,7 +1142,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">tables</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="table" src="../assets/task6/table.png" /></p>
-<h3 id="lets-now-create-summary-from-our-data-by-passing-the-info-to-multimodal">Lets now create summary from our data by passing the info to Multimodal</h3>
+<h3 id="lets-now-create-summary-from-our-data-by-passing-the-info-to-multimodal-model">Lets now create summary from our data by passing the info to Multimodal model</h3>
 <p><span class="colour" style="color:orange">Note: We will be using GPT-4o as our Multimodal to create summary </span></p>
 <ul>
 <li>Let's retrieve an OpenAI API key and set it as an environment variable within the Colab environment</li>
