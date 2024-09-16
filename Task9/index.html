@@ -958,7 +958,6 @@
 
 
 <h1 id="genai-frameworks">GenAI- Frameworks</h1>
-<p>(also explai langchian- langsmith - then show Fusion MultiQuery, raptor)</p>
 <p>In the previous sections of this lab, we started by exploring  basics of neural networks/tokenization, which are key to understanding how modern AI models, particularly large language models (LLMs), operate. We moved on to embeddings and vector databases, which play a vital role in how these models represent and retrieve information.</p>
 <p>We also looked into the concept of context windows and how they influence model performance. To address some of the limitations inherent in traditional context windows, we introduced Retrieval Augmented Generation (RAG). This approach enables models to dynamically retrieve relevant information, significantly improving their ability to generate accurate and contextually appropriate responses. To make you understand better, we even built a quick RAG application. Additionally, we touched on multimodal RAG, which takes this a step further by enabling the model to process and integrate information from multiple sources, such as text, images, and more, making it even more versatile.</p>
 <p>While we’ve covered the basics, it’s crucial to recognize that the field of AI is rapidly advancing. Companies like OpenAI, Mistral, Google, Meta, and others are in a race to develop the most sophisticated large language models (LLMs). </p>
@@ -967,10 +966,11 @@
 <p><img alt="genai2" src="../assets/task9/genai2.png" /></p>
 <p>This is where GenAI frameworks come into play, providing the essential infrastructure to bridge the gap between raw LLM capabilities and practical, scalable AI solutions. There are numerous frameworks available for use.</p>
 <p><img alt="genai3" src="../assets/task9/genai3.png" /></p>
-<p>The question of which framework to choose ultimately depends on your specific preferences and needs. Many of these frameworks have overlapping functionalities. In this section, we'll focus on <a href="https://python.langchain.com/v0.1/docs/get_started/introduction">LangChain</a>, exploring what it is and how it can be used to create AI-powered applications.</p>
+<p>The question of which framework to choose ultimately depends on your specific preferences and needs. Many of these frameworks have overlapping functionalities. In this section, we'll focus on 
+<a href="https://python.langchain.com/v0.1/docs/get_started/introduction" target="_blank">LangChain</a>, exploring what it is and how it can be used to create AI-powered applications.</p>
 <h2 id="langchain">Langchain</h2>
 <p>LangChain is an open-source framework that enables developers to integrate large language models (LLMs) with external data sources and computational resources. Available as a Python, JavaScript, or TypeScript package, it offers a versatile pipeline abstraction that can be used for various purposes, from creating AI enabled applications to managing data ingestion from external sources.</p>
-<p>While LLM like (GPT) has impressive general knowledge, LangChain is essential for retrieving information from your own documents or fine-tuning models for specific tasks. It allows you to connect LLMs to your data sources, enabling actions like sending messages to a Webex Space. The process involves breaking your data or documents into smaller chunks and storing them in a vector database as embeddings. LangChain supports various vector stores, such as Chroma, Faiss, and Cassandra e.t.c making data retrieval and action-taking both efficient and seamless. <a href="https://python.langchain.com/v0.1/docs/get_started/introduction">More info on langchain can be found here.</a></p>
+<p>While an LLM like (GPT) has impressive general knowledge, LangChain is essential for retrieving information from your own documents or fine-tuning models for specific tasks. It allows you to connect LLMs to your data sources, enabling actions like sending messages to a Webex Space. The process involves breaking your data or documents into smaller chunks and storing them in a vector database as embeddings. LangChain supports various vector stores, such as Chroma, Faiss, and Cassandra e.t.c making data retrieval and action-taking both efficient and seamless. <a href="https://python.langchain.com/v0.1/docs/get_started/introduction" target="_blank">More info on langchain can be found here.</a></p>
 <p><img alt="genai5" src="../assets/task9/genai5.png" /></p>
 <p><img alt="genai6" src="../assets/task9/genai6.png" /></p>
 <p><img alt="genai7" src="../assets/task9/genai7.png" /></p>
@@ -986,7 +986,7 @@
 <p><span class="colour" style="color:red">Note: Chains are a sequence of steps or operations that are linked together to achieve a particular task. Each step in the chain can involve various processes, such as invoking a language model, performing a calculation, calling an external API, or manipulating data. Chains allow developers to structure these steps in a way that the output of one step becomes the input of the next, creating a pipeline of operations. </span></p>
 <p><img alt="G4" src="../assets/task9/G4.png" /></p>
 <p><img alt="G5" src="../assets/task9/G5.png" /></p>
-<p><span class="colour" style="color:red">Note: The above image was obtained from <a href="https://js.langchain.com/v0.1/docs/get_started/introduction">Langchain</a></p>
+<p><span class="colour" style="color:red">Note: The above image was obtained from <a href="https://js.langchain.com/v0.1/docs/get_started/introduction" target="_blank">Langchain</a></p>
 <h2 id="langchain-usecase-1">Langchain - UseCase-1</h2>
 <p><span class="colour" style="color:red">Note: Make sure you have created a Langchain account as explained in the "Getting Started with LangChain" section in <a href="../Task1/">Task1</a></span></p>
 <p>Let's start building chatbot application using LangChain, I'll guide you through the basic steps. </p>
@@ -1007,7 +1007,7 @@
 <h3 id="set-openai-token">Set OpenAI token</h3>
 <p><span class="colour" style="color:orange">Note: Skip this step if you have already created the OpenAI account. If this is the first  module you working with please, create an account from the <a href="https://platform.openai.com/">OpenAI official website</a>.</span></p>
 <ul>
-<li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the APi Key as we will be using it in the later steps .</li>
+<li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys" target="_blank">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the APi Key as we will be using it in the later steps .</li>
 </ul>
 <p><img alt="GPT1_apiKey" src="../assets/task8c/ap.png" /></p>
 <ul>
@@ -1041,7 +1041,7 @@
 <h3 id="set-ngrok">Set NGROK</h3>
 <ul>
 <li>
-<p>Browse to <a href="https://ngrok.com/">NGROK</a> and click on Login</p>
+<p>Browse to <a href="https://ngrok.com/" target="_blank">NGROK</a> and click on Login</p>
 </li>
 <li>
 <p>I’ll be using the "Login with Google" option to access my account, but feel free to choose the login method that works best for you.</p>
@@ -1254,7 +1254,7 @@
 <p><img alt="ss1" src="../assets/task9/ss1.png" /></p>
 <p><img alt="ss2" src="../assets/task9/ss2.png" /></p>
 <ul>
-<li>Since we're using <a href="https://smith.langchain.com/">Langserve for llm-ops</a>, let's log in and explore its features there.</li>
+<li>Since we're using <a href="https://smith.langchain.com/" target="_blank">Langserve for llm-ops</a>, let's log in and explore its features there.</li>
 </ul>
 <p><img alt="ss3" src="../assets/task9/ss3.png" /></p>
 <p><img alt="ss4" src="../assets/task9/ss4.png" /></p>
@@ -1467,7 +1467,7 @@
 <h2 id="langchain-usecase-2-advanced-rag-chains-and-retrievers">Langchain - UseCase-2 - Advanced Rag - Chains and Retrievers</h2>
 <p>In <a href="../Task5/">Task5</a>, we explored the basics of a simple Retrieval-Augmented Generation (RAG) application, where we utilized similarity search to find and retrieve information from our database. While this approach is effective for specific, straightforward use cases, it does come with some limitations among them being lack of flexibility.</p>
 <p>One of the drawbacks of relying solely on similarity search is that it doesn’t easily accommodate more complex workflows or integration with additional tools. It’s powerful for direct matches but can struggle when the task requires multi-step logic, advanced filtering, or a combination of different data sources.</p>
-<p>LangChain’s <a href="https://python.langchain.com/v0.1/docs/modules/data_connection/retrievers/">retrievals</a> and <a href="https://python.langchain.com/v0.1/docs/modules/chains/">chains</a>, on the other hand, provide a more versatile and scalable framework. They enable the creation of sophisticated RAG applications by allowing you to define workflows that can incorporate multiple retrieval strategies, conditional logic, and integration with other LLM's or APIs.</p>
+<p>LangChain’s <a href="https://python.langchain.com/v0.1/docs/modules/data_connection/retrievers/" target="_blank">retrievals</a> and <a href="https://python.langchain.com/v0.1/docs/modules/chains/" target="_blank">chains</a>, on the other hand, provide a more versatile and scalable framework. They enable the creation of sophisticated RAG applications by allowing you to define workflows that can incorporate multiple retrieval strategies, conditional logic, and integration with other LLM's or APIs.</p>
 <p>Let’s now shift our focus towards creating an advanced RAG application by leveraging the capabilities of LangChain’s chains and retrievers. This will not only improve the flexibility and power of our application but also open up new possibilities for handling complex queries and delivering more refined results.</p>
 <p><img alt="ss12" src="../assets/task9/ss12.png" /></p>
 <p><strong>Chain: A chain in LangChain is like a sequence of tasks that you want to accomplish step by step.</strong> </p>
@@ -1604,7 +1604,7 @@ llm=Ollama(model="llama2")
 <span class="n">document_chain</span><span class="o">=</span><span class="n">create_stuff_documents_chain</span><span class="p">(</span><span class="n">llm</span><span class="p">,</span><span class="n">prompt</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Now, let's define our retrievers. As previously mentioned, a retriever is an interface that returns documents based on an unstructured query. It is broader in scope than a vector store, as it doesn't need to store documents, only to retrieve them. While vector stores can serve as the foundation for a retriever, there are other types of retrievers available as well. For more information, you can refer to the documentation [here] (https://python.langchain.com/docs/modules/data_connection/retrievers/)</li>
+<li>Now, let's define our retrievers. As previously mentioned, a retriever is an interface that returns documents based on an unstructured query. It is broader in scope than a vector store, as it doesn't need to store documents, only to retrieve them. While vector stores can serve as the foundation for a retriever, there are other types of retrievers available as well. For more information, you can refer to the documentation <a href="https://python.langchain.com/docs/modules/data_connection/retrievers/" target="_blank">here</a></li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">retriever</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">as_retriever</span><span class="p">()</span>
@@ -1631,7 +1631,7 @@ llm=Ollama(model="llama2")
 <p><img alt="ss16" src="../assets/task9/ss16.png" /></p>
 <h2 id="langchain-usecase-3-advanced-rag-multisearch-agents-rag-application">Langchain - UseCase-3 - Advanced Rag - Multisearch Agents RAG application</h2>
 <p>If you recall in our previous usecase, we discussed chains where we manually defined the sequence of actions to execute. However, the core concept behind <a href="https://python.langchain.com/v0.1/docs/modules/agents/">agents</a> is different. Instead of hardcoding the sequence of actions (as we do in chains), agents leverage a language model as a reasoning engine. This allows the model/agents to dynamically decide which actions to take and in what order.</p>
-<p>In this context, <a href="https://python.langchain.com/v0.1/docs/modules/tools/">tools</a> play an essential role. Tools are like wrappers that the model can call upon to perform specific tasks, acting as interfaces between the agent and the outside world. By integrating tools with agents, the language model not only decides what action to take but also knows how to use the available tools to achieve the desired outcome. This flexible system allows agents to interact with different data sources or APIs dynamically, without the need for a fixed sequence of operations as seen in chains.</p>
+<p>In this context, <a href="https://python.langchain.com/v0.1/docs/modules/tools/" target="_blank">tools</a> play an essential role. Tools are like wrappers that the model can call upon to perform specific tasks, acting as interfaces between the agent and the outside world. By integrating tools with agents, the language model not only decides what action to take but also knows how to use the available tools to achieve the desired outcome. This flexible system allows agents to interact with different data sources or APIs dynamically, without the need for a fixed sequence of operations as seen in chains.</p>
 <h3 id="lab-configuration">Lab Configuration</h3>
 <p>In this use-case, we will build a system that leverages the power of agents combined with tools to create a flexible and dynamic environment. We will create multiple tools that interact with different data sources, including:</p>
 <ul>
@@ -1642,7 +1642,7 @@ llm=Ollama(model="llama2")
 <p>A custom retriever tool that searches through a specific dataset or webpage example: (ThousandEyes API documentation).</p>
 </li>
 <li>
-<p>An <a href="https://arxiv.org/">Arxiv-based tool</a> for retrieving AI research papers.</p>
+<p>An <a href="https://arxiv.org/" target="_blank">Arxiv-based tool</a> for retrieving AI research papers.</p>
 </li>
 <li>
 <p>Custom PDF-based tool for extracting information from a document (Webex Calling Preffered Architecture).</p>
@@ -1693,7 +1693,7 @@ llm=Ollama(model="llama2")
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LANGCHAIN_PROJECT&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;WebexOne&quot;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>We will be creating Tools (wrappers) around our data sources. Tools act as interfaces that can be used by agents, chains, or LLMs to interact with various data sources. Langchain provides built-in toolkits that allow us to easily create these wrappers and interact with data sources to extract data. In our lab guide, we will develop four different wrappers. The first wrapper tool will be built around <a href="https://python.langchain.com/v0.1/docs/integrations/tools/wikipedia/">Wikipedia</a>.</li>
+<li>We will be creating Tools (wrappers) around our data sources. Tools act as interfaces that can be used by agents, chains, or LLMs to interact with various data sources. Langchain provides built-in toolkits that allow us to easily create these wrappers and interact with data sources to extract data. In our lab guide, we will develop four different wrappers. The first wrapper tool will be built around <a href="https://python.langchain.com/v0.1/docs/integrations/tools/wikipedia/" target="_blank">Wikipedia</a>.</li>
 </ul>
 <p><strong>Tool 1</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1787,7 +1787,7 @@ llm=Ollama(model="llama2")
 <span class="n">retriever1</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lets create a custom retriever tool using Langchain to search through our PDF. More info on create_retriever_tool available <a href="https://api.python.langchain.com/en/latest/tools/langchain.tools.retriever.create_retriever_tool.html">here</a></li>
+<li>Lets create a custom retriever tool using Langchain to search through our PDF. More info on create_retriever_tool available <a href="https://api.python.langchain.com/en/latest/tools/langchain.tools.retriever.create_retriever_tool.html" target="_blank">here</a>.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
