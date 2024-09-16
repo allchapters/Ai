@@ -1053,7 +1053,7 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 <li>Get your NGROK auth key</li>
 </ul>
 <p><img alt="ngrk1" src="../assets/task9/ngrk1.png" /></p>
-<p><span class="colour" style="color:red"> Note: Since we are using a free Ngrok account, we can only run up to 3 tunnels simultaneously. If you need to terminate any active tunnels, please use the following steps </span></p>
+<p><span class="colour" style="color:red"> Note: Since we are using a free NGROK account, we can only run up to 3 tunnels simultaneously. If you need to terminate any active tunnels, please use the following steps </span></p>
 <div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pkill</span> <span class="n">ngrok</span>
 </code></pre></div>
 <h3 id="configuration">Configuration</h3>
@@ -1087,7 +1087,6 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 <span class="kn">import</span> <span class="nn">subprocess</span>
 <span class="kn">import</span> <span class="nn">os</span>
 </code></pre></div></td></tr></table></div>
-<p><img alt="lib" src="../assets/task9/lib.png" /></p>
 <ul>
 <li>Lets start by configuring the environment variables. We will use and define Langserve for our LLM ops</li>
 </ul>
@@ -1114,7 +1113,7 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">prompt</span><span class="o">=</span><span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_messages</span><span class="p">(</span>
     <span class="p">[</span>
-        <span class="p">(</span><span class="s2">&quot;system&quot;</span><span class="p">,</span><span class="s2">&quot;You are a helpful Cisco assistant. Please responsd to the user queries&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;system&quot;</span><span class="p">,</span><span class="s2">&quot;You are a helpful Cisco assistant. Please respond to the user queries&quot;</span><span class="p">),</span>
         <span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span><span class="s2">&quot;Question:</span><span class="si">{question}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="p">]</span>
 <span class="p">)</span>
@@ -1124,7 +1123,7 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Langchain using OPENAI API&#39;</span><span class="p">)</span>
-<span class="n">input_text</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s2">&quot;Search the topic u want&quot;</span><span class="p">)</span>
+<span class="n">input_text</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s2">&quot;Search the topic you want&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>(Optional) We will initialize the Language Model and set-up the Output parser </li>
@@ -1448,12 +1447,12 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 <span class="c1">## Prompt Template</span>
 <span class="n">prompt</span><span class="o">=</span><span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_messages</span><span class="p">(</span>
     <span class="p">[</span>
-        <span class="p">(</span><span class="s2">&quot;system&quot;</span><span class="p">,</span><span class="s2">&quot;You are a helpful Cisco  assistant. Please responsd to the user queries&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;system&quot;</span><span class="p">,</span><span class="s2">&quot;You are a helpful Cisco  assistant. Please respond to the user queries&quot;</span><span class="p">),</span>
         <span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span><span class="s2">&quot;Question:</span><span class="si">{question}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="p">]</span>
 <span class="p">)</span>
 <span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Langchain With LLAMA2 API&#39;</span><span class="p">)</span>
-<span class="n">input_text</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s2">&quot;Search the topic u want&quot;</span><span class="p">)</span>
+<span class="n">input_text</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s2">&quot;Search the topic you want&quot;</span><span class="p">)</span>
 
 <span class="c1"># ollama LLAma3 LLm </span>
 <span class="n">llm</span><span class="o">=</span><span class="n">Ollama</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;llama3:latest&quot;</span><span class="p">)</span>
