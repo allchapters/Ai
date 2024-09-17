@@ -1102,7 +1102,7 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LANGCHAIN_TRACING_V2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LANGCHAIN_PROJECT&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;WebexOne&quot;</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:red"> Note: Due to the challenges of running Streamlit directly on Google Colab, we'll use NGROK to enable the execution and access of our code via a web interface. The code below is for your understanding or if you're running it as Python packages in your own environment. To continue and run the code in this lab or on Google Colab, please proceed and copy the code from Configuration1 section. </span></p>
+<p><span class="colour" style="color:red"> Note: Due to the challenges of running Streamlit directly on Google Colab, we'll use NGROK to enable the execution and access of our code via a web interface. The code below is for your understanding or if you're running it as Python packages in your own environment. To continue and run the code in this lab or on Google Colab, please proceed and copy the code from <a href="https://allchapters.github.io/Ai/Task9/#configuration1">Configuration1 section</a>. </span></p>
 <ul>
 <li>(Optional) As we creating a simple chatbot application lets create our prompt</li>
 </ul>
@@ -1401,7 +1401,7 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 <span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s1">&#39;streamlit&#39;</span><span class="p">,</span> <span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="s1">&#39;app.py&#39;</span><span class="p">])</span>
 
 <span class="c1"># Start ngrok tunnel</span>
-<span class="n">ngrok</span><span class="o">.</span><span class="n">set_auth_token</span><span class="p">(</span><span class="s2">&quot;2lVZ7NIouJBlvkWTx7QNxNmpEvV_5HyXsbHunJSaJN2BPe4Ry&quot;</span><span class="p">)</span>  <span class="c1"># Replace with your ngrok authtoken</span>
+<span class="n">ngrok</span><span class="o">.</span><span class="n">set_auth_token</span><span class="p">(</span><span class="s2">&quot;Replace-with-your-ngrok-authtoken-created-above&quot;</span><span class="p">)</span>  <span class="c1"># Replace with your ngrok authtoken</span>
 <span class="n">public_url</span> <span class="o">=</span> <span class="n">ngrok</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="mi">8501</span><span class="p">,</span> <span class="s2">&quot;http&quot;</span><span class="p">)</span>  <span class="c1"># Use http instead of specifying as a named argument</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Streamlit app is live at: </span><span class="si">{</span><span class="n">public_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -1495,12 +1495,12 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 </ul>
 <h3 id="configuration_1">Configuration</h3>
 <ul>
-<li>Lets start by installing all the packages</li>
+<li>Let's start by installing all the packages</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">langchain_openai</span> <span class="n">langchain</span> <span class="n">langchain_core</span> <span class="n">python</span><span class="o">-</span><span class="n">dotenv</span> <span class="n">langchain_community</span> <span class="n">langserve</span> <span class="n">PyPDF</span> <span class="n">chromadb</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lets start by configuring the environment variables. We will use and define Langserve for our LLM ops</li>
+<li>Let's start by configuring the environment variables. We will use and define Langserve for our LLM ops</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1534,7 +1534,7 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 <p>If we examine the RAG pipeline, we typically need to follow these steps</p>
 <p><img alt="ss13" src="../assets/task9/ss13.png" /></p>
 <ul>
-<li>Lets load our data source</li>
+<li>Let's load our data source</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1571,7 +1571,7 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 </code></pre></div></td></tr></table></div>
 <p><img alt="ss14" src="../assets/task9/ss14.png" /></p>
 <ul>
-<li>Let's now combine prompts with chains and retrievers to generate responses based on the prompts. Lets start by defining our LLM</li>
+<li>We will  now combine prompts with chains and retrievers to generate responses based on the prompts. Let's start by defining our LLM</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">llm</span><span class="o">=</span><span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -1597,7 +1597,7 @@ llm=Ollama(model="llama2")
 <span class="s2">                                         Question: </span><span class="si">{input}</span><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lets create our Chain now. Chains are sequences of operations that process input to produce the desired output. We will use <a href="https://python.langchain.com/v0.1/docs/modules/chains/">create_stuff_documents_chain</a></li>
+<li>Let's create our Chain now. Chains are sequences of operations that process input to produce the desired output. We will use <a href="https://python.langchain.com/v0.1/docs/modules/chains/">create_stuff_documents_chain</a></li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">langchain.chains.combine_documents</span> <span class="kn">import</span> <span class="n">create_stuff_documents_chain</span>
@@ -1673,7 +1673,7 @@ llm=Ollama(model="llama2")
 </ul>
 <h3 id="configuration_2">Configuration</h3>
 <ul>
-<li>Lets start by installing all the packages</li>
+<li>Let's start by installing all the packages</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">langchain_openai</span> <span class="n">langchain</span> <span class="n">langchain_core</span> <span class="n">python</span><span class="o">-</span><span class="n">dotenv</span> <span class="n">langchain_community</span> <span class="n">langserve</span> <span class="n">PyPDF</span> <span class="n">chromadb</span> <span class="n">arxiv</span> <span class="n">wikipedia</span> <span class="n">langchainhub</span> 
 </code></pre></div></td></tr></table></div>
@@ -1793,7 +1793,7 @@ llm=Ollama(model="llama2")
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">langchain.tools.retriever</span> <span class="kn">import</span> <span class="n">create_retriever_tool</span>
 <span class="n">retriever_tool1</span><span class="o">=</span><span class="n">create_retriever_tool</span><span class="p">(</span><span class="n">retriever1</span><span class="p">,</span><span class="s2">&quot;Webex_Calling_Search&quot;</span><span class="p">,</span>
-                      <span class="s2">&quot;Search for information about Webex Calling. For any questions about Webex CAlling, you must use this tool!&quot;</span><span class="p">)</span>
+                      <span class="s2">&quot;Search for information about Webex Calling. For any questions about Webex Calling, you must use this tool!&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>We will combine all the tools/wrappers together now</li>
