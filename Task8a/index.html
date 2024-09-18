@@ -1500,7 +1500,7 @@
 <p><img alt="HL_Output6" src="../assets/task8a/reformat_st.png" /></p>
 <p><span style="color: green;"> Step 9: Push our new Dataset to Hugging Face Hub so it can be processed and used for Fine-Tuning </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Push the dataset to the Hub</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Push the dataset to the Hub. Please remember to replace WebexOne with your org name that was created in Task1.</span>
 <span class="n">reformatted_ds</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="s2">&quot;WebexOne/test&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="HL_Output7" src="../assets/task8a/HFH.png" /></p>
@@ -1600,7 +1600,7 @@
 <span class="c1"># Save the dataset locally - OPTIONAL STEP</span>
 <span class="n">reformatted_ds</span><span class="o">.</span><span class="n">save_to_disk</span><span class="p">(</span><span class="s1">&#39;/content/data/reformatted_dataset&#39;</span><span class="p">)</span>
 
-<span class="c1"># Push the dataset to the Hub</span>
+<span class="c1"># Push the dataset to the Hub. Please remember to replace WebexOne with your org name that was created in Task1. </span>
 <span class="n">reformatted_ds</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="s2">&quot;WebexOne/test&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="fine-tuning-llama2-7b-model">Fine-tuning Llama2-7B Model</h3>
@@ -1624,7 +1624,7 @@
 {{ system_prompt }}
 &lt;&lt;/SYS&gt;&gt;
 {{ user_message }} [/INST] Model answer &lt;/s&gt;</code></p>
-<p><span class="colour" style="color:red">Note:</span> For this tutorial, we will use a preformatted dataset (WebexOne/test) that was uploaded earlier on Hugging Face. We will apply Supervised Fine-Tuning (SFT) to a base model.</p>
+<p><span class="colour" style="color:red">Note:</span> For this tutorial, we will use a preformatted dataset (WebexOne/test) that was uploaded earlier on Hugging Face. We will apply Supervised Fine-Tuning (SFT) to a base model. Please remember to replace WebexOne with your org name that was created in Task1.</p>
 <h4 id="guide-to-fine-tuning-llama-2">Guide to Fine-Tuning Llama 2</h4>
 <p>In this section, we will learn about all the steps required to fine-tune the Llama 2 model with 7 billion parameters on a T4 GPU with high RAM using Google Colab.</p>
 <p>The Colab T4 GPU has a limited 16 GB of VRAM. That is barely enough to store Llama 2–7b's weights (7b × 2 bytes = 14 GB in FP16), which means full fine-tuning is not possible, and we need to use parameter-efficient fine-tuning techniques like LoRA and QLoRA.</p>
@@ -1796,7 +1796,7 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># The instruction dataset to use that we created earlier </span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># The instruction dataset to use that we created earlier. Please remember to replace WebexOne with the org name that was created in Task1.</span>
 <span class="n">dataset_name</span> <span class="o">=</span> <span class="s2">&quot;WebexOne/test&quot;</span>
 
 <span class="c1"># Load dataset (you can process it here)</span>
@@ -2260,7 +2260,7 @@
 <span class="n">model</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">org_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">new_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">use_temp_dir</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">tokenizer</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">org_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">new_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">use_temp_dir</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:green"> Please replace "WebexOne" with the name of the organization created in Task 1 </span></p>
+<p><span class="colour" style="color:green"> Please replace "WebexOne" with the name of the organization created in <a href="https://allchapters.github.io/Ai/Task1/#accessing-hugging-face-api-in-google-colab">Task 1</a> </span></p>
 <p><img alt="Colab_nloadmodel" src="../assets/task8a/load_hf.png" /></p>
 <p><img alt="Colab_ModeUpl" src="../assets/task8a/mod_hf.png" /></p>
 <h4 id="load-the-pretrained-model-from-hugging-face-and-use-for-inference">Load the  pretrained model from Hugging Face and use for inference</h4>
