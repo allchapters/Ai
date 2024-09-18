@@ -658,11 +658,11 @@
         <li class="md-nav__item">
   <a href="#usecase-1-fine-tuning-using-llama2" class="md-nav__link">
     <span class="md-ellipsis">
-      UseCase 1 - Fine Tuning Using Llama2
+      UseCase 1 - Fine-Tuning Using Llama2
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="UseCase 1 - Fine Tuning Using Llama2">
+    <nav class="md-nav" aria-label="UseCase 1 - Fine-Tuning Using Llama2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -771,7 +771,7 @@
           <li class="md-nav__item">
   <a href="#base-models-for-fine-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      Base models for Fine Tuning
+      Base models for Fine-Tuning
     </span>
   </a>
   
@@ -866,11 +866,11 @@
           <li class="md-nav__item">
   <a href="#fine-tuning-example-2" class="md-nav__link">
     <span class="md-ellipsis">
-      Fine Tuning - Example 2
+      Fine-Tuning - Example 2
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Fine Tuning - Example 2">
+    <nav class="md-nav" aria-label="Fine-Tuning - Example 2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1094,18 +1094,18 @@
 </ul>
 <h2 id="pre-requisites">Pre-requisites</h2>
 <p><img alt="prereq" src="../assets/task8a/prereq.png" /></p>
-<h2 id="usecase-1-fine-tuning-using-llama2">UseCase 1 - Fine Tuning Using Llama2</h2>
+<h2 id="usecase-1-fine-tuning-using-llama2">UseCase 1 - Fine-Tuning Using Llama2</h2>
 <h3 id="datasets-creation">Datasets Creation</h3>
 <p><img alt="dsc" src="../assets/task8/datase.png" /></p>
 <p>There are several ways to create datasets:</p>
 <ul>
-<li>Using existing open source datasets e.g The Pile, Common Crawl , Wiki or even HuggingFace</li>
+<li>Using existing open source datasets e.g. The Pile, Common Crawl , Wiki or even HuggingFace</li>
 <li>Using LLM to create synthetic datasets faster and can be less expensive</li>
 <li>Using your own custom datasets e.t.c &lt;-- Focus for our lab</li>
 </ul>
 <p><img alt="dsc1" src="../assets/task8a/ds2.png" /></p>
 <h3 id="custom-datasets">Custom datasets</h3>
-<p>As we will be using and fine tuning Llam2  we need to convert them(datasets) into a uniform format compatible with training regimens <a href="https://llama.meta.com/docs/model-cards-and-prompt-formats/other-models#meta-llama-2" target="_blank">More Info</a></p>
+<p>As we will be using and Fine-Tuning Llam2  we need to convert them(datasets) into a uniform format compatible with training regimens <a href="https://llama.meta.com/docs/model-cards-and-prompt-formats/other-models#meta-llama-2" target="_blank">More Info</a></p>
 <h4 id="example-format-for-llama2">Example Format for Llama2</h4>
 <div class="highlight"><span class="filename">Sample Format - Dont Copy - reference ONLY</span><pre><span></span><code>&lt;s&gt;[INST] &lt;&lt;SYS&gt;&gt;
 {{ system_prompt }}
@@ -1305,7 +1305,7 @@
 <p><strong><em>To finalize, we again convert the above dataset (example.txt) into Llama2 format. Lets look into those steps</em></strong></p>
 <h4 id="convert-dataset-into-llama2-format-and-upload-on-hugging-face">Convert dataset into Llama2 format and upload on Hugging Face</h4>
 <ul>
-<li>Open Google Colab and create a new notebook. Click on "File" &gt; "New notebook" .Go to the "Secrets" section in the sidebar and ensure the Huuging Face toggle is enabled. Please refer to the <a href="../Task1/">following section</a> to create Google Colab account.</li>
+<li>Open Google Colab and create a new notebook. Click on "File" &gt; "New notebook" .Go to the "Secrets" section in the sidebar and ensure the Hugging Face toggle is enabled. Please refer to the <a href="../Task1/">following section</a> to create Google Colab account.</li>
 </ul>
 <p><img alt="HL_Format" src="../assets/task8a/opengc.png" /></p>
 <ul>
@@ -1325,7 +1325,7 @@
 </ul>
 <p><img alt="HL_file_uplo" src="../assets/task8a/file_uplod.png" /></p>
 <p><span class="colour" style="color:red">Note </span> Ensure that your files are saved elsewhere. This runtime's files will be deleted when it is terminated.</p>
-<p><strong><em>Summary: So far, we have our raw dataset as example.txt, enabled Hugging Face in our Colab notebook, and uploaded the data into our folder. we will be convertig the dataset (example.txt) into Llama2 format and uploading on Hugging Face so it can be used for our fine tuning in the upcoming steps</em></strong></p>
+<p><strong><em>Summary: So far, we have our raw dataset as example.txt, enabled Hugging Face in our Colab notebook, and uploaded the data into our folder. we will be convertig the dataset (example.txt) into Llama2 format and uploading on Hugging Face so it can be used for our Fine-Tuning in the upcoming steps</em></strong></p>
 <p><span style="color: green;"> We will start by installing specific Python packages. </span></p>
 <div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">datasets</span> <span class="n">huggingface_hub</span> <span class="n">google</span><span class="o">-</span><span class="n">colab</span>
 </code></pre></div>
@@ -1452,6 +1452,7 @@
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create the dataset from the generator</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_generator</span><span class="p">(</span><span class="n">data_generator</span><span class="p">,</span> <span class="n">gen_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;file_path&quot;</span><span class="p">:</span> <span class="n">file_path</span><span class="p">})</span>
 </code></pre></div></td></tr></table></div>
+<p><span class="colour" style="color:red">Note:Make sure to add quotations around the "file_path"</span> </p>
 <ul>
 <li>Creating a Dataset object by passing the file (example.txt) to the data_generator function</li>
 </ul>
@@ -1493,11 +1494,11 @@
 <p>The  above code snippet iterates over the original dataset (ds), extracts the reformatted segments, and collects them into a list (reformatted_segments_list). This process consolidates all the relevant data into a single list for further processing.</p>
 </li>
 <li>
-<p>After collecting all the reformatted segments, we will create a new Dataset object (reformatted_ds) from the list. This new dataset is structured in a way that is required by downstream processes when fine tuning starts.</p>
+<p>After collecting all the reformatted segments, we will create a new Dataset object (reformatted_ds) from the list. This new dataset is structured in a way that is required by downstream processes when Fine-Tuning starts.</p>
 </li>
 </ul>
 <p><img alt="HL_Output6" src="../assets/task8a/reformat_st.png" /></p>
-<p><span style="color: green;"> Step 9: Push our new Dataset to Hugging Face Hub so it can be processed and used for fine tuning </span></p>
+<p><span style="color: green;"> Step 9: Push our new Dataset to Hugging Face Hub so it can be processed and used for Fine-Tuning </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Push the dataset to the Hub</span>
 <span class="n">reformatted_ds</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="s2">&quot;WebexOne/test&quot;</span><span class="p">)</span>
@@ -1628,7 +1629,7 @@
 <p>In this section, we will learn about all the steps required to fine-tune the Llama 2 model with 7 billion parameters on a T4 GPU with high RAM using Google Colab.</p>
 <p>The Colab T4 GPU has a limited 16 GB of VRAM. That is barely enough to store Llama 2–7b's weights (7b × 2 bytes = 14 GB in FP16), which means full fine-tuning is not possible, and we need to use parameter-efficient fine-tuning techniques like LoRA and QLoRA.</p>
 <p>We will use the QLoRA technique to fine-tune the model in 4-bit precision and optimize VRAM usage. For that, we will use the Hugging Face ecosystem of LLM libraries: <span class="colour" style="color:blue">  transformers, accelerate, peft, trl, and bitsandbytes.</span></p>
-<h4 id="base-models-for-fine-tuning">Base models for Fine Tuning</h4>
+<h4 id="base-models-for-fine-tuning">Base models for Fine-Tuning</h4>
 <ul>
 <li>We have the option to fine-tune the Llama2 Base model <span class="colour" style="color:blue">(meta-llama/Llama-2-7b-hf)</span>, which can be found in the Hugging Face <a href="https://huggingface.co/meta-llama/Llama-2-7b-hf" target="_blank">repository</a></li>
 </ul>
@@ -2366,7 +2367,7 @@
 </code></pre></div></td></tr></table></div>
 <p><span class="colour" style="color:red"> Output: </span></p>
 <p><img alt="Colab_rep1" src="../assets/task8a/rep2.png" /></p>
-<h3 id="fine-tuning-example-2">Fine Tuning - Example 2</h3>
+<h3 id="fine-tuning-example-2">Fine-Tuning - Example 2</h3>
 <p>In this example, I will show you how to fine-tune using the <a href="https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cuipph/MPP/6800-DECT/deployment/CiscoDECT6800DeploymentGuide.pdf">Cisco IP DECT Phone 6800 Series Deployment Guide</a> . I have already created the dataset from the PDF, which can be found at <a href="https://huggingface.co/datasets/WebexOne/dect1?row=0">WebexOne/dect1</a></p>
 <p><span class="colour" style="color:green"> Step 1: Import the Necessary Libraries </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>

@@ -949,7 +949,7 @@ To convert these to bytes (since memory is often measured in bytes):</p>
 A 4-bit integer would use ( 4/8 = 0.5 ) bytes.
 A 16-bit integer would use ( 16/8 = 2 ) bytes.
 </code></pre></div>
-<p><strong>Lets Understand by taking Llama 2 as an example:</strong></p>
+<p><strong>Let’s take Llama 2 as an example, to better understand this:</strong></p>
 <p>For example, you may come across config like this in Llama 2 model:</p>
 <p><strong>Note:</strong> The bitsandbytes library will be used for quantization and fine-tuning of models. It provides tools to reduce memory footprint and improve computational efficiency.</p>
 <div class="highlight"><pre><span></span><code>bnb_config = transformers.BitsAndBytesConfig(
@@ -1057,7 +1057,7 @@ bnb_4bit_compute_dtype=bfloat16 //Specifies the data type for computation, which
 * Print the average quantization error to show the potential loss of accuracy introduced by reducing the bit-width from 32-bit to 4-bit.</p>
 <p><span style="color: RED;"> OUTPUT </span> </p>
 <p><code>Average Quantization Error: 0.016423573800129817</code></p>
-<p><span style="color: purple;"> Optional Step </span> Lets see the original generated randon floating point weights </p>
+<p><span style="color: purple;"> Optional Step: Let’s see the original generated random floating point weights </span></p>
 <div class="highlight"><pre><span></span><code>original_weights
 </code></pre></div>
 <p><code>0.9047668 , 0.81753767, 0.15176044, 0.82469964, 0.26190883,

@@ -857,10 +857,9 @@
 
 <h1 id="understanding-fine-tuning-large-language-models">Understanding Fine-Tuning - Large Language Models</h1>
 <h2 id="fine-tuning-llms">Fine-Tuning LLMs</h2>
-<p>Goals: Equip audience with knowledge and practical skills in finetuning techniques accompanied by code examples. Discuss the approach to finetuning LLMs.</p>
-<p>The section centers around fine-tuning LLMs, addressing their various aspects and methodologies. As the module progresses, the focus will be given to specialized instruction tuning techniques, namely  LoRA. It will examine domain-specific applications (Webex Calling), ensuring a holistic understanding of fine-tuning techniques and their real-world implications.</p>
+<p>The section centers around fine-tuning LLMs, addressing their various aspects and methodologies. As the module progresses, the focus will be given to specialized instruction tuning techniques, namely LoRA. It will examine domain-specific applications (Webex Calling), ensuring a holistic understanding of fine-tuning techniques and their real-world implications.</p>
 <ul>
-<li><strong>Techniques for Finetuning LLMs:</strong> The lesson highlights the challenges, particularly the resource intensity of traditional approaches. We will introduce instruction tuning methods like  LoRA.</li>
+<li><strong>Techniques for Finetuning LLMs:</strong> The lesson highlights the challenges, particularly the resource intensity of traditional approaches. We will introduce instruction tuning methods like LoRA.</li>
 <li><strong>Deep Dive into LoRA and SFT</strong>: This lesson offers an in-depth exploration of LoRA and SFT techniques. We will uncover the mechanics and underlying principles of these methods.</li>
 <li><strong>Finetuning using LoRA</strong> : This lesson guides a practical application of LoRA and SFT to finetune an LLM to follow instructions, using data from the “HuggingFace Dataset” .</li>
 </ul>
@@ -872,7 +871,7 @@
 <p>Fine-tuning is the process of adapting a pretrained model to a specific task by further training it using task-specific data. For example, if we aim to make an LLM proficient in answering questions about Webex Calling or Webex CC, we would fine-tune it using a dataset comprising Webex question-answer pairs. This process enables the model to recalibrate its internal parameters and representations to align with the intended task, enhancing its capacity to address domain-specific challenges effectively.</p>
 <p>However, fine-tuning LLMs conventionally can be resource-intensive and costly. It involves adjusting  the parameters in the pretrained LLM models, which can number in the billions, necessitating significant computational power and time. Consequently, it's crucial to explore more efficient and cost-effective methods for fine-tuning, such as Low-Rank Adaptation (LoRA).</p>
 <h3 id="a-reminder-on-instruction-and-conversational-finetuning">A Reminder On Instruction and Conversational Finetuning</h3>
-<p>In Conversational fine tuning the model engages in a dialogue with the user, maintaining context over multiple turns.The interaction mimics a natural conversation, with the model responding in a way that feels like a human interlocutor.</p>
+<p>In Conversational fine-tuning the model engages in a dialogue with the user, maintaining context over multiple turns.The interaction mimics a natural conversation, with the model responding in a way that feels like a human interlocutor.</p>
 <p>Instruction fine-tuning is a specific type of fine-tuning that grants precise control over a model's behavior. The objective is to train a Language Model (LLM) to interpret prompts as instructions rather than simply treating them as text to continue generating. </p>
 <h3 id="introduction-to-efficient-finetuning-with-parameter-efficient-fine-tuning-peft">Introduction to Efficient Finetuning with Parameter-Efficient Fine-tuning (PEFT)</h3>
 <p>Parameter-Efficient Fine-tuning (PEFT) approaches address the need for computational and storage efficiency in fine-tuning LLMs. Hugging Face developed the PEFT library specifically for this purpose. PEFT leverages architectures that only fine-tune a small number of additional model parameters while freezing most parameters of the pretrained LLMs, significantly reducing computational and storage costs.</p>
@@ -882,7 +881,7 @@
 <p>There are several techniques to make the finetuning process more efficient and effective:</p>
 <ul>
 <li>
-<p><strong>Full Finetuning:</strong> This method involves adjusting all the parameters in the pretrained LLM models to adapt to a specific task. While effective, it is resource-intensive and requires extensive computational power, therefore it’s rarely used. <strong>Not in our Scope</strong></p>
+<p><strong>Full Finetuning:</strong> This method involves adjusting all the parameters in the pretrained LLM models to adapt to a specific task. While effective, it is resource-intensive and requires extensive computational power, therefore it’s rarely used. <strong>This is not in the scope of this lab</strong></p>
 </li>
 <li>
 <p><strong>Low-Rank Adaptation (LoRA):</strong> LoRA is a technique that aims to adapt LLMs to specific tasks and datasets while simultaneously reducing computational resources and costs. By applying low-rank approximations to the downstream layers of LLMs, LoRA significantly reduces the number of parameters to be trained, thereby lowering the GPU memory requirements and training costs. We’ll also see QLoRA, a variant of LoRA that is more optimized and leverages quantization.</p>
@@ -891,10 +890,10 @@
 <p>With a focus on the number of parameters involved in finetuning, there are multiple methods, such as:</p>
 <ul>
 <li>
-<p><strong>Supervised Finetuning (SFT):</strong> SFT involves doing standard supervised finetuning with a pretrained LLM on a small amount of demonstration data. This method is less resource-intensive than full finetuning but still requires significant computational power. <strong>Scope of this lab</strong></p>
+<p><strong>Supervised Finetuning (SFT):</strong> SFT involves doing standard supervised finetuning with a pretrained LLM on a small amount of demonstration data. This method is less resource-intensive than full finetuning but still requires significant computational power. <strong>This is within the scope of this lab</strong></p>
 </li>
 <li>
-<p><strong>Reinforcement Learning from Human Feedback (RLHF):</strong> RLHF is a training methodology where models are trained to follow human feedback over multiple iterations. This method can be more effective than SFT, as it allows for continuous improvement based on human feedback. We’ll also see some alternatives to RLHF, such as Direct Preference Optimization (DPO), and Reinforcement Learning from AI Feedback (RLAIF).<strong>Not in our Scope</strong></p>
+<p><strong>Reinforcement Learning from Human Feedback (RLHF):</strong> RLHF is a training methodology where models are trained to follow human feedback over multiple iterations. This method can be more effective than SFT, as it allows for continuous improvement based on human feedback. We’ll also see some alternatives to RLHF, such as Direct Preference Optimization (DPO), and Reinforcement Learning from AI Feedback (RLAIF).<strong>This is not in the scope of this lab</strong></p>
 </li>
 </ul>
 <h3 id="conclusion">Conclusion</h3>
