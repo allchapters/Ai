@@ -946,7 +946,7 @@
 <p>Sentence Based: We need a .(fullstop) for it to work </p>
 </li>
 </ul>
-<p><span class="colour" style="color:orange"> Note: We've all heard of GPT and OpenAI. They utilize a tokenization method called Byte Pair Encoding (BPE), which is a middle ground between word-based and character-based tokenization. In BPE, words are broken down into smaller character sequences that the model encountered during training, allowing it to make informed predictions. </span></p>
+<p><span class="colour" style="color:red"> Note: We've all heard of GPT and OpenAI. They utilize a tokenization method called Byte Pair Encoding (BPE), which is a middle ground between word-based and character-based tokenization. In BPE, words are broken down into smaller character sequences that the model encountered during training, allowing it to make informed predictions. </span></p>
 <h2 id="why-do-we-need-tokenization-or-text-splitting">Why do we need Tokenization or Text Splitting?</h2>
 <p><img alt="salon" src="../assets/task3/salon.png" /></p>
 <p>Historically, applications perform better when they are provided with your own data. However, you can't feed unlimited data to your LLMs due to two key limitations:</p>
@@ -1005,9 +1005,9 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:orange">Note: </span> The image below is provided to highlight the code and help you understand how chunking works. Not an actual output from print(chunks) command.</span></p>
+<p><span class="colour" style="color:red">Note: </span> The image below is provided to highlight the code and help you understand how chunking works. Not an actual output from print(chunks) command.</span></p>
 <p><img alt="token_intro1" src="../assets/task3/char.png" /></p>
-<p><span class="colour" style="color:orange">Note: </span> The text contained a total of 422 characters, divided into 13 chunks. Problem with the above chunking technique is that it got split at 'r'. How we know when to chunk . Before we look into that. Lets look into Langchain Splitter </span></p>
+<p><span class="colour" style="color:red">Note: </span> The text contained a total of 422 characters, divided into 13 chunks. Problem with the above chunking technique is that it got split at 'r'. How we know when to chunk . Before we look into that. Lets look into Langchain Splitter </span></p>
 <h3 id="langchain-text-splitter"><strong>LangChain Text Splitter</strong></h3>
 <ul>
 <li>Let's retrieve the langchain library from the Python Package. In the example below, we'll configure the chunk_overlap parameter, which ensures that our chunks are blended together—meaning the end of chunk 1 will overlap with the beginning of chunk 2. Please copy the below command in Colab and press <strong>run</strong> to execute each cell individually.</li>
@@ -1033,7 +1033,7 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<span class="colour" style="color:green">Note:</span> Seprators are characters sequence you wanna split on. The image below is provided to highlight the code and help you understand how chunking works. </span></p>
+<span class="colour" style="color:red">Note: Seprators are characters sequence you wanna split on. The image below is provided to highlight the code and help you understand how chunking works. </span></p>
 <p><img alt="LCh1" src="../assets/task3/lch1.png" /></p>
 <h3 id="recursive-character-text-splitting"><strong>Recursive character Text Splitting</strong></h3>
 <p>In the previous example, when we used character Splitting, we split the text based on a fixed number of character. Specifically, we divided the text into chunks of 35 characters each.</p>
@@ -1071,9 +1071,9 @@
 
 <span class="n">text_splitter</span><span class="o">.</span><span class="n">create_documents</span><span class="p">([</span><span class="n">text</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
-<span class="colour" style="color:green">Note:</span> We avoid splitting in the middle of words by using spaces as one of the separators, ensuring that each chunk ends on a complete word. This is crucial because RCS (Recursive Character Splitting) helps maintain the context within sentences by keeping related words together. The image below is provided to highlight the code and help you understand how chunking works.</span></p>
+<span class="colour" style="color:red">Note:</span> We avoid splitting in the middle of words by using spaces as one of the separators, ensuring that each chunk ends on a complete word. This is crucial because RCS (Recursive Character Splitting) helps maintain the context within sentences by keeping related words together. The image below is provided to highlight the code and help you understand how chunking works.</span></p>
 <p><img alt="RTS1" src="../assets/task3/RTS1.png" /></p>
-<p><span class="colour" style="color:green">Note:</span>If you're new to AI, I would personally recommend starting with Recursive Text Splitting (RTS). </span></p>
+<p><span class="colour" style="color:red">Note:</span>If you're new to AI, I would personally recommend starting with Recursive Text Splitting (RTS). </span></p>
 <h3 id="document-level-splitting"><strong>Document Level Splitting</strong></h3>
 <p>So far, we've been working with splitting regular documents. But what if we have markdown files or  PDF or Python documentation? There's a better way to handle those cases, and that's where specialized document splitting comes into play.</p>
 <h4 id="pdf-with-table">PDF with table</h4>
@@ -1114,7 +1114,7 @@
 <ul>
 <li>We'll use the following code from the Unstructured library to demonstrate how tables can be extracted</li>
 </ul>
-<p><span class="colour" style="color:green">Note: <Your-File-Path> In the below code filename, is the relative path where your PDF is uploaded. To get the correct file path, click on the 'data' folder, select your PDF file, click on [...] and choose Copy Path. Example: filename = "/content/data/CiscoReport.pdf" </span></p>
+<p><span class="colour" style="color:red">Note: <Your-File-Path> In the below code filename, is the relative path where your PDF is uploaded. To get the correct file path, click on the 'data' folder, select your PDF file, click on [...] and choose Copy Path. Example: filename = "/content/data/CiscoReport.pdf" </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1160,7 +1160,7 @@
 <li>Tables are straightforward for humans to read, but they aren't as easy for language models to interpret. Language models are typically trained on HTML tables, so when you pass HTML-formatted tables to an LLM, it will better understand the structure and content. You can paste the HTML into an <a href="https://codebeautify.org/htmlviewer" target="_blank">HTML viewer</a> to see how it looks.</li>
 </ul>
 <p><img alt="Table1" src="../assets/task3/tab.png" /></p>
-<p><span class="colour" style="color:green">Note: That's how you handle tables within a PDF.</span></p>
+<p><span class="colour" style="color:red">Note: That's how you handle tables within a PDF.</span></p>
 <h3 id="multi-modal-text-images">Multi-Modal (Text + images)</h3>
 <p>What if a PDF or other document contains images? How can you extract them? We'll use the Unstructured library again to handle this.</p>
 <h4 id="extract-images-within-pdf">Extract Images within PDF</h4>
@@ -1217,15 +1217,15 @@
     <span class="n">combine_text_under_n_chars</span><span class="o">=</span><span class="mi">2000</span>
 <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:green">Note: You'll notice that a folder called 'figures' is created, where all the extracted images are stored. To make these images more useful, we can generate embeddings for them, which can later be used for semantic search. Typically, embedding models are specialized—they either handle text or images, but not both. This means the vector lengths won't align, and using different models for text and image embeddings can complicate similarity searches.
+<p><span class="colour" style="color:red">Note: You'll notice that a folder called 'figures' is created, where all the extracted images are stored. To make these images more useful, we can generate embeddings for them, which can later be used for semantic search. Typically, embedding models are specialized—they either handle text or images, but not both. This means the vector lengths won't align, and using different models for text and image embeddings can complicate similarity searches.
 However, the CLIP model can generate embeddings for both images and text, making it a versatile option for this purpose. To simplify things, we can first create a text summary for each image, and then generate embeddings based on those summaries. This approach allows us to leverage text-based semantic search while still incorporating the visual information from the images. </span></p>
 <p><img alt="image_extract" src="../assets/task3/iex.png" /></p>
 <ul>
 <li>You can view the image by double clicking it </li>
 </ul>
-<p><span class="colour" style="color:green">Note: After extracting images from a PDF or any other source, you can use the below method to send them to a multimodal model like GPT-4o to understand and generate insights about the images. This approach allows you to combine textual and visual data for a richer understanding of the content.</span></p>
+<p><span class="colour" style="color:red">Note: After extracting images from a PDF or any other source, you can use the below method to send them to a multimodal model like GPT-4o to understand and generate insights about the images. This approach allows you to combine textual and visual data for a richer understanding of the content.</span></p>
 <h4 id="set-openai-token-multimodal">Set OpenAI token - MultiModal</h4>
-<p><span class="colour" style="color:orange">Note: First, create an account from the <a href="https://platform.openai.com/" target="_blank">OpenAI official website</a>.</span></p>
+<p><span class="colour" style="color:red">Note: First, create an account from the <a href="https://platform.openai.com/" target="_blank">OpenAI official website</a>.</span></p>
 <ul>
 <li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys" target="_blank">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the API Key as we will be using it in the later steps . The below API key is for reference only . Also when creating an API key run with default settings.</li>
 </ul>
@@ -1292,7 +1292,7 @@ However, the CLIP model can generate embeddings for both images and text, making
 
 <span class="n">image_str</span> <span class="o">=</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="s2">&quot;/content/figures/figure-1-1.jpg&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<span class="colour" style="color:orange">Note: This is the image that was extracted from our data and saved in the <strong>Figures</strong> folder.</span></p>
+<span class="colour" style="color:red">Note: This is the image that was extracted from our data and saved in the <strong>Figures</strong> folder.</span></p>
 <ul>
 <li>Lets see our  base64-encoded image</li>
 </ul>
@@ -1339,7 +1339,7 @@ However, the CLIP model can generate embeddings for both images and text, making
 </code></pre></div></td></tr></table></div>
 <span class="colour" style="color:orange">Output: The response from the model is stored in msg.content, which will contain the descriptive summary of the image. </span></p>
 <p>The image is the logo of Cisco Systems, Inc., commonly known as Cisco. The logo features the company name "cisco" written in lowercase letters in a distinct, modern sans-serif font. Above the text, there is a series of vertical bars of varying heights, which is stylized to resemble the Golden Gate Bridge. The logo is rendered in a light blue color. The design is clean, professional, and easily recognizable, reflecting Cisco's identity as a major tech company specializing in networking hardware, telecommunications equipment, and other high-technology services and products.</p>
-<p><span class="colour" style="color:orange">Note: The description of your image may vary depending on the image retrieved.</span></p>
+<p><span class="colour" style="color:red">Note: The description of your image may vary depending on the image retrieved.</span></p>
 
 
 
