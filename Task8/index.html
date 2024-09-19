@@ -938,7 +938,7 @@
 <li>A 4-bit quantized number takes up only 4 bits of memory.
 So, theoretically, you can fit 8 times more 4-bit quantized numbers into the same memory space as float32 numbers. This allows you to load larger models into the GPU memory or use smaller GPUs that might not have been able to handle the model otherwise.</li>
 </ul>
-<p><strong>Note:</strong> The amount of memory used by an integer in a computer system is directly related to the number of bits used to represent that integer.</p>
+<p><span class="colour" style="color:red">Note:</span> The amount of memory used by an integer in a computer system is directly related to the number of bits used to represent that integer.</p>
 <p><strong>Memory Usage for 4-bit Integer</strong>
 A 4-bit integer uses 4 bits of memory</p>
 <p><strong>Memory Usage for 32-bit Integer</strong>
@@ -951,7 +951,7 @@ A 16-bit integer would use ( 16/8 = 2 ) bytes.
 </code></pre></div>
 <p><strong>Let’s take Llama 2 as an example, to better understand this:</strong></p>
 <p>For example, you may come across config like this in Llama 2 model:</p>
-<p><strong>Note:</strong> The bitsandbytes library will be used for quantization and fine-tuning of models. It provides tools to reduce memory footprint and improve computational efficiency.</p>
+<p><span class="colour" style="color:red">Note:</span> The bitsandbytes library will be used for quantization and fine-tuning of models. It provides tools to reduce memory footprint and improve computational efficiency.</p>
 <div class="highlight"><pre><span></span><code>bnb_config = transformers.BitsAndBytesConfig(
 load_in_4bit=True,
 bnb_4bit_quant_type=&#39;nf4&#39;,
@@ -976,7 +976,7 @@ bnb_4bit_compute_dtype=bfloat16 //Specifies the data type for computation, which
 <li>Select your runtime envoirnment</li>
 </ul>
 <p><img alt="Colab_runtime" src="../assets/task1/Colab_chg.png" /></p>
-<p><span style="color: red;"> NOTE: </span> As we will be running a hypothetical model in Google Colab, you can use the CPU to run the code below. Our goal is to understand how quantization can help us use less memory.</p>
+<p><span style="color:red"> NOTE: </span> As we will be running a hypothetical model in Google Colab, you can use the CPU to run the code below. Our goal is to understand how quantization can help us use less memory.</p>
 <p><span style="color: purple;"> Reminder: </span> Whenever you want to copy the below code  into Google Colab and run it on individual line, be sure to click on + Code to add a new code cell. Also make sure to press the Play button to execute the code</p>
 <p><img alt="Colab_newcell" src="../assets/task8/newcell.png" /></p>
 <p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>

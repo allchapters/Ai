@@ -932,14 +932,14 @@
 <p><span class="colour" style="color:orange">Embedding for images can be done via CLIP model.</span></p>
 <h2 id="contrastive-language-image-pretraining-clip-model">Contrastive Language-Image Pretraining - CLIP Model</h2>
 <p>Unlike other embedding models that focus on a single modality, such as text or images, the <a href="https://openai.com/index/clip/">CLIP (Contrastive Language-Image Pretraining)</a>, was developed by OpenAI in 2021, handles multiple modalities by integrating both text and images.</p>
-<p><span class="colour" style="color:orange">Note: CLIP models are embedding models, not traditional Large Language Models (LLMs).</span></p>
+<p><span class="colour" style="color:red">Note: CLIP models are embedding models, not traditional Large Language Models (LLMs).</span></p>
 <p>The primary function of CLIP (Contrastive Language-Image Pretraining) is to create a shared embedding space where both text and images are represented as vectors. The key idea is to learn representations where images and their corresponding text descriptions are close to each other in this embedding space, while unrelated image-text pairs are far apart. This allows CLIP to perform tasks like image classification, zero-shot learning, and text-to-image retrieval based on the semantic similarity between text and images. So in summary CLIP models create a relationship between images and text.</p>
 <h3 id="zero-shot-learning-zsl">Zero-Shot Learning (ZSL)</h3>
 <p>Zero-Shot Learning (ZSL): This technique enhances the ability of AI systems to classify and recognize objects they have not been explicitly trained on. Instead of relying solely on trained data, ZSL uses auxiliary information to make predictions. For example, in an image classification scenario where a model is trained to recognize dogs and cats, if it encounters an image of a zebra (which the model has never seen before), it can still classify it correctly if it has auxiliary information describing a zebra as an animal with black and white stripes.</p>
 <p>Using ZSL, CLIP models can perform tasks they were not specifically trained on, in real-time. Essentially, they have capabilities similar to text-based embedding models. Just as we create chunks of text and use a user query to find similar text chunks, the same concept applies to images using CLIP.</p>
 <h2 id="openclip-model">OpenCLIP Model</h2>
 <p>It's important to note that the original CLIP model by OpenAI is not publicly available. However, people have taken the concepts from OpenAI's CLIP paper and developed open-source models like OpenCLIP.</p>
-<p><span class="colour" style="color:orange"> Note: <a href="https://github.com/mlfoundations/open_clip">OpenCLIP</a> is an open-source implementation and extension of the original CLIP (Contrastive Language-Image Pretraining) model developed by OpenAI.</span></p>
+<p><span class="colour" style="color:red"> Note: <a href="https://github.com/mlfoundations/open_clip">OpenCLIP</a> is an open-source implementation and extension of the original CLIP (Contrastive Language-Image Pretraining) model developed by OpenAI.</span></p>
 <ul>
 <li>
 <p><strong>Different types of Multimodal Embeddings and LLM</strong>
@@ -980,7 +980,7 @@
 <p><span class="colour" style="color:red">Reminder: </span>Click the play button to the left of the code, or use the keyboard shortcut "Command/Ctrl+Enter" while the cell is selected.</p>
 <p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>
 <h3 id="set-openai-token-multimodal">Set OpenAI token - MultiModal</h3>
-<p><span class="colour" style="color:orange">Note: First, create an account from the <a href="https://platform.openai.com/">OpenAI official website</a>.If you have already completed this step please ignore and jump to Update Google Colab envoirnment section.</span></p>
+<p><span class="colour" style="color:red">Note: First, create an account from the <a href="https://platform.openai.com/">OpenAI official website</a>.If you have already completed this step please ignore and jump to Update Google Colab envoirnment section.</span></p>
 <ul>
 <li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the APi Key as we will be using it in the later steps .</li>
 </ul>
@@ -1049,7 +1049,7 @@
 <ul>
 <li>Let's load our PDF files into Google Colab. For this example, we can use the article titled "Webex Customer Experience Essentials" from the <a href="https://help.webex.com/en-us/article/72sb3r/Webex-Customer-Experience-Essentials">Webex Help Center</a>. You can also <a download="CX-Essentials.pdf" href="../assets/static/CX-Essentials.pdf" target="_blank">download the modified article here</a> as we will be using in the next step.</li>
 </ul>
-<p><span class="colour" style="color:orange"> Note: To save time and speed up processing in this lab, I have modified the CX-Essentials.pdf file by reducing it to only a few pages. You can download this version from the modified link provided above. </span></p>
+<p><span class="colour" style="color:red"> Note: To save time and speed up processing in this lab, I have modified the CX-Essentials.pdf file by reducing it to only a few pages. You can download this version from the modified link provided above. </span></p>
 <ul>
 <li>Within Google Colab, Click on Folder and create a new folder called "dat"</li>
 </ul>
@@ -1066,7 +1066,7 @@
 <li>Let's process our PDF document by splitting it into smaller, manageable chunks based on titles, extracting images, and handling text in a way that ensures the chunks are neither too large nor too small. We will store the extracted elements (text, images, etc.) in the pdf_elements variable, and images are saved in the specified path(image_path). To understand more about <a href="https://docs.unstructured.io/open-source/core-functionality/partitioning#partition-csv">unstructured partition_pdf click here</a> </li>
 </ul>
 <p>Unstructured will partition PDF files by first extracting embedded images if specified. It then processes the document's layout, dividing the content into structured elements such as titles, tables, and paragraphs based on the layout and text structure. For more detailed layout analysis, it may use advanced models like YOLOX to identify and extract bounding boxes for elements like tables and titles. This allows for the precise extraction and organization of text and images, making the content more suitable for further analysis and processing.</p>
-<p><span class="colour" style="color:orange"> NOTE: To avoid errors, overlap, or dependencies from previous tasks, open a new Google Colab notebook for this step. This will ensure a clean environment and prevent any potential issues related to previous work. </span></p>
+<p><span class="colour" style="color:red"> NOTE: To avoid errors, overlap, or dependencies from previous tasks, open a new Google Colab notebook for this step. This will ensure a clean environment and prevent any potential issues related to previous work. </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1092,7 +1092,7 @@
 <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="r9" src="../assets/task6/9.png" /></p>
-<p><span class="colour" style="color:orange"> Note: This process may take a few minutes to complete as we are extracting information from the PDF.</span></p>
+<p><span class="colour" style="color:red"> Note: This process may take a few minutes to complete as we are extracting information from the PDF.</span></p>
 <ul>
 <li>You'll also notice that a folder has been created containing all the extracted images.</li>
 </ul>
@@ -1143,7 +1143,7 @@
 </code></pre></div></td></tr></table></div>
 <p><img alt="table" src="../assets/task6/table.png" /></p>
 <h3 id="lets-now-create-summary-from-our-data-by-passing-the-info-to-multimodal-model">Let's now create summary from our data by passing the info to Multimodal model</h3>
-<p><span class="colour" style="color:orange">Note: We will be using GPT-4o as our Multimodal to create summary </span></p>
+<p><span class="colour" style="color:red">Note: We will be using GPT-4o as our Multimodal to create summary </span></p>
 <ul>
 <li>Let's retrieve an OpenAI API key and set it as an environment variable within the Colab environment</li>
 </ul>

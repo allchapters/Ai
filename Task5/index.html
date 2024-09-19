@@ -845,7 +845,7 @@
 </li>
 </ul>
 <p><img alt="Erro7" src="../assets/task5/erro.png" /></p>
-<p><span class="colour" style="color:orange"> Note: A token can be as small as a piece of a word or as large as a word itself, depending on the language and complexity of the text </span></p>
+<p><span class="colour" style="color:red"> Note: A token can be as small as a piece of a word or as large as a word itself, depending on the language and complexity of the text </span></p>
 <ul>
 <li>Consider a model with a context window limit of 8,000 tokens. If we input 6,000 tokens and the model generates a response of 1,500 tokens, the total token count is 7,500. This is within the model's context window, so all information is processed correctly.
 Conversely, if the input increases to 10,000 tokens and the response remains at 1,500 tokens, the total becomes 11,500 tokens. This exceeds the model's 8,000-token limit. Consequently, the model might lose context or be unable to respond properly as the excess information falls outside its context window. This demonstrates the importance of managing input size to stay within the model's processing capabilities.</li>
@@ -869,7 +869,7 @@ Conversely, if the input increases to 10,000 tokens and the response remains at 
 <p>Let's start by understanding what RAGs are before examining how they address context window issues.</p>
 <p>RAG = Retrieval Augmented Generation</p>
 <p><img alt="rag" src="../assets/task5/rag.png" /></p>
-<p>Lets focus on the <span class="colour" style="color:orange">Generation </span>part. Generation basically means responding to user query. For example, you might ask the model whether DX or Navigators are compatible with supporting ThousandEyes.</p>
+<p>Lets focus on the <span class="colour" style="color:red">Generation </span>part. Generation basically means responding to user query. For example, you might ask the model whether DX or Navigators are compatible with supporting ThousandEyes.</p>
 <p><img alt="rag1" src="../assets/task5/rag1.png" /></p>
 <p>That's an excellent question. LLMs are trained on vast amounts of historical data, so they may recognize that DX and Navigators are well-regarded Cisco products. As a result, the LLM might confidently respond that you can install ThousandEyes on those devices. However, the issue is that the response may lack a verifiable source to back up that claim or the information can be out-of-date  </p>
 <p><img alt="rag2" src="../assets/task5/rag2.png" /></p>
@@ -892,7 +892,7 @@ Conversely, if the input increases to 10,000 tokens and the response remains at 
 <p>This approach allows us to build applications that can effectively use language models. Example: When a user asks a question, we convert it into embeddings, perform a semantic search to find the most relevant answers, and then send both the question and the retrieved information to the LLM to generate a response.</p>
 <p>In this section, we'll briefly introduce LangChain, but in the upcoming chapters, we'll dive deeper to gain a more comprehensive understanding of how it works.</p>
 <p><img alt="PIPE" src="../assets/task5/rag_pipe.png" /></p>
-<p><span class="colour" style="color:orange">Note: In this section, we will be using a version of <a href="https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cuipph/MPP/6800-DECT/deployment/CiscoDECT6800DeploymentGuide.pdf" target="_blank">Cisco DECT 6800 Deployment Guide</a>.  For the purposes of this lab, I've modified the original PDF by removing a few pages and saving it as a new file. 
+<p><span class="colour" style="color:red">Note: In this section, we will be using a version of <a href="https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cuipph/MPP/6800-DECT/deployment/CiscoDECT6800DeploymentGuide.pdf" target="_blank">Cisco DECT 6800 Deployment Guide</a>.  For the purposes of this lab, I've modified the original PDF by removing a few pages and saving it as a new file. 
 The PDF we are using in this lab can be downloaded from <a download="dect.pdf" href="../assets/static/dect.pdf" target="_blank">here</a></span></p>
 <ul>
 <li>Open Google Colab and create a new notebook. Click on "File" &gt; "New notebook". Please refer to the <a href="../Task1/">following section</a> to create Google Colab account.</li>
@@ -983,7 +983,7 @@ The PDF we are using in this lab can be downloaded from <a download="dect.pdf" h
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">text_splitter</span> <span class="o">=</span> <span class="n">RecursiveCharacterTextSplitter</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">chunk_overlap</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 <span class="n">splits</span> <span class="o">=</span> <span class="n">text_splitter</span><span class="o">.</span><span class="n">split_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<span class="colour" style="color:orange"> Note: RecursiveCharacterTextSplitter Covered in previous section </span></p>
+<span class="colour" style="color:red"> Note: RecursiveCharacterTextSplitter Covered in previous section </span></p>
 <ul>
 <li>Let's create our embeddings. As discussed in the Embedding section, there are multiple techniques available. In this lab, we will use OpenAI embeddings. By default, the text-embedding-ada-002 model is used, but we can also opt for the text-embedding-3-large model if desired. Once the embeddings are created, they can be stored in a Vector Database. 
 While there are various databases available, as covered in the Embeddings and Vector DB section, in our example, we will use the Chroma Vector DB, which can be easily deployed locally on your machine. 
@@ -997,13 +997,13 @@ We will also create a retriever by using  retriever = vectorstore.as_retriever()
 
 <span class="n">retriever</span> <span class="o">=</span> <span class="n">vectorstore</span><span class="o">.</span><span class="n">as_retriever</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-<p><span style="color:orange">Note: We are using Chroma dB but you have options to use other databases as well such as Faiss. 
+<p><span style="color:red">Note: We are using Chroma dB but you have options to use other databases as well such as Faiss. 
 Also we can use <a href="https://python.langchain.com/v0.2/docs/integrations/text_embedding/ollama/">embeddings from Ollama</a>, an open-source and cost-free embedding solution. Below is a code snippet for your reference only:
 <div class="highlight"><pre><span></span><code># from langchain_community.embeddings import OllamaEmbeddings
 # embeddings = OllamaEmbeddings()
 </code></pre></div>
 </span></p>
-<p><span style="color:orange">Note: More info on Vector Databases can be found <a href="https://python.langchain.com/v0.2/docs/integrations/vectorstores/" target="_blank">here</a></p>
+<p><span style="color:red">Note: More info on Vector Databases can be found <a href="https://python.langchain.com/v0.2/docs/integrations/vectorstores/" target="_blank">here</a></p>
 <ul>
 <li>At this stage, we've loaded the document, created splits, converted them into embeddings, and stored them in the Vector DB. Now, let's query the database to ensure we can retrieve the information.</li>
 </ul>
@@ -1075,8 +1075,8 @@ Question: {question}
 <span class="n">req</span> <span class="o">=</span> <span class="n">rag_chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span style="color:orange">Note: When we pass our question into the rag_chain.invoke() method, it first goes through the retriever component that we set up earlier. The retriever uses the same embedding model, text-embedding-3-large, to transform the  question into an embedding vector. This vector is then compared with the embeddings of documents stored in the Chroma vector store to identify the most relevant ones. Once these relevant documents are retrieved based on the similarity of their embeddings, they are sent along with the original question to the language model (LLM), which then generates a response.</span></p>
-<p><span style="color:red">OUTPUT</span>
+<p><span style="color:red">Note: When we pass our question into the rag_chain.invoke() method, it first goes through the retriever component that we set up earlier. The retriever uses the same embedding model, text-embedding-3-large, to transform the  question into an embedding vector. This vector is then compared with the embeddings of documents stored in the Chroma vector store to identify the most relevant ones. Once these relevant documents are retrieved based on the similarity of their embeddings, they are sent along with the original question to the language model (LLM), which then generates a response.</span></p>
+<p><span style="color:orange">OUTPUT</span>
 To set up and install a DECT phone system, first review the site and plan the location of the base stations, ensuring they are within 50 meters of each other for good coverage. Upgrade the base stations to the latest firmware, configure them according to the Cisco IP DECT 6800 Series Administration Guide, and unpack and prepare the handsets. Finally, mount the base stations, place the handsets in their cradles, and make a few test calls to ensure everything is working correctly.</p>
 <h2 id="measuring-vector-similarity-using-cosine-similarity">Measuring Vector Similarity Using Cosine Similarity</h2>
 <p>Cosine similarity is a metric used to measure how similar two vectors are, regardless of their magnitude. It is particularly useful in the context of text analysis, information retrieval, and machine learning, where it is often used to compare the similarity of two text documents, sentences, or any other data that can be represented as vectors. In our code, we will use it to match the similarity between the question we asked and the answer we receive.</p>
@@ -1126,7 +1126,7 @@ To set up and install a DECT phone system, first review the site and plan the lo
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cosine Similarity: </span><span class="si">{</span><span class="n">similarity</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="Csimi" src="../assets/task5/cos_s.png" /></p>
-<p><span class="colour" style="color:orange"> Note: Cosine similarity values range from -1 to 1, where 1 means the vectors are identical, 0 means they are completely different, and values closer to 1 indicate greater similarity.  In our example where one similarity score is 0.63 and another is 0.57, the document with a score of 0.63 is more similar to the query than the one with 0.57. Both scores indicate a moderate similarity to the query, but the document with 0.63 contains slightly more relevant information. </span></p>
+<p><span class="colour" style="color:red"> Note: Cosine similarity values range from -1 to 1, where 1 means the vectors are identical, 0 means they are completely different, and values closer to 1 indicate greater similarity.  In our example where one similarity score is 0.63 and another is 0.57, the document with a score of 0.63 is more similar to the query than the one with 0.57. Both scores indicate a moderate similarity to the query, but the document with 0.63 contains slightly more relevant information. </span></p>
 
 
 
