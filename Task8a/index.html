@@ -1327,7 +1327,7 @@
 <p><span class="colour" style="color:red">Note: Ensure that your files are saved elsewhere. This runtime's files will be deleted when it is terminated.</span></p>
 <p><strong><em>Summary: So far, we have our raw dataset as example.txt, enabled Hugging Face in our Colab notebook, and uploaded the data into our folder. we will be convertig the dataset (example.txt) into Llama2 format and uploading on Hugging Face so it can be used for our Fine-Tuning in the upcoming steps</em></strong></p>
 <p><span style="color: green;"> We will start by installing specific Python packages. </span></p>
-<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">datasets</span> <span class="n">huggingface_hub</span> <span class="n">google</span><span class="o">-</span><span class="n">colab</span> <span class="n">python</span><span class="o">-</span><span class="n">dotenv</span>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">datasets</span> <span class="n">huggingface_hub</span> <span class="n">google</span><span class="o">-</span><span class="n">colab</span>
 </code></pre></div>
 <p><img alt="HL_Output1" src="../assets/task8a/output_pip.png" /></p>
 <ul>
@@ -1498,7 +1498,7 @@
 </li>
 </ul>
 <p><img alt="HL_Output6" src="../assets/task8a/reformat_st.png" /></p>
-<p><span style="color: green;"> Step 9: Push our new Dataset to Hugging Face Hub so it can be processed and used for Fine-Tuning </span></p>
+<p><span style="color: green;"> Step 9: Push our new Dataset to Hugging Face Hub so it can be processed and used for Fine-Tuning. Please remember to replace WebexOne with your org name that was created in Task1. </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Push the dataset to the Hub. Please remember to replace WebexOne with your org name that was created in Task1.</span>
 <span class="n">reformatted_ds</span><span class="o">.</span><span class="n">push_to_hub</span><span class="p">(</span><span class="s2">&quot;WebexOne/test&quot;</span><span class="p">)</span>
@@ -1644,7 +1644,7 @@
 <p><img alt="Colab_BaseModel_info2" src="../assets/task8a/gated_repo.png" /></p>
 <p><img alt="Colab_BaseModel_info3" src="../assets/task8a/gated_repo_pending.png" /></p>
 <p><span class="colour" style="color:red"> Note: It may take some time for the status to update from Pending to Accepted.</span></p>
-<p><span class="colour" style="color:blue"> Note: In this lab environment, we can use the Llama2 base model from another repository that is not gated.</span> <span class="colour" style="color:red"> More Info at: </span> <a href="https://huggingface.co/NousResearch/Llama-2-7b-chat-hf">Repository</a></p>
+<p><span class="colour" style="color:red"> Note: In this lab environment, we can use the Llama2 base model from another repository (NousResearch/Llama-2-7b-chat-hf) that is not gated.</span> <span class="colour" style="color:red"> More Info at: </span> <a href="https://huggingface.co/NousResearch/Llama-2-7b-chat-hf" target="_blank">Repository</a></p>
 <ul>
 <li>Lets continue</li>
 </ul>
@@ -1681,7 +1681,7 @@
 <p><img alt="Nvidia-Info" src="../assets/task8a/n-info.png" /></p>
 <p><span class="colour" style="color:red">Note: </span> nvidia-smi stands for NVIDIA System Management Interface. It is a command-line utility that provides information about NVIDIA GPUs installed on the system. This tool is part of the NVIDIA GPU driver package. By using !nvidia-smi, you can quickly check the status and health of your NVIDIA GPUs from within a Jupyter Notebook, making it a useful tool for machine learning and data science workflows.</p>
 <p><span class="colour" style="color:green">Step 2: Install the required libraries. </span></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="n">accelerate</span><span class="o">==</span><span class="mf">0.21.0</span> <span class="n">peft</span><span class="o">==</span><span class="mf">0.4.0</span> <span class="n">bitsandbytes</span><span class="o">==</span><span class="mf">0.40.2</span> <span class="n">transformers</span><span class="o">==</span><span class="mf">4.31.0</span> <span class="n">trl</span><span class="o">==</span><span class="mf">0.4.7</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="n">accelerate</span><span class="o">==</span><span class="mf">0.21.0</span> <span class="n">peft</span><span class="o">==</span><span class="mf">0.4.0</span> <span class="n">bitsandbytes</span><span class="o">==</span><span class="mf">0.40.2</span> <span class="n">transformers</span><span class="o">==</span><span class="mf">4.31.0</span> <span class="n">trl</span><span class="o">==</span><span class="mf">0.4.7</span> <span class="n">python</span><span class="o">-</span><span class="n">dotenv</span>
 </code></pre></div></td></tr></table></div>
 <p><span class="colour" style="color:red">Note: Remember to execute each cell individually </span></p>
 <p><img alt="lib-install" src="../assets/task8a/llama2-install.png" /></p>
@@ -1781,14 +1781,16 @@
 <li>Verify to confirm that the Hugging Face CLI is correctly authenticated with your account.</li>
 </ul>
 <h4 id="load-and-prepare-dataset-and-model">Load and prepare dataset and model</h4>
-<p><span class="colour" style="color:green">Step 5: Before we start processing the data we prepared earlier, we need to load the model, tokenizer and datasets.  </span></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p><span class="colour" style="color:green">Step 5: Before we start processing the data we prepared earlier, we need to load the model, tokenizer and datasets. As mentioned earlier we will be using NousResearch/Llama-2-7b-chat-hf as our base Llama2 model.</span></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># model_name = &quot;meta-llama/Llama-2-7b-hf&quot; as its a gated repo</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># model_name = &quot;meta-llama/Llama-2-7b-hf&quot; as its a gated repo</span>
 <span class="n">model_name</span> <span class="o">=</span> <span class="s2">&quot;NousResearch/Llama-2-7b-chat-hf&quot;</span>
+<span class="c1"># Change the &quot;new_model&quot; name for your finetuned model. </span>
 <span class="n">new_model</span> <span class="o">=</span> <span class="s2">&quot;WebexOneDemo-Llama-2-7b-chat-finetune&quot;</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:red">Note: You can name the new_model variable whatever you prefer. </span></p>
+<span class="colour" style="color:red">Note: You can name the new_model variable whatever you prefer. B </span></p>
 <ul>
 <li>We can use the gated repo or the one mentioned earlier</li>
 </ul>
@@ -2268,9 +2270,8 @@
 <li>The Model Hub simplifies the process of selecting the appropriate model. Since we've just uploaded the model to HuggingFace, there may be a slight delay before it becomes accessible. In the meantime, you can use the model I’ve already uploaded, <a href="https://huggingface.co/WebexOne/WebexOneDemo-Llama-2-7b-chat-finetune" target="_blank">WebexOne/WebexOneDemo-Llama-2-7b-chat-finetune</a> for inference. You can load it like any other Llama 2 model from the Hub. Let's dive into how to use this pre-uploaded model due to time constraints.</li>
 </ul>
 <p><span class="colour" style="color:green"> Step 15:  login into Hugging Face hub </span></p>
-<p><img alt="Colab_ModeUpl_inf" src="../assets/task8a/mod_lo_1.png" /></p>
 <ul>
-<li>We will use the WebexOne/WebexOneDemo-Llama-2-7b-chat-finetune model. Click Use this model. Please do not replace "WebexOne" with your created organization name, as we will be using an already uploaded model due to time constraints.</li>
+<li>We will use the WebexOne/WebexOneDemo-Llama-2-7b-chat-finetune model as mentioned in the previous step. Click Use this model, Select Transformers. Within Transformers command, Please do not replace "WebexOne" with your created organization name, as we will be using an already uploaded model due to time constraints.</li>
 </ul>
 <p><img alt="Colab_ModeUpl_inf1" src="../assets/task8a/mod_lo_11.png" /></p>
 <p><span class="colour" style="color:red">Note: The inference api requires that the model repo have a certain amount of user activity before it can be used directly on api-inference or "Use the model" tab appears. If you having issues please speak with the lab proctor</span></p>
@@ -2369,7 +2370,7 @@
 <p><span class="colour" style="color:red"> Output: </span></p>
 <p><img alt="Colab_rep1" src="../assets/task8a/rep2.png" /></p>
 <h3 id="fine-tuning-example-2">Fine-Tuning - Example 2</h3>
-<p>In this example, I will show you how to fine-tune using the <a href="https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cuipph/MPP/6800-DECT/deployment/CiscoDECT6800DeploymentGuide.pdf">Cisco IP DECT Phone 6800 Series Deployment Guide</a> . I have already created the dataset from the PDF, which can be found at <a href="https://huggingface.co/datasets/WebexOne/dect1?row=0">WebexOne/dect1</a></p>
+<p>In this example, I will show you how to fine-tune using the <a href="https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cuipph/MPP/6800-DECT/deployment/CiscoDECT6800DeploymentGuide.pdf" target="_blank">Cisco IP DECT Phone 6800 Series Deployment Guide</a>. We have also created the dataset from the PDF, which can be found at <a href="https://huggingface.co/datasets/WebexOne/dect1?row=0" target="_blank">WebexOne/dect1</a></p>
 <p><span class="colour" style="color:green"> Step 1: Import the Necessary Libraries </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2406,22 +2407,12 @@
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">userdata</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;HF_TOKEN&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">userdata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;HF_TOKEN&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:red">Note: Optional Step - If using Jupyter notebook on your machine. Create a .env folder, add your HuggingFace token. Then, import the token. 
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Optional STEP</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">load_dotenv</span><span class="p">()</span>
-<span class="n">hf_token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;HF_TOKEN&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-</span></p>
-<p><span class="colour" style="color:green"> Step 3: Load your Datasets and models </span></p>
+<p><span class="colour" style="color:green"> Step 3: Load the Datasets and our base model</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># The instruction dataset to use that we created earlier</span>
-<span class="n">dataset_name</span> <span class="o">=</span> <span class="s2">&quot;WebexOne/dect1&quot;</span>
-<span class="c1"># Load dataset (you can process it here)</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dataset_name</span> <span class="o">=</span> <span class="s2">&quot;WebexOne/dect1&quot;</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="n">dataset_name</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="s2">&quot;train&quot;</span><span class="p">)</span>
 <span class="c1"># model_name = &quot;meta-llama/Llama-2-7b-hf&quot; as its a gated repo</span>
 <span class="n">model_name</span> <span class="o">=</span> <span class="s2">&quot;NousResearch/Llama-2-7b-chat-hf&quot;</span>
@@ -2774,7 +2765,7 @@
 <span class="n">result</span> <span class="o">=</span> <span class="n">pipe</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&lt;s&gt;[INST] &lt;&lt;SYS&gt;&gt; </span><span class="si">{</span><span class="n">sys1</span><span class="si">}</span><span class="s2"> &lt;&lt;/SYS&gt;&gt; </span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="s2"> [/INST]&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;generated_text&#39;</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:red">  OUTPUT </span>
+<p><span class="colour" style="color:orange">  OUTPUT </span>
 <div class="highlight"><pre><span></span><code>&lt;s&gt;[INST] &lt;&lt;SYS&gt;&gt; You are an interviewer AI tasked with asking questions about a deployment guide for the Cisco IP DECT Phone 6800 Series. Your goal is to elicit detailed responses from the text as if the pdf itself were answering. Be polite and address the user&#39;s query directly. Aim to offer clear and accurate answers. If you dont find the answer in pdf just say no info available at this time please contact your Cisco TME &lt;&lt;/SYS&gt;&gt; What is a key consideration when planning the DECT system for different regions? [/INST]
 Consider the regulatory requirements for DECT frequencies in different regions. Cisco offers units set up correctly for each region, such as 1880-1900 MHz for Australia and New Zealand, 1880-1900 MHz for E.U. and APAC. 
 </code></pre></div></p>
