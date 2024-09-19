@@ -1022,7 +1022,7 @@ bnb_4bit_compute_dtype=bfloat16 //Specifies the data type for computation, which
 <p><span style="color: purple;"> Step 5: </span> Print the Result:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>print(f&quot;Memory saved by using 4-bit quantization: {memory_saved_in_bytes} bytes&quot;)
 </code></pre></div></td></tr></table></div>
-<span style="color: RED;"> OUTPUT </span></p>
+<span style="color:orange"> OUTPUT </span></p>
 <p><code>Memory saved by using 4-bit quantization: 3500.0 bytes</code></p>
 <ul>
 <li><strong>Will changing the model from 32-bit to 4-bit reduce the model's accuracy?</strong> <span style="color: RED;"> Yes </span></li>
@@ -1055,7 +1055,7 @@ bnb_4bit_compute_dtype=bfloat16 //Specifies the data type for computation, which
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average Quantization Error: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 * Print the average quantization error to show the potential loss of accuracy introduced by reducing the bit-width from 32-bit to 4-bit.</p>
-<p><span style="color: RED;"> OUTPUT </span> </p>
+<p><span style="color:orange"> OUTPUT </span> </p>
 <p><code>Average Quantization Error: 0.016423573800129817</code></p>
 <p><span style="color: purple;"> Optional Step: Let’s see the original generated random floating point weights </span></p>
 <div class="highlight"><pre><span></span><code>original_weights
