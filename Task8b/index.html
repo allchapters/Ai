@@ -677,13 +677,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usecase-1-fine-tuning-using-llama2" class="md-nav__link">
+  <a href="#usecase-1-fine-tuning-using-llama3" class="md-nav__link">
     <span class="md-ellipsis">
-      UseCase 1 - Fine Tuning Using Llama2
+      UseCase 1 - Fine Tuning Using Llama3
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="UseCase 1 - Fine Tuning Using Llama2">
+    <nav class="md-nav" aria-label="UseCase 1 - Fine Tuning Using Llama3">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1046,9 +1046,9 @@
 <h2 id="pre-requisites">Pre-requisites</h2>
 <p><img alt="prereq" src="../assets/task8a/prereq.png" /></p>
 <p><span class="colour" style="color:red">Note: Referenced from <a href="../Task8a/">Task8a</a></span></p>
-<h2 id="usecase-1-fine-tuning-using-llama2">UseCase 1 - Fine Tuning Using Llama2</h2>
+<h2 id="usecase-1-fine-tuning-using-llama3">UseCase 1 - Fine Tuning Using Llama3</h2>
 <h3 id="datasets-creation">Datasets Creation</h3>
-<p>As we will be using and fine tuning Llama3 base model we need to convert datasets into a uniform format compatible with Llama3. <a href="https://llama.meta.com/docs/model-cards-and-prompt-formats/meta-llama-3/">More Info at</a></p>
+<p>As we will be using and fine tuning Llama3 base model we need to convert datasets into a uniform format compatible with Llama3. <a href="https://llama.meta.com/docs/model-cards-and-prompt-formats/meta-llama-3/" target="_blank">More Info here</a></p>
 <h4 id="example-format-for-llama3-instruct">Example Format for Llama3 - Instruct</h4>
 <div class="highlight"><span class="filename">Sample Format - Dont Copy - reference ONLY</span><pre><span></span><code>&lt;|begin_of_text|&gt;&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt; You are a helpful AI assistant for  Collaboration&lt;|eot_id|&gt;
 
@@ -1066,19 +1066,19 @@ You are a helpful AI assistant for Collaboration</li>
 </ul>
 <h3 id="datasets-creation_1">Datasets Creation</h3>
 <p>The next step is to prepare a dataset for fine-tuning. If you already have a clean, high-quality dataset, that's great. However, let's assume you don't have one readily available.</p>
-<p>In my scenario, I was able to generate synthetic dataset from the <a href="https://www.cisco.com/c/dam/en/us/td/docs/solutions/CVD/Collaboration/hybrid/AltDesigns/PA-WbxCall.pdf">Cisco Preferred Architecture for Webex Calling</a>.</p>
+<p>In my scenario, I was able to generate synthetic dataset from the <a href="https://www.cisco.com/c/dam/en/us/td/docs/solutions/CVD/Collaboration/hybrid/AltDesigns/PA-WbxCall.pdf" target="_blank">Cisco Preferred Architecture for Webex Calling</a></p>
 <h4 id="creating-a-dataset-from-a-pdf-summary">Creating a Dataset from a PDF - Summary</h4>
 <p>To delve into the intricacies of dataset creation, let's explore a scenario where we aim to train an AI to replicate our preferred architecture. In this lab, we will transform a PDF document into a dataset. Specifically, we will use a PDF about Webex Calling as our source material.</p>
-<p><span class="colour" style="color:orange">Steps Involved</span></p>
-<p><span class="colour" style="color:orange">Converting the PDF to Text</span></p>
+<p><span class="colour" style="color:red">Steps Involved</span></p>
+<p><span class="colour" style="color:red">Converting the PDF to Text</span></p>
 <ul>
 <li>Begin by extracting the text content from the PDF document.</li>
 </ul>
-<p><span class="colour" style="color:orange">Paragraph Analysis and Segmentation:</span></p>
+<p><span class="colour" style="color:red">Paragraph Analysis and Segmentation:</span></p>
 <ul>
 <li>Once the PDF is in text form, analyze and segment it into individual paragraphs. Combine short paragraphs and split longer ones to ensure each segment is coherent and self-contained, while still contributing to the overall narrative.</li>
 </ul>
-<p><span class="colour" style="color:orange">Generating Interview Questions:</span></p>
+<p><span class="colour" style="color:red">Generating Interview Questions:</span></p>
 <ul>
 <li>For each paragraph, create an artificial interview scenario where a language model (LLM) acts as the interviewer.</li>
 <li>Develop questions that naturally elicit responses based on the content of the paragraph.</li>
@@ -1921,13 +1921,13 @@ You are a helpful AI assistant for Collaboration</li>
 <li>Choose your example_llama3.json file and click Open</li>
 </ul>
 <p><img alt="HL_Format_fold_created_l3" src="../assets/task8b/ll3_created.png" /></p>
-<p><span class="colour" style="color:orange">Note </span> Ensure that your files are saved elsewhere. This runtime's files will be deleted when its is terminated.</p>
+<p><span class="colour" style="color:red">Note </span> Ensure that your files are saved elsewhere. This runtime's files will be deleted when its is terminated.</p>
 <p><strong><em>Summary: So far, we have our raw dataset as example_llama3.json, enabled Hugging Face in our Colab notebook, and uploaded the data into our folder. we will be convertig the dataset (example_llama3.json) into Llama3 format and uploading on Hugging Face so it can be used for our fine tuning in the upcoming steps</em></strong></p>
 <p><span style="color: green;"> We will start by installing specific Python packages. </span></p>
 <div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">datasets</span> <span class="n">huggingface_hub</span> <span class="n">google</span><span class="o">-</span><span class="n">colab</span>
 </code></pre></div>
 <p><img alt="HL_Output1" src="../assets/task8a/output_pip.png" /></p>
-<p><span class="colour" style="color:orange">Note </span> You don't need to install the packages if you are using the same notebook as in Task 8a when the datasets were created for Llama2.</p>
+<p><span class="colour" style="color:red">Note </span> You don't need to install the packages if you are using the same notebook as in Task 8a when the datasets were created for Llama2.</p>
 <ul>
 <li>
 <p>The ! at the beginning is used in Jupyter notebooks or Google Colab to run shell commands. Using pip install we will install Python packages  </p>
@@ -2475,11 +2475,11 @@ You are a helpful AI assistant for Collaboration</li>
     <span class="nb">print</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">apply_chat_template</span><span class="p">(</span><span class="n">messages</span><span class="p">,</span> <span class="n">tokenize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:orange ">Note: tokenizer.apply_chat_template(messages, tokenize=False): Applies the chat template to the messages list using the tokenizer. The tokenize=False argument indicates that the text should not be tokenized at this stage. This step prepares the text in a format that can be used by Llama3 for training and inference. </span></p>
+<p><span class="colour" style="color:red ">Note: tokenizer.apply_chat_template(messages, tokenize=False): Applies the chat template to the messages list using the tokenizer. The tokenize=False argument indicates that the text should not be tokenized at this stage. This step prepares the text in a format that can be used by Llama3 for training and inference. </span></p>
 <p><span class="colour" style="color:green">Step 10: Apply the Function to our DataFrame </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">format_example</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:orange ">Note: axis = 1 , apply the function to each row </span></p>
+<p><span class="colour" style="color:red ">Note: axis = 1 , apply the function to each row </span></p>
 <p><img alt="Colab_newcel3l_ds23" src="../assets/task8b/dict1.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
