@@ -1086,7 +1086,7 @@ You are a helpful AI assistant for Collaboration</li>
 </ul>
 <p>By following these steps, we will convert the static information in the PDF into a dynamic and interactive dataset, facilitating a deeper understanding and more engaging learning experience.</p>
 <p>Here's an example of the resulting file. Please note that for this lab demonstration, only a few data points were converted from the PDF.</p>
-<p><span class="colour" style="color:red">Note: We will use the following file to create and eventually train downstream tasks for our LLM, specifically the Llama3 model.</span></p>
+<p><span class="colour" style="color:red">Note: The dataset (Cisco Preferred Architecture for Webex Calling) has already been formatted to Llama3 format. We'll use this dataset to create and train downstream tasks for our LLM, specifically the Llama3 model. Please scroll down to download the dataset file.</span></p>
 <h4 id="sample-file">Sample File</h4>
 <div class="highlight"><span class="filename">example_llama3.json</span><pre><span></span><code><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
@@ -1897,7 +1897,7 @@ You are a helpful AI assistant for Collaboration</li>
 <span class="p">]</span>
 </code></pre></div>
 <p><a download="example_llama3.json" href="../assets/static/example_llama3.json" target="_blank">Download example_llama3 file</a></p>
-<p style="color: blue;">Save the file as example_llama3.json as we will be using it in the next step to push dataset on Hugging Face Hub</p>
+<p style="color: red;">Save the file as example_llama3.json as we will be using it in the next step to push dataset on Hugging Face Hub</p>
 
 <p><strong><em>To finalize, we again convert the above dataset (example_llama3.json) into Llama3 format. Lets look into those steps</em></strong></p>
 <h4 id="convert-dataset-into-llama3-format-and-upload-on-hugging-face">Convert dataset into Llama3 format and upload on Hugging Face</h4>
@@ -2320,13 +2320,14 @@ You are a helpful AI assistant for Collaboration</li>
 <li>Verify to confirm that the Hugging Face CLI is correctly authenticated with your account.</li>
 </ul>
 <h4 id="load-model">Load model</h4>
-<p><span class="colour" style="color:green">Step 5: Before we start processing the data let's load our base model.  </span></p>
+<p><span class="colour" style="color:green">Step 5: Before we start processing the data let's load our base llama3 model.  </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">PAD_TOKEN</span> <span class="o">=</span> <span class="s2">&quot;&lt;|pad|&gt;&quot;</span>
 <span class="n">MODEL_NAME</span> <span class="o">=</span> <span class="s2">&quot;meta-llama/Meta-Llama-3-8B-Instruct&quot;</span>
 <span class="n">NEW_MODEL</span> <span class="o">=</span> <span class="s2">&quot;WebexOne-lllama-3&quot;</span>
 </code></pre></div></td></tr></table></div>
+<p><span class="colour" style="color:red">Note: You can name the NEW_MODEL variable whatever you prefer.</span></p>
 <ul>
 <li>
 <p>PAD_TOKEN: is set to help model not to repeat text.</p>
@@ -2817,7 +2818,7 @@ You are a helpful AI assistant for Collaboration</li>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">trainer</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="n">NEW_MODEL</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><span class="colour" style="color:green">Step 21: Loading and Preparing a Fine-Tuned Model </span></p>
-<p><span class="colour" style="color:red"> Note: This step may not work on Google Colab due to its resource limitations. It involves resizing token embeddings and merging a PEFT (Parameter-Efficient Fine-Tuning) model with the base model before pushing it to Hugging Face. If you're using your own servers (not Google Colab), feel free to proceed. Otherwise, this is for your information only, and you might encounter an error similar to the one shown below. </span></p>
+<p><span class="colour" style="color:red"> Note: This step may not work on Google Colab due to its resource limitations. It involves resizing token embeddings and merging a PEFT (Parameter-Efficient Fine-Tuning) model with the base model before pushing it to Hugging Face. If you're using your own servers (not Google Colab), feel free to proceed. Otherwise, this is for your information only, and you might encounter an error similar to the one shown below. Please skip to the <a href="https://allchapters.github.io/Ai/Task8b/#use-the-uploaded-model-and-test-for-inferencing">inferencing step</a> to use the uploaded model on Hugging Face and test how it works.</span></p>
 <p><img alt="Colab_newcel3l_error" src="../assets/task8b/error.png" /></p>
 <ul>
 <li>
