@@ -1027,8 +1027,22 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 </ul>
 <p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>
 <h2 id="preventing-session-timeout-in-google-colab-optional-step">Preventing Session Timeout in Google Colab (Optional Step)</h2>
-<p>In your Google Colab notebook, you can use the following script to keep the session active by automatically clicking the 'Reconnect' button every 60 seconds. Be sure to add this code to every notebook you work on to prevent idle timeouts and maintain uninterrupted workflow."</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">threading</span>
+<ul>
+<li>In your Google Colab notebook, you can use the following script to keep the session active by automatically clicking the 'Reconnect' button every 60 seconds. Be sure to add this code to every notebook you work on to prevent idle timeouts and maintain uninterrupted workflow."</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">threading</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">output</span>
 
@@ -1041,7 +1055,7 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 <span class="c1"># Run the timeout preventer in a background thread</span>
 <span class="n">thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">prevent_timeout</span><span class="p">)</span>
 <span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <h2 id="notes-on-gpu-and-tpu-access">Notes: On GPU and TPU Access:</h2>
 <p>While Google Colab offers free access to GPUs and TPUs, there are limitations. For more consistent access to high-performance GPUs and TPUs, you might need to subscribe to <a href="https://colab.research.google.com/signup" target="_blank">Colab Pro or Colab Pro+ accounts</a>. These paid plans provide priority access to better hardware, longer runtimes, and more memory.</p>
 <h2 id="using-huggingface-hub-to-share-our-datasets">Using Huggingface Hub to share our Datasets</h2>
