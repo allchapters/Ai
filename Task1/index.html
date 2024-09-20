@@ -471,6 +471,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#preventing-session-timeout-in-google-colab-optional-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing Session Timeout in Google Colab (Optional Step)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3-4-5-6-7-8-9-10-11-12-13import-threading-import-time-from-googlecolab-import-output-function-to-prevent-timeout-def-prevent_timeout-while-true-outputeval_jsgooglecolabkernelaccessallowed-true-timesleep60-run-the-timeout-preventer-in-a-background-thread-thread-threadingthreadtargetprevent_timeout-threadstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 2 3 4 5 6 7 8 9 10 11 12 13import threading import time from google.colab import output # Function to prevent timeout def prevent_timeout(): while True: output.eval_js(&#39;google.colab.kernel.accessAllowed = true&#39;) time.sleep(60) # Run the timeout preventer in a background thread thread = threading.Thread(target=prevent_timeout) thread.start()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes-on-gpu-and-tpu-access" class="md-nav__link">
     <span class="md-ellipsis">
       Notes: On GPU and TPU Access:
@@ -1017,7 +1035,36 @@ TPU: Use a Tensor Processing Unit for even faster performance, especially benefi
 <li><strong>Execute Code:</strong> Click the play button to the left of the code, or use the keyboard shortcut "Command/Ctrl+Enter" while the cell is selected.</li>
 </ul>
 <p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>
-<hr />
+<h2 id="preventing-session-timeout-in-google-colab-optional-step">Preventing Session Timeout in Google Colab (Optional Step)</h2>
+<ul>
+<li>In your Google Colab notebook, you can use the following script to keep the session active by automatically clicking the 'Reconnect' button every 60 seconds. Be sure to add this code to every notebook you work on to prevent idle timeouts and maintain uninterrupted workflow."</li>
+</ul>
+<h2 id="1-2-3-4-5-6-7-8-9-10-11-12-13import-threading-import-time-from-googlecolab-import-output-function-to-prevent-timeout-def-prevent_timeout-while-true-outputeval_jsgooglecolabkernelaccessallowed-true-timesleep60-run-the-timeout-preventer-in-a-background-thread-thread-threadingthreadtargetprevent_timeout-threadstart"><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">output</span>
+
+<span class="c1"># Function to prevent timeout</span>
+<span class="k">def</span> <span class="nf">prevent_timeout</span><span class="p">():</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">output</span><span class="o">.</span><span class="n">eval_js</span><span class="p">(</span><span class="s1">&#39;google.colab.kernel.accessAllowed = true&#39;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="c1"># Run the timeout preventer in a background thread</span>
+<span class="n">thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">prevent_timeout</span><span class="p">)</span>
+<span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div></h2>
 <h2 id="notes-on-gpu-and-tpu-access">Notes: On GPU and TPU Access:</h2>
 <p>While Google Colab offers free access to GPUs and TPUs, there are limitations. For more consistent access to high-performance GPUs and TPUs, you might need to subscribe to <a href="https://colab.research.google.com/signup" target="_blank">Colab Pro or Colab Pro+ accounts</a>. These paid plans provide priority access to better hardware, longer runtimes, and more memory.</p>
 <hr />
