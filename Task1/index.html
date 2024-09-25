@@ -1160,16 +1160,17 @@ os.environ[&quot;HF_TOKEN&quot;] = userdata.get(&#39;HF_TOKEN&#39;)
 <p><img alt="ls2" src="../assets/task1/ls2.png" /></p>
 <p>Lets create a Personal Access Token</p>
 <p><img alt="lsr3" src="../assets/task1/lsr3.png" /></p>
+<p>After generating the token, store it securely, as you will need it for future tasks. Ensure you use and save the token you create.</p>
 <h3 id="setup-langchain-envoirnment-sample-code">Setup LangChain envoirnment - Sample Code</h3>
 <ul>
-<li>In the code snippet below, we'll configure our environment to enable tracing of AI calls and set up the API key for interacting with LangChain's services, as we will be using these in the upcoming section.</li>
+<li>In the code snippet below, we'll configure our environment to enable tracing of AI calls and set up the API key for interacting with LangChain's services. We will be using these in the upcoming section.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sample Code</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">langchain</span><span class="o">-</span><span class="n">community</span>
-<span class="n">export</span> <span class="n">LANGCHAIN_TRACING_V2</span><span class="o">=</span><span class="n">true</span>
-<span class="n">export</span> <span class="n">LANGCHAIN_API_KEY</span><span class="o">=&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">key</span><span class="o">&gt;</span>
+<p><span style="color: RED;"> Note: The below code snippet is for reference only; there's no need to execute it at this point.</span></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sample Code</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">langchain</span><span class="o">-</span><span class="n">community</span>
 </code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code>export LANGCHAIN_TRACING_V2=true
+export LANGCHAIN_API_KEY=&lt;your-api-key&gt;
+</code></pre></div>
 <h2 id="optional-step-running-ollama-locally">Optional Step - Running Ollama locally</h2>
 <p>Have you ever used ChatGPT and amazed at its ability to understand and respond to your queries? But did you know that you can also harness the power of open-source models using Ollama? With Ollama, you can download and interact with these models directly, getting responses that are tailored to your needs.</p>
 <p>In this lab, I'll show you how to install Ollama locally on your machine and start using it to generate responses. You'll learn how to download and load open-source models, and then use Ollama's intuitive interface to interact with them. More info for <a href="https://ollama.com/" target="_blank">Ollama can be found here</a></p>
