@@ -1086,6 +1086,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="n">langchain_community</span> <span class="n">unstructured</span><span class="p">[</span><span class="nb">all</span><span class="o">-</span><span class="n">docs</span><span class="p">]</span> <span class="n">unstructured</span> <span class="n">pdfminer</span> <span class="n">pdfminer</span><span class="o">.</span><span class="n">six</span> <span class="n">pdf2image</span> <span class="n">pillow_heif</span> <span class="n">opencv</span><span class="o">-</span><span class="n">python</span> <span class="n">unstructured_inference</span> <span class="n">pytesseract</span> <span class="n">unstructured_pytesseract</span> <span class="n">python</span><span class="o">-</span><span class="n">dotenv</span> <span class="n">openai</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="unstrc" src="../assets/task3/unstr.png" /></p>
+<p><span class="colour" style="color:red"> Note: You will be asked to restart your notebook </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">poppler</span><span class="o">-</span><span class="n">utils</span> <span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">tesseract</span><span class="o">-</span><span class="n">ocr</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="apt" src="../assets/task3/apy.png" /></p>
@@ -1146,7 +1147,7 @@
     <span class="n">hi_res_model_name</span><span class="o">=</span><span class="s2">&quot;yolox&quot;</span>
 <span class="p">)</span>
 <span class="c1"># Let&#39;s look at our elements</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
+<span class="n">elements</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="elemebts" src="../assets/task3/elem.png" /></p>
 <ul>
@@ -1218,7 +1219,7 @@
     <span class="n">combine_text_under_n_chars</span><span class="o">=</span><span class="mi">2000</span>
 <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><span class="colour" style="color:red">Note: You'll notice that a folder called 'figures' is created, where all the extracted images are stored. To make these images more useful, we can generate embeddings for them, which can later be used for semantic search. Typically, embedding models are specialized—they either handle text or images, but not both. This means the vector lengths won't align, and using different models for text and image embeddings can complicate similarity searches.
+<p><span class="colour" style="color:red">Note: You'll notice that a folder called 'figures' is created, where all the extracted images are stored. To make these images more useful, we can generate embeddings (which will be discussed in the next section) for them.  These embeddings can later be used for semantic search. Typically, embedding models are specialized—they either handle text or images, but not both. This means the vector lengths won't align, and using different models for text and image embeddings can complicate similarity searches.
 However, the CLIP model can generate embeddings for both images and text, making it a versatile option for this purpose. To simplify things, we can first create a text summary for each image, and then generate embeddings based on those summaries. This approach allows us to leverage text-based semantic search while still incorporating the visual information from the images. </span></p>
 <p><img alt="image_extract" src="../assets/task3/iex.png" /></p>
 <ul>
