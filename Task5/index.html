@@ -922,12 +922,9 @@ The PDF we are using in this lab can be downloaded from <a download="dect.pdf" h
 </ul>
 <p><img alt="HL_Format_fold" src="../assets/task8a/fold.png" /></p>
 <ul>
-<li>Click on [...], select Upload</li>
+<li>Click on [...], select Upload. Make sure you choose your dect.pdf file </li>
 </ul>
 <p><img alt="HL_Format_fold_created" src="../assets/task8a/dc_created.png" /></p>
-<ul>
-<li>Choose your dect.pdf file and click Open</li>
-</ul>
 <p><img alt="HL_file_uplo" src="../assets/task5/dect.png" /></p>
 <ul>
 <li>First let’s install the necessary Python packages</li>
@@ -969,6 +966,7 @@ The PDF we are using in this lab can be downloaded from <a download="dect.pdf" h
 <span class="kn">from</span> <span class="nn">langchain.document_loaders</span> <span class="kn">import</span> <span class="n">PyMuPDFLoader</span>
 <span class="n">load_dotenv</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
+<p><span style="color:red">Note: If you receive any warnings related to langchain_community, you can safely ignore this warning. </span></p>
 <ul>
 <li>Next let’s load the data source. This is also known as “Data Ingestion”.</li>
 </ul>
