@@ -883,8 +883,8 @@
 <p>Embeddings are basically data which are converted into array of numbers called vectors that contain pattern of relationship, and can be used for similarity search.</p>
 <p><img alt="Emb1" src="../assets/task4/emb1.png" /></p>
 <p><img alt="Emb2" src="../assets/task4/emb2.png" /></p>
-<p>Let's explain this concept using a 2D graph. In this graph, words like "Webex" and "collaboration" are often used in similar contexts, so their embeddings—essentially vector representations—are positioned close to each other. These vectors are numerical arrays that computers can easily interpret.</p>
-<p>The advantage of using vectors is that we can find similar items by calculating the distances between their vectors, a process known as nearest neighbor search. However, simply storing these embeddings isn't enough. Performing queries across thousands of vectors can be incredibly slow. To overcome this, the vectors need to be indexed in the vector database.</p>
+<p>Let's explain this concept using a 2D graph. In this graph, words like "Webex" and "collaboration" are often used in similar contexts, so their embeddings essentially vector representations are positioned close to each other (as shown in green in the below image ). These vectors are numerical arrays that computers can easily interpret.</p>
+<p>The advantage of using vectors is that we can find similar items by calculating the distances between their vectors, a process known as nearest neighbor search. However, simply storing these embeddings isn't enough. Performing queries across thousands of vectors can be incredibly slow. To overcome this, the vectors need to be indexed in the vector database. Indexing organizes the vectors in a way that speeds up the search process, allowing for quicker and more efficient retrieval of similar items.</p>
 <p><span class="colour" style="color:red"> Note: In reality vectors can have hundred of dimensions </span></p>
 <p><img alt="Emb3" src="../assets/task4/emb3.png" /></p>
 <p>Similarly, images are also broken into vectors, which are arrays of numbers that machines can process. Once these embeddings (both for words and images) are generated, they are stored in a specialized database known as a vector database.</p>
@@ -953,6 +953,8 @@
 </ul>
 <p><img alt="SS3" src="../assets/task4/st3.png" /></p>
 <p><img alt="SS4" src="../assets/task4/st4.png" /></p>
+<p><img alt="SS4a" src="../assets/task4/st4a.png" /></p>
+<p><img alt="SS4b" src="./assets/task4/st4b.png" /></p>
 <p><img alt="SS5" src="../assets/task4/st5.png" /></p>
 <ul>
 <li>Click on New Deployment</li>
@@ -970,6 +972,7 @@
 <ul>
 <li>Now we can create a database</li>
 </ul>
+<p><span class="colour" style="color:red">Note:Database creation can take up to 5 minutes. </span></p>
 <p><img alt="SS10" src="../assets/task4/st10.png" /></p>
 <p><img alt="SS11" src="../assets/task4/st11.png" /></p>
 <ul>
