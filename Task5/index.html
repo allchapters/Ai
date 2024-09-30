@@ -1029,12 +1029,19 @@ First browse to <a href="https://smith.langchain.com/" target="_blank">Langmith<
 <ul>
 <li>Lets pull our prompt</li>
 </ul>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">prompt</span> <span class="o">=</span> <span class="n">hub</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="s2">&quot;rlm/rag-prompt&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<span class="n">prompt</span>
 </code></pre></div></td></tr></table></div>
-<span style="color:red">OUTPUT</span>
+<p><span style="color:red">OUTPUT</span>
 "You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\nQuestion: {question} \nContext: {context} \nAnswer:"</p>
+<ul>
+<li>To retrieve the template message only, you can also execute the following command:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">req1</span> <span class="o">=</span> <span class="n">prompt</span><span class="o">.</span><span class="n">messages</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">prompt</span><span class="o">.</span><span class="n">template</span>
+<span class="n">req1</span>
+</code></pre></div></td></tr></table></div>
 <p><span style="color:orange">Here's an example of a manual prompt for your reference only—if you prefer not to use the downloaded prompt. </span></p>
 <div class="highlight"><span class="filename">Reference ONLY</span><pre><span></span><code>template = &quot;&quot;&quot;Answer the question based only on the following context:
 {context}
@@ -1108,6 +1115,7 @@ To set up and install a DECT phone system, first review the site and plan the lo
 <span class="n">question_embedding</span> <span class="o">=</span> <span class="n">embedding_model</span><span class="o">.</span><span class="n">embed_query</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
 <span class="n">retrieved_docs</span> <span class="o">=</span> <span class="n">retriever</span><span class="o">.</span><span class="n">get_relevant_documents</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
+<p><span style="color:red">Note: If you receive any warnings related to langchain, you can safely ignore this warning. </span></p>
 <ul>
 <li>Lets calculate and print similarity between the question and each retrieved document</li>
 </ul>
