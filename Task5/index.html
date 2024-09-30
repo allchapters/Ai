@@ -877,7 +877,6 @@ Conversely, if the input increases to 10,000 tokens and the response remains at 
 <p><img alt="rag3" src="../assets/task5/rag3.png" /></p>
 <h2 id="how-can-rag-address-the-limitations-weve-seen-with-the-context-window">How can RAG address the limitations we've seen with the context window?</h2>
 <p>To address the context window limitation, we can use an embedding model to convert relevant text into embeddings and store them in a vector database. When a user submits a query, we transform it into an embedding and compare it to the stored embeddings to find the closest match. Once we identify the match, we retrieve that specific chunk of text to respond to the query. This approach effectively overcomes the context window limitation by ensuring that our responses are accurate and contextually relevant.</p>
-<p><img alt="rag4" src="../assets/task5/rag4.png" /></p>
 <p>Now you can see how RAG can address some of the challenges with LLMs. Instead of re-training or fine-tuning the model with new information, we can augment our data sources to retrieve the most up-to-date information. Additionally, LLMs are now instructed to prioritize primary source data before generating responses, making them less likely to hallucinate and encouraging more accurate and reliable outputs.</p>
 <p><img alt="rag6" src="../assets/task5/rag6.png" /></p>
 <h2 id="whats-happening-under-the-hood">What's Happening Under the Hood?</h2>
