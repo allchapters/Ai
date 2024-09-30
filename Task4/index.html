@@ -898,6 +898,21 @@
 <h2 id="understanding-the-workings-of-embeddings-and-vector-databases">Understanding the workings of Embeddings and Vector Databases</h2>
 <h3 id="practical-example-of-embedding-techniques-using-postman">Practical Example of Embedding Techniques Using Postman</h3>
 <p><img alt="SingleStore" src="../assets/task4/HLO.png" /></p>
+<p>The above image illustrates a high-level overview of how embeddings and vector databases will work together:</p>
+<ul>
+<li>
+<p>Questions/Input Data: The process begins with a set of questions or inputs that need to be understood or processed.</p>
+</li>
+<li>
+<p>Create Embeddings: These questions or inputs are then converted into embeddings.</p>
+</li>
+<li>
+<p>Embeddings: Once the embeddings are generated, they are stored temporarily and prepared for the next step. These embeddings are essentially numeric representations that contain the contextual information of the original input.</p>
+</li>
+<li>
+<p>Vector Database (Vector DB): The generated embeddings are stored in a vector database(e.g Singlestore). This database is optimized for searching and retrieving embeddings quickly, enabling faster queries when comparing vectors to find similar items.</p>
+</li>
+</ul>
 <h4 id="set-openai-token">Set OpenAI token</h4>
 <p><span class="colour" style="color:red">Note: If you’ve already obtained the token in previous steps or section, you can skip this section </span></p>
 <p><span class="colour" style="color:red">Note: First, create an account from the <a href="https://platform.openai.com/" target="_blank">OpenAI official website</a>.</span></p>
@@ -1007,7 +1022,7 @@
 <p>Let's copy the embeddings we generated earlier using Postman so that we can insert them into our database.</p>
 </li>
 <li>
-<p>To proceed, copy the input text and  all the embedding values, including the square brackets [], as shown in the image. These will be used for insertion into our database.</p>
+<p>To proceed, copy the input text and  all the embedding values, including the square brackets [ ], as shown in the image. These will be used for insertion into our database.</p>
 </li>
 </ul>
 <p><img alt="SS18" src="../assets/task4/st18.png" /></p>
@@ -1020,7 +1035,7 @@
 In this query:</p>
 <div class="highlight"><pre><span></span><code>* Replace &quot;your_input_text&quot; with the input values from Postman.
 
-* Replace your_embeddings with the embeddings you copied earlier, including the square brackets [].
+* Replace your_embeddings with the embeddings you copied earlier, including the square brackets [ ].
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">myvectortable</span><span class="w"> </span><span class="p">(</span><span class="nb">text</span><span class="w"> </span><span class="p">,</span><span class="n">vector</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;What is WebexOne 2024? WebexOne is an annual in-person and virtual event that takes place over four days. It’s an event focused on AI collaboration and customer experience, and it features a range of activities such as insightful breakout sessions, technical training courses, hands-on labs, inspiring keynotes, epic entertainment, a solutions showcase and expo, customer awards, meet the experts, 1:1 executive meetings, a partner program, and more!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;[</span>
 <span class="ss">                -0.0042485874,</span>
@@ -1078,7 +1093,7 @@ In this query:</p>
 <span class="k">limit</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
 * In this query:
-    * Replace your_embeddings with the embeddings you copied earlier, including the square brackets [] for the question.</p>
+    * Replace your_embeddings with the embeddings you copied earlier, including the square brackets [ ] for the question.</p>
 <div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="nb">text</span><span class="p">,</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;[</span>
 <span class="ss">                -0.0015118581,</span>
 <span class="ss">                -0.021267666,</span>
