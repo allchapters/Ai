@@ -1382,15 +1382,16 @@
 <span class="c1"># Image summaries</span>
 <span class="n">img_base64_list</span><span class="p">,</span> <span class="n">image_summaries</span> <span class="o">=</span> <span class="n">generate_img_summaries</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">image_summaries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">image_summaries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<img alt="Sum1" src="../assets/task6/sum1.png" /></p>
+<p><span class="colour" style="color:red"> Note: This will generate a list of image summaries, each corresponding to an image in the figures directory. For example, if there are 11 images extracted from the PDF, you can access the summary for the 11th image by running: image_summaries[10] </span></p>
+<p><img alt="Sum1" src="../assets/task6/sum1.png" /></p>
 <p><img alt="Sum2" src="../assets/task6/sum2.png" /></p>
 <h3 id="lets-now-create-our-multivector-retriever-and-rag-system-incl-storing-summary-embeddings-in-vector-db">Let's now create our MultiVector Retriever and RAG system - incl storing summary embeddings in Vector DB</h3>
 <p><img alt="Sum3" src="../assets/task6/sum3.png" /></p>
 <h4 id="create-our-multivector-retriever">Create our MultiVector Retriever</h4>
 <ul>
-<li>Let's install packages for chroma our inmemory db and MultiVectorRetriever</li>
+<li>Let's install packages for chroma, our in-memory db and MultiVectorRetriever</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>

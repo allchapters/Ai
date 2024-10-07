@@ -1008,7 +1008,7 @@
 </code></pre></div></td></tr></table></div>
 <p><span class="colour" style="color:red">Note: </span> The image below is provided to highlight the code and help you understand how chunking works. Not an actual output from print(chunks) command.</span></p>
 <p><img alt="token_intro1" src="../assets/task3/char.png" /></p>
-<p><span class="colour" style="color:red">Note: </span> The text contained a total of 422 characters, divided into 13 chunks. Problem with the above chunking technique is that it got split at 'r'. How we know when to chunk . Before we look into that. Lets look into Langchain Splitter </span></p>
+<p><span class="colour" style="color:red">Note: </span>Please note that the image above is not generated directly from our code. It has been included as a visual aid to help you better understand the concept of tokenization and chunking.  The text contained a total of 422 characters, divided into 13 chunks. Problem with the above chunking technique is that it got split at 'r'. How we know when to chunk . Before we look into that. Lets look into Langchain Splitter </span></p>
 <h3 id="langchain-text-splitter"><strong>LangChain Text Splitter</strong></h3>
 <ul>
 <li>Let's retrieve the langchain library from the Python Package. In the example below, we'll configure the chunk_overlap parameter, which ensures that our chunks are blended together—meaning the end of chunk 1 will overlap with the beginning of chunk 2. Please copy the below command in Colab and press <strong>run</strong> to execute each cell individually.</li>
@@ -1054,7 +1054,7 @@
 <p>If necessary, it will continue to break down the text further, using spaces and eventually individual characters as separators.</p>
 </li>
 </ul>
-<p>With RTS, you don’t need to manually specify the chunk size by character count. You simply pass your text to the RTS process, and it will intelligently determine how to split the text based on its structure, resulting in chunks that are logically organized and more contextually meaningful.</p>
+<p>With RTS, you don’t need to manually specify the chunk size by character count. You can simply pass your text to the RTS process, and it will intelligently determine how to split the text based on its structure, resulting in chunks that are logically organized and more contextually meaningful. In the example below, we provide a chunk size, but you can omit the chunk-size command if you prefer.</p>
 <p><img alt="RTS" src="../assets/task3/RTS.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;WebexOne is an annual in-person and virtual event that takes place over four days. It’s an event focused on AI collaboration and customer experience.  </span>
@@ -1227,7 +1227,7 @@
 </ul>
 <p><span class="colour" style="color:red">Note: After extracting images from a PDF or any other source, you can use the below method to send them to a multimodal model like GPT-4o to understand and generate insights about the images. This approach allows you to combine textual and visual data for a richer understanding of the content.</span></p>
 <h4 id="set-openai-token-multimodal">Set OpenAI token - MultiModal</h4>
-<p><span class="colour" style="color:red">Note: First, create an account from the <a href="https://platform.openai.com/" target="_blank">OpenAI official website</a>.</span></p>
+<p><span class="colour" style="color:red">Note: If you've followed the lab instructions, the OpenAI API keys will be available in your demo Gmail account. If not, you can create an account and obtain the keys from the <a href="https://platform.openai.com/" target="_blank">OpenAI official website</a>.</span></p>
 <ul>
 <li>Create a new project API key by browsing to <a href="https://platform.openai.com/api-keys" target="_blank">API Keys web page</a>. Select Create new secret key. The API key is automatically generated. Save the API Key as we will be using it in the later steps . The below API key is for reference only . Also when creating an API key run with default settings.</li>
 </ul>
