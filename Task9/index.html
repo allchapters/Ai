@@ -1270,6 +1270,7 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 <ul>
 <li>let's modify our code to send the generated responses directly to a Webex space. This will enable real-time collaboration and communication with team members through Webex, enhancing the utility of our AI applications.</li>
 </ul>
+<p><span class="colour" style="color:red"> Note: Be sure to add your webex_space_id and Bearer token before running the cell. </span></p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1338,9 +1339,7 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 <span class="normal">66</span>
 <span class="normal">67</span>
 <span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create the Streamlit app code</span>
+<span class="normal">69</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create the Streamlit app code</span>
 <span class="n">streamlit_code</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">from langchain_openai import ChatOpenAI</span>
 <span class="s2">from langchain_core.prompts import ChatPromptTemplate</span>
@@ -1397,8 +1396,6 @@ Furthermore, I'll show you how to utilize Streamlit, a server-based application,
 <span class="s2">    st.write(response)</span>
 <span class="s2">    send_webex_message(response)</span>
 <span class="s2">&quot;&quot;&quot;</span>
-
-<span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;colour&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color:red&quot;</span><span class="o">&gt;</span> <span class="n">Note</span><span class="p">:</span> <span class="n">Be</span> <span class="n">sure</span> <span class="n">to</span> <span class="n">add</span> <span class="n">your</span> <span class="n">webex_space_id</span> <span class="ow">and</span> <span class="n">Bearer</span> <span class="n">token</span> <span class="n">before</span> <span class="n">running</span> <span class="n">the</span> <span class="n">cell</span><span class="o">.</span> <span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
 
 <span class="c1"># Save the streamlit app code to a file</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;app.py&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
