@@ -1045,6 +1045,17 @@
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">nltk</span>
 </code></pre></div></td></tr></table></div>
+<ul>
+<li>Check version of nltk
+<div class="highlight"><pre><span></span><code>import nltk
+print(nltk.__version__)
+</code></pre></div></li>
+</ul>
+<div class="highlight"><pre><span></span><code>import nltk
+nltk.download(&#39;punkt_tab&#39;)
+nltk.download(&#39;averaged_perceptron_tagger&#39;)
+nltk.download(&#39;averaged_perceptron_tagger_eng&#39;)
+</code></pre></div>
 <p><img alt="ap14" src="../assets/task6/ap14.png" /></p>
 <h3 id="pdf-with-table">PDF with table</h3>
 <ul>
