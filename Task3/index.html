@@ -514,9 +514,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#manual-testing-for-chunking" class="md-nav__link">
+  <a href="#manual-testing-for-chunkingtokenization" class="md-nav__link">
     <span class="md-ellipsis">
-      Manual testing for Chunking
+      Manual testing for Chunking/Tokenization
     </span>
   </a>
   
@@ -934,7 +934,7 @@
 </ul>
 <p>A common approach to manage large amounts of data is to break it down into smaller, more manageable parts; this is a process often referred to as Tokenization or Chunking. Tokenization is a key step in this process, where raw text is divided into smaller units, called tokens, which can then be processed by a neural network.</p>
 <p><img alt="token_intro1" src="../assets/task3/tokeniza.png" /></p>
-<p>In order to do this you need to pick a chunk strategy. Just to name a few:</p>
+<p>In order to do this you need to pick a chunking/Tokenization strategy. Just to name a few:</p>
 <ul>
 <li>
 <p>Word-Based: A simple and straightforward method that most of us would propose is to use word-based tokens, splitting the text by spaces.</p>
@@ -947,6 +947,7 @@
 </li>
 </ul>
 <p><span class="colour" style="color:red"> Note: We've all heard of GPT and OpenAI. They utilize a tokenization method called Byte Pair Encoding (BPE), which is a middle ground between word-based and character-based tokenization. In BPE, words are broken down into smaller character sequences that the model encountered during training, allowing it to make informed predictions. </span></p>
+<p><a href="https://huggingface.co/learn/nlp-course/en/chapter6/5" target="_blank">More Info for Byte-Pair Encoding tokenization</a></p>
 <h2 id="why-do-we-need-tokenization-or-text-splitting">Why do we need Tokenization or Text Splitting?</h2>
 <p><img alt="salon" src="../assets/task3/salon.png" /></p>
 <p>Historically, applications perform better when they are provided with your own data. However, you can't feed unlimited data to your LLMs due to two key limitations:</p>
@@ -974,7 +975,7 @@
 <p><img alt="Colab_newcell" src="../assets/task8/newcell.png" /></p>
 <p><span class="colour" style="color:red">Reminder: </span>Click the play button to the left of the code, or use the keyboard shortcut "Command/Ctrl+Enter" while the cell is selected.</p>
 <p><img alt="Colab_newcell_execute" src="../assets/task8/exec.png" /></p>
-<h3 id="manual-testing-for-chunking"><strong>Manual testing for Chunking</strong></h3>
+<h3 id="manual-testing-for-chunkingtokenization"><strong>Manual testing for Chunking/Tokenization</strong></h3>
 <p><span class="colour" style="color:green">We will create Chunks of 35 characters, so first 35 characters as chunk 1 ,next 35 characters chunk2 and so on </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -991,8 +992,8 @@
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Manual Splitting</span>
-<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;WebexOne is an annual in-person and virtual event that takes place over four days. It’s an event focused on AI collaboration and customer experience.  </span>
-<span class="s2">It features a range of activities such as insightful breakout sessions, technical training courses, hands-on labs, inspiring keynotes, epic entertainment, a solutions showcase and expo, customer awards, meet the experts, 1:1 executive meetings, a partner program, and more!&quot;&quot;&quot;</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Cisco hosts multiple events, including Cisco Live and WebexOne, which bring together industry professionals for in-person and virtual experiences. These events focus on AI collaboration, customer experience, and the latest innovations.</span>
+<span class="s2">They feature a variety of activities such as insightful breakout sessions, technical training courses, hands-on labs, inspiring keynotes, epic entertainment, a solutions showcase and expo, customer awards, meet-the-experts sessions, 1:1 executive meetings, a partner program, and more!&quot;&quot;&quot;</span>
 
 <span class="c1"># Create a list that will hold your chunks</span>
 <span class="n">chunks</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1008,7 +1009,8 @@
 </code></pre></div></td></tr></table></div>
 <p><span class="colour" style="color:red">Note: </span> The image below is provided to highlight the code and help you understand how chunking works. Not an actual output from print(chunks) command.</span></p>
 <p><img alt="token_intro1" src="../assets/task3/char.png" /></p>
-<p><span class="colour" style="color:red">Note: </span>Please note that the image above is not generated directly from our code. It has been included as a visual aid to help you better understand the concept of tokenization and chunking.  The text contained a total of 422 characters, divided into 13 chunks. Problem with the above chunking technique is that it got split at 'r'. How we know when to chunk . Before we look into that. Lets look into Langchain Splitter </span></p>
+<p><span class="colour" style="color:red">Note: </span>Please note that the image above is not generated directly from our code. It has been included as a visual aid to help you better understand the concept of tokenization and chunking.  The text contained a total of 522 characters, divided into 15 chunks. Problem with the above chunking technique is that it got split at 'includ'. How we know when to chunk . Before we look into that. Lets look into Langchain Splitter </span></p>
+<p><img alt="token_intro11" src="../assets/task3/char1.png" /></p>
 <h3 id="langchain-text-splitter"><strong>LangChain Text Splitter</strong></h3>
 <ul>
 <li>Let's retrieve the langchain library from the Python Package. In the example below, we'll configure the chunk_overlap parameter, which ensures that our chunks are blended together—meaning the end of chunk 1 will overlap with the beginning of chunk 2. Please copy the below command in Colab and press <strong>run</strong> to execute each cell individually.</li>
