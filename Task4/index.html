@@ -912,6 +912,7 @@
 <p>Vector Database (Vector DB): The generated embeddings are stored in a vector database(e.g Singlestore). This database is optimized for searching and retrieving embeddings quickly, enabling faster queries when comparing vectors to find similar items.</p>
 </li>
 </ul>
+<p><span class="colour" style="color:red">Note: There are many vector databases, such as Chroma, Faiss, Pinecone e.t.c. However, we are using SingleStore for its ease of use and to help you better understand how embeddings are created.</span></p>
 <h4 id="set-openai-token">Set OpenAI token</h4>
 <p><span class="colour" style="color:red">Note: If you’ve already obtained the token in previous steps or section, you can skip this section </span></p>
 <p><span class="colour" style="color:red">Note: First, create an account from the <a href="https://platform.openai.com/" target="_blank">OpenAI official website</a>.</span></p>
@@ -922,7 +923,8 @@
 <p><span class="colour" style="color:red">Note: We will use the OpenAI key in Postman to generate embeddings.</span></p>
 <h4 id="login-to-postman">Login to Postman</h4>
 <p>If you haven't installed Postman on your machine yet, you can download it from the following <a href="https://www.postman.com/downloads/" target="_blank">link</a></p>
-<p>We will use embedding APIs to create an embedding vector that represents our input text, more information can be found at the following <a href="https://platform.openai.com/docs/api-reference/embeddings" target="_blank">link</a></p>
+<p><span class="colour" style="color:red">Note:If you are using the provided machines, Postman will already be pre-installed.</span></p>
+<p>We will use embedding APIs to create an embedding vector that represents our input text, more information about OPENAI embeddings can be found at the following <a href="https://platform.openai.com/docs/api-reference/embeddings" target="_blank">link</a></p>
 <p>The POST request we will be using:</p>
 <p><div class="highlight"><pre><span></span><code>https://api.openai.com/v1/embeddings
 </code></pre></div>
@@ -948,13 +950,13 @@
 </code></pre></div>
 <p><img alt="postman3" src="../assets/task4/pm3.png" /></p>
 <ul>
-<li>You will receive a 200 OK message, confirming success. You'll notice that our text has been converted into embeddings (vectors). In the upcoming steps, we will learn how to manually save this information in a vector database.</li>
+<li>You will receive a 200 OK message, confirming success. You'll notice that our text has been converted into embeddings (vectors/floating point numbers). In the upcoming steps, we will learn how to manually save this information in a vector database.</li>
 </ul>
 <p><img alt="postman4" src="../assets/task4/pm4.png" /></p>
 <p><span class="colour" style="color:red">Note:Text embedding models convert text into numerical data (embeddings) that represent the meaning of the text.</span></p>
 <h4 id="inserting-values-in-vector-database">Inserting values in Vector Database</h4>
 <p>We have a variety of databases available. In the upcoming step, let's demonstrate how to use <a href="https://www.singlestore.com/built-in-vector-database/" target="_blank">SingleStore</a> as a vector database and save our embeddings there.</p>
-<p><span class="colour" style="color:red">Note: This manual step is simply to illustrate how embeddings are stored in vector databases.</span></p>
+<p><span class="colour" style="color:red">Note: This MANUAL step is simply to illustrate how embeddings are stored in vector databases.</span></p>
 <p><img alt="VecDB1" src="../assets/task4/ex_vdb.png" /></p>
 <p><span class="colour" style="color:red">Note: We will create a Free account on <a href="https://www.singlestore.com/built-in-vector-database/" target="_blank">SingleStore</a> since it provides some credits to set up a trial account.</span></p>
 <p><img alt="SS1" src="../assets/task4/st1.png" /></p>
@@ -966,12 +968,13 @@
 <li>Select Continue</li>
 </ul>
 <p><img alt="SS3" src="../assets/task4/st3.png" /></p>
+<p><img alt="SS31" src="../assets/task4/st31.png" /></p>
 <p><img alt="SS4" src="../assets/task4/st4.png" /></p>
 <p><img alt="SS4a" src="../assets/task4/st4a.png" /></p>
-<p><img alt="SS4b" src="./assets/task4/st4b.png" /></p>
+<p><img alt="SS4b" src="../assets/task4/st4b.png" /></p>
 <p><img alt="SS5" src="../assets/task4/st5.png" /></p>
 <ul>
-<li>Click on New Deployment</li>
+<li>Click on Create New -&gt; Deployment</li>
 </ul>
 <p><img alt="SS6" src="../assets/task4/st6.png" /></p>
 <ul>
@@ -982,12 +985,12 @@
 <li>Then, leave everything as is and click on "Create Workspace."</li>
 </ul>
 <p><img alt="SS8" src="../assets/task4/st8.png" /></p>
-<p><img alt="SS9" src="../assets/task4/st9.png" /></p>
+<p><span class="colour" style="color:red">Note: Workspace creation can take up to 5 minutes. </span></p>
 <ul>
 <li>Now we can create a database</li>
 </ul>
-<p><span class="colour" style="color:red">Note:Database creation can take up to 5 minutes. </span></p>
-<p><img alt="SS10" src="../assets/task4/st10.png" /></p>
+<p><img alt="SS9" src="../assets/task4/st9.png" /></p>
+<p><span class="colour" style="color:red">Note: Database creation can take up to 5 minutes. </span></p>
 <p><img alt="SS11" src="../assets/task4/st11.png" /></p>
 <ul>
 <li>Click on Database tab</li>
@@ -995,7 +998,7 @@
 <p><img alt="SS12" src="../assets/task4/st12.png" /></p>
 <p><img alt="SS13" src="../assets/task4/st13.png" /></p>
 <ul>
-<li>Return to the home screen and navigate to Develop &gt; Data Studio. Open the SQL Editor.</li>
+<li>Navigate to Develop &gt; Data Studio. Open the SQL Editor.</li>
 </ul>
 <p><img alt="SS14" src="../assets/task4/st14.png" /></p>
 <ul>
