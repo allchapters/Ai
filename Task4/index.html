@@ -894,6 +894,7 @@
 <h2 id="why-use-vector-databases-when-we-have-relational-databases">Why use vector databases when we have relational databases?</h2>
 <p>Around 80% of the data we encounter is unstructured, including social media posts, images, and videos. This type of data doesn’t easily fit into traditional relational databases, which is where vector databases come into play.</p>
 <p><img alt="VecDB" src="../assets/task4/vdb.png" /></p>
+<p><img alt="VecDB1" src="../assets/task4/ex_vdb.png" /></p>
 <h2 id="understanding-the-workings-of-embeddings-and-vector-databases">Understanding the workings of Embeddings and Vector Databases</h2>
 <h3 id="practical-example-of-embedding-techniques-using-postman">Practical Example of Embedding Techniques Using Postman</h3>
 <p><img alt="SingleStore" src="../assets/task4/HLO.png" /></p>
@@ -957,7 +958,6 @@
 <h4 id="inserting-values-in-vector-database">Inserting values in Vector Database</h4>
 <p>We have a variety of databases available. In the upcoming step, let's demonstrate how to use <a href="https://www.singlestore.com/built-in-vector-database/" target="_blank">SingleStore</a> as a vector database and save our embeddings there.</p>
 <p><span class="colour" style="color:red">Note: This MANUAL step is simply to illustrate how embeddings are stored in vector databases.</span></p>
-<p><img alt="VecDB1" src="../assets/task4/ex_vdb.png" /></p>
 <p><span class="colour" style="color:red">Note: We will create a Free account on <a href="https://www.singlestore.com/built-in-vector-database/" target="_blank">SingleStore</a> since it provides some credits to set up a trial account.</span></p>
 <p><img alt="SS1" src="../assets/task4/st1.png" /></p>
 <ul>
@@ -995,7 +995,6 @@
 <ul>
 <li>Click on Database tab</li>
 </ul>
-<p><img alt="SS12" src="../assets/task4/st12.png" /></p>
 <p><img alt="SS13" src="../assets/task4/st13.png" /></p>
 <ul>
 <li>Navigate to Develop &gt; Data Studio. Open the SQL Editor.</li>
@@ -1016,6 +1015,11 @@
 </code></pre></div>
 <img alt="SS16" src="../assets/task4/st16.png" /></p>
 <ul>
+<li>You can navigate to the Schema Explorer VIEW on the right, and verify that the table has been created.</li>
+</ul>
+<p><img alt="SS171" src="../assets/task4/st171.png" /></p>
+<p><span class="colour" style="color:red">Note: OR </span></p>
+<ul>
 <li>You can navigate to the Databases tab and verify that the table has been created.</li>
 </ul>
 <p><img alt="SS17" src="../assets/task4/st17.png" /></p>
@@ -1029,16 +1033,16 @@
 </ul>
 <p><img alt="SS18" src="../assets/task4/st18.png" /></p>
 <ul>
-<li>Let's head back to our SQL editor and insert the values into our database. Once done press "Run"</li>
+<li>Let's head back to our SQL editor and insert the values into our database using the below SQL command. Once done press "Run"</li>
 </ul>
 <p><span class="colour" style="color:red">Note: You can reuse the same SQL editor block, remove the previous command, and run the following one. </span></p>
-<p><div class="highlight"><pre><span></span><code><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">myvectortable</span><span class="w"> </span><span class="p">(</span><span class="nb">text</span><span class="w"> </span><span class="p">,</span><span class="n">vector</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;your_input_text&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;your_embeddings&quot;</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">myvectortable</span><span class="w"> </span><span class="p">(</span><span class="nb">text</span><span class="w"> </span><span class="p">,</span><span class="n">vector</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;your_input_text&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;your_embeddings&quot;</span><span class="p">))</span>
 </code></pre></div>
-In this query:</p>
-<div class="highlight"><pre><span></span><code>* Replace &quot;your_input_text&quot; with the input values from Postman.
-
-* Replace your_embeddings with the embeddings you copied earlier, including the square brackets [ ].
-</code></pre></div>
+<p>In this query:</p>
+<ul>
+<li><b style="color: red;">Replace "your_input_text" with the input values from Postman.</b></li>
+<li><b style="color: red;">Replace "your_embeddings" with the embeddings you copied earlier, including the square brackets [ ].</b></li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">myvectortable</span><span class="w"> </span><span class="p">(</span><span class="nb">text</span><span class="w"> </span><span class="p">,</span><span class="n">vector</span><span class="p">)</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;What is WebexOne 2024? WebexOne is an annual in-person and virtual event that takes place over four days. It’s an event focused on AI collaboration and customer experience, and it features a range of activities such as insightful breakout sessions, technical training courses, hands-on labs, inspiring keynotes, epic entertainment, a solutions showcase and expo, customer awards, meet the experts, 1:1 executive meetings, a partner program, and more!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;[</span>
 <span class="ss">                -0.0042485874,</span>
 <span class="ss">                -0.02296605,</span>
@@ -1075,6 +1079,9 @@ In this query:</p>
 <li>After running the above command, you will see that our table now contains both the input text and the corresponding embeddings. Click on Sample Data</li>
 </ul>
 <p><img alt="SS19" src="../assets/task4/st19.png" /></p>
+<ul>
+<li>Let's now explore on how to retrive values from Vector Database</li>
+</ul>
 <h4 id="retrieving-values-from-the-vector-database">Retrieving Values from the Vector Database</h4>
 <p><img alt="SS20" src="../assets/task4/st20.png" /></p>
 <ul>
@@ -1083,19 +1090,25 @@ In this query:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Is</span> <span class="n">WebexOne</span> <span class="n">an</span> <span class="n">annual</span> <span class="n">event</span><span class="err">?</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Let's open Postman and create an embedding for our question. Be sure to click on "Send."</li>
+<li>Let's open Postman and create an embedding for our question now. Be sure to click on "Send."</li>
 </ul>
+<p><b style="color: red;">Note: Make sure you use the same embedding techniques that we used earlier.</b></p>
 <p><img alt="SS21" src="../assets/task4/st21.png" /></p>
 <ul>
 <li>Let's head over to the SQL editor and run a query for our search.</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="nb">text</span><span class="p">,</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;[your_embeddings]&quot;</span><span class="p">))</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">score</span>
+<p><img alt="SS2111" src="../assets/task4/st2111.png" /></p>
+<p><span class="colour" style="color:red">Note: You can reuse the same SQL editor block, remove the previous command, and run the following one. </span></p>
+<div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="nb">text</span><span class="p">,</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;your_embeddings&quot;</span><span class="p">))</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">score</span>
 <span class="k">from</span><span class="w"> </span><span class="n">myvectortable</span>
 <span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">desc</span>
 <span class="k">limit</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
-* In this query:
-    * Replace your_embeddings with the embeddings you copied earlier, including the square brackets [ ] for the question.</p>
+<p>In this query:</p>
+<ul>
+<li><b style="color: red;">Replace "your_embeddings" with the embeddings you copied earlier, including the square brackets [ ].</b></li>
+</ul>
+<p><span class="colour" style="color:red">Note: The below code is just an example, please copy the embeddings from your Postman. </span></p>
 <div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="nb">text</span><span class="p">,</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span><span class="n">JSON_ARRAY_PACK</span><span class="p">(</span><span class="ss">&quot;[</span>
 <span class="ss">                -0.0015118581,</span>
 <span class="ss">                -0.021267666,</span>
