@@ -834,15 +834,11 @@
 <h1 id="task-5-context-windows-and-retrieval-augmented-generation-rag">Task 5: Context Windows and Retrieval Augmented Generation (RAG)</h1>
 <p><img alt="CW" src="../assets/task5/cw.png" /></p>
 <ul>
-<li>
-<p>The context window is the limit on how much text the model can keep in mind and process at once. It includes your messages, the model’s replies, and any other text in the conversation. If the conversation gets too long and goes beyond this limit, the model might start to forget what was said earlier.</p>
-</li>
-<li>
+<li>The context window is the limit on how much text the model can keep and process at once. It includes your messages, the model’s replies, and any other text in the conversation. If the conversation gets too long and goes beyond this limit, the model might start to forget what was said earlier.</li>
+</ul>
 <p><strong>Example</strong> </p>
-</li>
-<li>
-<p>For GPT-3.5, the context window limit is approximately 8,000 tokens (one token typically represents about 4 characters on average). If the input text along with previous interactions (if any) exceeds the limit of LLM, the model may not be able to see or remember parts of the text that fall outside this window. This can result in errors or the inability to refer back to earlier parts of the conversation or document. </p>
-</li>
+<ul>
+<li>For GPT-3.5, the context window limit is approximately 8,000 tokens (one token typically represents about 4 characters on average). If the input text along with previous interactions (if any) exceeds the limit of LLM, the model may not be able to see or remember parts of the text that fall outside this window. This can result in errors or the inability to refer back to earlier parts of the conversation or document. </li>
 </ul>
 <p><img alt="Erro7" src="../assets/task5/erro.png" /></p>
 <p><span class="colour" style="color:red"> Note: A token can be as small as a piece of a word or as large as a word itself, depending on the language and complexity of the text </span></p>
@@ -873,10 +869,10 @@ Conversely, if the input increases to 10,000 tokens and the response remains at 
 <p><img alt="rag1" src="../assets/task5/rag1.png" /></p>
 <p>That's an excellent question. LLMs are trained on vast amounts of historical data, so they may recognize that DX and Navigators are well-regarded Cisco products. As a result, the LLM might confidently respond that you can install ThousandEyes on those devices. However, the issue is that the response may lack a verifiable source to back up that claim or the information can be out-of-date  </p>
 <p><img alt="rag2" src="../assets/task5/rag2.png" /></p>
-<p>What if, instead of just asking the question, I had first consulted a reputable source and only then informed the user that ThousandEyes can't be installed on those devices? This is where Retrieval-Augmented Generation comes into play. By integrating a knowledge base—such as PDFs, CSVs, images, and other resources—into the model, we ensure that any time a question is asked, the response is based on the most current and accurate information available.</p>
+<p>What if, instead of just asking the question, I had first consulted a reputable source and only then informed the user that ThousandEyes can't be installed on those devices? This is where Retrieval-Augmented Generation comes into play. By integrating a knowledge base such as PDFs, CSVs, images, and other resources into the model, we ensure that any time a question is asked, the response is based on the most current and accurate information available.</p>
 <p><img alt="rag3" src="../assets/task5/rag3.png" /></p>
 <h2 id="how-can-rag-address-the-limitations-weve-seen-with-the-context-window">How can RAG address the limitations we've seen with the context window?</h2>
-<p>To address the context window limitation, we can use an embedding model to convert relevant text into embeddings and store them in a vector database. When a user submits a query, we transform it into an embedding and compare it to the stored embeddings to find the closest match. Once we identify the match, we retrieve that specific chunk of text to respond to the query. This approach effectively overcomes the context window limitation by ensuring that our responses are accurate and contextually relevant.</p>
+<p>To address the context window limitation, we can use an embedding model to convert relevant text into embeddings and store them in a vector database (covered in the previous section). When a user submits a query, we transform it into an embedding and compare it to the stored embeddings to find the closest match. Once we identify the match, we retrieve that specific chunk of text to respond to the query. This approach effectively overcomes the context window limitation by ensuring that our responses are accurate and contextually relevant.</p>
 <p>Now you can see how RAG can address some of the challenges with LLMs. Instead of re-training or fine-tuning the model with new information, we can augment our data sources to retrieve the most up-to-date information. Additionally, LLMs are now instructed to prioritize primary source data before generating responses, making them less likely to hallucinate and encouraging more accurate and reliable outputs.</p>
 <p><img alt="rag6" src="../assets/task5/rag6.png" /></p>
 <h2 id="whats-happening-under-the-hood">What's Happening Under the Hood?</h2>
@@ -885,9 +881,9 @@ Conversely, if the input increases to 10,000 tokens and the response remains at 
 <p>Now, when we receive a query, we also convert it into an embedding (numerical value). We then perform a similarity search in this 3D space, looking for the documents that are closest to our query's embedding. These nearby documents are likely to contain the most relevant information.</p>
 <p>Once we've identified these matching documents, we retrieve the relevant sections (or "splits") and feed all this information into the LLM's context window, allowing it to generate a well-informed response.</p>
 <p><img alt="rag5" src="../assets/task5/rag5.png" /></p>
-<p>We've seen models like Gemini Pro with a context window size of millions, allowing them to retain more information. So, why use RAG? The answer is that RAG remains highly beneficial for sourcing real-time data,fact-checking, and accessing external knowledge that isn't contained within the context window.</p>
+<p>We've seen models like Gemini Pro with a context window size of million, allowing them to retain more information. So, why use RAG? The answer is that RAG remains highly beneficial for sourcing real-time data,fact-checking, and accessing external knowledge that isn't contained within the context window.</p>
 <h2 id="lets-build-a-quick-rag-application">Let's build a quick RAG application</h2>
-<p>While LLMs (Large Language Models) like GPT-4 , Llama, Gemini possess impressive general knowledge, they don't inherently have access to your data. To connect LLMs with your own data sources, we can use frameworks like <span class="colour" style="color:red">LangChain</span>. These frameworks enable us to leverage our own data by breaking down documents into smaller chunks and storing them as embeddings in vector databases.</p>
+<p>While LLMs (Large Language Models) like GPT's , Llama, Gemini e.t.c possess impressive general knowledge, they don't inherently have access to your data. To connect LLMs with your own data sources, we can use frameworks like <span class="colour" style="color:red">LangChain</span>. These frameworks enable us to leverage our own data by breaking down documents into smaller chunks and storing them as embeddings in vector databases.</p>
 <p>This approach allows us to build applications that can effectively use language models. Example: When a user asks a question, we convert it into embeddings, perform a semantic search to find the most relevant answers, and then send both the question and the retrieved information to the LLM to generate a response.</p>
 <p>In this section, we'll continue using LangChain, but in the following chapters, we'll explore it in greater depth to gain a more thorough understanding of its functionality.</p>
 <p><img alt="PIPE" src="../assets/task5/rag_pipe.png" /></p>
@@ -912,6 +908,7 @@ The PDF we are using in this lab can be downloaded from <a download="dect.pdf" h
 
 - Use the “Notebook access” toggle to grant or revoke access to a secret for each notebook.
 </code></pre></div>
+<p><img alt="HF_GT_sec11" src="../assets/task8a/gensec11.png" /></p>
 <ul>
 <li>
 <p>Let's load our PDF files into Google Colab. For this example, we can use the <a download="dect.pdf" href="../assets/static/dect.pdf" target="_blank">modified DECT guide</a></p>
@@ -966,7 +963,7 @@ The PDF we are using in this lab can be downloaded from <a download="dect.pdf" h
 <span class="kn">from</span> <span class="nn">langchain.document_loaders</span> <span class="kn">import</span> <span class="n">PyMuPDFLoader</span>
 <span class="n">load_dotenv</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-<p><span style="color:red">Note: If you receive any warnings related to langchain_community, you can safely ignore this warning. </span></p>
+<p><span style="color:red">Note: If you receive any warnings related to langchain_community, or "USER_AGENT environment variable not set", you can safely ignore it. This does not affect functionality, especially in Google Colab. </span></p>
 <ul>
 <li>Next let’s load the data source. This is also known as “Data Ingestion”.</li>
 </ul>
@@ -1013,7 +1010,7 @@ Also we can use <a href="https://python.langchain.com/v0.2/docs/integrations/tex
 </code></pre></div></td></tr></table></div>
 <p><img alt="Output2" src="../assets/task5/o2.png" /></p>
 <ul>
-<li>Let's create our prompt. There are several ways to do this, you can either craft it manually or use prompts that have already been made available on the LangChain Hub. In this section, I'll demonstrate how to pull a prompt from the LangChain Hub and use it. 
+<li>Let's now create our prompt. There are several ways to do this, you can either craft it manually or use prompts that have already been made available on the LangChain Hub. In this section, I'll demonstrate how to pull a prompt from the LangChain Hub and use it. 
 First browse to <a href="https://smith.langchain.com/" target="_blank">Langmith</a> and create an account. In this example, I'll use Google to sign up for a Langsmith account, but feel free to choose the option that works best for you.</li>
 </ul>
 <p><img alt="Lsmith" src="../assets/task5/lsmith.png" /></p>
@@ -1021,11 +1018,13 @@ First browse to <a href="https://smith.langchain.com/" target="_blank">Langmith<
 <li>Create your API Key</li>
 </ul>
 <p><img alt="Lsmith1" src="../assets/task5/lsmith1.png" /></p>
+<p><img alt="Lsmith12" src="../assets/task5/lsmith12.png" /></p>
 <ul>
 <li>You can either enter your key in the secret folder or paste it manually here.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LANGCHAIN_API_KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PASTE-YOUR-KEY-HERE&quot;</span>
 </code></pre></div></td></tr></table></div>
+<p><img alt="Lsmith123" src="../assets/task5/lsmith123.png" /></p>
 <ul>
 <li>We will be using a LangChain template prompt, which allows us to define and reuse structured prompts easily. In the example below, we're pulling a pre-defined prompt from a repository using hub.pull() and assigning it to the variable prompt. This can help us streamline the workflow, especially when dealing with large language models.</li>
 </ul>
@@ -1113,7 +1112,7 @@ To set up and install a DECT phone system, first review the site and plan the lo
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Convert the question into an embedding</span>
 <span class="n">embedding_model</span> <span class="o">=</span> <span class="n">OpenAIEmbeddings</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;text-embedding-3-large&quot;</span><span class="p">)</span>
 <span class="n">question_embedding</span> <span class="o">=</span> <span class="n">embedding_model</span><span class="o">.</span><span class="n">embed_query</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
-<span class="n">retrieved_docs</span> <span class="o">=</span> <span class="n">retriever</span><span class="o">.</span><span class="n">get_relevant_documents</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
+<span class="n">retrieved_docs</span> <span class="o">=</span> <span class="n">retriever</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><span style="color:red">Note: If you receive any warnings related to langchain, you can safely ignore this warning. </span></p>
 <ul>
