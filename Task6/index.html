@@ -931,7 +931,7 @@
 <p><span class="colour" style="color:orange"> We will be using Option 2 for our lab </span></p>
 <p><span class="colour" style="color:orange">Embedding for images can be done via CLIP model.</span></p>
 <h2 id="contrastive-language-image-pretraining-clip-model">Contrastive Language-Image Pretraining - CLIP Model</h2>
-<p>Unlike other embedding models that focus on a single modality, such as text or images, the <a href="https://openai.com/index/clip/">CLIP (Contrastive Language-Image Pretraining)</a>, was developed by OpenAI in 2021, handles multiple modalities by integrating both text and images.</p>
+<p>Unlike other embedding models that focus on a single modality, such as text or images, the <a href="https://openai.com/index/clip/" target="_blank">CLIP (Contrastive Language-Image Pretraining)</a>  was developed by OpenAI in 2021, handles multiple modalities by integrating both text and images.</p>
 <p><span class="colour" style="color:red">Note: CLIP models are embedding models, not traditional Large Language Models (LLMs).</span></p>
 <p>The primary function of CLIP (Contrastive Language-Image Pretraining) is to create a shared embedding space where both text and images are represented as vectors. The key idea is to learn representations where images and their corresponding text descriptions are close to each other in this embedding space, while unrelated image-text pairs are far apart. This allows CLIP to perform tasks like image classification, zero-shot learning, and text-to-image retrieval based on the semantic similarity between text and images. So in summary CLIP models create a relationship between images and text.</p>
 <h3 id="zero-shot-learning-zsl">Zero-Shot Learning (ZSL)</h3>
@@ -939,7 +939,7 @@
 <p>Using ZSL, CLIP models can perform tasks they were not specifically trained on, in real-time. Essentially, they have capabilities similar to text-based embedding models. Just as we create chunks of text and use a user query to find similar text chunks, the same concept applies to images using CLIP.</p>
 <h2 id="openclip-model">OpenCLIP Model</h2>
 <p>It's important to note that the original CLIP model by OpenAI is not publicly available. However, people have taken the concepts from OpenAI's CLIP paper and developed open-source models like OpenCLIP.</p>
-<p><span class="colour" style="color:red"> Note: <a href="https://github.com/mlfoundations/open_clip">OpenCLIP</a> is an open-source implementation and extension of the original CLIP (Contrastive Language-Image Pretraining) model developed by OpenAI.</span></p>
+<p><span class="colour" style="color:red"> Note: <a href="https://github.com/mlfoundations/open_clip" target="_blank">OpenCLIP</a> is an open-source implementation and extension of the original CLIP (Contrastive Language-Image Pretraining) model developed by OpenAI.</span></p>
 <ul>
 <li>
 <p><strong>Different types of Multimodal Embeddings and LLM</strong>
@@ -1003,9 +1003,10 @@
 </ul>
 <p><img alt="HF_GT_sec_created_8c" src="../assets/task8c/kei.png" /></p>
 <h3 id="update-google-colab-envoirnment-and-install-packages">Update Google Colab envoirnment and install packages</h3>
-<p>PDFs often contain tables and other structured data that can be challenging to split accurately using character-based embedding techniques. For PDFs, it's important to extract and chunk all elements, including tables, effectively. We'll accomplish this using the <a href="https://unstructured.io/">Unstructured library</a>, which is specifically designed for handling such tasks. If you have a large collection of PDFs, <a href="https://unstructured.io/">Unstructured</a> is an excellent tool to manage them efficiently.</p>
+<p><span class="colour" style="color:red"> NOTE: To avoid errors, overlap, or dependencies from previous tasks, open a new Google Colab notebook for this step. This will ensure a clean environment and prevent any potential issues related to previous work. </span></p>
+<p>PDFs often contain tables and other structured data that can be challenging to split accurately using character-based embedding techniques. For PDFs, it's important to extract and chunk all elements, including tables, effectively. We'll accomplish this using the <a href="https://unstructured.io/" target="_blank">Unstructured</a>, which is specifically designed for handling such tasks. If you have a large collection of PDFs, <a href="https://unstructured.io/" target="_blank">Unstructured</a> is an excellent tool to manage them efficiently.</p>
 <ul>
-<li>Install relevant libraries including <a href="https://unstructured.io/">Unstructured - ELT tool</a>. Unstructured will partition PDF files by first removing all embedded image blocks. Then it will use a layout model (YOLOX) to get bounding boxes (for tables) as well as titles.</li>
+<li>Install relevant libraries including <a href="https://unstructured.io/" target="_blank">Unstructured</a> . Unstructured will partition PDF files by first removing all embedded image blocks. Then it will use a layout model (YOLOX) to get bounding boxes (for tables) as well as titles.</li>
 </ul>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;unstructured[all-docs]&quot;</span> <span class="n">pillow</span> <span class="n">pydantic</span> <span class="n">lxml</span> <span class="n">matplotlib</span> <span class="n">langchain</span> <span class="n">langchain_community</span> <span class="n">chromadb</span> <span class="n">langchain</span><span class="o">-</span><span class="n">experimental</span> <span class="n">langchain_openai</span>
 </code></pre></div></td></tr></table></div>
@@ -1059,7 +1060,7 @@ nltk.download(&#39;averaged_perceptron_tagger_eng&#39;)
 <p><img alt="ap14" src="../assets/task6/ap14.png" /></p>
 <h3 id="pdf-with-table">PDF with table</h3>
 <ul>
-<li>Let's load our PDF files into Google Colab. For this example, we can use the article titled "Webex Customer Experience Essentials" from the <a href="https://help.webex.com/en-us/article/72sb3r/Webex-Customer-Experience-Essentials">Webex Help Center</a>. You can also <a download="CX-Essentials.pdf" href="../assets/static/CX-Essentials.pdf" target="_blank">download the modified article here</a> as we will be using in the next step.</li>
+<li>Let's load our PDF files into Google Colab. For this example, we can use the article titled "Webex Customer Experience Essentials" from the <a href="https://help.webex.com/en-us/article/72sb3r/Webex-Customer-Experience-Essentials">Webex Help Center</a>. You can  <a download="CX-Essentials.pdf" href="../assets/static/CX-Essentials.pdf" target="_blank">download the modified article here</a> as we will be using in the next step.</li>
 </ul>
 <p><span class="colour" style="color:red"> Note: To save time and speed up processing in this lab, I have modified the CX-Essentials.pdf file by reducing it to only a few pages. You can download this version from the modified link provided above. </span></p>
 <ul>
@@ -1075,10 +1076,9 @@ nltk.download(&#39;averaged_perceptron_tagger_eng&#39;)
 </ul>
 <p><img alt="r8" src="../assets/task6/8.png" /></p>
 <ul>
-<li>Let's process our PDF document by splitting it into smaller, manageable chunks based on titles, extracting images, and handling text in a way that ensures the chunks are neither too large nor too small. We will store the extracted elements (text, images, etc.) in the pdf_elements variable, and images are saved in the specified path(image_path). To understand more about <a href="https://docs.unstructured.io/open-source/core-functionality/partitioning#partition-csv">unstructured partition_pdf click here</a> </li>
+<li>Let's process our PDF document by splitting it into smaller, manageable chunks based on titles, extracting images, and handling text in a way that ensures the chunks are neither too large nor too small. We will store the extracted elements (text, images, etc.) in the pdf_elements variable, and images are saved in the specified path(image_path). To understand more about <a href="https://docs.unstructured.io/open-source/core-functionality/partitioning#partition-csv" target="_blank">unstructured partition_pdf, click here</a>. </li>
 </ul>
 <p>Unstructured will partition PDF files by first extracting embedded images if specified. It then processes the document's layout, dividing the content into structured elements such as titles, tables, and paragraphs based on the layout and text structure. For more detailed layout analysis, it may use advanced models like YOLOX to identify and extract bounding boxes for elements like tables and titles. This allows for the precise extraction and organization of text and images, making the content more suitable for further analysis and processing.</p>
-<p><span class="colour" style="color:red"> NOTE: To avoid errors, overlap, or dependencies from previous tasks, open a new Google Colab notebook for this step. This will ensure a clean environment and prevent any potential issues related to previous work. </span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1112,8 +1112,9 @@ nltk.download(&#39;averaged_perceptron_tagger_eng&#39;)
 <ul>
 <li>To see different elements from our pdf we can look into the variable</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">pdf_elements</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">pdf_elements</span>
 </code></pre></div></td></tr></table></div>
+<p><span class="colour" style="color:red">Note: Since we are working with a modified CX-Essentials.pdf file, you may notice that there are no pdf_elements for tables. </span></p>
 <p><img alt="r10" src="../assets/task6/10.png" /></p>
 <ul>
 <li>Let's categorize extracted elements from a PDF into two types: text elements and table elements. </li>
@@ -1148,11 +1149,12 @@ nltk.download(&#39;averaged_perceptron_tagger_eng&#39;)
 
 <span class="n">texts</span><span class="p">,</span> <span class="n">tables</span> <span class="o">=</span> <span class="n">categorize_elements</span><span class="p">(</span><span class="n">pdf_elements</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">texts</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="texts" src="../assets/task6/text.png" /></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">tables</span><span class="p">)</span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tables</span>
 </code></pre></div></td></tr></table></div>
+<span class="colour" style="color:red">Note: The output will be blank when running the table command.</span></p>
 <p><img alt="table" src="../assets/task6/table.png" /></p>
 <h3 id="lets-now-create-summary-from-our-data-by-passing-the-info-to-multimodal-model">Let's now create summary from our data by passing the info to Multimodal model</h3>
 <p><span class="colour" style="color:red">Note: We will be using GPT-4o as our Multimodal to create summary </span></p>
@@ -1350,7 +1352,7 @@ nltk.download(&#39;averaged_perceptron_tagger_eng&#39;)
 <span class="k">def</span> <span class="nf">image_summarize</span><span class="p">(</span><span class="n">img_base64</span><span class="p">,</span> <span class="n">prompt</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Make image summary&quot;&quot;&quot;</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o&quot;</span><span class="p">)</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
         <span class="p">[</span>
             <span class="n">HumanMessage</span><span class="p">(</span>
                 <span class="n">content</span><span class="o">=</span><span class="p">[</span>
@@ -1535,7 +1537,7 @@ nltk.download(&#39;averaged_perceptron_tagger_eng&#39;)
 
 <span class="c1"># The vectorstore to use to index the summaries</span>
 <span class="n">vectorstore</span> <span class="o">=</span> <span class="n">Chroma</span><span class="p">(</span>
-    <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;mm_webexone_cl&quot;</span><span class="p">,</span>
+    <span class="n">collection_name</span><span class="o">=</span><span class="s2">&quot;mm_ai_lab_cl&quot;</span><span class="p">,</span>
     <span class="n">embedding_function</span><span class="o">=</span><span class="n">OpenAIEmbeddings</span><span class="p">(),</span>
     <span class="c1"># embedding_function=VertexAIEmbeddings(model_name=&quot;textembedding-gecko@latest&quot;),</span>
 <span class="p">)</span>
@@ -1809,7 +1811,7 @@ nltk.download(&#39;averaged_perceptron_tagger_eng&#39;)
 <span class="nb">print</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;how can I Upgrade call queue from Customer ExperienceBasic to Customer Experience Essentials. explain images if any there as well&quot;&quot;&quot;</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;how can I Assign Customer Experience Essentials license to users&quot;&quot;&quot;</span>
 <span class="n">docs</span> <span class="o">=</span> <span class="n">retriever_multi_vector_img</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
